@@ -10,7 +10,8 @@ const EN_UNITS = ['zay-ROH', 'uhn', 'duh', 'TRWAH', 'KAH-truh', 'SANK', 'SEESS',
   'OHNZ', 'DOOZ', 'TREZ', 'kah-TORZ', 'KANZ', 'SEZ', 'dee-SET', 'dee-ZWEET', 'deez-NUHF'];
 const EN_TENS = { 20: 'VAN', 30: 'TRAHNT', 40: 'kah-RAHNT', 50: 'san-KAHNT', 60: 'swah-SAHNT' };
 
-function compose(n, U, T, et, join) {
+function compose2(n, U, T, et, join) {
+  const fa = U === FA_UNITS;
   if (n < 20) return U[n];
   if (n < 70) {
     const t = Math.floor(n / 10) * 10, u = n % 10;
@@ -18,9 +19,33 @@ function compose(n, U, T, et, join) {
     return T[t] + (u === 1 ? `${et}${U[1]}` : join + U[u]);
   }
   if (n < 80) return T[60] + (n === 71 ? `${et}${U[11]}` : join + U[n - 60]);
-  if (n < 100) return n === 80 ? (U === FA_UNITS ? 'کاتر وَن' : 'KAH-truh VAN') : (U === FA_UNITS ? 'کاتر وَن ' : 'KAH-truh-van-') + U[n - 80];
-  if (n === 100) return U === FA_UNITS ? 'سان' : 'SAHN';
-  return String(n);
+  if (n === 80) return fa ? 'کاتر وَن' : 'KAH-truh VAN';
+  return (fa ? 'کاتر وَن ' : 'KAH-truh-van-') + U[n - 80];
+}
+
+function compose3(n, U, T, et, join) {
+  const fa = U === FA_UNITS;
+  if (n < 100) return compose2(n, U, T, et, join);
+  const c = Math.floor(n / 100), r = n % 100;
+  const cent = fa ? 'سان' : 'SAHN';
+  const head = c === 1 ? cent : `${compose2(c, U, T, et, join)} ${cent}`;
+  return r ? `${head} ${compose2(r, U, T, et, join)}` : head;
+}
+
+function compose(n, U, T, et, join) {
+  const fa = U === FA_UNITS;
+  if (n < 1000) return compose3(n, U, T, et, join);
+  const words = fa ? { 1e9: ['میلیار', 'میلیار'], 1e6: ['میلیُن', 'میلیُن'], 1e3: 'میل' } : { 1e9: ['meel-YAR', 'meel-YAR'], 1e6: ['meel-YOHN', 'meel-YOHN'], 1e3: 'MEEL' };
+  const parts = [];
+  let rest = n;
+  for (const size of [1e9, 1e6]) {
+    const k = Math.floor(rest / size);
+    if (k) { parts.push(`${compose3(k, U, T, et, join)} ${words[size][0]}`); rest %= size; }
+  }
+  const th = Math.floor(rest / 1000);
+  if (th) { parts.push(th === 1 ? words[1e3] : `${compose3(th, U, T, et, join)} ${words[1e3]}`); rest %= 1000; }
+  if (rest) parts.push(compose3(rest, U, T, et, join));
+  return parts.join(' ');
 }
 
 export const faNumber = (n) => compose(n, FA_UNITS, FA_TENS, ' اِ ', '‌');

@@ -22,7 +22,8 @@ export function speakables() {
       add(s.fr);
       s.fr.replace(/([.!?])$/, '').split(' ').forEach(add);   // word tiles
     }
-    for (const v of m.vocab || []) if (!v.noun.includes('-')) add(v.noun);  // distractor tiles
+    for (const v of m.vocab || []) if (v.noun && !v.noun.includes('-')) add(v.noun);  // distractor tiles
+    for (const v of m.vocab || []) (v.alts || []).forEach(add);
     // Possessive + noun answers for the grammar drills.
     if (m.grammar) {
       const nouns = [...(m.vocab || []).filter((v) => v.g !== 'pl').map((v) => ({ noun: v.noun, pl: v.pl, g: v.g === 'mf' ? 'm' : v.g })),
@@ -50,6 +51,22 @@ export function speakables() {
       r.questions.forEach((q) => { add(q.q); q.options.forEach(add); });
     }
     (m.numberChant?.lines || []).forEach((l) => add(l.fr));
+    (m.bigNumbers || []).forEach((n) => add(frNumber(n)));
+    for (const g of m.grammars || []) {
+      for (const t of g.teach || []) {
+        (t.examples || []).forEach((e) => add(e.fr));
+        (t.table?.rows || []).forEach((r) => r.slice(1).forEach(add));
+        (t.tiles || []).forEach((x) => add(x.fr));
+        (t.numbers || []).forEach((n) => add(frNumber(n)));
+      }
+      (g.chant?.lines || []).forEach((l) => add(l.fr));
+      for (const x of [...(g.drills || []), ...(g.exercises || [])]) {
+        if (x.type === 'listen-digits' || x.type === 'speak') { add(x.say || x.fr); continue; }
+        (x.options || []).forEach(add);
+        add(x.answer);
+        if (x.text?.includes('___')) add(x.text.replace('___', x.answer).replace(/^—\s*/, '').replace(/\s*\([^)]*\)\s*$/, '').replace(/^[\d.]+\s*=\s*/, ''));
+      }
+    }
     for (const x of m.letters || []) { add(x.say); add(x.word); }
     (m.chant?.lines || []).forEach((l) => add(l.fr));
     for (const a of m.accents || []) { add(a.name); a.words.forEach(add); }

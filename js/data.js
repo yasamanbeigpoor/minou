@@ -44,6 +44,12 @@ function indexItems() {
     for (const w of m.spellWords || []) add(`${m.key}:w:${w}`, { type: 'spell', data: { word: w }, label: w });
     for (const s of m.sentences || []) add(`${m.key}:s:${s.id}`, { type: 'sentence', data: s, label: s.fr });
     for (const x of m.exercises || []) add(`${m.key}:x:${x.id}`, { type: 'exercise', data: x, label: x.text });
+    // Module 2 on: grammar lessons are described in the content file, with practice drills and textbook exercises.
+    for (const g of m.grammars || []) {
+      for (const x of [...(g.drills || []), ...(g.exercises || [])]) {
+        add(`${m.key}:x:${x.id}`, { type: 'exercise', data: x, grammar: g, label: x.text || x.fr || x.en });
+      }
+    }
     for (const r of m.readings || []) {
       r.questions.forEach((q, qi) => add(`${m.key}:r:${r.id}:${qi}`, { type: 'reading', data: { reading: r, q }, label: q.q }));
     }
@@ -54,6 +60,9 @@ function indexItems() {
       for (let n = m.numbers[0]; n <= m.numbers[1]; n++) {
         DB.items[`num:${n}`] = { type: 'number', data: { n }, mod: m, id: `num:${n}`, label: `${n} = ${frNumber(n)}` };
       }
+    }
+    for (const n of m.bigNumbers || []) {
+      DB.items[`num:${n}`] ||= { type: 'number', data: { n }, mod: m, id: `num:${n}`, label: `${n} = ${frNumber(n)}` };
     }
   }
 }

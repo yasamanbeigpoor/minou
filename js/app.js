@@ -13,7 +13,7 @@ import { startTour } from './tour.js';
 import { applyPronClasses, prOn, faOn } from './fa.js';
 
 // Shown on the Me tab so it's easy to check which version is running. Bump with every release.
-export const APP_VERSION = '1.7 (25 Nov 2026)';
+export const APP_VERSION = '1.8 (25 Nov 2026)';
 
 const app = $('#app');
 let installEvt = null;
@@ -23,7 +23,7 @@ const NODE_BLURB = {
   alphabet: 'All 26 letters with their French names, the tricky pairs like G and J, and a spelling game.',
   accents: 'Every French accent: what it looks like, how it sounds, and how to type it. Then you hear words and pick the right spelling.',
   numbers: 'Count from 0 to 100: the numbers to learn by heart, the tens, and how French builds 70, 80 and 90.',
-  vocab: (n) => `All ${n.mod.vocab.length} words of the module, in small groups with matching games, then reading, writing, listening and speaking practice.`,
+  vocab: (n) => `${(n.items || n.mod.vocab).length} new words and phrases, in small groups with matching games, then reading, writing, listening and speaking practice.`,
   grammar: 'Minou explains the rule step by step, you drill it, then you do the textbook exercises.',
   'module-review': 'Short readings, then a mixed test of the whole module.',
   review: 'A mixed recap of everything before this module, weighted toward what you’re about to forget.',

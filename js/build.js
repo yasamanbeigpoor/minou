@@ -3,7 +3,7 @@ import { DB, GRAMMAR_RULES, itemsOf, modulesBefore } from './data.js';
 import { get } from './store.js';
 import { prioritize } from './srs.js';
 import { shuffle, sample, pick } from './util.js';
-import { range, frNumber } from './numbers.js';
+import { range, frNumber, frDigits } from './numbers.js';
 import { prNumber, faNumber } from './fa.js';
 import {
   vocabQ, matchQ, sentenceQ, grammarQ, exerciseQ, readingQ, passageStep, numberQ, numberTable, numberList, questionFor,
@@ -23,8 +23,8 @@ export function buildNode(node) {
     case 'alphabet': return buildAlphabet(m, again);
     case 'accents': return buildAccents(m, again);
     case 'numbers': return buildNumbersLesson(m, again);
-    case 'vocab': return buildVocab(m, again);
-    case 'grammar': return buildGrammar(m, again);
+    case 'vocab': return buildVocab(m, again, node.items);
+    case 'grammar': return node.grammar ? buildGrammarLesson(m, m.grammars.find((g) => g.id === node.grammar), again) : buildGrammar(m, again);
     case 'module-review': return buildModuleReview(m);
     case 'review': return buildReview(modulesBefore(m), 20);
     default: return [];
@@ -128,8 +128,8 @@ export function buildNumbersDrill(top) {
 
 // ---------- Module vocabulary: one circle ----------
 
-function buildVocab(m, again) {
-  const ids = (m.vocab || []).map((v) => vid(m, v.id));
+function buildVocab(m, again, only) {
+  const ids = (m.vocab || []).filter((v) => !only || only.includes(v.id)).map((v) => vid(m, v.id));
   const steps = [];
   if (!again) {
     // Meet the words in small groups, each group closed by a matching game.
@@ -183,6 +183,37 @@ function buildGrammar(m, again) {
     { kind: 'teach', title: 'Exercices du manuel', body: 'Now the exercises from pages 65–66 of your textbook. Every blank gets instant feedback.' },
     ...exercises,
   ].filter(Boolean);
+}
+
+// ---------- Grammar lessons described in content (Module 2 on) ----------
+
+function buildGrammarLesson(m, g, again) {
+  const xid = (x) => `${m.key}:x:${x.id}`;
+  const teach = (g.teach || []).map((t, i) => {
+    if (t.tiles) return { kind: 'numbers', say: t.say, sub: t.sub, tiles: t.tiles.map((x) => ({ ...x, say: x.fr })) };
+    const step = { kind: 'teach', ...t };
+    if (t.numbers) {
+      step.examples = [...(t.examples || []), ...t.numbers.map((n) => ({ fr: frNumber(n), en: frDigits(n), pr: prNumber(n), fa: faNumber(n) }))];
+    }
+    return step;
+  });
+  const drills = g.drills || [];
+  const exercises = (g.exercises || []).map((x) => exerciseQ(xid(x)));
+  if (again) {
+    const ids = weakest([...drills, ...(g.exercises || [])].map(xid), 16);
+    return [teach.find((t) => t.kind === 'teach'), ...shuffle(ids.map((id) => exerciseQ(id)))].filter(Boolean);
+  }
+  const steps = [];
+  teach.forEach((t, i) => {
+    steps.push(t);
+    drills.filter((d) => (d.after ?? teach.length - 1) === i).forEach((d) => steps.push(exerciseQ(xid(d))));
+  });
+  if (g.chant) steps.push(chantStep(g.chant, 'A little song to remember it. Tap Listen to all.'));
+  if (exercises.length) {
+    steps.push({ kind: 'teach', title: 'Exercices du manuel', body: `Now the exercises from your textbook (${g.section}, ${g.pages}). Every answer gets instant feedback.` });
+    steps.push(...exercises);
+  }
+  return steps.filter(Boolean);
 }
 
 // ---------- Module review: one circle ----------

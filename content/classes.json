@@ -6,7 +6,8 @@
       "modules": [
         "alphabet",
         "numbers",
-        "module1"
+        "module1",
+        "module2"
       ]
     }
   ]

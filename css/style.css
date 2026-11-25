@@ -670,3 +670,5 @@ html.no-pr.no-fa .pron { display: none; }
 .l-foot .back-btn { flex: none; padding: 0 16px; }
 .l-foot .back-btn .ic { width: 20px; height: 20px; }
 @media (max-width: 380px) { .l-foot .back-btn span { display: none; } }
+
+.pill.g-x { background: var(--good-soft); color: var(--good-deep); }

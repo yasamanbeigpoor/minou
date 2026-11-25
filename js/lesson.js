@@ -12,6 +12,8 @@ import { faNumber, prNumber } from './fa.js';
 
 // English for every French line Minou says.
 const SAY_EN = {
+  'Choisis la bonne réponse.': 'Pick the right answer.',
+  'Écoute et écris les chiffres.': 'Listen and write the digits.', 'Lis le numéro à voix haute.': 'Read the number out loud.', 'Les mois': 'The months',
   'Que veut dire… ?': 'What does it mean?', 'Comment dit-on… ?': 'How do you say…?', 'Écoute bien !': 'Listen carefully!',
   'Écris ce que tu entends.': 'Write what you hear.', 'En français, s’il te plaît !': 'In French, please!',
   'Masculin ou féminin ?': 'Masculine or feminine?', 'Le ou la ?': 'Le or la?', 'À toi de parler !': 'Your turn to speak!',
@@ -359,7 +361,7 @@ function accentBar(input) {
 
 const RENDER = {
   intro(step, body) {
-    const gender = { m: 'masculine', f: 'feminine', mf: 'masc. or fem.', pl: 'plural' }[step.g];
+    const gender = { m: 'masculine', f: 'feminine', mf: 'masc. or fem.', pl: 'plural', x: 'expression' }[step.g];
     setTimeout(() => speak(step.fr), 300);
     put(body, 
       promptHead({ say: 'Nouveau mot !', sub: 'Tap the word to hear it again.' }),

@@ -1,10 +1,10 @@
-// French number words, 0–999 (standard French: soixante-dix, quatre-vingts).
+// French number words (standard French: soixante-dix, quatre-vingts).
 
 const UNITS = ['zéro', 'un', 'deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit', 'neuf', 'dix',
   'onze', 'douze', 'treize', 'quatorze', 'quinze', 'seize', 'dix-sept', 'dix-huit', 'dix-neuf'];
 const TENS = { 20: 'vingt', 30: 'trente', 40: 'quarante', 50: 'cinquante', 60: 'soixante' };
 
-export function frNumber(n) {
+function under1000(n) {
   if (n < 20) return UNITS[n];
   if (n < 70) {
     const t = Math.floor(n / 10) * 10, u = n % 10;
@@ -18,8 +18,40 @@ export function frNumber(n) {
   }
   const c = Math.floor(n / 100), r = n % 100;
   const head = c === 1 ? 'cent' : UNITS[c] + (r ? ' cent' : ' cents');
-  return r ? head + ' ' + frNumber(r) : head;
+  return r ? head + ' ' + under1000(r) : head;
 }
+
+// French number words for any whole number up to the billions, with the textbook's spelling rules:
+// "cents" loses its s before another number (deux cent un), "mille" never takes an s,
+// "quatre-vingts" loses its s before another number, and million / milliard do take an s.
+export function frNumber(n) {
+  if (n < 1000) return under1000(n);
+  const parts = [];
+  const big = [[1e9, 'milliard'], [1e6, 'million']];
+  let rest = n;
+  for (const [size, word] of big) {
+    const k = Math.floor(rest / size);
+    if (k) { parts.push(`${under1000(k)} ${word}${k > 1 ? 's' : ''}`); rest %= size; }
+  }
+  const th = Math.floor(rest / 1000);
+  if (th) {
+    // In "deux cents mille" the s is dropped too: deux cent mille; quatre-vingt mille.
+    const w = th === 1 ? 'mille' : `${under1000(th).replace(/cents$/, 'cent').replace(/vingts$/, 'vingt')} mille`;
+    parts.push(w);
+    rest %= 1000;
+  }
+  if (rest) parts.push(under1000(rest));
+  return parts.join(' ');
+}
+
+// Years before 2000 can also be said in hundreds: 1998 = dix-neuf cent quatre-vingt-dix-huit.
+export function frYearHundreds(y) {
+  const c = Math.floor(y / 100), r = y % 100;
+  return `${under1000(c)} cent${r ? ' ' + under1000(r) : 's'}`;
+}
+
+// Written the French way: a period between thousands (1.000.000).
+export const frDigits = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 
 // Pronunciation notes for the tricky ones.
 export const NUMBER_TIPS = {

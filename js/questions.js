@@ -41,10 +41,11 @@ export function vocabQ(itemId, kind) {
       return { ...base, kind: 'type', skill: 'listening', say: 'Écris ce que tu entends.', sub: 'Type what you hear, with the article.',
         audio: v.fr, answers: [v.fr], needArticle: true, reveal: `${v.fr} (${v.en})`, speakAnswer: v.fr };
     case 'write':
-      return { ...base, kind: 'type', skill: 'writing', say: 'En français, s’il te plaît !', sub: 'Type it in French, with le, la, l’ or les.',
-        big: v.en, answers: [v.fr], needArticle: true, reveal: v.fr, speakAnswer: v.fr };
+      return { ...base, kind: 'type', skill: 'writing', say: 'En français, s’il te plaît !',
+        sub: v.noun ? 'Type it in French, with le, la, l’ or les.' : 'Type it in French.',
+        big: v.en, answers: [v.fr, ...(v.alts || [])], needArticle: !!v.noun, reveal: v.fr, speakAnswer: v.fr };
     case 'gender': {
-      if (v.g === 'pl' || v.g === 'mf') return vocabQ(itemId, 'en-fr');
+      if (v.g !== 'm' && v.g !== 'f') return vocabQ(itemId, 'en-fr');
       const vowel = /^[aeiouyhéèêàâîôû]/i.test(v.noun);
       if (vowel) {
         return { ...base, kind: 'mcq', skill: 'reading', say: 'Masculin ou féminin ?', sub: `L' hides it. Is “${v.noun}” masculine or feminine?`,
@@ -84,7 +85,12 @@ function sentenceTiles(s, mod) {
     const alt = sample(POSS.filter((p) => p !== owned && p[0] === owned[0]), 1)[0] || pick(POSS.filter((p) => p !== owned));
     extra.push(alt);
   }
-  const nouns = (mod.vocab || []).map((v) => v.noun).filter((n) => !lower.includes(n) && !n.includes('-'));
+  // Distractor words: nouns from the module, or single words from its other sentences.
+  let nouns = (mod.vocab || []).map((v) => v.noun).filter((n) => n && !lower.includes(n) && !n.includes('-'));
+  if (!nouns.length) {
+    nouns = [...new Set((mod.sentences || []).flatMap((x) => x.fr.replace(/[.!?]$/, '').split(' ')))]
+      .filter((w) => !lower.includes(w.toLowerCase()) && w.length > 2);
+  }
   extra.push(...sample(nouns, owned ? 1 : 2));
   return shuffle([...words, ...extra]);
 }
@@ -219,19 +225,31 @@ function pluralEn(en) {
 export function exerciseQ(itemId) {
   const it = DB.items[itemId];
   const x = it.data;
-  const base = { itemId, label: it.label, explain: x.why, tag: x.set, trick: (it.mod.grammar?.tricks || {})[x.rule], answerFa: faWord(x.answer), answerPr: prWord(x.answer) };
-  const filled = x.text.replace('___', x.answer);
+  const tricks = it.grammar?.tricks || it.mod.grammar?.tricks || {};
+  const base = { itemId, label: it.label, explain: x.why, tag: x.set, trick: x.trick || tricks[x.rule], answerFa: faWord(x.answer), answerPr: prWord(x.answer) };
+  if (x.type === 'listen-digits') {
+    return { ...base, kind: 'type', skill: 'listening', say: 'Écoute et écris les chiffres.', sub: x.set === 'Practice' ? 'Listen and type the number in digits.' : `${x.set}. Listen and type the digits.`,
+      audio: x.say, answers: [x.answer], numeric: true, reveal: `${x.en} = ${x.say}`, speakAnswer: x.say, explain: x.why };
+  }
+  if (x.type === 'speak') {
+    const digits = /^[\d .]+$/.test(x.en || '');
+    return { ...base, kind: 'speak', skill: 'speaking', say: digits ? 'Lis le numéro à voix haute.' : 'À toi de parler !',
+      sub: digits ? `${x.set}. Read it in pairs, then compare with Minou.` : 'Tap the mic and say it.',
+      fr: x.fr, en: x.en, digits: digits ? x.en : undefined, showDigits: digits, selfCheck: digits, label: x.fr };
+  }
+  const filled = x.text.includes('___') ? x.text.replace('___', x.answer) : x.answer;
   if (x.type === 'type') {
-    return { ...base, kind: 'type', skill: 'writing', say: 'Complète la phrase.', sub: x.set,
+    return { ...base, kind: 'type', skill: 'writing', say: 'Complète la phrase.', sub: x.set === 'Practice' ? 'Type the missing word.' : x.set,
       text: x.text, en: x.en, answers: x.accept || [x.answer], caseless: true, reveal: filled, short: true };
   }
   if (x.type === 'sentence') {
-    return { ...base, kind: 'type', skill: 'writing', say: 'Réécris la phrase.', sub: x.set,
-      text: x.text, en: x.en, answers: [x.answer], reveal: x.answer, speakAnswer: x.answer, long: true };
+    return { ...base, kind: 'type', skill: 'writing', say: /^Say it in French/.test(x.text) ? 'Écris en français.' : 'Réécris la phrase.', sub: x.set === 'Practice' ? 'Type the whole sentence.' : x.set,
+      text: x.text, en: x.en, answers: x.accept || [x.answer], reveal: x.answer, speakAnswer: x.answer, long: true };
   }
-  return { ...base, kind: 'mcq', skill: 'reading', say: 'Complète la phrase.', sub: x.set,
+  return { ...base, kind: 'mcq', skill: 'reading', say: x.text.includes('___') ? 'Complète la phrase.' : 'Choisis la bonne réponse.',
+    sub: x.set === 'Practice' ? 'Pick the right answer.' : x.set,
     text: x.text, en: x.en, options: x.options, answer: x.answer, keepOrder: true, optionsFr: true, reveal: filled,
-    speakAnswer: filled.replace(/^—\s*/, '') };
+    speakAnswer: filled.replace(/^—\s*/, '').replace(/\s*\([^)]*\)\s*$/, '').replace(/^[\d.]+\s*=\s*/, '') };
 }
 
 // ---------- Reading ----------

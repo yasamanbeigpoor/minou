@@ -1,0 +1,1968 @@
+{
+  "id": "m2",
+  "number": 2,
+  "title": "Les loisirs",
+  "subtitle": "Free time, aimer, dates and big numbers",
+  "source": "Grammaire 1.2 (pp. 67–68), Grammaire 1.3 (pp. 68–69), Vocabulaire: Activités favorites et distractions",
+  "path": [
+    {
+      "id": "vocab1",
+      "type": "vocab",
+      "title": "Activités I",
+      "titleEn": "Activities I",
+      "subtitle": "Likes and dislikes, going out",
+      "items": [
+        "qfaire",
+        "jadore",
+        "jaihorreur",
+        "jaime",
+        "jaimemieux",
+        "cinema",
+        "plage",
+        "montagne",
+        "chanter",
+        "conduire",
+        "cuisiner",
+        "danser",
+        "diner",
+        "dormir",
+        "ecouter",
+        "camping",
+        "courses",
+        "fete"
+      ]
+    },
+    {
+      "id": "vocab2",
+      "type": "vocab",
+      "title": "Activités II",
+      "titleEn": "Activities II",
+      "subtitle": "Games, home and evenings",
+      "items": [
+        "promenade",
+        "ski",
+        "inviter",
+        "cartes",
+        "foot",
+        "tennis",
+        "jeux",
+        "lire",
+        "nager",
+        "telephone",
+        "soiree",
+        "tele",
+        "maison",
+        "rigoler",
+        "sortir",
+        "jardin",
+        "voyager"
+      ]
+    },
+    {
+      "id": "g12",
+      "type": "grammar",
+      "grammar": "g12",
+      "title": "Aimer + infinitif",
+      "titleEn": "Grammar 1.2",
+      "subtitle": "J'aime danser, je n'aime pas…"
+    },
+    {
+      "id": "g13",
+      "type": "grammar",
+      "grammar": "g13",
+      "title": "Dates et nombres",
+      "titleEn": "Grammar 1.3",
+      "subtitle": "Dates, age and numbers beyond 100"
+    },
+    {
+      "id": "review",
+      "type": "module-review",
+      "title": "Révision du module",
+      "titleEn": "Module review",
+      "subtitle": "Reading, listening, speaking and a mixed test"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "qfaire",
+      "fr": "Qu'est-ce que tu aimes faire ?",
+      "en": "What do you like to do?",
+      "pr": "KESS-kuh tü EM FEHR",
+      "fa": "کِس‌کُ تو اِم فِر",
+      "g": "x",
+      "tip": "The question to ask someone about their hobbies."
+    },
+    {
+      "id": "jadore",
+      "fr": "J'adore…",
+      "en": "I love…",
+      "pr": "zhah-DOR",
+      "fa": "ژادُر",
+      "g": "x",
+      "trick": "Adore is the same as English: j'adore = I adore, I love."
+    },
+    {
+      "id": "jaihorreur",
+      "fr": "J'ai horreur de…",
+      "en": "I hate…",
+      "pr": "zhay oh-RUHR duh",
+      "fa": "ژِ اُرُر دُ",
+      "g": "x",
+      "trick": "Think “horror”: I have horror of it. J'ai horreur de faire les courses!"
+    },
+    {
+      "id": "jaime",
+      "fr": "J'aime…",
+      "en": "I like…",
+      "pr": "ZHEM",
+      "fa": "ژِم",
+      "g": "x",
+      "tip": "J'aime + a person can also mean “I love”: j'aime mon frère."
+    },
+    {
+      "id": "jaimemieux",
+      "fr": "J'aime mieux…",
+      "en": "I prefer…",
+      "pr": "zhem MYUH",
+      "fa": "ژِم میُ",
+      "g": "x",
+      "trick": "Mieux means “better”: j'aime mieux = I like better = I prefer."
+    },
+    {
+      "id": "cinema",
+      "fr": "aller au cinéma",
+      "en": "to go to the movies",
+      "pr": "ah-LAY oh see-nay-MAH",
+      "fa": "آله اُ سینما",
+      "g": "x",
+      "trick": "Aller = to go. Au = à + le: “to the”."
+    },
+    {
+      "id": "plage",
+      "fr": "aller à la plage",
+      "en": "to go to the beach",
+      "pr": "ah-LAY ah lah PLAHZH",
+      "fa": "آله آ لا پلاژ",
+      "g": "x",
+      "trick": "Plage sounds like “plaj”, like a beach in Persian too: پلاژ."
+    },
+    {
+      "id": "montagne",
+      "fr": "aller à la montagne",
+      "en": "to go to the mountains",
+      "pr": "ah-LAY ah lah mohn-TAHN-yuh",
+      "fa": "آله آ لا مُنتانی",
+      "g": "x",
+      "trick": "Montagne looks like “mountain”."
+    },
+    {
+      "id": "chanter",
+      "fr": "chanter sous la douche",
+      "en": "to sing in the shower",
+      "pr": "shahn-TAY soo lah DOOSH",
+      "fa": "شانته سو لا دوش",
+      "g": "x",
+      "trick": "Chanter = to chant, to sing. Douche = shower, like دوش."
+    },
+    {
+      "id": "conduire",
+      "fr": "conduire une voiture",
+      "en": "to drive a car",
+      "pr": "kohn-DWEER ün vwah-TÜR",
+      "fa": "کُندویر یون ووآتور",
+      "g": "x",
+      "trick": "Conduire = to conduct a car. Voiture sounds like “vehicle”."
+    },
+    {
+      "id": "cuisiner",
+      "fr": "cuisiner",
+      "en": "to cook",
+      "pr": "kwee-zee-NAY",
+      "fa": "کویزینه",
+      "g": "x",
+      "trick": "Cuisine = the kitchen and the food; cuisiner = to make cuisine."
+    },
+    {
+      "id": "danser",
+      "fr": "danser",
+      "en": "to dance",
+      "pr": "dahn-SAY",
+      "fa": "دانسه",
+      "g": "x"
+    },
+    {
+      "id": "diner",
+      "fr": "diner au restaurant",
+      "en": "to eat at a restaurant",
+      "pr": "dee-NAY oh res-toh-RAHN",
+      "fa": "دینه اُ رِستُران",
+      "g": "x",
+      "alts": [
+        "dîner au restaurant"
+      ],
+      "tip": "Your book spells it diner; dîner with a hat is the older spelling. Both are correct."
+    },
+    {
+      "id": "dormir",
+      "fr": "dormir tard",
+      "en": "to sleep late",
+      "pr": "dor-MEER TAR",
+      "fa": "دُرمیر تار",
+      "g": "x",
+      "trick": "Dormir: a dormitory is where you sleep. Tard = late, like “tardy”."
+    },
+    {
+      "id": "ecouter",
+      "fr": "écouter la radio",
+      "en": "to listen to the radio",
+      "pr": "ay-koo-TAY lah rah-DYOH",
+      "fa": "اِکوته لا رادیُ",
+      "g": "x"
+    },
+    {
+      "id": "camping",
+      "fr": "faire du camping",
+      "en": "to go camping",
+      "pr": "fehr dü kahm-PEENG",
+      "fa": "فِر دو کامپینگ",
+      "g": "x",
+      "trick": "Faire = to do. French says “do camping, do skiing”: faire du camping, faire du ski."
+    },
+    {
+      "id": "courses",
+      "fr": "faire les courses",
+      "en": "to go grocery shopping",
+      "pr": "fehr lay KOORS",
+      "fa": "فِر لِ کورس",
+      "g": "x",
+      "trick": "Les courses = the errands you run around for, like running a course."
+    },
+    {
+      "id": "fete",
+      "fr": "faire la fête",
+      "en": "to party",
+      "pr": "fehr lah FET",
+      "fa": "فِر لا فِت",
+      "g": "x",
+      "trick": "Fête = party, feast (the hat hides the s of feast)."
+    },
+    {
+      "id": "promenade",
+      "fr": "faire une promenade",
+      "en": "to take a walk",
+      "pr": "fehr ün prom-NAHD",
+      "fa": "فِر یون پرُمناد",
+      "g": "x",
+      "trick": "A promenade is a walk along the water in English too."
+    },
+    {
+      "id": "ski",
+      "fr": "faire du ski",
+      "en": "to go skiing",
+      "pr": "fehr dü SKEE",
+      "fa": "فِر دو اِسکی",
+      "g": "x"
+    },
+    {
+      "id": "inviter",
+      "fr": "inviter des amis",
+      "en": "to invite friends over",
+      "pr": "an-vee-TAY day-zah-MEE",
+      "fa": "اَنویته دِزامی",
+      "g": "x",
+      "tip": "Des amis links: day-zah-MEE."
+    },
+    {
+      "id": "cartes",
+      "fr": "jouer aux cartes",
+      "en": "to play cards",
+      "pr": "zhoo-AY oh KART",
+      "fa": "ژوئه اُ کارت",
+      "g": "x",
+      "trick": "Jouer à + a game. À + les = aux: jouer aux cartes."
+    },
+    {
+      "id": "foot",
+      "fr": "jouer au foot",
+      "en": "to play soccer",
+      "pr": "zhoo-AY oh FOOT",
+      "fa": "ژوئه اُ فوت",
+      "g": "x",
+      "alts": [
+        "jouer au football"
+      ],
+      "trick": "Foot = football = soccer. À + le = au: jouer au foot."
+    },
+    {
+      "id": "tennis",
+      "fr": "jouer au tennis",
+      "en": "to play tennis",
+      "pr": "zhoo-AY oh tay-NEESS",
+      "fa": "ژوئه اُ تِنیس",
+      "g": "x"
+    },
+    {
+      "id": "jeux",
+      "fr": "jouer aux jeux vidéo",
+      "en": "to play video games",
+      "pr": "zhoo-AY oh ZHUH vee-day-OH",
+      "fa": "ژوئه اُ ژُ ویدئو",
+      "g": "x",
+      "trick": "Jeu = game, jeux = games. Jouer and jeu come from the same word: play."
+    },
+    {
+      "id": "lire",
+      "fr": "lire le journal",
+      "en": "to read the newspaper",
+      "pr": "LEER luh zhoor-NAHL",
+      "fa": "لیر لُ ژورنال",
+      "g": "x",
+      "trick": "Journal = newspaper (a daily: jour = day)."
+    },
+    {
+      "id": "nager",
+      "fr": "nager à la piscine",
+      "en": "to swim in the pool",
+      "pr": "nah-ZHAY ah lah pee-SEEN",
+      "fa": "ناژه آ لا پیسین",
+      "g": "x",
+      "trick": "Piscine sounds like پیسین. Nager: think “natation”, swimming."
+    },
+    {
+      "id": "telephone",
+      "fr": "parler au téléphone",
+      "en": "to talk on the phone",
+      "pr": "par-LAY oh tay-lay-FUN",
+      "fa": "پارله اُ تِلِفُن",
+      "g": "x",
+      "trick": "Parler = to talk: a parliament is where people talk."
+    },
+    {
+      "id": "soiree",
+      "fr": "passer la soirée ensemble",
+      "en": "to spend the evening together",
+      "pr": "pah-SAY lah swah-RAY ahn-SAHM-bluh",
+      "fa": "پاسه لا سوآره آنسامبل",
+      "g": "x",
+      "trick": "Soir = evening, so a soirée is an evening party. Ensemble = together."
+    },
+    {
+      "id": "tele",
+      "fr": "regarder la télé",
+      "en": "to watch TV",
+      "pr": "ruh-gar-DAY lah tay-LAY",
+      "fa": "رُگارده لا تِله",
+      "g": "x",
+      "alts": [
+        "regarder la télévision"
+      ],
+      "trick": "Regarder = to look at, to watch (think “regard”)."
+    },
+    {
+      "id": "maison",
+      "fr": "rester à la maison",
+      "en": "to stay home",
+      "pr": "res-TAY ah lah may-ZOHN",
+      "fa": "رِسته آ لا مِزُن",
+      "g": "x",
+      "trick": "Rester = to stay, to rest. Maison = house."
+    },
+    {
+      "id": "rigoler",
+      "fr": "rigoler",
+      "en": "to laugh; to have fun",
+      "pr": "ree-goh-LAY",
+      "fa": "ریگُله",
+      "g": "x",
+      "trick": "Rigoler sounds like “giggle”."
+    },
+    {
+      "id": "sortir",
+      "fr": "sortir avec des amis",
+      "en": "to go out with friends",
+      "pr": "sor-TEER ah-VEK day-zah-MEE",
+      "fa": "سُرتیر آوِک دِزامی",
+      "g": "x",
+      "trick": "Sortir = to go out. A sortie is a way out."
+    },
+    {
+      "id": "jardin",
+      "fr": "travailler dans le jardin",
+      "en": "to work in the yard",
+      "pr": "trah-vah-YAY dahn luh zhar-DAN",
+      "fa": "تراوایه دان لُ ژاردَن",
+      "g": "x",
+      "trick": "Jardin = garden. Travailler = to work (think “travail”, hard work)."
+    },
+    {
+      "id": "voyager",
+      "fr": "voyager",
+      "en": "to travel",
+      "pr": "vwah-yah-ZHAY",
+      "fa": "ووآیاژه",
+      "g": "x",
+      "trick": "Voyager = to go on a voyage."
+    }
+  ],
+  "grammars": [
+    {
+      "id": "g12",
+      "title": "Aimer + infinitive",
+      "section": "Grammaire 1.2",
+      "pages": "pp. 67–68",
+      "teach": [
+        {
+          "title": "Aimer: to like, to love",
+          "body": "Use <b>aimer</b> to say you like or love something or someone. Its form changes with the subject, like être and avoir.",
+          "table": {
+            "head": [
+              "",
+              "aimer"
+            ],
+            "rows": [
+              [
+                "I",
+                "j'aime"
+              ],
+              [
+                "you (tu)",
+                "tu aimes"
+              ],
+              [
+                "he / she / one",
+                "il aime"
+              ],
+              [
+                "we",
+                "nous aimons"
+              ],
+              [
+                "you (vous)",
+                "vous aimez"
+              ],
+              [
+                "they",
+                "ils aiment"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "fr": "J'aime mon petit frère.",
+              "en": "I love my little brother.",
+              "pr": "ZHEM mohn puh-TEE FREHR",
+              "fa": "ژِم مُن پُتی فرِر"
+            },
+            {
+              "fr": "Nous aimons beaucoup le professeur.",
+              "en": "We really like the teacher.",
+              "pr": "noo-zeh-MOHN boh-KOO luh proh-feh-SUHR",
+              "fa": "نوزِمُن بوکو لُ پرُفِسُر"
+            },
+            {
+              "fr": "Est-ce que tu aimes ton cours d'informatique ?",
+              "en": "Do you like your computer science class?",
+              "pr": "ESS-kuh tü EM tohn koor dan-for-mah-TEEK",
+              "fa": "اِس‌کُ تو اِم تُن کور دَنفُرماتیک"
+            }
+          ]
+        },
+        {
+          "title": "The -er pattern",
+          "body": "Aimer is a regular <b>-er verb</b>. Drop <b>-er</b> and add <b>-e, -es, -e, -ons, -ez, -ent</b>. Most French verbs work this way. The forms in the L-shape (j'aime, tu aimes, il aime, ils aiment) all sound the same: “em”. The endings -es and -ent are silent!",
+          "examples": [
+            {
+              "fr": "nous aimons",
+              "en": "we like (z sound: noo-ZEH-mohn)",
+              "pr": "noo-zeh-MOHN",
+              "fa": "نوزِمُن"
+            },
+            {
+              "fr": "vous aimez",
+              "en": "you like (z sound)",
+              "pr": "voo-zeh-MAY",
+              "fa": "ووزِمه"
+            },
+            {
+              "fr": "ils aiment",
+              "en": "they like (z sound, silent -ent)",
+              "pr": "eel-ZEM",
+              "fa": "ایلزِم"
+            }
+          ],
+          "trick": "Only nous and vous sound different. Everything else is just “em”: j'aime, tu aimes, il aime, ils aiment."
+        },
+        {
+          "title": "Aimer + infinitive",
+          "body": "To say what someone likes <i>to do</i>, put the infinitive right after aimer. To say what someone doesn't like, wrap <b>ne … pas</b> around aimer: <b>ne</b> becomes <b>n'</b> before a vowel.",
+          "examples": [
+            {
+              "fr": "J'aime diner au restaurant.",
+              "en": "I like to eat dinner in a restaurant.",
+              "pr": "ZHEM dee-NAY oh res-toh-RAHN",
+              "fa": "ژِم دینه اُ رِستُران"
+            },
+            {
+              "fr": "Joël n'aime pas danser.",
+              "en": "Joël doesn't like to dance.",
+              "pr": "zhoh-EL NEM pah dahn-SAY",
+              "fa": "ژُئِل نِم پا دانسه"
+            },
+            {
+              "fr": "Mes amis aiment jouer au football.",
+              "en": "My friends like to play soccer.",
+              "pr": "may-zah-MEE EM zhoo-AY oh foot-BOHL",
+              "fa": "مِزامی اِم ژوئه اُ فوتبُل"
+            }
+          ],
+          "trick": "Ne … pas is a sandwich: the conjugated verb is the filling. Je n'aime pas danser."
+        },
+        {
+          "title": "Détester and adorer",
+          "body": "<b>Détester</b> (to hate) and <b>adorer</b> (to love) follow the same pattern as aimer, and can also take an infinitive.",
+          "examples": [
+            {
+              "fr": "Je déteste étudier le samedi soir.",
+              "en": "I hate to study on Saturday nights.",
+              "pr": "zhuh day-TEST ay-tü-DYAY luh sahm-DEE SWAR",
+              "fa": "ژُ دِتِست اِتودیه لُ سامدی سوآر"
+            },
+            {
+              "fr": "J'adore dormir tard le dimanche matin.",
+              "en": "I love to sleep late on Sunday mornings.",
+              "pr": "zhah-DOR dor-MEER TAR luh dee-MAHNSH mah-TAN",
+              "fa": "ژادُر دُرمیر تار لُ دیمانش ماتَن"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "aimer: j'aime, tu aimes, il/elle/on aime, nous aimons, vous aimez, ils/elles aiment.",
+        "Regular -er verbs: drop -er, add -e, -es, -e, -ons, -ez, -ent.",
+        "aimer + infinitive: J'aime danser. Negative: Je n'aime pas danser.",
+        "Détester and adorer work the same way: Je déteste étudier. J'adore voyager.",
+        "Liaison: nous_aimons, vous_aimez, ils_aiment (z sound)."
+      ],
+      "chant": {
+        "id": "aimer",
+        "title": "La chanson d'aimer",
+        "lines": [
+          {
+            "fr": "J'aime, tu aimes, il aime aussi.",
+            "en": "I like, you like, he likes too.",
+            "pr": "ZHEM, tü EM, eel EM oh-SEE",
+            "fa": "ژِم، تو اِم، ایل اِم اُسی"
+          },
+          {
+            "fr": "Nous aimons, vous aimez, mes amis !",
+            "en": "We like, you like, my friends!",
+            "pr": "noo-zeh-MOHN, voo-zeh-MAY, may-zah-MEE",
+            "fa": "نوزِمُن، ووزِمه، مِزامی"
+          },
+          {
+            "fr": "Ils aiment, elles aiment, c'est fini !",
+            "en": "They like, they like, that's it!",
+            "pr": "eel-ZEM, el-ZEM, say fee-NEE",
+            "fa": "ایلزِم، اِلزِم، سِ فینی"
+          }
+        ]
+      },
+      "drills": [
+        {
+          "id": "a1",
+          "set": "Practice",
+          "text": "Tu ___ danser ?",
+          "options": [
+            "aime",
+            "aimes",
+            "aimons",
+            "aimez",
+            "aiment"
+          ],
+          "answer": "aimes",
+          "en": "Do you like to dance?",
+          "why": "With tu, the ending is -es: tu aimes.",
+          "rule": "er",
+          "after": 0
+        },
+        {
+          "id": "a2",
+          "set": "Practice",
+          "text": "Nous ___ voyager.",
+          "options": [
+            "aime",
+            "aimes",
+            "aimons",
+            "aimez",
+            "aiment"
+          ],
+          "answer": "aimons",
+          "en": "We like to travel.",
+          "why": "With nous, the ending is -ons: nous aimons.",
+          "rule": "er",
+          "after": 0
+        },
+        {
+          "id": "a3",
+          "set": "Practice",
+          "text": "Mes amis ___ jouer aux cartes.",
+          "options": [
+            "aime",
+            "aimes",
+            "aimons",
+            "aimez",
+            "aiment"
+          ],
+          "answer": "aiment",
+          "en": "My friends like to play cards.",
+          "why": "Mes amis = ils, so -ent: ils aiment.",
+          "rule": "er",
+          "after": 1
+        },
+        {
+          "id": "a4",
+          "set": "Practice",
+          "text": "Vous ___ cuisiner ?",
+          "options": [
+            "aime",
+            "aimes",
+            "aimons",
+            "aimez",
+            "aiment"
+          ],
+          "answer": "aimez",
+          "en": "Do you like to cook?",
+          "why": "With vous, the ending is -ez: vous aimez.",
+          "rule": "er",
+          "after": 1
+        },
+        {
+          "id": "a5",
+          "set": "Practice",
+          "text": "Léa ___ lire le journal.",
+          "options": [
+            "aime",
+            "aimes",
+            "aimons",
+            "aimez",
+            "aiment"
+          ],
+          "answer": "aime",
+          "en": "Léa likes to read the newspaper.",
+          "why": "Léa = elle, so -e: elle aime.",
+          "rule": "er",
+          "after": 1
+        },
+        {
+          "id": "a6",
+          "set": "Practice",
+          "type": "type",
+          "text": "Ils ___ voyager. (aimer)",
+          "answer": "aiment",
+          "accept": [
+            "aiment"
+          ],
+          "en": "They like to travel.",
+          "why": "Ils: -ent. It's silent, but you have to write it!",
+          "after": 1,
+          "rule": "er"
+        },
+        {
+          "id": "a7",
+          "set": "Practice",
+          "text": "Joël ___ danser.",
+          "options": [
+            "n'aime pas",
+            "ne aime pas",
+            "aime ne pas"
+          ],
+          "answer": "n'aime pas",
+          "en": "Joël doesn't like to dance.",
+          "why": "Ne becomes n' before a vowel, and pas comes right after the verb.",
+          "rule": "neg",
+          "after": 2
+        },
+        {
+          "id": "a8",
+          "set": "Practice",
+          "text": "Je ___ faire les courses.",
+          "options": [
+            "n'aime pas",
+            "aime pas ne",
+            "ne pas aime"
+          ],
+          "answer": "n'aime pas",
+          "en": "I don't like to go grocery shopping.",
+          "why": "Sandwich: n'aime pas.",
+          "rule": "neg",
+          "after": 2
+        },
+        {
+          "id": "a9",
+          "set": "Practice",
+          "type": "sentence",
+          "text": "Say it in French: I don't like to cook.",
+          "answer": "Je n'aime pas cuisiner.",
+          "accept": [
+            "Je n'aime pas cuisiner."
+          ],
+          "en": "",
+          "why": "Je n'aime pas + infinitive.",
+          "after": 2,
+          "rule": "neg"
+        },
+        {
+          "id": "a10",
+          "set": "Practice",
+          "type": "sentence",
+          "text": "Say it in French: We like to go to the movies.",
+          "answer": "Nous aimons aller au cinéma.",
+          "accept": [
+            "Nous aimons aller au cinéma.",
+            "On aime aller au cinéma."
+          ],
+          "en": "",
+          "why": "Nous aimons + infinitive.",
+          "after": 2,
+          "rule": "er"
+        },
+        {
+          "id": "a11",
+          "set": "Practice",
+          "text": "Je ___ étudier le samedi soir.",
+          "options": [
+            "déteste",
+            "détestes",
+            "détestons"
+          ],
+          "answer": "déteste",
+          "en": "I hate to study on Saturday nights.",
+          "why": "Like aimer: je déteste.",
+          "rule": "er",
+          "after": 3
+        },
+        {
+          "id": "a12",
+          "set": "Practice",
+          "text": "Nous ___ dormir tard.",
+          "options": [
+            "adorons",
+            "adorez",
+            "adorent"
+          ],
+          "answer": "adorons",
+          "en": "We love to sleep late.",
+          "why": "Like aimer: nous adorons.",
+          "rule": "er",
+          "after": 3
+        },
+        {
+          "id": "a13",
+          "set": "Practice",
+          "type": "speak",
+          "fr": "nous aimons",
+          "en": "we like (link the s: noo-ZEH-mohn)",
+          "after": 1
+        },
+        {
+          "id": "a14",
+          "set": "Practice",
+          "type": "speak",
+          "fr": "ils aiment",
+          "en": "they like (link the s: eel-ZEM)",
+          "after": 1
+        }
+      ],
+      "tricks": {
+        "er": "Only nous (-ons) and vous (-ez) sound different. All the others sound like “em”.",
+        "neg": "Ne … pas is a sandwich around the verb: je n'aime pas danser."
+      },
+      "exercises": [
+        {
+          "id": "e4-1",
+          "set": "Exercice 4 · Le dimanche d'Albert",
+          "text": "Ma sœur ___ dormir jusqu'à midi.",
+          "options": [
+            "aime",
+            "aimes",
+            "aimons",
+            "aimez",
+            "aiment"
+          ],
+          "answer": "aime",
+          "en": "My sister likes to sleep until noon.",
+          "why": "Ma sœur = elle: elle aime.",
+          "rule": "er"
+        },
+        {
+          "id": "e4-2",
+          "set": "Exercice 4 · Le dimanche d'Albert",
+          "text": "Mes parents ___ jouer aux cartes.",
+          "options": [
+            "aime",
+            "aimes",
+            "aimons",
+            "aimez",
+            "aiment"
+          ],
+          "answer": "aiment",
+          "en": "My parents like to play cards.",
+          "why": "Mes parents = ils: ils aiment.",
+          "rule": "er"
+        },
+        {
+          "id": "e4-3",
+          "set": "Exercice 4 · Le dimanche d'Albert",
+          "text": "Daniel et moi, nous ___ jouer au tennis.",
+          "options": [
+            "aime",
+            "aimes",
+            "aimons",
+            "aimez",
+            "aiment"
+          ],
+          "answer": "aimons",
+          "en": "Daniel and I like to play tennis.",
+          "why": "Nous: aimons.",
+          "rule": "er"
+        },
+        {
+          "id": "e4-4",
+          "set": "Exercice 4 · Le dimanche d'Albert",
+          "text": "Moi, j'___ lire le journal.",
+          "options": [
+            "aime",
+            "aimes",
+            "aimons",
+            "aimez",
+            "aiment"
+          ],
+          "answer": "aime",
+          "en": "Me, I like to read the newspaper.",
+          "why": "Je becomes j' before a vowel: j'aime.",
+          "rule": "er"
+        },
+        {
+          "id": "e4-5",
+          "set": "Exercice 4 · Le dimanche d'Albert",
+          "text": "Tes amis et toi, qu'est-ce que vous ___ faire ?",
+          "options": [
+            "aime",
+            "aimes",
+            "aimons",
+            "aimez",
+            "aiment"
+          ],
+          "answer": "aimez",
+          "en": "Your friends and you, what do you like to do?",
+          "why": "Tes amis et toi = vous: vous aimez.",
+          "rule": "er"
+        },
+        {
+          "id": "e4-6",
+          "set": "Exercice 4 · Le dimanche d'Albert",
+          "text": "Et toi, tu ___ faire les mêmes choses ?",
+          "options": [
+            "aime",
+            "aimes",
+            "aimons",
+            "aimez",
+            "aiment"
+          ],
+          "answer": "aimes",
+          "en": "And you, do you like to do the same things?",
+          "why": "Tu: aimes.",
+          "rule": "er"
+        },
+        {
+          "id": "e5-1",
+          "set": "Exercice 5 · Passetemps préférés",
+          "text": "Est-ce que vos amis aiment surfer sur l'internet ?",
+          "options": [
+            "Oui, mes amis aiment surfer sur l'internet.",
+            "Oui, mes amis aime surfer sur l'internet.",
+            "Oui, mes amis aimons surfer sur l'internet."
+          ],
+          "answer": "Oui, mes amis aiment surfer sur l'internet.",
+          "en": "Do your friends like to surf the internet?",
+          "why": "Mes amis = ils: aiment.",
+          "rule": "er"
+        },
+        {
+          "id": "e5-2",
+          "set": "Exercice 5 · Passetemps préférés",
+          "text": "Est-ce que votre mère aime jouer du piano ?",
+          "options": [
+            "Non, ma mère n'aime pas jouer du piano.",
+            "Non, ma mère ne aime pas jouer du piano.",
+            "Non, ma mère n'aime jouer pas du piano."
+          ],
+          "answer": "Non, ma mère n'aime pas jouer du piano.",
+          "en": "Does your mother like to play the piano?",
+          "why": "N' before a vowel, and pas right after aime.",
+          "rule": "neg"
+        },
+        {
+          "id": "e5-3",
+          "set": "Exercice 5 · Passetemps préférés",
+          "text": "Est-ce que votre père aime écouter du rock ?",
+          "options": [
+            "Oui, mon père aime écouter du rock.",
+            "Oui, mon père aimes écouter du rock.",
+            "Oui, mon père aiment écouter du rock."
+          ],
+          "answer": "Oui, mon père aime écouter du rock.",
+          "en": "Does your father like to listen to rock?",
+          "why": "Mon père = il: aime.",
+          "rule": "er"
+        },
+        {
+          "id": "e5-4",
+          "set": "Exercice 5 · Passetemps préférés",
+          "text": "Est-ce que votre petit ami aime faire une promenade ?",
+          "options": [
+            "Oui, mon petit ami aime faire une promenade.",
+            "Oui, mon petit ami aimez faire une promenade.",
+            "Oui, mon petit ami aimons faire une promenade."
+          ],
+          "answer": "Oui, mon petit ami aime faire une promenade.",
+          "en": "Does your boyfriend like to take a walk?",
+          "why": "Mon petit ami = il: aime.",
+          "rule": "er"
+        },
+        {
+          "id": "e5-5",
+          "set": "Exercice 5 · Passetemps préférés",
+          "text": "Est-ce que votre professeur de français aime aller au cinéma ?",
+          "options": [
+            "Non, mon professeur n'aime pas aller au cinéma.",
+            "Non, mon professeur ne aime pas aller au cinéma.",
+            "Non, mon professeur n'aime aller pas au cinéma."
+          ],
+          "answer": "Non, mon professeur n'aime pas aller au cinéma.",
+          "en": "Does your French teacher like to go to the movies?",
+          "why": "Sandwich: n'aime pas, then the infinitive.",
+          "rule": "neg"
+        },
+        {
+          "id": "e5-6",
+          "set": "Exercice 5 · Passetemps préférés",
+          "text": "Est-ce que vous aimez jouer au tennis le weekend ?",
+          "options": [
+            "Oui, j'aime jouer au tennis le weekend.",
+            "Oui, je aime jouer au tennis le weekend.",
+            "Oui, j'aimes jouer au tennis le weekend."
+          ],
+          "answer": "Oui, j'aime jouer au tennis le weekend.",
+          "en": "Do you like to play tennis on the weekend?",
+          "why": "Je + aime = j'aime.",
+          "rule": "er"
+        }
+      ]
+    },
+    {
+      "id": "g13",
+      "title": "Dates, age and numbers beyond 100",
+      "section": "Grammaire 1.3",
+      "pages": "pp. 68–69",
+      "teach": [
+        {
+          "title": "La date",
+          "body": "In French, the <b>day comes before the month</b>, and you use plain numbers: <b>le vingt avril</b>. The only exception is the 1st: <b>le premier</b>. Months are not capitalized. 25.12.20 = <b>le 25 décembre 2020</b>.",
+          "examples": [
+            {
+              "fr": "Quelle est la date aujourd'hui ?",
+              "en": "What's today's date?",
+              "pr": "KEL ay lah DAHT oh-zhoor-DWEE",
+              "fa": "کِل اِ لا دات اُژوردویی"
+            },
+            {
+              "fr": "Aujourd'hui, c'est le vingt avril.",
+              "en": "Today is April 20th.",
+              "pr": "oh-zhoor-DWEE, say luh VAN ah-VREEL",
+              "fa": "اُژوردویی، سِ لُ وَن آوریل"
+            },
+            {
+              "fr": "Aujourd'hui, nous sommes le premier janvier.",
+              "en": "Today is January 1st.",
+              "pr": "oh-zhoor-DWEE, noo SUM luh pruh-MYAY zhahn-VYAY",
+              "fa": "اُژوردویی، نو سُم لُ پرُمیه ژانویه"
+            }
+          ],
+          "trick": "Only the 1st is special: le premier. Every other day is just the number: le deux, le trois, le trente et un."
+        },
+        {
+          "grid": true,
+          "say": "Les mois",
+          "sub": "The months. Tap each one to hear it.",
+          "tiles": [
+            {
+              "big": "01",
+              "fr": "janvier",
+              "pr": "zhahn-VYAY",
+              "fa": "ژانویه"
+            },
+            {
+              "big": "02",
+              "fr": "février",
+              "pr": "fay-vree-YAY",
+              "fa": "فِوریه"
+            },
+            {
+              "big": "03",
+              "fr": "mars",
+              "pr": "MARS",
+              "fa": "مارس"
+            },
+            {
+              "big": "04",
+              "fr": "avril",
+              "pr": "ah-VREEL",
+              "fa": "آوریل"
+            },
+            {
+              "big": "05",
+              "fr": "mai",
+              "pr": "MAY",
+              "fa": "مِه"
+            },
+            {
+              "big": "06",
+              "fr": "juin",
+              "pr": "ZHWAN",
+              "fa": "ژوئَن"
+            },
+            {
+              "big": "07",
+              "fr": "juillet",
+              "pr": "zhwee-YAY",
+              "fa": "ژوییه"
+            },
+            {
+              "big": "08",
+              "fr": "août",
+              "pr": "OOT",
+              "fa": "اوت"
+            },
+            {
+              "big": "09",
+              "fr": "septembre",
+              "pr": "sep-TAHM-bruh",
+              "fa": "سِپتامبر"
+            },
+            {
+              "big": "10",
+              "fr": "octobre",
+              "pr": "ok-TOH-bruh",
+              "fa": "اُکتُبر"
+            },
+            {
+              "big": "11",
+              "fr": "novembre",
+              "pr": "noh-VAHM-bruh",
+              "fa": "نُوامبر"
+            },
+            {
+              "big": "12",
+              "fr": "décembre",
+              "pr": "day-SAHM-bruh",
+              "fa": "دِسامبر"
+            }
+          ]
+        },
+        {
+          "title": "Your age: avoir + ans",
+          "body": "In French you <b>have</b> your years: <b>j'ai vingt ans</b> = I am twenty. Use <b>avoir</b> (to have) + number + <b>ans</b>. Never “je suis vingt”.",
+          "table": {
+            "head": [
+              "",
+              "avoir"
+            ],
+            "rows": [
+              [
+                "I",
+                "j'ai"
+              ],
+              [
+                "you (tu)",
+                "tu as"
+              ],
+              [
+                "he / she",
+                "il a"
+              ],
+              [
+                "we",
+                "nous avons"
+              ],
+              [
+                "you (vous)",
+                "vous avez"
+              ],
+              [
+                "they",
+                "ils ont"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "fr": "Joël, quel âge as-tu ?",
+              "en": "Joël, how old are you?",
+              "pr": "zhoh-EL, kel AHZH ah-TÜ",
+              "fa": "ژُئِل، کِل آژ آتو"
+            },
+            {
+              "fr": "J'ai huit ans.",
+              "en": "I'm eight.",
+              "pr": "zhay wee-TAHN",
+              "fa": "ژِ ویتان"
+            },
+            {
+              "fr": "Il a quatorze ans.",
+              "en": "He's fourteen.",
+              "pr": "ee-LAH kah-tor-ZAHN",
+              "fa": "ایلا کاتُرزان"
+            }
+          ],
+          "trick": "Ans means years: j'ai 20 ans = I have 20 years. Ans always links: vingt_ans, huit_ans."
+        },
+        {
+          "title": "Your birthday",
+          "body": "To give your birthday, use <b>Mon anniversaire est le …</b>. To say the year you were born, use <b>Je suis né en …</b> (add an e if you're a woman: <b>née</b>; it sounds the same).",
+          "examples": [
+            {
+              "fr": "Mon anniversaire est le vingt et un septembre.",
+              "en": "My birthday is September 21st.",
+              "pr": "moh-nah-nee-vehr-SEHR ay luh van-tay-UHN sep-TAHM-bruh",
+              "fa": "مُنانیوِرسِر اِ لُ وَنتِ‌اَن سِپتامبر"
+            },
+            {
+              "fr": "Je suis née en deux mille trois.",
+              "en": "I was born in 2003.",
+              "pr": "zhuh swee NAY ahn duh meel TRWAH",
+              "fa": "ژُ سویی نه آن دُ میل تروا"
+            }
+          ]
+        },
+        {
+          "title": "Numbers beyond 100",
+          "body": "<b>Cent</b> takes an s only when nothing follows: <b>deux cents</b>, but <b>deux cent un</b>. <b>Mille</b> never takes an s: <b>deux mille</b>. Million and milliard do: <b>deux millions</b>. French writes a period in big numbers: 1.000.000. Years before 2000 can be said two ways: 1998 = <b>mille neuf cent quatre-vingt-dix-huit</b> or <b>dix-neuf cent quatre-vingt-dix-huit</b>.",
+          "examples": [],
+          "numbers": [
+            101,
+            200,
+            201,
+            1000,
+            2000,
+            10000,
+            100000,
+            1000000,
+            2000000,
+            1000000000
+          ],
+          "trick": "Cents loses its s when it isn't last: deux cents, deux cent un. Mille is never plural."
+        }
+      ],
+      "notes": [
+        "Dates: day before month, plain numbers: le vingt avril. The 1st is le premier.",
+        "Months are lowercase: janvier, février, mars, avril, mai, juin, juillet, août, septembre, octobre, novembre, décembre.",
+        "Age: avoir + number + ans: J'ai vingt ans. Quel âge as-tu ?",
+        "avoir: j'ai, tu as, il/elle a, nous avons, vous avez, ils/elles ont.",
+        "Birthday: Mon anniversaire est le … Born: Je suis né(e) en …",
+        "deux cents but deux cent un; mille never takes an s; deux millions, deux milliards.",
+        "French uses a period in big numbers: 1.000.000."
+      ],
+      "drills": [
+        {
+          "id": "d1",
+          "set": "Practice",
+          "text": "Aujourd'hui, c'est le ___ janvier. (Jan. 1st)",
+          "options": [
+            "premier",
+            "un",
+            "première"
+          ],
+          "answer": "premier",
+          "en": "Today is January 1st.",
+          "why": "Only the 1st uses premier.",
+          "rule": "date",
+          "after": 0
+        },
+        {
+          "id": "d2",
+          "set": "Practice",
+          "text": "25.12.2020 = ___",
+          "options": [
+            "le vingt-cinq décembre deux mille vingt",
+            "le décembre vingt-cinq deux mille vingt",
+            "le douze vingt-cinq deux mille vingt"
+          ],
+          "answer": "le vingt-cinq décembre deux mille vingt",
+          "en": "December 25th, 2020",
+          "why": "Day first, then month, then year.",
+          "rule": "date",
+          "after": 1
+        },
+        {
+          "id": "d3",
+          "set": "Practice",
+          "text": "14.07 = ___",
+          "options": [
+            "le quatorze juillet",
+            "le juillet quatorze",
+            "le quatorzième juillet"
+          ],
+          "answer": "le quatorze juillet",
+          "en": "July 14th",
+          "why": "Day first, plain number.",
+          "rule": "date",
+          "after": 1
+        },
+        {
+          "id": "d4",
+          "set": "Practice",
+          "text": "Quel âge ___-tu ?",
+          "options": [
+            "as",
+            "a",
+            "es"
+          ],
+          "answer": "as",
+          "en": "How old are you?",
+          "why": "Avoir with tu: tu as.",
+          "rule": "age",
+          "after": 2
+        },
+        {
+          "id": "d5",
+          "set": "Practice",
+          "text": "J'___ vingt ans.",
+          "options": [
+            "ai",
+            "as",
+            "suis"
+          ],
+          "answer": "ai",
+          "en": "I'm twenty.",
+          "why": "Avoir, not être: j'ai vingt ans.",
+          "rule": "age",
+          "after": 2
+        },
+        {
+          "id": "d6",
+          "set": "Practice",
+          "text": "Mes cousins ___ douze ans.",
+          "options": [
+            "ont",
+            "sont",
+            "avons"
+          ],
+          "answer": "ont",
+          "en": "My cousins are twelve.",
+          "why": "Mes cousins = ils: ils ont.",
+          "rule": "age",
+          "after": 2
+        },
+        {
+          "id": "d7",
+          "set": "Practice",
+          "text": "Nous ___ dix-neuf ans.",
+          "options": [
+            "avons",
+            "avez",
+            "sommes"
+          ],
+          "answer": "avons",
+          "en": "We are nineteen.",
+          "why": "Nous avons.",
+          "rule": "age",
+          "after": 2
+        },
+        {
+          "id": "d8",
+          "set": "Practice",
+          "type": "sentence",
+          "text": "Say it in French: I am 20 years old.",
+          "answer": "J'ai vingt ans.",
+          "accept": [
+            "J'ai vingt ans.",
+            "J'ai 20 ans."
+          ],
+          "en": "",
+          "why": "Avoir + number + ans.",
+          "after": 2,
+          "rule": "age"
+        },
+        {
+          "id": "d9",
+          "set": "Practice",
+          "type": "sentence",
+          "text": "Say it in French: My birthday is March 1st.",
+          "answer": "Mon anniversaire est le premier mars.",
+          "accept": [
+            "Mon anniversaire est le premier mars.",
+            "Mon anniversaire est le 1er mars."
+          ],
+          "en": "",
+          "why": "Le premier for the 1st, and the month comes after.",
+          "after": 3,
+          "rule": "date"
+        },
+        {
+          "id": "d10",
+          "set": "Practice",
+          "text": "200 = ___",
+          "options": [
+            "deux cents",
+            "deux cent",
+            "deux centes"
+          ],
+          "answer": "deux cents",
+          "en": "200",
+          "why": "Nothing follows, so cents keeps its s.",
+          "rule": "big",
+          "after": 4
+        },
+        {
+          "id": "d11",
+          "set": "Practice",
+          "text": "201 = ___",
+          "options": [
+            "deux cent un",
+            "deux cents un",
+            "deux cent et un"
+          ],
+          "answer": "deux cent un",
+          "en": "201",
+          "why": "A number follows, so cent loses its s.",
+          "rule": "big",
+          "after": 4
+        },
+        {
+          "id": "d12",
+          "set": "Practice",
+          "text": "3.000 = ___",
+          "options": [
+            "trois mille",
+            "trois milles",
+            "trois mil"
+          ],
+          "answer": "trois mille",
+          "en": "3,000",
+          "why": "Mille never takes an s.",
+          "rule": "big",
+          "after": 4
+        },
+        {
+          "id": "d13",
+          "set": "Practice",
+          "text": "2.000.000 = ___",
+          "options": [
+            "deux millions",
+            "deux million",
+            "deux mille"
+          ],
+          "answer": "deux millions",
+          "en": "2,000,000",
+          "why": "Million does take an s.",
+          "rule": "big",
+          "after": 4
+        },
+        {
+          "id": "d14",
+          "set": "Practice",
+          "text": "1998 = ___",
+          "options": [
+            "mille neuf cent quatre-vingt-dix-huit",
+            "mille neuf cents quatre-vingt-dix-huit",
+            "mille neuf cent quatre-vingts-dix-huit"
+          ],
+          "answer": "mille neuf cent quatre-vingt-dix-huit",
+          "en": "1998",
+          "why": "Cent and vingt lose their s when a number follows.",
+          "rule": "big",
+          "after": 4
+        },
+        {
+          "id": "d15",
+          "set": "Practice",
+          "type": "listen-digits",
+          "say": "deux mille vingt-six",
+          "answer": "2026",
+          "en": "2026",
+          "after": 4
+        },
+        {
+          "id": "d16",
+          "set": "Practice",
+          "type": "listen-digits",
+          "say": "mille neuf cent quatre-vingt-dix-huit",
+          "answer": "1998",
+          "en": "1998",
+          "after": 4
+        },
+        {
+          "id": "d17",
+          "set": "Practice",
+          "type": "listen-digits",
+          "say": "trois cent soixante-cinq",
+          "answer": "365",
+          "en": "365",
+          "after": 4
+        },
+        {
+          "id": "d18",
+          "set": "Practice",
+          "type": "listen-digits",
+          "say": "cinq cent mille",
+          "answer": "500000",
+          "en": "500.000",
+          "after": 4
+        }
+      ],
+      "tricks": {
+        "date": "Only the 1st is special: le premier. Every other day is just the number.",
+        "age": "In French you HAVE your years: j'ai vingt ans.",
+        "big": "Cents loses its s when another number follows. Mille never takes an s."
+      },
+      "exercises": [
+        {
+          "id": "e6-1",
+          "set": "Exercice 6 · La famille Colin",
+          "type": "sentence",
+          "text": "Quel âge a Francis Lasalle ? (70)",
+          "answer": "Il a soixante-dix ans.",
+          "accept": [
+            "Il a soixante-dix ans.",
+            "Il a 70 ans."
+          ],
+          "en": "How old is Francis Lasalle? (70)",
+          "why": "Il a + soixante-dix + ans.",
+          "rule": "age"
+        },
+        {
+          "id": "e6-2",
+          "set": "Exercice 6 · La famille Colin",
+          "type": "sentence",
+          "text": "Quel âge a Claudine Colin ? (45)",
+          "answer": "Elle a quarante-cinq ans.",
+          "accept": [
+            "Elle a quarante-cinq ans.",
+            "Elle a 45 ans."
+          ],
+          "en": "How old is Claudine Colin? (45)",
+          "why": "Claudine = elle: elle a.",
+          "rule": "age"
+        },
+        {
+          "id": "e6-3",
+          "set": "Exercice 6 · La famille Colin",
+          "type": "sentence",
+          "text": "Quel âge a Victor Colin ? (47)",
+          "answer": "Il a quarante-sept ans.",
+          "accept": [
+            "Il a quarante-sept ans.",
+            "Il a 47 ans."
+          ],
+          "en": "How old is Victor Colin? (47)",
+          "why": "Il a quarante-sept ans.",
+          "rule": "age"
+        },
+        {
+          "id": "e6-4",
+          "set": "Exercice 6 · La famille Colin",
+          "type": "sentence",
+          "text": "Quel âge a Marise et Clarisse ? (19)",
+          "answer": "Elles ont dix-neuf ans.",
+          "accept": [
+            "Elles ont dix-neuf ans.",
+            "Elles ont 19 ans."
+          ],
+          "en": "How old is Marise et Clarisse? (19)",
+          "why": "Two women: elles ont.",
+          "rule": "age"
+        },
+        {
+          "id": "e6-5",
+          "set": "Exercice 6 · La famille Colin",
+          "type": "sentence",
+          "text": "Quel âge a Charles ? (17)",
+          "answer": "Il a dix-sept ans.",
+          "accept": [
+            "Il a dix-sept ans.",
+            "Il a 17 ans."
+          ],
+          "en": "How old is Charles? (17)",
+          "why": "Il a dix-sept ans.",
+          "rule": "age"
+        },
+        {
+          "id": "e6-6",
+          "set": "Exercice 6 · La famille Colin",
+          "type": "sentence",
+          "text": "Quel âge a Emmanuel ? (14)",
+          "answer": "Il a quatorze ans.",
+          "accept": [
+            "Il a quatorze ans.",
+            "Il a 14 ans."
+          ],
+          "en": "How old is Emmanuel? (14)",
+          "why": "Il a quatorze ans.",
+          "rule": "age"
+        },
+        {
+          "id": "e7-1",
+          "set": "Exercice 7 · Au téléphone",
+          "type": "listen-digits",
+          "say": "zéro deux, soixante-cinq, dix, quatre-vingts, trente",
+          "fr": "zéro deux, soixante-cinq, dix, quatre-vingts, trente",
+          "answer": "0265108030",
+          "en": "02 65 10 80 30",
+          "why": "French phone numbers are read in pairs: zéro deux, soixante-cinq, dix, quatre-vingts, trente."
+        },
+        {
+          "id": "e7-2",
+          "set": "Exercice 7 · Au téléphone",
+          "type": "speak",
+          "say": "zéro trois, quatre-vingt-sept, cinquante-trois, quarante, seize",
+          "fr": "zéro trois, quatre-vingt-sept, cinquante-trois, quarante, seize",
+          "answer": "0387534016",
+          "en": "03 87 53 40 16",
+          "why": "French phone numbers are read in pairs: zéro trois, quatre-vingt-sept, cinquante-trois, quarante, seize."
+        },
+        {
+          "id": "e7-3",
+          "set": "Exercice 7 · Au téléphone",
+          "type": "listen-digits",
+          "say": "zéro un, vingt, cinquante-cinq, soixante-dix, quatre-vingt-un",
+          "fr": "zéro un, vingt, cinquante-cinq, soixante-dix, quatre-vingt-un",
+          "answer": "0120557081",
+          "en": "01 20 55 70 81",
+          "why": "French phone numbers are read in pairs: zéro un, vingt, cinquante-cinq, soixante-dix, quatre-vingt-un."
+        },
+        {
+          "id": "e7-4",
+          "set": "Exercice 7 · Au téléphone",
+          "type": "speak",
+          "say": "zéro un, quatre-vingt-dix-huit, soixante-quinze, vingt et un, soixante",
+          "fr": "zéro un, quatre-vingt-dix-huit, soixante-quinze, vingt et un, soixante",
+          "answer": "0198752160",
+          "en": "01 98 75 21 60",
+          "why": "French phone numbers are read in pairs: zéro un, quatre-vingt-dix-huit, soixante-quinze, vingt et un, soixante."
+        },
+        {
+          "id": "e7-5",
+          "set": "Exercice 7 · Au téléphone",
+          "type": "listen-digits",
+          "say": "zéro deux, soixante-dix-sept, trente-huit, quatre-vingt-deux, quatre-vingt-dix-sept",
+          "fr": "zéro deux, soixante-dix-sept, trente-huit, quatre-vingt-deux, quatre-vingt-dix-sept",
+          "answer": "0277388297",
+          "en": "02 77 38 82 97",
+          "why": "French phone numbers are read in pairs: zéro deux, soixante-dix-sept, trente-huit, quatre-vingt-deux, quatre-vingt-dix-sept."
+        },
+        {
+          "id": "e7-6",
+          "set": "Exercice 7 · Au téléphone",
+          "type": "speak",
+          "say": "zéro quatre, quatre-vingt-onze, dix-huit, trente-neuf, soixante-dix-huit",
+          "fr": "zéro quatre, quatre-vingt-onze, dix-huit, trente-neuf, soixante-dix-huit",
+          "answer": "0491183978",
+          "en": "04 91 18 39 78",
+          "why": "French phone numbers are read in pairs: zéro quatre, quatre-vingt-onze, dix-huit, trente-neuf, soixante-dix-huit."
+        },
+        {
+          "id": "e7-7",
+          "set": "Exercice 7 · Au téléphone",
+          "type": "listen-digits",
+          "say": "zéro quatre, quarante-cinq, soixante-deux, quatre-vingt-six, quarante-trois",
+          "fr": "zéro quatre, quarante-cinq, soixante-deux, quatre-vingt-six, quarante-trois",
+          "answer": "0445628643",
+          "en": "04 45 62 86 43",
+          "why": "French phone numbers are read in pairs: zéro quatre, quarante-cinq, soixante-deux, quatre-vingt-six, quarante-trois."
+        },
+        {
+          "id": "e7-8",
+          "set": "Exercice 7 · Au téléphone",
+          "type": "speak",
+          "say": "zéro trois, quatre-vingt-trois, soixante-seize, soixante-quatre, quatre-vingt-dix",
+          "fr": "zéro trois, quatre-vingt-trois, soixante-seize, soixante-quatre, quatre-vingt-dix",
+          "answer": "0383766490",
+          "en": "03 83 76 64 90",
+          "why": "French phone numbers are read in pairs: zéro trois, quatre-vingt-trois, soixante-seize, soixante-quatre, quatre-vingt-dix."
+        },
+        {
+          "id": "e7-9",
+          "set": "Exercice 7 · Au téléphone",
+          "type": "listen-digits",
+          "say": "zéro deux, cinquante-trois, soixante-sept, zéro sept, onze",
+          "fr": "zéro deux, cinquante-trois, soixante-sept, zéro sept, onze",
+          "answer": "0253670711",
+          "en": "02 53 67 07 11",
+          "why": "French phone numbers are read in pairs: zéro deux, cinquante-trois, soixante-sept, zéro sept, onze."
+        }
+      ]
+    }
+  ],
+  "readings": [
+    {
+      "id": "r1",
+      "title": "Le dimanche de Minou",
+      "lines": [
+        {
+          "fr": "Le dimanche, j'adore dormir tard.",
+          "en": "On Sundays, I love to sleep late.",
+          "pr": "luh dee-MAHNSH, zhah-DOR dor-MEER TAR",
+          "fa": "لُ دیمانش، ژادُر دُرمیر تار"
+        },
+        {
+          "fr": "Après, j'aime faire une promenade avec ma grand-mère.",
+          "en": "Afterwards, I like to take a walk with my grandmother.",
+          "pr": "ah-PREH, ZHEM fehr ün prom-NAHD ah-VEK mah grahn-MEHR",
+          "fa": "آپرِ، ژِم فِر یون پرُمناد آوِک ما گران‌مِر"
+        },
+        {
+          "fr": "Mon frère Pompon aime jouer aux jeux vidéo, mais il n'aime pas lire.",
+          "en": "My brother Pompon likes to play video games, but he doesn't like to read.",
+          "pr": "mohn FREHR pohn-POHN EM zhoo-AY oh ZHUH vee-day-OH, may eel NEM pah LEER",
+          "fa": "مُن فرِر پُنپُن اِم ژوئه اُ ژُ ویدئو، مِ ایل نِم پا لیر"
+        },
+        {
+          "fr": "Ma sœur Praline et moi, nous aimons chanter sous la douche !",
+          "en": "My sister Praline and I like to sing in the shower!",
+          "pr": "mah SUHR prah-LEEN ay MWAH, noo-zeh-MOHN shahn-TAY soo lah DOOSH",
+          "fa": "ما سُر پرالین اِ موا، نوزِمُن شانته سو لا دوش"
+        },
+        {
+          "fr": "Mes parents aiment mieux rester à la maison et regarder la télé.",
+          "en": "My parents prefer to stay home and watch TV.",
+          "pr": "may pah-RAHN em MYUH res-TAY ah lah may-ZOHN ay ruh-gar-DAY lah tay-LAY",
+          "fa": "مِ پاران اِم میُ رِسته آ لا مِزُن اِ رُگارده لا تِله"
+        },
+        {
+          "fr": "Et moi ? J'ai horreur de faire les courses.",
+          "en": "And me? I hate grocery shopping.",
+          "pr": "ay MWAH? zhay oh-RUHR duh fehr lay KOORS",
+          "fa": "اِ موا؟ ژِ اُرُر دُ فِر لِ کورس"
+        }
+      ],
+      "questions": [
+        {
+          "q": "Qu'est-ce que Minou adore faire le dimanche ?",
+          "hint": "What does Minou love to do on Sundays?",
+          "options": [
+            "dormir tard",
+            "faire les courses",
+            "jouer au tennis"
+          ],
+          "answer": "dormir tard",
+          "optionsEn": {
+            "dormir tard": "to sleep late",
+            "faire les courses": "to go grocery shopping",
+            "jouer au tennis": "to play tennis"
+          }
+        },
+        {
+          "q": "Qui aime jouer aux jeux vidéo ?",
+          "hint": "Who likes to play video games?",
+          "options": [
+            "Pompon",
+            "Praline",
+            "la grand-mère"
+          ],
+          "answer": "Pompon",
+          "optionsEn": {
+            "Pompon": "Pompon (the brother)",
+            "Praline": "Praline (the sister)",
+            "la grand-mère": "the grandmother"
+          }
+        },
+        {
+          "q": "Qu'est-ce que Pompon n'aime pas faire ?",
+          "hint": "What doesn't Pompon like to do?",
+          "options": [
+            "lire",
+            "chanter",
+            "dormir"
+          ],
+          "answer": "lire",
+          "optionsEn": {
+            "lire": "to read",
+            "chanter": "to sing",
+            "dormir": "to sleep"
+          }
+        },
+        {
+          "q": "Qu'est-ce que Minou déteste faire ?",
+          "hint": "What does Minou hate to do?",
+          "options": [
+            "faire les courses",
+            "faire une promenade",
+            "chanter sous la douche"
+          ],
+          "answer": "faire les courses",
+          "optionsEn": {
+            "faire les courses": "to go grocery shopping",
+            "faire une promenade": "to take a walk",
+            "chanter sous la douche": "to sing in the shower"
+          }
+        }
+      ]
+    },
+    {
+      "id": "r2",
+      "title": "Bon anniversaire !",
+      "lines": [
+        {
+          "who": "Léa",
+          "fr": "Salut ! Je m'appelle Léa. Et toi ?",
+          "en": "Hi! My name is Léa. And you?",
+          "pr": "sah-LÜ! zhuh mah-PEL lay-AH. ay TWAH?",
+          "fa": "سالو! ژُ ماپِل لِآ. اِ توا؟"
+        },
+        {
+          "who": "Sami",
+          "fr": "Moi, c'est Sami. Quel âge as-tu ?",
+          "en": "I'm Sami. How old are you?",
+          "pr": "MWAH, say sah-MEE. kel AHZH ah-TÜ?",
+          "fa": "موا، سِ سامی. کِل آژ آتو؟"
+        },
+        {
+          "who": "Léa",
+          "fr": "J'ai dix-neuf ans. Je suis née en deux mille sept.",
+          "en": "I'm nineteen. I was born in 2007.",
+          "pr": "zhay deez-nuh-VAHN. zhuh swee NAY ahn duh meel SET",
+          "fa": "ژِ دیزنُوان. ژُ سویی نه آن دُ میل سِت"
+        },
+        {
+          "who": "Sami",
+          "fr": "Moi, j'ai vingt ans. Mon anniversaire est le premier mars.",
+          "en": "I'm twenty. My birthday is March 1st.",
+          "pr": "MWAH, zhay van-TAHN. moh-nah-nee-vehr-SEHR ay luh pruh-MYAY MARS",
+          "fa": "موا، ژِ وَنتان. مُنانیوِرسِر اِ لُ پرُمیه مارس"
+        },
+        {
+          "who": "Léa",
+          "fr": "Le premier mars ? C'est aujourd'hui ! Bon anniversaire !",
+          "en": "March 1st? That's today! Happy birthday!",
+          "pr": "luh pruh-MYAY MARS? say-toh-zhoor-DWEE! bo-nah-nee-vehr-SEHR!",
+          "fa": "لُ پرُمیه مارس؟ سِتُژوردویی! بُنانیوِرسِر!"
+        },
+        {
+          "who": "Sami",
+          "fr": "Merci ! Tu aimes danser ? Ce soir, on fait la fête !",
+          "en": "Thanks! Do you like to dance? Tonight, we're having a party!",
+          "pr": "mehr-SEE! tü EM dahn-SAY? suh SWAR, ohn FEH lah FET!",
+          "fa": "مِرسی! تو اِم دانسه؟ سُ سوآر، اُن فِ لا فِت!"
+        }
+      ],
+      "questions": [
+        {
+          "q": "Quel âge a Léa ?",
+          "hint": "How old is Léa?",
+          "options": [
+            "dix-neuf ans",
+            "vingt ans",
+            "dix-sept ans"
+          ],
+          "answer": "dix-neuf ans",
+          "optionsEn": {
+            "dix-neuf ans": "nineteen",
+            "vingt ans": "twenty",
+            "dix-sept ans": "seventeen"
+          }
+        },
+        {
+          "q": "Quand est l'anniversaire de Sami ?",
+          "hint": "When is Sami's birthday?",
+          "options": [
+            "le premier mars",
+            "le premier mai",
+            "le vingt mars"
+          ],
+          "answer": "le premier mars",
+          "optionsEn": {
+            "le premier mars": "March 1st",
+            "le premier mai": "May 1st",
+            "le vingt mars": "March 20th"
+          }
+        },
+        {
+          "q": "En quelle année est née Léa ?",
+          "hint": "What year was Léa born?",
+          "options": [
+            "deux mille sept",
+            "deux mille dix-sept",
+            "mille neuf cent sept"
+          ],
+          "answer": "deux mille sept",
+          "optionsEn": {
+            "deux mille sept": "2007",
+            "deux mille dix-sept": "2017",
+            "mille neuf cent sept": "1907"
+          }
+        },
+        {
+          "q": "Qu'est-ce qu'on fait ce soir ?",
+          "hint": "What are they doing tonight?",
+          "options": [
+            "la fête",
+            "du ski",
+            "les courses"
+          ],
+          "answer": "la fête",
+          "optionsEn": {
+            "la fête": "a party",
+            "du ski": "skiing",
+            "les courses": "grocery shopping"
+          }
+        }
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "t1",
+      "fr": "J'aime aller au cinéma.",
+      "en": "I like to go to the movies.",
+      "pr": "ZHEM ah-LAY oh see-nay-MAH",
+      "fa": "ژِم آله اُ سینما"
+    },
+    {
+      "id": "t2",
+      "fr": "Tu aimes danser ?",
+      "en": "Do you like to dance?",
+      "pr": "tü EM dahn-SAY",
+      "fa": "تو اِم دانسه",
+      "alts": [
+        "Est-ce que tu aimes danser ?"
+      ]
+    },
+    {
+      "id": "t3",
+      "fr": "Nous adorons voyager.",
+      "en": "We love to travel.",
+      "pr": "noo-zah-doh-ROHN vwah-yah-ZHAY",
+      "fa": "نوزادُرُن ووآیاژه"
+    },
+    {
+      "id": "t4",
+      "fr": "Mes amis aiment jouer au foot.",
+      "en": "My friends like to play soccer.",
+      "pr": "may-zah-MEE EM zhoo-AY oh FOOT",
+      "fa": "مِزامی اِم ژوئه اُ فوت",
+      "alts": [
+        "Mes amis aiment jouer au football."
+      ]
+    },
+    {
+      "id": "t5",
+      "fr": "Je n'aime pas faire les courses.",
+      "en": "I don't like to go grocery shopping.",
+      "pr": "zhuh NEM pah fehr lay KOORS",
+      "fa": "ژُ نِم پا فِر لِ کورس"
+    },
+    {
+      "id": "t6",
+      "fr": "Elle aime mieux rester à la maison.",
+      "en": "She prefers to stay home.",
+      "pr": "el em MYUH res-TAY ah lah may-ZOHN",
+      "fa": "اِل اِم میُ رِسته آ لا مِزُن"
+    },
+    {
+      "id": "t7",
+      "fr": "Vous aimez nager à la piscine ?",
+      "en": "Do you like to swim in the pool?",
+      "pr": "voo-zeh-MAY nah-ZHAY ah lah pee-SEEN",
+      "fa": "ووزِمه ناژه آ لا پیسین",
+      "alts": [
+        "Est-ce que vous aimez nager à la piscine ?"
+      ]
+    },
+    {
+      "id": "t8",
+      "fr": "J'ai horreur de faire la cuisine.",
+      "en": "I hate cooking.",
+      "pr": "zhay oh-RUHR duh fehr lah kwee-ZEEN",
+      "fa": "ژِ اُرُر دُ فِر لا کویزین",
+      "alts": [
+        "J'ai horreur de cuisiner."
+      ]
+    },
+    {
+      "id": "t9",
+      "fr": "J'ai vingt ans.",
+      "en": "I am twenty years old.",
+      "pr": "zhay van-TAHN",
+      "fa": "ژِ وَنتان",
+      "alts": [
+        "J'ai 20 ans."
+      ]
+    },
+    {
+      "id": "t10",
+      "fr": "Mon anniversaire est le premier mars.",
+      "en": "My birthday is March 1st.",
+      "pr": "moh-nah-nee-vehr-SEHR ay luh pruh-MYAY MARS",
+      "fa": "مُنانیوِرسِر اِ لُ پرُمیه مارس"
+    },
+    {
+      "id": "t11",
+      "fr": "Quelle est la date aujourd'hui ?",
+      "en": "What's today's date?",
+      "pr": "KEL ay lah DAHT oh-zhoor-DWEE",
+      "fa": "کِل اِ لا دات اُژوردویی"
+    },
+    {
+      "id": "t12",
+      "fr": "Aujourd'hui, c'est le vingt avril.",
+      "en": "Today is April 20th.",
+      "pr": "oh-zhoor-DWEE, say luh VAN ah-VREEL",
+      "fa": "اُژوردویی، سِ لُ وَن آوریل",
+      "alts": [
+        "Aujourd'hui, nous sommes le vingt avril."
+      ]
+    },
+    {
+      "id": "t13",
+      "fr": "Qu'est-ce que tu aimes faire ?",
+      "en": "What do you like to do?",
+      "pr": "KESS-kuh tü EM FEHR",
+      "fa": "کِس‌کُ تو اِم فِر"
+    },
+    {
+      "id": "t14",
+      "fr": "Je suis née en deux mille trois.",
+      "en": "I was born in 2003.",
+      "pr": "zhuh swee NAY ahn duh meel TRWAH",
+      "fa": "ژُ سویی نه آن دُ میل تروا",
+      "alts": [
+        "Je suis né en deux mille trois.",
+        "Je suis née en 2003.",
+        "Je suis né en 2003."
+      ]
+    }
+  ],
+  "bigNumbers": [
+    101,
+    150,
+    200,
+    201,
+    300,
+    365,
+    500,
+    999,
+    1000,
+    2000,
+    2003,
+    2007,
+    2020,
+    2026,
+    10000,
+    100000,
+    1000000,
+    2000000,
+    1000000000,
+    1998
+  ]
+}
