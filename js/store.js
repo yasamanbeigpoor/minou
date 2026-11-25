@@ -6,7 +6,7 @@ const KEY = 'minou.v1';
 
 const fresh = () => ({
   xp: 0,
-  days: {},            // 'YYYY-MM-DD' -> xp earned that day
+  days: {},            // 'YYYY-MM-DD' -> lessons finished that day
   streak: { count: 0, last: null },
   done: {},            // nodeKey -> { best, stars, times }
   cards: {},           // itemId -> FSRS card
@@ -37,10 +37,10 @@ export function save() {
 
 export const get = () => state;
 
-export function addXP(n) {
+// Record that the learner practised today (drives the streak).
+export function markActive() {
   const t = todayKey();
-  state.xp += n;
-  state.days[t] = (state.days[t] || 0) + n;
+  state.days[t] = (state.days[t] || 0) + 1;
   touchStreak();
   save();
 }
@@ -60,7 +60,6 @@ export function streakNow() {
   return daysBetween(last, todayKey()) <= 1 ? count : 0;
 }
 
-export const todayXP = () => state.days[todayKey()] || 0;
 
 export function record(itemId, grade, skill, label) {
   state.cards[itemId] = review(state.cards[itemId], grade);

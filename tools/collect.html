@@ -1,0 +1,10 @@
+<!doctype html>
+<meta charset="utf-8">
+<base href="../">
+<script type="module">
+  import { loadAll } from './js/data.js';
+  import { speakables } from './tools/speakables.js';
+  await loadAll();
+  window.SPEAKABLES = speakables();
+  document.body.dataset.ready = '1';
+</script>

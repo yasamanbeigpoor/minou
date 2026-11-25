@@ -19,6 +19,7 @@ function compose(n, U, T, et, join) {
   }
   if (n < 80) return T[60] + (n === 71 ? `${et}${U[11]}` : join + U[n - 60]);
   if (n < 100) return n === 80 ? (U === FA_UNITS ? 'کاتر وَن' : 'KAH-truh VAN') : (U === FA_UNITS ? 'کاتر وَن ' : 'KAH-truh-van-') + U[n - 80];
+  if (n === 100) return U === FA_UNITS ? 'سان' : 'SAHN';
   return String(n);
 }
 

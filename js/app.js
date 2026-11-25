@@ -1,13 +1,13 @@
 // Minou: screens, navigation and wiring.
 import { h, $, todayKey, pick } from './util.js';
-import { DB, loadAll, nodeState, currentNode, startedModules, moduleByKey } from './data.js';
+import { DB, loadAll, nodeState, currentNode, startedModules, moduleByKey, preModules, mainModules } from './data.js';
 import * as store from './store.js';
-import { buildNode, buildReview, buildWeak, buildExam, buildNumbers, dueCount } from './build.js';
+import { buildNode, buildReview, buildWeak, buildExam, buildNumbersDrill, dueCount } from './build.js';
 import { runLesson, showResults, skillBar } from './lesson.js';
 import { minouSVG, setMood } from './minou.js';
 import { icon } from './icons.js';
 import { renderSummary } from './summary.js';
-import { speak, frenchVoices, refreshVoice, ttsSupported, sttSupported } from './speech.js';
+import { speak, sttSupported } from './speech.js';
 import { sfx } from './sound.js';
 import { startTour } from './tour.js';
 import { applyPronClasses, prOn, faOn } from './fa.js';
@@ -17,18 +17,12 @@ let installEvt = null;
 addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); installEvt = e; });
 
 const NODE_BLURB = {
-  review: 'A mixed quiz on everything you learned before this module.',
-  words: (n) => `Meet ${n.items.length} new words, then practise them by reading, writing, listening and speaking.`,
-  grammar: 'Minou explains the rule step by step, then you drill it.',
-  exercises: 'The textbook exercises, with instant feedback on every blank.',
-  reading: 'Read short texts, hear every line, and answer questions.',
-  listen: 'Build, hear, type and say full sentences.',
-  numbers: (n) => `Learn the numbers ${n.mod.numbers[0]} to ${n.mod.numbers[1]}, then hear, read, write and say them.`,
-  checkpoint: 'A mixed test of the whole module. Pass it to unlock the next module.',
-  letters: (n) => `Meet ${n.letters.length} letters: how to say each one, then hear them, name them and say them.`,
-  'letter-traps': 'The letters English speakers mix up, drilled by ear until they stick.',
-  accents: 'What each accent looks like, how it sounds, and how to type it.',
-  spell: 'Minou spells words from your lessons letter by letter. You type the word, then spell some yourself.',
+  alphabet: 'All 26 letters with their French names, the tricky pairs like G and J, the accents, and a spelling game.',
+  numbers: 'Count from 0 to 100: the numbers to learn by heart, the tens, and how French builds 70, 80 and 90.',
+  vocab: (n) => `All ${n.mod.vocab.length} words of the module, in small groups with matching games, then reading, writing, listening and speaking practice.`,
+  grammar: 'Minou explains the rule step by step, you drill it, then you do the textbook exercises.',
+  'module-review': 'Short readings, then a mixed test of the whole module. Pass it to unlock the next module.',
+  review: 'A mixed recap of everything before this module, weighted toward what you’re about to forget.',
 };
 
 // ---------- Boot ----------
@@ -64,7 +58,7 @@ function onboarding() {
     h('div', { class: 'onboard-card' }, cat,
       h('h1', { id: 'ob-title', lang: 'fr' }, 'Bonjour ! Je suis Minou.'),
       h('p', { class: 'ob-en' }, 'Hello! I’m Minou.'),
-      h('p', {}, 'I’ll be your French teacher. Every day: a quick review, a new module, and ten new numbers. Everything comes with English, and you can turn on pronunciation help in English or Persian.'),
+      h('p', {}, 'I’ll be your French teacher. Start with the alphabet and numbers, then work through one module a day: vocabulary, grammar, review. Everything comes with English, and you can turn on pronunciation help in English or Persian.'),
       h('label', { class: 'field' }, h('span', { lang: 'fr' }, 'Et toi, comment tu t’appelles ?'), h('small', {}, 'And you, what’s your name?'), input),
       go));
   go.onclick = () => {
@@ -98,18 +92,11 @@ function tabBar(active) {
 }
 
 function statsBar() {
-  const s = store.get();
-  const goal = s.settings.goal;
-  const today = store.todayXP();
-  const pct = Math.min(1, today / goal);
-  const r = 15, circ = 2 * Math.PI * r;
-  const ring = h('span', { class: 'ring', title: `${today} of ${goal} XP today`, html:
-    `<svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="${r}" class="ring-bg"/><circle cx="18" cy="18" r="${r}" class="ring-fg" stroke-dasharray="${circ}" stroke-dashoffset="${circ * (1 - pct)}"/></svg>` });
-  ring.append(icon('xp'));
+  const streak = store.streakNow();
   return h('header', { class: 'stats' },
     h('div', { class: 'brand' }, h('span', { class: 'wordmark' }, 'minou'), h('span', { class: 'class-tag' }, 'Class 1')),
-    h('div', { class: 'stat streak', title: 'Day streak' }, icon('paw'), h('b', {}, String(store.streakNow()))),
-    h('div', { class: 'stat goal' }, ring, h('b', {}, `${today}/${goal}`)),
+    h('div', { class: 'stat streak', title: `${streak}-day streak` }, icon('paw'), h('b', {}, String(streak)),
+      h('span', { class: 'streak-label' }, streak === 1 ? 'day' : 'days')),
   );
 }
 
@@ -122,17 +109,24 @@ function learnScreen() {
   const name = store.get().settings.name;
   const cur = currentNode();
 
-  for (const m of DB.modules) {
-    const banner = h('div', { class: 'mod-banner' },
-      h('div', {}, h('span', { class: 'mod-num' }, m.bonus ? 'Bonus track' : `Module ${m.number}`), h('h2', {}, m.title), h('p', {}, m.subtitle)),
-      h('a', { class: 'banner-btn', href: `#/notes/${m.key}`, 'aria-label': `Summary of ${m.title}` }, icon('notes'), h('span', {}, 'Summary')));
-    banner.classList.toggle('bonus', !!m.bonus);
+  // The basics (alphabet, numbers) share one section; then one section per module.
+  const sections = [];
+  const pre = preModules();
+  if (pre.length) sections.push({ pre: true, nodes: pre.flatMap((m) => m.nodes), title: 'Les bases', titleEn: 'The basics',
+    sub: 'Start here: the alphabet and numbers 0–100' });
+  for (const m of mainModules()) sections.push({ m, nodes: m.nodes, title: m.title, sub: m.subtitle });
+
+  for (const sec of sections) {
+    const banner = h('div', { class: `mod-banner ${sec.pre ? 'pre' : ''}` },
+      h('div', {}, h('span', { class: 'mod-num' }, sec.pre ? 'Before Module 1' : `Module ${sec.m.number}`),
+        h('h2', { lang: 'fr' }, sec.title, sec.titleEn ? h('small', { class: 'banner-en' }, sec.titleEn) : null), h('p', {}, sec.sub)),
+      h('a', { class: 'banner-btn', href: sec.pre ? '#/notes' : `#/notes/${sec.m.key}`, 'aria-label': `Summary of ${sec.title}` }, icon('notes'), h('span', {}, 'Summary')));
     const path = h('ol', { class: 'path' });
-    m.nodes.forEach((n, i) => {
+    sec.nodes.forEach((n, i) => {
       const st = nodeState(n);
       const done = store.get().done[n.key];
       const off = OFFSETS[i % OFFSETS.length];
-      const btn = h('button', { class: `node ${st} t-${n.type}`, 'aria-label': `${n.title}: ${n.subtitle}${st === 'locked' ? ' (locked)' : ''}`, onclick: () => openNode(n) },
+      const btn = h('button', { class: `node ${st} t-${n.type}`, 'aria-label': `${n.titleEn || n.title}: ${n.subtitle}${st === 'locked' ? ' (locked)' : ''}`, onclick: () => openNode(n) },
         icon(st === 'locked' ? 'lock' : n.icon));
       const li = h('li', { class: 'path-step', style: `--x:${off}px` },
         st === 'current' ? h('span', { class: 'start-tag' }, done ? 'Again' : 'Start') : null,
@@ -149,7 +143,7 @@ function learnScreen() {
       }
       path.append(li);
     });
-    wrap.append(h('section', { class: `module ${m.bonus ? 'is-bonus' : ''}` }, banner, path));
+    wrap.append(h('section', { class: `module ${sec.pre ? 'is-pre' : 'is-main'}` }, banner, path));
   }
 
   wrap.append(h('div', { class: 'path-end' }, minouSVG({ size: 64, mood: 'idle' }),
@@ -182,7 +176,7 @@ function openNode(n) {
   const ov = h('div', { class: 'pop-ov', onclick: (e) => { if (e.target === ov) close(); } },
     h('div', { class: `pop t-${n.type}`, role: 'dialog', 'aria-modal': 'true', 'aria-label': n.title },
       h('div', { class: 'pop-head' }, h('span', { class: 'pop-ic' }, icon(n.icon)),
-        h('div', {}, h('h3', {}, n.title), h('p', {}, n.subtitle))),
+        h('div', {}, h('h3', { lang: 'fr' }, n.title, n.titleEn && n.titleEn !== n.title ? h('small', { class: 'banner-en' }, n.titleEn) : null), h('p', {}, n.subtitle))),
       h('p', { class: 'pop-blurb' }, blurb),
       done ? h('p', { class: 'pop-best' }, `Best: ${Math.round(done.best * 100)}%  ·  Played ${done.times}×`) : null,
       action));
@@ -199,9 +193,7 @@ function startNode(n) {
     title: n.title, steps, mode: 'learn',
     onExit: route,
     onDone: (result) => {
-      const bonus = 10 + (result.accuracy >= 0.95 ? 5 : 0);
-      result.xp += bonus;
-      store.addXP(result.xp);
+      store.markActive();
       const stars = store.finishNode(n.key, result.accuracy);
       showResults({ title: n.title, result, mode: 'learn', stars, onContinue: route });
     },
@@ -220,11 +212,8 @@ function practiceScreen() {
   const run = (title, steps, mode = 'review') => {
     if (!steps.length) return;
     runLesson({ title, steps, mode, onExit: route, onDone: (result) => {
-      if (mode === 'exam') {
-        store.addExam({ date: todayKey(), score: result.accuracy, total: result.graded, bySkill: result.answersBySkill });
-        result.xp += 20;
-      } else result.xp += 5;
-      store.addXP(result.xp);
+      if (mode === 'exam') store.addExam({ date: todayKey(), score: result.accuracy, total: result.graded, bySkill: result.answersBySkill });
+      store.markActive();
       showResults({ title, result, mode, onContinue: route });
     } });
   };
@@ -254,7 +243,7 @@ function practiceScreen() {
     card('nums', 'hash', 'Numbers drill', learnedNums.length
       ? `Every number you’ve learned so far, up to ${Math.max(...learnedNums.map((m) => m.numbers[1]))}.`
       : 'Unlocks with your first numbers lesson.', 'Drill numbers',
-    () => { const top = Math.max(...learnedNums.map((m) => m.numbers[1])); run('Numbers drill', buildNumbers(0, top, false)); }, !learnedNums.length),
+    () => { const top = Math.max(...learnedNums.map((m) => m.numbers[1])); run('Numbers drill', buildNumbersDrill(top)); }, !learnedNums.length),
     h('section', { class: 'card' }, h('h2', { class: 'card-title' }, 'Your four skills'),
       ...Object.entries(s.skills).map(([k, [c, t]]) => skillBar(k, c, t))),
   );
@@ -272,14 +261,14 @@ function notesScreen(key) {
     ...DB.classes.map((cls) => h('section', { class: 'notes-class' }, h('h2', { class: 'card-title' }, cls.title),
       ...DB.modules.filter((m) => m.classId === cls.id).map((m) =>
         h('a', { class: 'card note-link', href: `#/notes/${m.key}` },
-          h('span', { class: 'note-num' }, m.bonus ? 'Aa' : String(m.number)),
+          h('span', { class: 'note-num' }, m.pre ? (m.letters ? 'Aa' : '12') : String(m.number)),
           h('span', {}, h('b', {}, m.title), h('small', {}, m.subtitle)),
           icon('back', 'flip'))))));
 }
 
 function moduleNotes(m) {
   const pdf = `summaries/${m.classId}-${m.id}${faOn() ? '-fa' : ''}.pdf`;
-  const fname = `Minou ${m.className} - ${m.bonus ? '' : `Module ${m.number} - `}${m.title.replace(/'/g, '’')}.pdf`;
+  const fname = `Minou ${m.className} - ${m.pre ? '' : `Module ${m.number} - `}${m.title.replace(/'/g, '’')}.pdf`;
   const dl = h('a', { class: 'btn primary', href: pdf, download: fname, hidden: true }, icon('download'), 'Download PDF');
   fetch(pdf, { method: 'HEAD' }).then((r) => { if (r.ok) dl.hidden = false; }).catch(() => {});
   return h('div', { class: 'screen module-notes' },
@@ -297,13 +286,11 @@ function meScreen() {
   const name = s.settings.name || 'toi';
   const last7 = Array.from({ length: 7 }, (_, k) => {
     const d = new Date(); d.setDate(d.getDate() - (6 - k));
-    return { label: d.toLocaleDateString('en', { weekday: 'narrow' }), xp: s.days[todayKey(d)] || 0 };
+    return { label: d.toLocaleDateString('en', { weekday: 'short' }), on: !!s.days[todayKey(d)], today: k === 6 };
   });
-  const maxXP = Math.max(s.settings.goal, ...last7.map((d) => d.xp));
-  const week = h('div', { class: 'week', role: 'img', 'aria-label': 'XP over the last 7 days' },
-    ...last7.map((d) => h('div', { class: 'week-col' },
-      h('div', { class: 'week-bar' }, h('i', { style: `height:${Math.round((d.xp / maxXP) * 100)}%`, class: d.xp >= s.settings.goal ? 'met' : '' })),
-      h('span', {}, d.label))));
+  const streak = store.streakNow();
+  const week = h('div', { class: 'paws', role: 'img', 'aria-label': `Practised on ${last7.filter((d) => d.on).length} of the last 7 days` },
+    ...last7.map((d) => h('div', { class: `paw-day ${d.on ? 'on' : ''} ${d.today ? 'today' : ''}` }, icon('paw'), h('span', { class: 'paw-label' }, d.label))));
 
   // Settings controls
   const nameIn = h('input', { type: 'text', value: s.settings.name || '', maxlength: '30', onchange: (e) => store.setSetting('name', e.target.value.trim()) });
@@ -313,12 +300,6 @@ function meScreen() {
   const speakOff = h('input', { type: 'checkbox', checked: !s.settings.speakOff || null, onchange: (e) => store.setSetting('speakOff', !e.target.checked) });
   const rate = h('input', { type: 'range', min: '0.6', max: '1.2', step: '0.05', value: String(s.settings.rate),
     onchange: (e) => { store.setSetting('rate', Number(e.target.value)); speak('Bonjour, je suis Minou.'); } });
-  const goal = h('select', { onchange: (e) => store.setSetting('goal', Number(e.target.value)) },
-    ...[[30, 'Easy · 30 XP'], [60, 'Steady · 60 XP'], [100, 'Serious · 100 XP'], [150, 'Exam week · 150 XP']].map(([v, l]) =>
-      h('option', { value: String(v), selected: s.settings.goal === v || null }, l)));
-  const voiceSel = h('select', { onchange: (e) => { store.setSetting('voice', e.target.value); refreshVoice(); speak('Bonjour !'); } },
-    h('option', { value: '' }, 'Automatic'),
-    ...frenchVoices().map((v) => h('option', { value: v.name, selected: s.settings.voice === v.name || null }, `${v.name} (${v.lang})`)));
 
   const fileIn = h('input', { type: 'file', accept: 'application/json', hidden: true, onchange: async (e) => {
     const f = e.target.files[0];
@@ -331,8 +312,8 @@ function meScreen() {
 
   return h('div', { class: 'screen me' },
     h('header', { class: 'me-head' }, minouSVG({ size: 96, mood: 'happy' }),
-      h('div', {}, h('h1', { lang: 'fr' }, `Salut, ${name} !`), h('p', {}, `Hi, ${name}! ${store.streakNow()}-day streak, ${s.xp} XP in total.`))),
-    h('section', { class: 'card' }, h('h2', { class: 'card-title' }, 'This week'), week),
+      h('div', {}, h('h1', { lang: 'fr' }, `Salut, ${name} !`), h('p', {}, `Hi, ${name}! ${streak === 0 ? 'Do a lesson today to start your streak.' : `You’re on a ${streak}-day streak.`}`))),
+    h('section', { class: 'card' }, h('h2', { class: 'card-title' }, 'Your streak'), week),
     h('section', { class: 'card' }, h('h2', { class: 'card-title' }, 'Skills'), ...Object.entries(s.skills).map(([k, [c, t]]) => skillBar(k, c, t))),
     s.exams.length ? h('section', { class: 'card' }, h('h2', { class: 'card-title' }, 'Mock exams'),
       h('ul', { class: 'exam-list' }, ...s.exams.slice(0, 5).map((e) => h('li', {}, h('span', {}, e.date), h('b', {}, `${Math.round(e.score * 100)}%`))))) : null,
@@ -344,11 +325,10 @@ function meScreen() {
       h('label', { class: 'set-row' }, h('span', {}, 'English pronunciation', h('small', {}, 'Sound-it-out spelling, like “luh PEHR”')), pronIn),
       h('label', { class: 'set-row' }, h('span', {}, 'Persian pronunciation', h('small', { lang: 'fa', dir: 'rtl' }, 'تلفظ به خط فارسی، مثل «لُ پِر»')), faIn),
       h('label', { class: 'set-row' }, h('span', {}, 'Your name'), nameIn),
-      h('label', { class: 'set-row' }, h('span', {}, 'Daily goal'), goal),
       h('label', { class: 'set-row' }, h('span', {}, 'Sound effects'), sound),
       h('label', { class: 'set-row' }, h('span', {}, 'Speaking exercises', h('small', {}, sttSupported() ? 'Uses your mic' : 'Your browser can’t check speech, so you’ll self-check')), speakOff),
       h('label', { class: 'set-row col' }, h('span', {}, 'Voice speed'), rate),
-      ttsSupported() ? h('label', { class: 'set-row' }, h('span', {}, 'French voice'), voiceSel) : h('p', { class: 'muted' }, 'This browser has no text-to-speech.')),
+      h('p', { class: 'muted set-note' }, 'Minou’s voice is a recorded native French voice, so it sounds the same on every device.')),
     h('section', { class: 'card' }, h('h2', { class: 'card-title' }, 'Help'),
       h('p', { class: 'muted' }, 'A 30-second walk through the app with Minou.'),
       h('div', { class: 'btn-row' }, h('button', { class: 'btn ghost', onclick: () => { location.hash = '#/learn'; setTimeout(() => startTour(), 250); } }, 'Show the tour again'))),

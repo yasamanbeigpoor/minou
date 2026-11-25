@@ -1,42 +1,65 @@
-// Text-to-speech and speech recognition, both built into the browser.
+// Speech: recorded native-French audio for everything in the lessons, and the browser's
+// speech recognition for speaking practice.
+//
+// Every French word and sentence the app can say is recorded ahead of time with a neural
+// French voice (tools/build_audio.py writes audio/*.mp3 and audio/index.json). Anything not
+// recorded, such as the learner's own name, falls back to the browser's voice, but only when
+// the device has a real French voice; otherwise it stays silent rather than mispronounce.
 import { get } from './store.js';
 
-let voices = [];
-let chosen = null;
+const key = (t) => String(t).normalize('NFC').replace(/\s+/g, ' ').trim();
 
-function loadVoices() {
+let index = null;
+const ready = fetch('audio/index.json', { cache: 'no-cache' })
+  .then((r) => (r.ok ? r.json() : {}))
+  .then((j) => (index = j))
+  .catch(() => (index = {}));
+
+let current = null;
+let frVoice = null;
+function pickVoice() {
   if (!('speechSynthesis' in window)) return;
-  voices = speechSynthesis.getVoices().filter((v) => /^fr/i.test(v.lang));
-  const pref = get().settings.voice;
-  const ranked = (v) =>
-    (v.name === pref ? 100 : 0) +
-    (/fr[-_]FR/i.test(v.lang) ? 10 : 0) +
-    (/google|amélie|amelie|thomas|audrey|marie|natural|neural|premium|enhanced/i.test(v.name) ? 5 : 0) +
-    (v.localService ? 1 : 0);
-  chosen = voices.slice().sort((a, b) => ranked(b) - ranked(a))[0] || null;
+  const v = speechSynthesis.getVoices().filter((x) => /^fr/i.test(x.lang));
+  frVoice = v.find((x) => /fr[-_]FR/i.test(x.lang)) || v[0] || null;
+}
+if ('speechSynthesis' in window) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
+
+export function stopSpeaking() {
+  if (current) { current.pause(); current = null; }
+  if ('speechSynthesis' in window) speechSynthesis.cancel();
 }
 
-if ('speechSynthesis' in window) {
-  loadVoices();
-  speechSynthesis.onvoiceschanged = loadVoices;
+export const hasRecording = (text) => !!(index && index[key(text)]);
+
+export async function speak(text, { slow = false } = {}) {
+  if (!text) return;
+  if (!index) await ready;
+  stopSpeaking();
+  const rate = (get().settings.rate || 0.9) / 0.9;
+  const file = index[key(text)];
+  if (file) {
+    return new Promise((resolve) => {
+      const a = new Audio(`audio/${file}`);
+      a.playbackRate = slow ? Math.max(0.5, 0.65 * rate) : rate;
+      a.preservesPitch = true;
+      current = a;
+      a.onended = a.onerror = () => resolve();
+      a.play().catch(() => resolve());
+    });
+  }
+  return browserVoice(text, slow);
 }
 
-export const ttsSupported = () => 'speechSynthesis' in window;
-export const frenchVoices = () => voices;
-export const refreshVoice = loadVoices;
-
-export function speak(text, { slow = false } = {}) {
+function browserVoice(text, slow) {
   return new Promise((resolve) => {
-    if (!ttsSupported() || !text) return resolve();
-    speechSynthesis.cancel();
+    if (!('speechSynthesis' in window) || !frVoice) return resolve();
     const u = new SpeechSynthesisUtterance(text);
-    u.lang = chosen ? chosen.lang : 'fr-FR';
-    if (chosen) u.voice = chosen;
+    u.voice = frVoice;
+    u.lang = frVoice.lang;
     const base = get().settings.rate || 0.9;
     u.rate = slow ? Math.max(0.5, base * 0.6) : base;
     u.onend = u.onerror = () => resolve();
     speechSynthesis.speak(u);
-    // Some browsers never fire onend; don't hang the UI.
     setTimeout(resolve, 600 + text.length * 120);
   });
 }

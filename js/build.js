@@ -1,178 +1,190 @@
 // Builds the step list for each kind of lesson.
-import { DB, GRAMMAR_RULES, itemsOf, mainModules } from './data.js';
+import { DB, GRAMMAR_RULES, itemsOf, modulesBefore } from './data.js';
 import { get } from './store.js';
 import { prioritize } from './srs.js';
 import { shuffle, sample, pick } from './util.js';
-import { range } from './numbers.js';
+import { range, frNumber } from './numbers.js';
+import { prNumber, faNumber } from './fa.js';
 import {
-  vocabQ, matchQ, sentenceQ, grammarQ, exerciseQ, readingQ, passageStep, numberQ, numberTable, questionFor,
+  vocabQ, matchQ, sentenceQ, grammarQ, exerciseQ, readingQ, passageStep, numberQ, numberTable, numberList, questionFor,
   letterQ, trapQ, accentQ, spellQ, spellOut,
 } from './questions.js';
 
 const vid = (m, id) => `${m.key}:v:${id}`;
 const SKILL_ROTATION = ['writing', 'listening', 'speaking', 'reading'];
 
+// A circle already finished once is replayed as practice: no intro cards, and the weakest items first.
+const replaying = (node) => !!get().done[node.key];
+
 export function buildNode(node) {
   const m = node.mod;
+  const again = replaying(node);
   switch (node.type) {
-    case 'words': return buildWords(m, node.items.map((id) => vid(m, id)));
-    case 'grammar': return buildGrammar(m);
-    case 'exercises': return (m.exercises || []).map((x) => exerciseQ(`${m.key}:x:${x.id}`));
-    case 'reading': return buildReading(m);
-    case 'listen': return buildListen(m);
-    case 'numbers': return withChant(m.numberChant, buildNumbers(m.numbers[0], m.numbers[1], true), 1);
-    case 'checkpoint': return buildCheckpoint(m);
-    case 'review': return buildReview(mainModules().slice(0, m.index), 18);
-    case 'letters': return node.id === 'a-m' ? withChant(m.chant, buildLetters(m, [...node.letters]), 0) : buildLetters(m, [...node.letters]);
-    case 'letter-traps': return buildTraps(m);
-    case 'accents': return buildAccents(m);
-    case 'spell': return buildSpell(m);
+    case 'alphabet': return buildAlphabet(m, again);
+    case 'numbers': return buildNumbersLesson(m, again);
+    case 'vocab': return buildVocab(m, again);
+    case 'grammar': return buildGrammar(m, again);
+    case 'module-review': return buildModuleReview(m);
+    case 'review': return buildReview(modulesBefore(m), 20);
     default: return [];
   }
 }
 
-function buildLetters(m, letters) {
-  const id = (L) => `${m.key}:l:${L}`;
-  const steps = [];
-  letters.forEach((L, i) => {
-    steps.push(letterQ(id(L), 'intro'));
-    if (i > 0 && i % 2 === 0) steps.push(letterQ(id(letters[i - 1]), 'hear-letter'));
-  });
-  const practice = shuffle(letters).map((L, i) =>
-    letterQ(id(L), ['hear-letter', 'letter-name', 'say-letter', 'hear-letter'][i % 4]));
-  // Finish with two spelling challenges using only these letters where possible.
-  const words = (m.spellWords || []).filter((w) => [...stripAcc(w).toUpperCase()].every((ch) => letters.includes(ch)));
-  const spells = sample(words.length >= 2 ? words : m.spellWords || [], 2).map((w) => spellQ(`${m.key}:w:${w}`));
-  return [...steps, ...practice, ...spells];
+const chantStep = (chant, sub) => chant ? { kind: 'passage', say: 'Chante avec moi !',
+  sub: sub || 'Tap a line to hear it, or play them all. Say it along with Minou.', passage: { ...chant, showEn: true } } : null;
+
+// Pick n item ids, weakest and most overdue first once they've been seen.
+function weakest(ids, n) {
+  const { cards } = get();
+  return prioritize(ids, cards).slice(0, n);
 }
+
+// ---------- Alphabet: one circle ----------
 
 const stripAcc = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/œ/g, 'oe');
 
-function buildTraps(m) {
-  const steps = [{ kind: 'teach', title: 'English speakers mix these up', body:
-    'Some French letter names sound like <i>other</i> English letters. <b>G</b> is “zhay” and <b>J</b> is “zhee”, the opposite of English. <b>E</b> is “uh” and <b>I</b> is “ee”. <b>U</b> has no English twin: say “ee” with round lips.',
-  examples: (m.traps || []).slice(0, 4).flat().filter((v, i, a) => a.indexOf(v) === i).map((L) => {
-    const x = m.letters.find((y) => y.l === L);
-    return { fr: x.say, en: `${L}: ${x.hint}` };
-  }) }];
-  const traps = m.traps || [];
-  for (let r = 0; r < 2; r++) shuffle(traps).forEach((p) => steps.push(trapQ(m, p)));
-  return steps;
-}
-
-function buildAccents(m) {
-  const id = (a) => `${m.key}:a:${a.id}`;
-  const acc = m.accents || [];
-  const steps = acc.map((a) => accentQ(id(a), 'intro'));
-  const practice = shuffle([...acc.map((a) => accentQ(id(a), 'name')), ...acc.map((a) => accentQ(id(a), 'word')),
-    ...sample(acc, 3).map((a) => accentQ(id(a), 'hear'))]);
-  const spells = sample((m.spellWords || []).filter((w) => /[éèêçëà]/.test(w)), 2).map((w) => spellQ(`${m.key}:w:${w}`));
-  return [...steps, ...practice, ...spells];
-}
-
-function buildSpell(m) {
-  const ids = shuffle((m.spellWords || []).map((w) => `${m.key}:w:${w}`));
-  const name = (get().settings.name || '').trim();
-  const steps = [{ kind: 'teach', title: 'Épelle !', body:
-    'Minou will spell a word one letter at a time, accents included: <b>m, e accent grave, r, e</b> spells <b>mère</b>. Use the turtle to hear it slowly. All the words come from your lessons.' }];
-  ids.slice(0, 10).forEach((id) => steps.push(spellQ(id)));
-  ids.slice(10, 12).forEach((id) => steps.push(spellQ(id, 'speak')));
-  if (/^[a-zà-ÿ' -]{2,20}$/i.test(name)) {
-    steps.push({ kind: 'speak', skill: 'speaking', say: 'Épelle ton prénom !', sub: 'Spell your own name out loud. You’ll need it in class!',
-      fr: spellOut(name, m), en: `Spell: ${name}`, digits: name, showDigits: true, selfCheck: true, label: name });
-  }
-  return steps;
-}
-
-function buildWords(m, ids) {
+function buildAlphabet(m, again) {
+  const lid = (L) => `${m.key}:l:${L}`;
+  const aid = (a) => `${m.key}:a:${a.id}`;
+  const letters = (m.letters || []).map((x) => x.l);
   const steps = [];
-  ids.forEach((id, i) => {
-    steps.push(vocabQ(id, 'intro'));
-    if (i > 0) steps.push(vocabQ(ids[i - 1], i % 2 ? 'fr-en' : 'listen-pick'));
-  });
-  steps.push(vocabQ(ids[ids.length - 1], 'en-fr'));
-  steps.push(matchQ(sample(ids, 5)));
-  const practice = shuffle(ids).map((id, i) => {
-    const skill = SKILL_ROTATION[i % SKILL_ROTATION.length];
-    if (skill === 'reading') return vocabQ(id, 'gender');
-    if (skill === 'writing') return vocabQ(id, 'write');
-    if (skill === 'listening') return vocabQ(id, i % 3 ? 'listen-type' : 'listen-pick');
-    return vocabQ(id, 'speak');
-  });
-  return [...steps, ...practice];
+  if (!again) {
+    steps.push(chantStep(m.chant, 'The alphabet song, to the tune of Twinkle, Twinkle. Tap a line to hear it.'));
+    steps.push({ kind: 'numbers', say: 'Les lettres !', sub: 'Tap each letter to hear its French name.', gridClass: 'letters',
+      tiles: m.letters.map((x) => ({ big: x.l, fr: x.say, say: x.say, pr: x.pr, fa: x.fa })) });
+    steps.push({ kind: 'teach', title: 'The tricky pairs', body:
+      'Some French letter names sound like <i>other</i> English letters. <b>G</b> is “zhay” and <b>J</b> is “zhee”, the opposite of English. <b>E</b> is “uh”, <b>I</b> is “ee”, and <b>U</b> is “ee” said with rounded lips.',
+      examples: ['G', 'J', 'E', 'I', 'U', 'R'].map((L) => { const x = m.letters.find((y) => y.l === L); return { fr: x.say, en: `${L}: ${x.hint}`, pr: x.pr, fa: x.fa }; }) });
+  }
+  // Letters: by ear and by sight, weighted to the ones that get mixed up.
+  const trapLetters = [...new Set((m.traps || []).flat())];
+  const pickLetters = again ? weakest(letters.map(lid), 12) : [...shuffle(trapLetters).slice(0, 6), ...sample(letters.filter((L) => !trapLetters.includes(L)), 6)].map(lid);
+  pickLetters.forEach((id, i) => steps.push(letterQ(id, ['hear-letter', 'letter-name', 'hear-letter', 'say-letter'][i % 4])));
+  sample(m.traps || [], 4).forEach((p) => steps.push(trapQ(m, p)));
+  // Accents.
+  const acc = m.accents || [];
+  if (!again) {
+    steps.push({ kind: 'teach', title: 'Les accents', body:
+      'Accents change how a letter sounds, and sometimes what the word means. Tap each name to hear it.',
+      examples: acc.map((a) => ({ fr: a.name, en: `${a.mark}: ${a.hint}`, pr: a.pr, fa: a.fa })) });
+  }
+  sample(acc, 3).forEach((a) => steps.push(accentQ(aid(a), 'name')));
+  sample(acc, 2).forEach((a) => steps.push(accentQ(aid(a), 'word')));
+  // Spelling.
+  const spellIds = (m.spellWords || []).map((w) => `${m.key}:w:${w}`);
+  (again ? weakest(spellIds, 3) : sample(spellIds, 3)).forEach((id) => steps.push(spellQ(id)));
+  return steps.filter(Boolean);
 }
 
-function buildGrammar(m) {
+// ---------- Numbers 0–100: one circle ----------
+
+function buildNumbersLesson(m, again) {
+  const [a, b] = m.numbers;
+  const steps = [];
+  const tens = [20, 30, 40, 50, 60, 70, 80, 90, 100];
+  if (!again) {
+    steps.push(numberTable(0, 20, { say: 'De 0 à 20', sub: 'These you just learn by heart. Tap each to hear it.' }));
+    steps.push(chantStep(m.numberChant, 'A French counting rhyme. Tap a line to hear it.'));
+    steps.push(numberList(tens, { say: 'Les dizaines', sub: 'The tens. Notice 70, 80 and 90!' }));
+    steps.push({ kind: 'teach', title: 'Building the rest', body:
+      'After 20, glue the tens and units with a hyphen: <b>vingt-deux</b> (22). For 21, 31, 41, 51, 61 and 71 you say <b>et un</b>: <b>vingt et un</b>. From 70, French does maths: <b>70 = 60 + 10</b>, <b>80 = 4 × 20</b>, <b>90 = 4 × 20 + 10</b>.',
+      examples: [21, 22, 35, 71, 75, 80, 81, 92, 99].map((n) => ({ fr: frNumber(n), en: String(n), pr: prNumber(n), fa: faNumber(n) })),
+      trick: 'Seventy is “sixty-ten”, eighty is “four twenties”, ninety is “four twenties ten”. Ninety-seven is quatre-vingt-dix-sept: 4 × 20 + 10 + 7.' });
+  }
+  const all = range(a, b);
+  const ids = all.map((n) => `num:${n}`);
+  // Mix: a third 0–20, a sixth round tens, half the rest, leaning on 70–99.
+  const plan = again
+    ? weakest(ids, 20)
+    : [...sample(range(0, 20), 7), ...sample(tens, 3), ...sample(range(21, 69).filter((n) => n % 10), 4), ...sample(range(70, 99).filter((n) => n % 10), 6)].map((n) => `num:${n}`);
+  const kinds = ['num-read', 'num-listen', 'num-word', 'num-write', 'num-speak'];
+  shuffle(plan).forEach((id, i) => steps.push(numberQ(id, kinds[i % kinds.length], all)));
+  return steps.filter(Boolean);
+}
+
+export function buildNumbersDrill(top) {
+  const all = range(0, top);
+  const ids = weakest(all.map((n) => `num:${n}`), 16);
+  const kinds = ['num-listen', 'num-read', 'num-write', 'num-word', 'num-speak'];
+  return ids.map((id, i) => numberQ(id, kinds[i % kinds.length], all));
+}
+
+// ---------- Module vocabulary: one circle ----------
+
+function buildVocab(m, again) {
+  const ids = (m.vocab || []).map((v) => vid(m, v.id));
+  const steps = [];
+  if (!again) {
+    // Meet the words in small groups, each group closed by a matching game.
+    for (let g = 0; g < ids.length; g += 6) {
+      const group = ids.slice(g, g + 6);
+      group.forEach((id) => steps.push(vocabQ(id, 'intro')));
+      if (group.length >= 3) steps.push(matchQ(shuffle(group).slice(0, 5)));
+    }
+  }
+  const practice = again ? weakest(ids, 18) : sample(ids, 12);
+  practice.forEach((id, i) => {
+    const skill = SKILL_ROTATION[i % SKILL_ROTATION.length];
+    if (skill === 'reading') steps.push(vocabQ(id, i % 8 === 3 ? 'gender' : 'fr-en'));
+    else if (skill === 'writing') steps.push(vocabQ(id, 'write'));
+    else if (skill === 'listening') steps.push(vocabQ(id, i % 3 ? 'listen-type' : 'listen-pick'));
+    else steps.push(vocabQ(id, 'speak'));
+  });
+  // A few whole sentences to hear and say.
+  const sids = sample((m.sentences || []).map((s) => `${m.key}:s:${s.id}`), 4);
+  ['listen-bank', 'speak', 'listen-mean', 'bank'].forEach((k, i) => sids[i] && steps.push(sentenceQ(sids[i], k)));
+  return steps;
+}
+
+// ---------- Module grammar: one circle (rule + textbook exercises) ----------
+
+function buildGrammar(m, again) {
   const g = m.grammar;
   const gid = (r) => `${m.key}:g:${r}`;
   const tricks = g.tricks || {};
   const teachTricks = [tricks.mon, tricks.sonsa, tricks.vowel, null];
   const teach = g.teach.map((t, i) => ({ kind: 'teach', ...t, trick: teachTricks[i] }));
+  const exercises = (m.exercises || []).map((x) => exerciseQ(`${m.key}:x:${x.id}`));
+  if (again) {
+    return [teach[0], ...shuffle(['mon', 'ma', 'mes', 'vowel', 'sonsa', 'notre', 'leur', 'sonsa', 'vowel'].map((r) => grammarQ(gid(r)))),
+      ...sample(exercises, 8)].filter(Boolean);
+  }
   return [
     teach[0],
     grammarQ(gid('mon'), { type: false }), grammarQ(gid('ma'), { type: false }), grammarQ(gid('mes'), { type: false }),
     grammarQ(gid('notre'), { type: false }), grammarQ(gid('leur'), { type: false }),
     teach[1],
-    grammarQ(gid('sonsa')), grammarQ(gid('sonsa')), grammarQ(gid('sonsa')),
+    grammarQ(gid('sonsa')), grammarQ(gid('sonsa')),
     teach[2],
-    grammarQ(gid('vowel'), { type: false }), grammarQ(gid('vowel'), { type: true }), grammarQ(gid('vowel'), { type: false }),
+    grammarQ(gid('vowel'), { type: false }), grammarQ(gid('vowel'), { type: true }),
     teach[3],
-    g.chant ? { kind: 'passage', say: 'Chante avec moi !', sub: 'A little chant to remember all six. Tap Listen to all.', passage: { ...g.chant, showEn: true } } : null,
-    ...['mes enfants', 'mon oncle', 'mes filles'].map((p) => ({
-      kind: 'speak', skill: 'speaking', say: 'Fais la liaison !', sub: 'Say it, linking the sounds where needed.',
-      fr: p, en: p === 'mes filles' ? 'no liaison here' : 'link the sounds', itemId: gid('vowel'), label: p,
+    chantStep(g.chant, 'A little chant to remember all six. Tap Listen to all.'),
+    ...['mes enfants', 'mon oncle'].map((p) => ({
+      kind: 'speak', skill: 'speaking', say: 'Fais la liaison !', sub: 'Say it, linking the sounds.',
+      fr: p, en: 'link the sounds', itemId: gid('vowel'), label: p,
     })),
-    ...shuffle(['mon', 'ma', 'mes', 'vowel', 'notre', 'leur'].map((r) => grammarQ(gid(r), { type: true }))),
+    { kind: 'teach', title: 'Exercices du manuel', body: 'Now the exercises from pages 65–66 of your textbook. Every blank gets instant feedback.' },
+    ...exercises,
   ].filter(Boolean);
 }
 
-function buildReading(m) {
+// ---------- Module review: one circle ----------
+
+function buildModuleReview(m) {
   const steps = [];
   for (const r of m.readings || []) {
     steps.push(passageStep(r));
     r.questions.forEach((_, qi) => steps.push(readingQ(`${m.key}:r:${r.id}:${qi}`)));
   }
-  return steps;
-}
-
-function buildListen(m) {
-  const ids = shuffle((m.sentences || []).map((s) => `${m.key}:s:${s.id}`));
-  const plan = ['listen-bank', 'bank', 'speak', 'listen-mean', 'dictation', 'listen-bank', 'speak', 'bank',
-    'write-sentence', 'speak', 'listen-bank', 'dictation', 'speak', 'bank'];
-  return plan.map((k, i) => sentenceQ(ids[i % ids.length], k));
-}
-
-// Insert a sing-along passage (a traditional rhyme or Minou's chant) at position `at`.
-function withChant(chant, steps, at) {
-  if (!chant) return steps;
-  const step = { kind: 'passage', say: 'Chante avec moi !', sub: 'Tap a line to hear it, or play them all. Say it along with Minou.',
-    passage: { ...chant, showEn: true } };
-  return [...steps.slice(0, at), step, ...steps.slice(at)];
-}
-
-export function buildNumbers(a, b, withTable) {
-  const fresh = range(a, b);
-  const earlier = a > 0 ? range(0, a - 1) : [];
-  const pool = [...earlier, ...fresh];
-  const pickN = () => (earlier.length && Math.random() < 0.3 ? pick(earlier) : pick(fresh));
-  const kinds = ['num-read', 'num-listen', 'num-word', 'num-write', 'num-speak', 'num-listen', 'num-read',
-    'num-write', 'num-listen', 'num-speak', 'num-word', 'num-listen', 'num-write', 'num-read'];
-  const steps = withTable ? [numberTable(a, b)] : [];
-  kinds.forEach((k) => steps.push(numberQ(`num:${pickN()}`, k, pool)));
-  return steps;
-}
-
-function buildCheckpoint(m) {
   const items = itemsOf([m]);
   const by = (t) => items.filter((it) => it.type === t).map((it) => it.id);
-  const steps = [
-    ...sample(by('vocab'), 6).map((id, i) => questionFor(id, SKILL_ROTATION[i % 4])),
-    ...sample(by('grammar'), 4).map((id) => grammarQ(id)),
-    ...sample(by('exercise'), 3).map((id) => exerciseQ(id)),
-    ...sample(by('sentence'), 4).map((id, i) => questionFor(id, SKILL_ROTATION[(i + 1) % 4])),
-    ...sample(by('number'), 3).map((id) => questionFor(id)),
+  const mix = [
+    ...weakest(by('vocab'), 6).map((id, i) => questionFor(id, SKILL_ROTATION[i % 4])),
+    ...weakest(by('grammar'), 4).map((id) => grammarQ(id)),
+    ...weakest(by('exercise'), 3).map((id) => exerciseQ(id)),
+    ...sample(by('sentence'), 4).map((id, i) => sentenceQ(id, ['dictation', 'speak', 'write-sentence', 'listen-bank'][i])),
   ];
-  return shuffle(steps.filter(Boolean));
+  return [...steps, ...shuffle(mix.filter(Boolean))];
 }
 
 // Mixed review across modules, weighted toward what's due or was missed, balanced across skills.

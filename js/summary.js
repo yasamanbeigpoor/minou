@@ -15,10 +15,10 @@ export function renderSummary(m, { interactive = true } = {}) {
   const out = h('article', { class: 'summary' });
 
   out.append(h('header', { class: 'sum-head' },
-    h('p', { class: 'sum-kicker' }, `${m.className}, ${m.bonus ? 'bonus track' : `Module ${m.number}`}`),
+    h('p', { class: 'sum-kicker' }, `${m.className}, ${m.pre ? 'the basics' : `Module ${m.number}`}`),
     h('h1', {}, m.title),
     h('p', { class: 'sum-sub' }, m.subtitle),
-    m.source && !m.bonus ? h('p', { class: 'sum-source' }, `From: ${m.source}`) : null));
+    m.source && !m.pre ? h('p', { class: 'sum-source' }, `From: ${m.source}`) : null));
 
   if (m.letters?.length) {
     out.append(h('section', { class: 'sum-sec' }, h('h2', {}, 'The alphabet'),

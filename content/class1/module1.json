@@ -4,108 +4,27 @@
   "title": "La famille",
   "subtitle": "Family and possessive adjectives",
   "source": "Grammaire 1.1, pp. 65–66, and Vocabulaire: La famille",
-  "numbers": [
-    0,
-    10
-  ],
   "path": [
     {
-      "id": "words1",
-      "type": "words",
-      "title": "Mots I",
-      "subtitle": "Parents and siblings",
-      "items": [
-        "pere",
-        "mere",
-        "frere",
-        "soeur",
-        "fils",
-        "fille",
-        "mari",
-        "femme"
-      ],
-      "titleEn": "Words I"
-    },
-    {
-      "id": "words2",
-      "type": "words",
-      "title": "Mots II",
-      "subtitle": "Grandparents and cousins",
-      "items": [
-        "enfant",
-        "grand-pere",
-        "grand-mere",
-        "grands-parents",
-        "oncle",
-        "tante",
-        "cousin",
-        "cousine"
-      ],
-      "titleEn": "Words II"
-    },
-    {
-      "id": "words3",
-      "type": "words",
-      "title": "Mots III",
-      "subtitle": "In-laws and step-family",
-      "items": [
-        "beau-pere",
-        "belle-mere",
-        "beau-frere",
-        "belle-soeur",
-        "demi-frere",
-        "demi-soeur",
-        "neveu",
-        "niece",
-        "petit-fils",
-        "petite-fille",
-        "petits-enfants",
-        "epoux",
-        "epouse"
-      ],
-      "titleEn": "Words III"
+      "id": "vocab",
+      "type": "vocab",
+      "title": "Vocabulaire",
+      "titleEn": "Vocabulary",
+      "subtitle": "La famille: 29 family words"
     },
     {
       "id": "grammar",
       "type": "grammar",
       "title": "Grammaire",
-      "subtitle": "Mon, ma, mes and friends",
-      "titleEn": "Grammar"
+      "titleEn": "Grammar",
+      "subtitle": "Possessive adjectives and textbook exercises"
     },
     {
-      "id": "exercises",
-      "type": "exercises",
-      "title": "Exercices",
-      "subtitle": "Textbook page 66",
-      "titleEn": "Exercises"
-    },
-    {
-      "id": "reading",
-      "type": "reading",
-      "title": "Lecture",
-      "subtitle": "Read about two families",
-      "titleEn": "Reading"
-    },
-    {
-      "id": "listen",
-      "type": "listen",
-      "title": "Écoute et parole",
-      "subtitle": "Hear it, say it, build it",
-      "titleEn": "Listen and speak"
-    },
-    {
-      "id": "numbers",
-      "type": "numbers",
-      "title": "Nombres",
-      "subtitle": "0 to 10",
-      "titleEn": "Numbers"
-    },
-    {
-      "id": "checkpoint",
-      "type": "checkpoint",
-      "title": "Checkpoint",
-      "subtitle": "Prove Module 1",
-      "titleEn": "Checkpoint"
+      "id": "review",
+      "type": "module-review",
+      "title": "Révision du module",
+      "titleEn": "Module review",
+      "subtitle": "Reading, listening, speaking and a mixed test"
     }
   ],
   "vocab": [
@@ -1296,35 +1215,5 @@
       "fa": "ما گران‌مِر آبیت شِ نو",
       "pr": "mah grahn-MEHR ah-BEET shay NOO"
     }
-  ],
-  "numberChant": {
-    "id": "comptine",
-    "title": "Un, deux, trois, nous irons au bois",
-    "lines": [
-      {
-        "fr": "Un, deux, trois, nous irons au bois.",
-        "en": "One, two, three, we'll go to the woods.",
-        "fa": "اَن، دُ، تروا، نوزیرُن اُ بوا",
-        "pr": "uhn, duh, TRWAH, noo-zee-ROHN oh BWAH"
-      },
-      {
-        "fr": "Quatre, cinq, six, cueillir des cerises.",
-        "en": "Four, five, six, to pick cherries.",
-        "fa": "کاتر، سَنک، سیس، کُیی‌یِر دِ سُریز",
-        "pr": "KAH-truh, SANK, SEESS, kuh-YEER day suh-REEZ"
-      },
-      {
-        "fr": "Sept, huit, neuf, dans mon panier neuf.",
-        "en": "Seven, eight, nine, in my new basket.",
-        "fa": "سِت، ویت، نُف، دان مُن پانیه نُف",
-        "pr": "SET, WEET, NUHF, dahn mohn pahn-YAY NUHF"
-      },
-      {
-        "fr": "Dix, onze, douze, elles seront toutes rouges.",
-        "en": "Ten, eleven, twelve, they'll all be red.",
-        "fa": "دیس، اُنز، دوز، اِل سُرُن توت روژ",
-        "pr": "DEESS, OHNZ, DOOZ, el suh-ROHN toot ROOZH"
-      }
-    ]
-  }
+  ]
 }

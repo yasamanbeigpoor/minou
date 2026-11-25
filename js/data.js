@@ -5,9 +5,7 @@ import { frNumber } from './numbers.js';
 export const DB = { classes: [], modules: [], items: {}, nodes: [] };
 
 const NODE_ICONS = {
-  letters: 'abc', 'letter-traps': 'ear', accents: 'accent', spell: 'spell',
-  review: 'refresh', words: 'cards', grammar: 'key', exercises: 'pencil', reading: 'book',
-  listen: 'ear', numbers: 'hash', checkpoint: 'crown',
+  alphabet: 'abc', numbers: 'hash', review: 'refresh', vocab: 'cards', grammar: 'key', 'module-review': 'crown',
 };
 
 export async function loadAll() {
@@ -25,8 +23,9 @@ export async function loadAll() {
       m.className = cls.title;
       m.key = `${cls.id}.${m.id}`;
       m.file = cls.modules[i];
-      m.bonus = m.track === 'bonus';
-      m.index = m.bonus ? -1 : mainIndex++;
+      // Starter circles (alphabet, numbers) come before Module 1 and are not numbered modules.
+      m.pre = m.track === 'pre';
+      m.index = m.pre ? -1 : mainIndex++;
       DB.modules.push(m);
     });
   }
@@ -69,20 +68,19 @@ export const GRAMMAR_RULES = [
   { id: 'leur', label: 'leur / leurs' },
 ];
 
-// Main modules form one chain; each bonus track (like the alphabet) is its own chain.
+// One path: starter circles, then each module. From Module 2 on, a recap circle reviews everything before it.
 function buildNodes() {
   DB.nodes = [];
   DB.chains = { main: [] };
   for (const m of DB.modules) {
     const nodes = [];
     if (m.index > 0) {
-      nodes.push({ id: 'review', type: 'review', title: 'Révision', titleEn: 'Review', subtitle: `Review Modules 1–${m.number - 1}` });
+      const prev = m.number - 1 === 1 ? 'Module 1' : `Modules 1–${m.number - 1}`;
+      nodes.push({ id: 'recap', type: 'review', title: 'Récap', titleEn: 'Recap', subtitle: `The basics and ${prev}` });
     }
     nodes.push(...m.path);
-    const chainId = m.bonus ? m.key : 'main';
-    DB.chains[chainId] ||= [];
-    m.nodes = nodes.map((n) => ({ ...n, mod: m, key: `${m.key}/${n.id}`, icon: NODE_ICONS[n.type] || 'star', chain: chainId }));
-    DB.chains[chainId].push(...m.nodes);
+    m.nodes = nodes.map((n) => ({ ...n, mod: m, key: `${m.key}/${n.id}`, icon: NODE_ICONS[n.type] || 'star', chain: 'main' }));
+    DB.chains.main.push(...m.nodes);
     DB.nodes.push(...m.nodes);
   }
 }
@@ -96,7 +94,10 @@ export function nodeState(node) {
 }
 
 export const currentNode = (chain = 'main') => DB.chains[chain].find((n) => nodeState(n) === 'current') || null;
-export const mainModules = () => DB.modules.filter((m) => !m.bonus);
+export const mainModules = () => DB.modules.filter((m) => !m.pre);
+export const preModules = () => DB.modules.filter((m) => m.pre);
+// Everything that comes before a module on the path (starter circles included).
+export const modulesBefore = (m) => DB.modules.slice(0, DB.modules.indexOf(m));
 
 // Modules whose first node has been opened, i.e. material the learner has started.
 export function startedModules() {

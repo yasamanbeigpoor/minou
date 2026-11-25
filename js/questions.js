@@ -274,8 +274,12 @@ export function numberQ(itemId, kind, poolNs) {
   }
 }
 
-export function numberTable(a, b) {
-  return { kind: 'numbers', say: 'Les nombres !', sub: 'Tap each number to hear it.', nums: range(a, b) };
+export function numberTable(a, b, extra = {}) {
+  return { kind: 'numbers', say: 'Les nombres !', sub: 'Tap each number to hear it.', nums: range(a, b), ...extra };
+}
+
+export function numberList(nums, extra = {}) {
+  return { kind: 'numbers', say: 'Les nombres !', sub: 'Tap each number to hear it.', nums, ...extra };
 }
 
 // ---------- Alphabet ----------

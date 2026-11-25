@@ -1,6 +1,6 @@
-// The lesson player: renders each step, checks answers, gives feedback, tracks XP.
+// The lesson player: renders each step, checks answers and gives feedback.
 import { h, $, shuffle, checkFrench, clean, similarity, pick, sleep } from './util.js';
-import { speak, listen, sttSupported } from './speech.js';
+import { speak, listen, sttSupported, stopSpeaking } from './speech.js';
 import { sfx } from './sound.js';
 import { minouSVG, setMood, LINES } from './minou.js';
 import { icon } from './icons.js';
@@ -92,7 +92,7 @@ export function runLesson({ title, steps, mode = 'learn', onDone, onExit }) {
 
   function cleanup(exited) {
     clearInterval(timerId);
-    speechSynthesis?.cancel?.();
+    stopSpeaking();
     document.removeEventListener('keydown', onKey);
     root.hidden = true;
     root.innerHTML = '';
@@ -403,11 +403,15 @@ const RENDER = {
     return {};
   },
 
+  // A grid of tap-to-hear tiles: numbers by default, or any {big, fr, say, pr, fa} tiles.
   numbers(step, body) {
-    put(body, promptHead(step), h('div', { class: 'num-grid' }, ...step.nums.map((n) => {
-      return h('button', { class: 'num-tile', onclick: () => speak(numberWord(n)) },
-        h('b', {}, String(n)), h('span', { lang: 'fr' }, numberWord(n)), pron(prNumber(n), faNumber(n), 'center'));
-    })));
+    const tiles = step.tiles || step.nums.map((n) => ({ big: String(n), fr: numberWord(n), pr: prNumber(n), fa: faNumber(n) }));
+    const all = h('button', { class: 'chip', onclick: async () => { for (const t of tiles) await speak(t.say || t.fr); } },
+      icon('sound'), h('span', {}, 'Listen to all'));
+    put(body, promptHead(step), step.note ? h('p', { class: 'grid-note' }, step.note) : null, all,
+      h('div', { class: `num-grid ${step.gridClass || ''}` }, ...tiles.map((t) =>
+        h('button', { class: 'num-tile', onclick: () => speak(t.say || t.fr) },
+          h('b', {}, t.big), t.fr !== t.big ? h('span', { lang: 'fr' }, t.fr) : null, pron(t.pr, t.fa, 'center')))));
     return {};
   },
 
@@ -572,7 +576,7 @@ const RENDER = {
       const giveUp = h('button', { class: 'btn ghost small', hidden: true, onclick: () => ctx.grade({ ok: true, grade: 2, note: 'Marked as said. Keep practising out loud!' }) }, 'I said it, mark it');
       mic.onclick = async () => {
         if (mic.classList.contains('on')) return;
-        speechSynthesis?.cancel?.();
+        stopSpeaking();
         status.textContent = 'Starting the mic…';
         try {
           const alts = await listen({ onStart: () => { mic.classList.add('on'); status.textContent = 'Listening… speak now.'; } });
@@ -629,7 +633,7 @@ export function showResults({ title, result, mode, stars, onContinue, extra }) {
     : (acc === 100 ? 'Not a single slip. Minou is impressed.' : acc >= 90 ? 'Almost flawless. Your one slip is saved for review.' : 'Every mistake is now in your review deck.');
 
   const tiles = h('div', { class: 'res-tiles' },
-    resTile('xp', 'XP', `+${result.xp}`),
+    resTile('paw', 'Day streak', String(store.streakNow())),
     resTile('target', mode === 'exam' ? 'Score' : 'Accuracy', `${acc}%`),
     resTile('clock', 'Time', `${mins}:${String(secs).padStart(2, '0')}`));
 

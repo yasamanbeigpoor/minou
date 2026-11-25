@@ -1,6 +1,6 @@
 // Offline support. App files: cache first, refreshed in the background.
 // Lesson content: network first, so new modules show up as soon as they're pushed.
-const VERSION = 'minou-v1';
+const VERSION = 'minou-v2';
 const SHELL = [
   './', 'index.html', 'manifest.webmanifest', 'css/style.css', 'css/fonts.css',
   'fonts/fredoka-latin-500-normal.woff2', 'fonts/fredoka-latin-600-normal.woff2', 'fonts/nunito-latin-400-normal.woff2',
@@ -28,7 +28,16 @@ self.addEventListener('fetch', (e) => {
   const url = new URL(req.url);
   const isContent = url.origin === location.origin && (url.pathname.includes('/content/') || url.pathname.includes('/summaries/'));
 
-  if (isContent) {
+  // Recordings never change (their names come from a hash of the text), so cache them on first play.
+  if (url.origin === location.origin && url.pathname.includes('/audio/') && url.pathname.endsWith('.mp3')) {
+    e.respondWith(caches.match(req).then((hit) => hit || fetch(req).then((res) => {
+      if (res.ok) { const copy = res.clone(); caches.open(VERSION).then((c) => c.put(req, copy)); }
+      return res;
+    })));
+    return;
+  }
+
+  if (isContent || url.pathname.endsWith('/audio/index.json')) {
     e.respondWith(fetch(req).then((res) => {
       const copy = res.clone();
       if (res.ok) caches.open(VERSION).then((c) => c.put(req, copy));

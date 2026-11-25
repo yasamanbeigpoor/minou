@@ -176,7 +176,7 @@ button:disabled { cursor: default; }
 .ring .ring-bg { stroke: var(--line); }
 .ring .ring-fg { stroke: var(--eye); stroke-linecap: round; transition: stroke-dashoffset .6s ease; }
 .ring .ic { width: 16px; height: 16px; color: var(--eye-deep); }
-.stat.goal b { font-size: 15px; color: var(--ink-2); }
+.streak-label { font: 700 13px var(--body); color: var(--ink-2); margin-left: -1px; }
 
 /* ---------- Path ---------- */
 .module { margin-top: 10px; }
@@ -638,3 +638,19 @@ html.no-pr.no-fa .pron { display: none; }
 .tour-btns .grow { flex: 1; }
 
 .btn-en { font: italic 700 14px var(--body); opacity: .85; }
+
+/* Simplified path: the basics section, streak paws */
+.mod-banner.pre { background: var(--fur); box-shadow: 0 5px 0 color-mix(in srgb, var(--fur) 60%, #000); }
+.mod-banner.pre .mod-num { color: var(--eye); }
+.banner-en { display: block; font: italic 700 14px var(--body); opacity: .85; margin-top: 1px; }
+.pop h3 .banner-en { color: var(--iris); opacity: 1; }
+.module.is-pre .path { margin-bottom: 26px; }
+.paws { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+.paw-day { display: grid; justify-items: center; gap: 4px; color: var(--line); }
+.paw-day .ic { width: 30px; height: 30px; }
+.paw-day.on { color: var(--eye-deep); }
+.paw-day .paw-label { font-size: 12.5px; font-weight: 800; color: var(--ink-2); }
+.paw-day.today .paw-label { color: var(--iris); }
+.grid-note { color: var(--ink-2); }
+.num-grid.letters { grid-template-columns: repeat(auto-fill, minmax(78px, 1fr)); }
+.set-note { margin-top: 10px; font-size: 14px; }

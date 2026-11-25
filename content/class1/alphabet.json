@@ -1,47 +1,17 @@
 {
   "id": "alpha",
-  "track": "bonus",
+  "track": "pre",
   "number": 0,
   "title": "L'alphabet",
   "subtitle": "Letters, accents and spelling out loud",
   "source": "Bonus track",
   "path": [
     {
-      "id": "a-m",
-      "type": "letters",
-      "title": "A à M",
-      "subtitle": "The first 13 letters",
-      "letters": "ABCDEFGHIJKLM",
-      "titleEn": "A to M"
-    },
-    {
-      "id": "n-z",
-      "type": "letters",
-      "title": "N à Z",
-      "subtitle": "The last 13 letters",
-      "letters": "NOPQRSTUVWXYZ",
-      "titleEn": "N to Z"
-    },
-    {
-      "id": "traps",
-      "type": "letter-traps",
-      "title": "Les pièges",
-      "subtitle": "G or J? E or I? The tricky pairs",
-      "titleEn": "The tricky pairs"
-    },
-    {
-      "id": "accents",
-      "type": "accents",
-      "title": "Les accents",
-      "subtitle": "é, è, ê, ç, ë, à",
-      "titleEn": "Accents"
-    },
-    {
-      "id": "spell",
-      "type": "spell",
-      "title": "Épelle !",
-      "subtitle": "Minou spells, you guess the word",
-      "titleEn": "Spell it!"
+      "id": "alphabet",
+      "type": "alphabet",
+      "title": "L'alphabet",
+      "titleEn": "The alphabet",
+      "subtitle": "Letters, tricky pairs, accents and spelling"
     }
   ],
   "letters": [
