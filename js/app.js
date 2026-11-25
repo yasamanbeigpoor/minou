@@ -268,7 +268,9 @@ function notesScreen(key) {
 function moduleNotes(m) {
   const pdf = `summaries/${m.classId}-${m.id}${faOn() ? '-fa' : ''}.pdf`;
   const fname = `Minou ${m.className} - ${m.pre ? '' : `Module ${m.number} - `}${m.title.replace(/'/g, '’')}.pdf`;
-  const dl = h('a', { class: 'btn primary', href: pdf, download: fname, hidden: true }, icon('download'), 'Download PDF');
+  // target=_blank matters on iPhone: inside a home-screen app it opens the PDF in a viewer with a Done
+  // button that returns to Minou, instead of replacing the app with no way back.
+  const dl = h('a', { class: 'btn primary', href: pdf, download: fname, target: '_blank', rel: 'noopener', hidden: true }, icon('download'), 'Download PDF');
   fetch(pdf, { method: 'HEAD' }).then((r) => { if (r.ok) dl.hidden = false; }).catch(() => {});
   return h('div', { class: 'screen module-notes' },
     h('div', { class: 'notes-bar' },
