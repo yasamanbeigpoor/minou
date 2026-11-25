@@ -1,0 +1,13 @@
+/* Self-hosted fonts (SIL Open Font License): Fredoka, Nunito, Vazirmatn. */
+@font-face { font-family: 'Fredoka'; src: url('../fonts/fredoka-latin-500-normal.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Fredoka'; src: url('../fonts/fredoka-latin-600-normal.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Nunito'; src: url('../fonts/nunito-latin-400-normal.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Nunito'; src: url('../fonts/nunito-latin-600-normal.woff2') format('woff2'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Nunito'; src: url('../fonts/nunito-latin-700-normal.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Nunito'; src: url('../fonts/nunito-latin-800-normal.woff2') format('woff2'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Nunito'; src: url('../fonts/nunito-latin-600-italic.woff2') format('woff2'); font-weight: 600; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Nunito'; src: url('../fonts/nunito-latin-700-italic.woff2') format('woff2'); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: 'Vazirmatn'; src: url('../fonts/vazirmatn-arabic-400-normal.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap;
+  unicode-range: U+0600-06FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFF; }
+@font-face { font-family: 'Vazirmatn'; src: url('../fonts/vazirmatn-arabic-500-normal.woff2') format('woff2'); font-weight: 500; font-style: normal; font-display: swap;
+  unicode-range: U+0600-06FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFF; }

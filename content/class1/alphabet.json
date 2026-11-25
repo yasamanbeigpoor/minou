@@ -1,0 +1,541 @@
+{
+  "id": "alpha",
+  "track": "bonus",
+  "number": 0,
+  "title": "L'alphabet",
+  "subtitle": "Letters, accents and spelling out loud",
+  "source": "Bonus track",
+  "path": [
+    {
+      "id": "a-m",
+      "type": "letters",
+      "title": "A à M",
+      "subtitle": "The first 13 letters",
+      "letters": "ABCDEFGHIJKLM",
+      "titleEn": "A to M"
+    },
+    {
+      "id": "n-z",
+      "type": "letters",
+      "title": "N à Z",
+      "subtitle": "The last 13 letters",
+      "letters": "NOPQRSTUVWXYZ",
+      "titleEn": "N to Z"
+    },
+    {
+      "id": "traps",
+      "type": "letter-traps",
+      "title": "Les pièges",
+      "subtitle": "G or J? E or I? The tricky pairs",
+      "titleEn": "The tricky pairs"
+    },
+    {
+      "id": "accents",
+      "type": "accents",
+      "title": "Les accents",
+      "subtitle": "é, è, ê, ç, ë, à",
+      "titleEn": "Accents"
+    },
+    {
+      "id": "spell",
+      "type": "spell",
+      "title": "Épelle !",
+      "subtitle": "Minou spells, you guess the word",
+      "titleEn": "Spell it!"
+    }
+  ],
+  "letters": [
+    {
+      "l": "A",
+      "say": "a",
+      "hint": "Like “ah”.",
+      "word": "ami",
+      "trick": "A is the sound you make at the doctor: “ahh”.",
+      "fa": "آ",
+      "pr": "ah",
+      "wordEn": "friend"
+    },
+    {
+      "l": "B",
+      "say": "bé",
+      "hint": "Like “bay”.",
+      "word": "bébé",
+      "trick": "B = “bay”, like a bay by the sea.",
+      "fa": "بِه",
+      "pr": "bay",
+      "wordEn": "baby"
+    },
+    {
+      "l": "C",
+      "say": "cé",
+      "hint": "Like “say”.",
+      "word": "cousin",
+      "trick": "C sounds like “say”. Say C!",
+      "fa": "سِه",
+      "pr": "say",
+      "wordEn": "cousin"
+    },
+    {
+      "l": "D",
+      "say": "dé",
+      "hint": "Like “day”.",
+      "word": "dix",
+      "trick": "D sounds like “day”. D-day!",
+      "fa": "دِه",
+      "pr": "day",
+      "wordEn": "ten"
+    },
+    {
+      "l": "E",
+      "say": "eu",
+      "hint": "A soft “uh”, lips a little rounded. Not “ee”!",
+      "word": "enfant",
+      "trick": "E is “euh”, the sound French people make when they hesitate: “euh…”.",
+      "fa": "اُ",
+      "pr": "uh",
+      "wordEn": "child"
+    },
+    {
+      "l": "F",
+      "say": "effe",
+      "hint": "Like “eff”.",
+      "word": "fille",
+      "trick": "F = “eff”, same as English.",
+      "fa": "اِف",
+      "pr": "eff",
+      "wordEn": "daughter, girl"
+    },
+    {
+      "l": "G",
+      "say": "gé",
+      "hint": "“zhay”, like the s in “measure”. English J sound, French G!",
+      "word": "grand-père",
+      "trick": "G and J swap places from English. G = “zhay”, as in girafe.",
+      "fa": "ژِه",
+      "pr": "zhay",
+      "wordEn": "grandfather"
+    },
+    {
+      "l": "H",
+      "say": "hache",
+      "hint": "“ash”. In words, H is silent: homme sounds like “om”.",
+      "word": "homme",
+      "trick": "Hache means axe. The axe chopped H's sound off, so it's silent in words.",
+      "fa": "آش",
+      "pr": "ash",
+      "wordEn": "man"
+    },
+    {
+      "l": "I",
+      "say": "i",
+      "hint": "Like “ee”. This is the one that sounds like English E.",
+      "word": "idée",
+      "trick": "I = “ee”, like the i in Paris.",
+      "fa": "ای",
+      "pr": "ee",
+      "wordEn": "idea"
+    },
+    {
+      "l": "J",
+      "say": "ji",
+      "hint": "“zhee”. English G sound, French J!",
+      "word": "jeune",
+      "trick": "J = “zhee”, as in jeudi. Just remember: G and J trade sounds in French.",
+      "fa": "ژی",
+      "pr": "zhee",
+      "wordEn": "young"
+    },
+    {
+      "l": "K",
+      "say": "ka",
+      "hint": "Like “kah”.",
+      "word": "kilo",
+      "trick": "K = “ka”, like the start of “karate”.",
+      "fa": "کا",
+      "pr": "kah",
+      "wordEn": "kilo"
+    },
+    {
+      "l": "L",
+      "say": "elle",
+      "hint": "Like “el”. Same as the word elle (she).",
+      "word": "livre",
+      "trick": "L sounds just like elle, the word for she.",
+      "fa": "اِل",
+      "pr": "el",
+      "wordEn": "book"
+    },
+    {
+      "l": "M",
+      "say": "emme",
+      "hint": "Like “em”.",
+      "word": "mère",
+      "trick": "M = “em”, same as English.",
+      "fa": "اِم",
+      "pr": "em",
+      "wordEn": "mother"
+    },
+    {
+      "l": "N",
+      "say": "enne",
+      "hint": "Like “en”.",
+      "word": "neveu",
+      "trick": "N = “en”, same as English.",
+      "fa": "اِن",
+      "pr": "en",
+      "wordEn": "nephew"
+    },
+    {
+      "l": "O",
+      "say": "o",
+      "hint": "Like “oh”, short and round.",
+      "word": "oncle",
+      "trick": "O: make a perfect round O with your lips.",
+      "fa": "اُ",
+      "pr": "oh",
+      "wordEn": "uncle"
+    },
+    {
+      "l": "P",
+      "say": "pé",
+      "hint": "Like “pay”.",
+      "word": "père",
+      "trick": "P = “pay”. You pay with P.",
+      "fa": "پِه",
+      "pr": "pay",
+      "wordEn": "father"
+    },
+    {
+      "l": "Q",
+      "say": "qu",
+      "hint": "Like “kü”: say K, then the French U.",
+      "word": "quatre",
+      "trick": "Q = K + the French U. Pucker up after the k.",
+      "fa": "کو",
+      "pr": "kü",
+      "wordEn": "four"
+    },
+    {
+      "l": "R",
+      "say": "erre",
+      "hint": "“air”, with a soft gargle at the back of the throat.",
+      "word": "rouge",
+      "trick": "R: gargle softly, like rinsing with mouthwash, but gentle.",
+      "fa": "اِر",
+      "pr": "air",
+      "wordEn": "red"
+    },
+    {
+      "l": "S",
+      "say": "esse",
+      "hint": "Like “ess”.",
+      "word": "sœur",
+      "trick": "S = “ess”, same as English.",
+      "fa": "اِس",
+      "pr": "ess",
+      "wordEn": "sister"
+    },
+    {
+      "l": "T",
+      "say": "té",
+      "hint": "Like “tay”.",
+      "word": "tante",
+      "trick": "T sounds like “tay”, as in a cup of tea with a French accent.",
+      "fa": "تِه",
+      "pr": "tay",
+      "wordEn": "aunt"
+    },
+    {
+      "l": "U",
+      "say": "u",
+      "hint": "Say “ee”, then round your lips like “oo” without moving your tongue.",
+      "word": "une",
+      "trick": "U: pucker for a kiss, then try to say “ee”. That's the French U.",
+      "fa": "او",
+      "pr": "ü",
+      "wordEn": "a, one (feminine)"
+    },
+    {
+      "l": "V",
+      "say": "vé",
+      "hint": "Like “vay”.",
+      "word": "vingt",
+      "trick": "V = “vay”, rhymes with bé, cé, dé, pé, té.",
+      "fa": "وِه",
+      "pr": "vay",
+      "wordEn": "twenty"
+    },
+    {
+      "l": "W",
+      "say": "double vé",
+      "hint": "“double V”, not double U.",
+      "word": "wagon",
+      "trick": "The French see two Vs in W, not two Us: double vé.",
+      "fa": "دوبل وِه",
+      "pr": "DOO-bluh vay",
+      "wordEn": "train car"
+    },
+    {
+      "l": "X",
+      "say": "ixe",
+      "hint": "Like “eeks”.",
+      "word": "taxi",
+      "trick": "X = “eeks”. Eek, an X!",
+      "fa": "ایکس",
+      "pr": "eeks",
+      "wordEn": "taxi"
+    },
+    {
+      "l": "Y",
+      "say": "i grec",
+      "hint": "“ee grek”: the Greek I.",
+      "word": "yeux",
+      "trick": "Y is the Greek I: i grec. It even looks like an I with arms.",
+      "fa": "ای گرِک",
+      "pr": "ee GREK",
+      "wordEn": "eyes"
+    },
+    {
+      "l": "Z",
+      "say": "zède",
+      "hint": "Like “zed”.",
+      "word": "zéro",
+      "trick": "Z is “zède”, like the British “zed”.",
+      "fa": "زِد",
+      "pr": "zed",
+      "wordEn": "zero"
+    }
+  ],
+  "traps": [
+    [
+      "G",
+      "J"
+    ],
+    [
+      "E",
+      "I"
+    ],
+    [
+      "U",
+      "O"
+    ],
+    [
+      "E",
+      "U"
+    ],
+    [
+      "I",
+      "Y"
+    ],
+    [
+      "W",
+      "V"
+    ],
+    [
+      "Q",
+      "K"
+    ],
+    [
+      "R",
+      "L"
+    ]
+  ],
+  "accents": [
+    {
+      "id": "aigu",
+      "mark": "é",
+      "name": "e accent aigu",
+      "hint": "Sounds like “ay”. The most common accent.",
+      "words": [
+        "école",
+        "bébé",
+        "épouse"
+      ],
+      "trick": "Aigu goes UP, like your voice going up in “ay!”. Rising accent, rising sound.",
+      "fa": "اُ آکسان تِگو",
+      "pr": "uh ak-sahn tay-GÜ",
+      "wordsEn": {
+        "école": "school",
+        "bébé": "baby",
+        "épouse": "wife"
+      }
+    },
+    {
+      "id": "grave",
+      "mark": "è",
+      "name": "e accent grave",
+      "hint": "Sounds like “eh” in “bed”.",
+      "words": [
+        "mère",
+        "père",
+        "frère"
+      ],
+      "trick": "Grave goes DOWN, like a grave in the ground. Low, open “eh”.",
+      "fa": "اُ آکسان گراو",
+      "pr": "uh ak-sahn GRAHV",
+      "wordsEn": {
+        "mère": "mother",
+        "père": "father",
+        "frère": "brother"
+      }
+    },
+    {
+      "id": "circ",
+      "mark": "ê",
+      "name": "e accent circonflexe",
+      "hint": "Also “eh”. Often a missing s from old French: fête, like “feast”.",
+      "words": [
+        "être",
+        "fête",
+        "tête"
+      ],
+      "trick": "The circonflexe is a little hat hiding a lost s: forêt = forest, fête = feast, hôpital = hospital.",
+      "fa": "اُ آکسان سیرکُنفلِکس",
+      "pr": "uh ak-sahn seer-kohn-FLEKS",
+      "wordsEn": {
+        "être": "to be",
+        "fête": "party",
+        "tête": "head"
+      }
+    },
+    {
+      "id": "cedille",
+      "mark": "ç",
+      "name": "c cédille",
+      "hint": "Makes C sound like S before a, o, u.",
+      "words": [
+        "garçon",
+        "français",
+        "ça"
+      ],
+      "trick": "The cédille is a little tail that softens C into S: garçon, français.",
+      "fa": "سِه سِدی",
+      "pr": "say say-DEE-y",
+      "wordsEn": {
+        "garçon": "boy",
+        "français": "French",
+        "ça": "that"
+      }
+    },
+    {
+      "id": "trema",
+      "mark": "ë",
+      "name": "e tréma",
+      "hint": "Two dots: say this vowel separately from the one before it.",
+      "words": [
+        "Noël",
+        "naïf"
+      ],
+      "trick": "The two dots split the vowels apart: Noël is “no-el”, not “nole”.",
+      "fa": "اُ تره‌ما",
+      "pr": "uh tray-MAH",
+      "wordsEn": {
+        "Noël": "Christmas",
+        "naïf": "naive"
+      }
+    },
+    {
+      "id": "agrave",
+      "mark": "à",
+      "name": "a accent grave",
+      "hint": "Same sound as a. It changes the meaning: à means “to”, a means “has”.",
+      "words": [
+        "à",
+        "voilà",
+        "là"
+      ],
+      "trick": "The accent on à is a signpost: à = to. Without it, a = has.",
+      "fa": "آ آکسان گراو",
+      "pr": "ah ak-sahn GRAHV",
+      "wordsEn": {
+        "à": "to, at",
+        "voilà": "there you go",
+        "là": "there"
+      }
+    }
+  ],
+  "spellWords": [
+    "papa",
+    "mère",
+    "père",
+    "frère",
+    "sœur",
+    "fils",
+    "fille",
+    "mari",
+    "oncle",
+    "tante",
+    "neveu",
+    "nièce",
+    "cousin",
+    "bébé",
+    "famille",
+    "enfant",
+    "zéro",
+    "deux",
+    "trois",
+    "sept",
+    "huit",
+    "neuf"
+  ],
+  "chant": {
+    "id": "abc",
+    "title": "La chanson de l'alphabet",
+    "lines": [
+      {
+        "fr": "A, B, C, D, E, F, G",
+        "en": "Sing it to the tune of Twinkle, Twinkle, Little Star.",
+        "pr": "ah, bay, say, day, uh, eff, zhay",
+        "fa": "آ، بِه، سِه، دِه، اُ، اِف، ژِه"
+      },
+      {
+        "fr": "H, I, J, K, L, M, N, O, P",
+        "en": null,
+        "pr": "ash, ee, zhee, kah, el, em, en, oh, pay",
+        "fa": "آش، ای، ژی، کا، اِل، اِم، اِن، اُ، پِه"
+      },
+      {
+        "fr": "Q, R, S, T, U, V",
+        "en": null,
+        "pr": "kü, air, ess, tay, ü, vay",
+        "fa": "کو، اِر، اِس، تِه، او، وِه"
+      },
+      {
+        "fr": "W, X, Y, Z",
+        "en": null,
+        "pr": "DOO-bluh-vay, eeks, ee-GREK, zed",
+        "fa": "دوبل‌وِه، ایکس، ای‌گرِک، زِد"
+      },
+      {
+        "fr": "Et voilà, je connais mon alphabet !",
+        "en": "And there, I know my alphabet!",
+        "fa": "اِ ووالا، ژُ کُنِ مُنالفابِه!",
+        "pr": "ay vwah-LAH, zhuh koh-NAY moh-nahl-fah-BAY!"
+      }
+    ]
+  },
+  "spellEn": {
+    "papa": "dad",
+    "mère": "mother",
+    "père": "father",
+    "frère": "brother",
+    "sœur": "sister",
+    "fils": "son",
+    "fille": "daughter",
+    "mari": "husband",
+    "oncle": "uncle",
+    "tante": "aunt",
+    "neveu": "nephew",
+    "nièce": "niece",
+    "cousin": "cousin",
+    "bébé": "baby",
+    "famille": "family",
+    "enfant": "child",
+    "zéro": "zero",
+    "deux": "two",
+    "trois": "three",
+    "sept": "seven",
+    "huit": "eight",
+    "neuf": "nine"
+  }
+}

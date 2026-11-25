@@ -1,0 +1,9 @@
+{
+  "classes": [
+    {
+      "id": "class1",
+      "title": "Class 1",
+      "modules": ["alphabet", "module1"]
+    }
+  ]
+}

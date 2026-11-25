@@ -1,0 +1,1330 @@
+{
+  "id": "m1",
+  "number": 1,
+  "title": "La famille",
+  "subtitle": "Family and possessive adjectives",
+  "source": "Grammaire 1.1, pp. 65–66, and Vocabulaire: La famille",
+  "numbers": [
+    0,
+    10
+  ],
+  "path": [
+    {
+      "id": "words1",
+      "type": "words",
+      "title": "Mots I",
+      "subtitle": "Parents and siblings",
+      "items": [
+        "pere",
+        "mere",
+        "frere",
+        "soeur",
+        "fils",
+        "fille",
+        "mari",
+        "femme"
+      ],
+      "titleEn": "Words I"
+    },
+    {
+      "id": "words2",
+      "type": "words",
+      "title": "Mots II",
+      "subtitle": "Grandparents and cousins",
+      "items": [
+        "enfant",
+        "grand-pere",
+        "grand-mere",
+        "grands-parents",
+        "oncle",
+        "tante",
+        "cousin",
+        "cousine"
+      ],
+      "titleEn": "Words II"
+    },
+    {
+      "id": "words3",
+      "type": "words",
+      "title": "Mots III",
+      "subtitle": "In-laws and step-family",
+      "items": [
+        "beau-pere",
+        "belle-mere",
+        "beau-frere",
+        "belle-soeur",
+        "demi-frere",
+        "demi-soeur",
+        "neveu",
+        "niece",
+        "petit-fils",
+        "petite-fille",
+        "petits-enfants",
+        "epoux",
+        "epouse"
+      ],
+      "titleEn": "Words III"
+    },
+    {
+      "id": "grammar",
+      "type": "grammar",
+      "title": "Grammaire",
+      "subtitle": "Mon, ma, mes and friends",
+      "titleEn": "Grammar"
+    },
+    {
+      "id": "exercises",
+      "type": "exercises",
+      "title": "Exercices",
+      "subtitle": "Textbook page 66",
+      "titleEn": "Exercises"
+    },
+    {
+      "id": "reading",
+      "type": "reading",
+      "title": "Lecture",
+      "subtitle": "Read about two families",
+      "titleEn": "Reading"
+    },
+    {
+      "id": "listen",
+      "type": "listen",
+      "title": "Écoute et parole",
+      "subtitle": "Hear it, say it, build it",
+      "titleEn": "Listen and speak"
+    },
+    {
+      "id": "numbers",
+      "type": "numbers",
+      "title": "Nombres",
+      "subtitle": "0 to 10",
+      "titleEn": "Numbers"
+    },
+    {
+      "id": "checkpoint",
+      "type": "checkpoint",
+      "title": "Checkpoint",
+      "subtitle": "Prove Module 1",
+      "titleEn": "Checkpoint"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "pere",
+      "fr": "le père",
+      "noun": "père",
+      "pl": "pères",
+      "g": "m",
+      "en": "father",
+      "trick": "Père, mère, frère all end in -ère. Père sounds like the start of “paternal”.",
+      "fa": "لُ پِر",
+      "pr": "luh PEHR"
+    },
+    {
+      "id": "mere",
+      "fr": "la mère",
+      "noun": "mère",
+      "pl": "mères",
+      "g": "f",
+      "en": "mother",
+      "trick": "Mère: think “maternal”. The family that ends in -ère sticks together.",
+      "fa": "لا مِر",
+      "pr": "lah MEHR"
+    },
+    {
+      "id": "frere",
+      "fr": "le frère",
+      "noun": "frère",
+      "pl": "frères",
+      "g": "m",
+      "en": "brother",
+      "trick": "Frère: think “fraternity”, a group of brothers.",
+      "fa": "لُ فرِر",
+      "pr": "luh FREHR"
+    },
+    {
+      "id": "soeur",
+      "fr": "la sœur",
+      "noun": "sœur",
+      "pl": "sœurs",
+      "g": "f",
+      "en": "sister",
+      "trick": "Sœur: think “sorority”, a group of sisters. Say “sir” with rounded lips.",
+      "fa": "لا سُر",
+      "pr": "lah SUHR"
+    },
+    {
+      "id": "fils",
+      "fr": "le fils",
+      "noun": "fils",
+      "pl": "fils",
+      "g": "m",
+      "en": "son",
+      "tip": "The l and s are silent: say “fiss”.",
+      "trick": "Fils: a son “fills” the house. But the l and s are silent: “fiss”.",
+      "fa": "لُ فیس",
+      "pr": "luh FEESS"
+    },
+    {
+      "id": "fille",
+      "fr": "la fille",
+      "noun": "fille",
+      "pl": "filles",
+      "g": "f",
+      "en": "daughter",
+      "tip": "Also means “girl”.",
+      "trick": "Fille: a filly is a young female horse. Fille = daughter, and also girl.",
+      "fa": "لا فی",
+      "pr": "lah FEE-y"
+    },
+    {
+      "id": "mari",
+      "fr": "le mari",
+      "noun": "mari",
+      "pl": "maris",
+      "g": "m",
+      "en": "husband",
+      "trick": "Mari: the one you marry. Husband = mari.",
+      "fa": "لُ ماری",
+      "pr": "luh mah-REE"
+    },
+    {
+      "id": "femme",
+      "fr": "la femme",
+      "noun": "femme",
+      "pl": "femmes",
+      "g": "f",
+      "en": "wife",
+      "tip": "Also means “woman”. Say “fam”.",
+      "trick": "Femme: think “feminine”. It sounds like “fam”: she's your fam.",
+      "fa": "لا فام",
+      "pr": "lah FAHM"
+    },
+    {
+      "id": "enfant",
+      "fr": "l'enfant",
+      "noun": "enfant",
+      "pl": "enfants",
+      "g": "mf",
+      "en": "child",
+      "tip": "Masculine or feminine. L' hides the gender before a vowel.",
+      "trick": "Enfant: think “infant”. Same word, French accent.",
+      "fa": "لانفان",
+      "pr": "lahn-FAHN"
+    },
+    {
+      "id": "grand-pere",
+      "fr": "le grand-père",
+      "noun": "grand-père",
+      "pl": "grands-pères",
+      "g": "m",
+      "en": "grandfather",
+      "trick": "Grand + père = grandfather, just like English. Grand for the older generation.",
+      "fa": "لُ گران‌پِر",
+      "pr": "luh grahn-PEHR"
+    },
+    {
+      "id": "grand-mere",
+      "fr": "la grand-mère",
+      "noun": "grand-mère",
+      "pl": "grands-mères",
+      "g": "f",
+      "en": "grandmother",
+      "trick": "Grand + mère = grandmother. Same pattern as English.",
+      "fa": "لا گران‌مِر",
+      "pr": "lah grahn-MEHR"
+    },
+    {
+      "id": "grands-parents",
+      "fr": "les grands-parents",
+      "noun": "grands-parents",
+      "pl": "grands-parents",
+      "g": "pl",
+      "en": "grandparents",
+      "tip": "Always plural and masculine.",
+      "trick": "Grands-parents: both words take an s, because there are two of them.",
+      "fa": "لِ گران‌پاران",
+      "pr": "lay grahn-pah-RAHN"
+    },
+    {
+      "id": "oncle",
+      "fr": "l'oncle",
+      "noun": "oncle",
+      "pl": "oncles",
+      "g": "m",
+      "en": "uncle",
+      "tip": "Masculine, even though you only see l'.",
+      "trick": "Oncle: “uncle” with an o. Masculine like every uncle.",
+      "fa": "لُنکل",
+      "pr": "LOHN-kluh"
+    },
+    {
+      "id": "tante",
+      "fr": "la tante",
+      "noun": "tante",
+      "pl": "tantes",
+      "g": "f",
+      "en": "aunt",
+      "trick": "Tante: picture your aunt in a tent. T-aunt-e.",
+      "fa": "لا تانت",
+      "pr": "lah TAHNT"
+    },
+    {
+      "id": "cousin",
+      "fr": "le cousin",
+      "noun": "cousin",
+      "pl": "cousins",
+      "g": "m",
+      "en": "cousin (male)",
+      "trick": "Cousin: same as English. Add an e for a girl: cousine.",
+      "fa": "لُ کوزَن",
+      "pr": "luh koo-ZAN"
+    },
+    {
+      "id": "cousine",
+      "fr": "la cousine",
+      "noun": "cousine",
+      "pl": "cousines",
+      "g": "f",
+      "en": "cousin (female)",
+      "trick": "Cousine: cousin + e. In French, an e on the end often makes it feminine.",
+      "fa": "لا کوزین",
+      "pr": "lah koo-ZEEN"
+    },
+    {
+      "id": "beau-pere",
+      "fr": "le beau-père",
+      "noun": "beau-père",
+      "pl": "beaux-pères",
+      "g": "m",
+      "en": "father-in-law; stepfather",
+      "trick": "Beau means handsome. French calls in-laws “beautiful”: your beau-père is your handsome new father.",
+      "fa": "لُ بوپِر",
+      "pr": "luh boh-PEHR"
+    },
+    {
+      "id": "belle-mere",
+      "fr": "la belle-mère",
+      "noun": "belle-mère",
+      "pl": "belles-mères",
+      "g": "f",
+      "en": "mother-in-law; stepmother",
+      "trick": "Belle means beautiful. Beau for men, belle for women: belle-mère.",
+      "fa": "لا بِل‌مِر",
+      "pr": "lah bel-MEHR"
+    },
+    {
+      "id": "beau-frere",
+      "fr": "le beau-frère",
+      "noun": "beau-frère",
+      "pl": "beaux-frères",
+      "g": "m",
+      "en": "brother-in-law",
+      "trick": "Beau + frère: your “handsome brother”, the brother-in-law.",
+      "fa": "لُ بوفرِر",
+      "pr": "luh boh-FREHR"
+    },
+    {
+      "id": "belle-soeur",
+      "fr": "la belle-sœur",
+      "noun": "belle-sœur",
+      "pl": "belles-sœurs",
+      "g": "f",
+      "en": "sister-in-law",
+      "trick": "Belle + sœur: your “beautiful sister”, the sister-in-law.",
+      "fa": "لا بِل‌سُر",
+      "pr": "lah bel-SUHR"
+    },
+    {
+      "id": "demi-frere",
+      "fr": "le demi-frère",
+      "noun": "demi-frère",
+      "pl": "demi-frères",
+      "g": "m",
+      "en": "half brother; stepbrother",
+      "trick": "Demi means half, like a demigod. Demi-frère = half brother.",
+      "fa": "لُ دُمی‌فرِر",
+      "pr": "luh duh-mee-FREHR"
+    },
+    {
+      "id": "demi-soeur",
+      "fr": "la demi-sœur",
+      "noun": "demi-sœur",
+      "pl": "demi-sœurs",
+      "g": "f",
+      "en": "half sister; stepsister",
+      "trick": "Demi + sœur = half sister. Demi like a demitasse, a half cup.",
+      "fa": "لا دُمی‌سُر",
+      "pr": "lah duh-mee-SUHR"
+    },
+    {
+      "id": "neveu",
+      "fr": "le neveu",
+      "noun": "neveu",
+      "pl": "neveux",
+      "g": "m",
+      "en": "nephew",
+      "trick": "Neveu sounds like “nephew” said fast.",
+      "fa": "لُ نُوُ",
+      "pr": "luh nuh-VUH"
+    },
+    {
+      "id": "niece",
+      "fr": "la nièce",
+      "noun": "nièce",
+      "pl": "nièces",
+      "g": "f",
+      "en": "niece",
+      "trick": "Nièce: just like niece, with an accent.",
+      "fa": "لا نیِس",
+      "pr": "lah NYESS"
+    },
+    {
+      "id": "petit-fils",
+      "fr": "le petit-fils",
+      "noun": "petit-fils",
+      "pl": "petits-fils",
+      "g": "m",
+      "en": "grandson",
+      "trick": "Petit = little. Grandchildren are the “little” ones: petit-fils = grandson.",
+      "fa": "لُ پُتی‌فیس",
+      "pr": "luh puh-tee-FEESS"
+    },
+    {
+      "id": "petite-fille",
+      "fr": "la petite-fille",
+      "noun": "petite-fille",
+      "pl": "petites-filles",
+      "g": "f",
+      "en": "granddaughter",
+      "trick": "Petite-fille: “little daughter” = granddaughter. Grand going up, petit going down.",
+      "fa": "لا پُتیت‌فی",
+      "pr": "lah puh-teet-FEE-y"
+    },
+    {
+      "id": "petits-enfants",
+      "fr": "les petits-enfants",
+      "noun": "petits-enfants",
+      "pl": "petits-enfants",
+      "g": "pl",
+      "en": "grandchildren",
+      "trick": "Petits-enfants: “little children” = grandchildren.",
+      "fa": "لِ پُتی‌زانفان",
+      "pr": "lay puh-tee-zahn-FAHN"
+    },
+    {
+      "id": "epoux",
+      "fr": "l'époux",
+      "noun": "époux",
+      "pl": "époux",
+      "g": "m",
+      "en": "spouse (husband)",
+      "trick": "Époux: drop the é and squint: “spoux”, spouse.",
+      "fa": "لِپو",
+      "pr": "lay-POO"
+    },
+    {
+      "id": "epouse",
+      "fr": "l'épouse",
+      "noun": "épouse",
+      "pl": "épouses",
+      "g": "f",
+      "en": "spouse (wife)",
+      "tip": "Feminine but starts with a vowel, so it's mon épouse.",
+      "trick": "Épouse = spouse. Feminine but starts with a vowel, so mon épouse.",
+      "fa": "لِپوز",
+      "pr": "lay-POOZ"
+    }
+  ],
+  "grammar": {
+    "title": "Possessive adjectives",
+    "teach": [
+      {
+        "title": "My, your, his, her…",
+        "body": "Possessive adjectives say whose something is: <b>mon</b> frère, <b>ta</b> sœur. They go right before the noun.",
+        "table": {
+          "head": [
+            "",
+            "masc.",
+            "fem.",
+            "plural"
+          ],
+          "rows": [
+            [
+              "my",
+              "mon",
+              "ma",
+              "mes"
+            ],
+            [
+              "your (tu)",
+              "ton",
+              "ta",
+              "tes"
+            ],
+            [
+              "his / her / its",
+              "son",
+              "sa",
+              "ses"
+            ],
+            [
+              "our",
+              "notre",
+              "notre",
+              "nos"
+            ],
+            [
+              "your (vous)",
+              "votre",
+              "votre",
+              "vos"
+            ],
+            [
+              "their",
+              "leur",
+              "leur",
+              "leurs"
+            ]
+          ]
+        }
+      },
+      {
+        "title": "Match the thing, not the owner",
+        "body": "The possessive agrees with the noun that is owned. <b>Sa mère</b> can mean <i>his</i> mother or <i>her</i> mother, because <i>mère</i> is feminine.",
+        "examples": [
+          {
+            "fr": "Victor regarde sa femme.",
+            "en": "Victor looks at his wife.",
+            "fa": "ویکتُر رُگارد سا فام",
+            "pr": "veek-TOR ruh-GARD sah FAHM"
+          },
+          {
+            "fr": "Madame Martin regarde son livre.",
+            "en": "Madame Martin looks at her book.",
+            "fa": "مادام مارتَن رُگارد سُن لیور",
+            "pr": "mah-DAHM mar-TAN ruh-GARD sohn LEE-vruh"
+          }
+        ]
+      },
+      {
+        "title": "The vowel rule",
+        "body": "Before a singular word starting with a vowel or a silent h, use <b>mon, ton, son</b>, even if the word is feminine. It's easier to say.",
+        "examples": [
+          {
+            "fr": "mon amie Agnès",
+            "en": "my friend Agnès",
+            "fa": "مُنامی آنیِس",
+            "pr": "moh-nah-MEE ahn-YESS"
+          },
+          {
+            "fr": "son épouse",
+            "en": "his wife",
+            "fa": "سُنِپوز",
+            "pr": "soh-nay-POOZ"
+          },
+          {
+            "fr": "ton horloge",
+            "en": "your clock",
+            "fa": "تُنُرلُژ",
+            "pr": "toh-nor-LOZH"
+          }
+        ]
+      },
+      {
+        "title": "Listen for the link",
+        "body": "A final s or n is pronounced when the next word starts with a vowel. <b>mes enfants</b> sounds like “mé-z-enfants”. <b>mon ami</b> sounds like “mon-n-ami”. But in <b>mes filles</b> and <b>mon fils</b>, the s and n stay quiet.",
+        "examples": [
+          {
+            "fr": "mes enfants",
+            "en": "my children",
+            "fa": "مِزانفان",
+            "pr": "may-zahn-FAHN"
+          },
+          {
+            "fr": "mon oncle",
+            "en": "my uncle",
+            "fa": "مُنُنکل",
+            "pr": "moh-NOHN-kluh"
+          }
+        ]
+      }
+    ],
+    "extraNouns": [
+      {
+        "noun": "amie",
+        "pl": "amies",
+        "g": "f",
+        "en": "friend (female)"
+      },
+      {
+        "noun": "ami",
+        "pl": "amis",
+        "g": "m",
+        "en": "friend (male)"
+      },
+      {
+        "noun": "horloge",
+        "pl": "horloges",
+        "g": "f",
+        "en": "clock"
+      },
+      {
+        "noun": "école",
+        "pl": "écoles",
+        "g": "f",
+        "en": "school"
+      },
+      {
+        "noun": "étudiante",
+        "pl": "étudiantes",
+        "g": "f",
+        "en": "student (female)"
+      },
+      {
+        "noun": "famille",
+        "pl": "familles",
+        "g": "f",
+        "en": "family"
+      },
+      {
+        "noun": "maison",
+        "pl": "maisons",
+        "g": "f",
+        "en": "house"
+      },
+      {
+        "noun": "livre",
+        "pl": "livres",
+        "g": "m",
+        "en": "book"
+      },
+      {
+        "noun": "appartement",
+        "pl": "appartements",
+        "g": "m",
+        "en": "apartment"
+      }
+    ],
+    "notes": [
+      "Agree with the thing owned, not the owner: sa mère = his mother or her mother.",
+      "Before a vowel or silent h, use mon / ton / son, even for feminine nouns: mon amie.",
+      "Notre, votre, leur have no masculine or feminine form, only singular and plural.",
+      "Pronounce the s or n before a vowel: mes enfants (z), mon ami (n)."
+    ],
+    "tricks": {
+      "mon": "The possessive is the noun's outfit: it dresses to match the noun, never the owner.",
+      "ma": "Feminine noun, consonant start: ma, ta, sa. All end in a, like many feminine words.",
+      "mes": "Plural? All three end in -es: mes, tes, ses. The s is for “several”.",
+      "vowel": "Say “ma amie” out loud: two vowels crash. French hates that, so ma becomes mon. Mon amie flows.",
+      "sonsa": "Ignore the owner. Ask: is the THING masculine or feminine? Marc's mother is still sa mère.",
+      "notre": "Notre, votre: one thing. Nos, vos: many things. Short word for many, think “nos = nose-ful”.",
+      "leur": "Leur = their, one thing. Leurs = their, many things. Add s for more, like English."
+    },
+    "chant": {
+      "id": "chant",
+      "title": "La comptine de Minou",
+      "lines": [
+        {
+          "fr": "Mon, ma, mes : c'est à moi !",
+          "en": "My: it's mine!",
+          "fa": "مُن، ما، مِ : سِ تا موا!",
+          "pr": "mohn, mah, may: say tah MWAH!"
+        },
+        {
+          "fr": "Ton, ta, tes : c'est à toi !",
+          "en": "Your: it's yours!",
+          "fa": "تُن، تا، تِ : سِ تا توا!",
+          "pr": "tohn, tah, tay: say tah TWAH!"
+        },
+        {
+          "fr": "Son, sa, ses : à lui, à elle !",
+          "en": "His, her: his or hers!",
+          "fa": "سُن، سا، سِ : آ لویی، آ اِل!",
+          "pr": "sohn, sah, say: ah LWEE, ah EL!"
+        },
+        {
+          "fr": "Notre, nos : c'est à nous !",
+          "en": "Our: it's ours!",
+          "fa": "نُتر، نو : سِ تا نو!",
+          "pr": "NOH-truh, noh: say tah NOO!"
+        },
+        {
+          "fr": "Votre, vos : c'est à vous !",
+          "en": "Your: it's yours, all of you!",
+          "fa": "وُتر، وو : سِ تا وو!",
+          "pr": "VOH-truh, voh: say tah VOO!"
+        },
+        {
+          "fr": "Leur, leurs : c'est à eux !",
+          "en": "Their: it's theirs!",
+          "fa": "لُر، لُر : سِ تا اُ!",
+          "pr": "luhr, luhr: say tah UH!"
+        }
+      ]
+    }
+  },
+  "exercises": [
+    {
+      "id": "ex1-1a",
+      "set": "Exercice 1 · En famille",
+      "text": "— Jacqueline, comment est ___ famille ?",
+      "options": [
+        "ton",
+        "ta",
+        "tes"
+      ],
+      "answer": "ta",
+      "why": "Denise says tu to Jacqueline, and famille is feminine, so ta.",
+      "rule": "ma",
+      "en": "— Jacqueline, what is your family like?"
+    },
+    {
+      "id": "ex1-1b",
+      "set": "Exercice 1 · En famille",
+      "text": "— Est-ce que ___ frères et sœurs sont jeunes ?",
+      "options": [
+        "ton",
+        "ta",
+        "tes"
+      ],
+      "answer": "tes",
+      "why": "Frères et sœurs is plural, so tes.",
+      "rule": "mes",
+      "en": "— Are your brothers and sisters young?"
+    },
+    {
+      "id": "ex1-1c",
+      "set": "Exercice 1 · En famille",
+      "text": "— Non, pas trop. ___ frère a 19 ans…",
+      "options": [
+        "Mon",
+        "Ma",
+        "Mes"
+      ],
+      "answer": "Mon",
+      "why": "Jacqueline talks about her own brother. Frère is masculine, so mon.",
+      "rule": "mon",
+      "en": "— Not really. My brother is 19…"
+    },
+    {
+      "id": "ex1-1d",
+      "set": "Exercice 1 · En famille",
+      "text": "…et ___ sœurs ont 12 et 14 ans.",
+      "options": [
+        "mon",
+        "ma",
+        "mes"
+      ],
+      "answer": "mes",
+      "why": "Sœurs is plural, so mes.",
+      "rule": "mes",
+      "en": "…and my sisters are 12 and 14."
+    },
+    {
+      "id": "ex1-2a",
+      "set": "Exercice 1 · En famille",
+      "text": "— Est-ce que ___ grands-parents habitent dans la même ville que toi ?",
+      "options": [
+        "ton",
+        "ta",
+        "tes"
+      ],
+      "answer": "tes",
+      "why": "Grands-parents is always plural, so tes.",
+      "rule": "mes",
+      "en": "— Do your grandparents live in the same town as you?"
+    },
+    {
+      "id": "ex1-2b",
+      "set": "Exercice 1 · En famille",
+      "text": "— ___ grand-mère habite chez nous…",
+      "options": [
+        "Mon",
+        "Ma",
+        "Mes"
+      ],
+      "answer": "Ma",
+      "why": "Grand-mère is feminine and starts with a consonant, so ma.",
+      "rule": "ma",
+      "en": "— My grandmother lives with us…"
+    },
+    {
+      "id": "ex1-2c",
+      "set": "Exercice 1 · En famille",
+      "text": "…mais ___ grand-père est mort.",
+      "options": [
+        "mon",
+        "ma",
+        "mes"
+      ],
+      "answer": "mon",
+      "why": "Grand-père is masculine, so mon.",
+      "rule": "mon",
+      "en": "…but my grandfather has died."
+    },
+    {
+      "id": "ex1-3a",
+      "set": "Exercice 1 · En famille",
+      "text": "— Est-ce que ___ mère est une personne active ?",
+      "options": [
+        "ton",
+        "ta",
+        "tes"
+      ],
+      "answer": "ta",
+      "why": "Asking Jacqueline (tu) about her mother: mère is feminine, so ta.",
+      "rule": "ma",
+      "en": "— Is your mother an active person?"
+    },
+    {
+      "id": "ex1-3b",
+      "set": "Exercice 1 · En famille",
+      "text": "— Oui. Avec ___ job (m.)…",
+      "options": [
+        "son",
+        "sa",
+        "ses"
+      ],
+      "answer": "son",
+      "why": "Her job: job is masculine, so son, even though the mother is a woman.",
+      "rule": "sonsa",
+      "en": "— Yes. With her job…"
+    },
+    {
+      "id": "ex1-3c",
+      "set": "Exercice 1 · En famille",
+      "text": "…et ___ enfants, elle est très occupée.",
+      "options": [
+        "son",
+        "sa",
+        "ses"
+      ],
+      "answer": "ses",
+      "why": "Enfants is plural, so ses.",
+      "rule": "mes",
+      "en": "…and her children, she is very busy."
+    },
+    {
+      "id": "ex1-4a",
+      "set": "Exercice 1 · En famille",
+      "text": "— ___ frère habite encore chez toi ?",
+      "options": [
+        "Ton",
+        "Ta",
+        "Tes"
+      ],
+      "answer": "Ton",
+      "why": "Frère is masculine, talking to tu, so ton.",
+      "rule": "mon",
+      "en": "— Does your brother still live at home?"
+    },
+    {
+      "id": "ex1-4b",
+      "set": "Exercice 1 · En famille",
+      "text": "— Non, il a ___ propre appartement (m.).",
+      "options": [
+        "son",
+        "sa",
+        "ses"
+      ],
+      "answer": "son",
+      "why": "His own apartment: appartement is masculine, so son.",
+      "rule": "mon",
+      "en": "— No, he has his own apartment."
+    },
+    {
+      "id": "ex2-1",
+      "set": "Exercice 2 · Votre classe",
+      "text": "Il y a dix étudiants dans ___ classe.",
+      "options": [
+        "notre",
+        "nos"
+      ],
+      "answer": "notre",
+      "why": "Classe is singular, so notre.",
+      "rule": "notre",
+      "en": "There are ten students in our class."
+    },
+    {
+      "id": "ex2-2",
+      "set": "Exercice 2 · Votre classe",
+      "text": "___ camarades de classe sont extravertis.",
+      "options": [
+        "Notre",
+        "Nos"
+      ],
+      "answer": "Nos",
+      "why": "Camarades is plural, so nos.",
+      "rule": "notre",
+      "en": "Our classmates are outgoing."
+    },
+    {
+      "id": "ex2-3",
+      "set": "Exercice 2 · Votre classe",
+      "text": "___ professeur s'appelle Madame Dubois.",
+      "options": [
+        "Notre",
+        "Nos"
+      ],
+      "answer": "Notre",
+      "why": "One teacher, so notre.",
+      "rule": "notre",
+      "en": "Our teacher is named Madame Dubois."
+    },
+    {
+      "id": "ex2-4",
+      "set": "Exercice 2 · Votre classe",
+      "text": "___ devoirs sont faciles.",
+      "options": [
+        "Notre",
+        "Nos"
+      ],
+      "answer": "Nos",
+      "why": "Devoirs is plural, so nos.",
+      "rule": "notre",
+      "en": "Our homework is easy."
+    },
+    {
+      "id": "ex3-1",
+      "set": "Exercice 3 · Une nouvelle amie",
+      "type": "type",
+      "text": "Évelyne writes: “Mes parents sont jeunes et énergiques.” Report it: ___ parents sont jeunes et énergiques.",
+      "answer": "Ses",
+      "accept": [
+        "ses"
+      ],
+      "why": "Her parents, plural: ses.",
+      "rule": "sonsa",
+      "en": "“My parents are young and energetic.” → Her parents are young and energetic."
+    },
+    {
+      "id": "ex3-2",
+      "set": "Exercice 3 · Une nouvelle amie",
+      "type": "type",
+      "text": "“Ma sœur Madeleine est très amusante.” Report it: ___ sœur Madeleine est très amusante.",
+      "answer": "Sa",
+      "accept": [
+        "sa"
+      ],
+      "why": "Her sister, feminine: sa.",
+      "rule": "sonsa",
+      "en": "“My sister Madeleine is very funny.” → Her sister Madeleine is very funny."
+    },
+    {
+      "id": "ex3-3",
+      "set": "Exercice 3 · Une nouvelle amie",
+      "type": "sentence",
+      "text": "Rewrite as Évelyne's friend would say it: “Mon père travaille avec mon oncle.”",
+      "answer": "Son père travaille avec son oncle.",
+      "why": "Her father and her uncle: both masculine, so son and son.",
+      "rule": "sonsa",
+      "en": "“My father works with my uncle.” → Her father works with her uncle."
+    },
+    {
+      "id": "ex3-4",
+      "set": "Exercice 3 · Une nouvelle amie",
+      "type": "type",
+      "text": "“Notre maison est très vieille et très grande.” Report it: ___ maison est très vieille et très grande.",
+      "answer": "Leur",
+      "accept": [
+        "leur"
+      ],
+      "why": "Our house becomes their house: leur (one house, so no s).",
+      "rule": "leur",
+      "en": "“Our house is very old and very big.” → Their house is very old and very big."
+    },
+    {
+      "id": "ex3-5",
+      "set": "Exercice 3 · Une nouvelle amie",
+      "type": "sentence",
+      "text": "Rewrite as Évelyne's friend would say it: “Mon amie Sabrine est très intelligente.”",
+      "answer": "Son amie Sabrine est très intelligente.",
+      "why": "Amie is feminine, but it starts with a vowel, so son.",
+      "rule": "vowel",
+      "en": "“My friend Sabrine is very smart.” → Her friend Sabrine is very smart."
+    }
+  ],
+  "readings": [
+    {
+      "id": "r1",
+      "title": "La photo de Minou",
+      "lines": [
+        {
+          "fr": "Voici une photo de ma famille.",
+          "en": "Here is a photo of my family.",
+          "fa": "وواسی یون فُتو دُ ما فامی",
+          "pr": "vwah-SEE oon foh-TOH duh mah fah-MEE-y"
+        },
+        {
+          "fr": "À gauche, c'est mon père, Gaston, et ma mère, Colette.",
+          "en": "On the left, that's my father, Gaston, and my mother, Colette.",
+          "fa": "آ گُش، سِ مُن پِر، گاستُن، اِ ما مِر، کُلِت",
+          "pr": "ah GOHSH, say mohn PEHR, gahs-TOHN, ay mah MEHR, koh-LET"
+        },
+        {
+          "fr": "Mon frère s'appelle Pompon. Il a cinq ans.",
+          "en": "My brother is named Pompon. He is five.",
+          "fa": "مُن فرِر ساپِل پُنپُن. ایلا سَنکان",
+          "pr": "mohn FREHR sah-PEL pohn-POHN. ee-LAH san-KAHN"
+        },
+        {
+          "fr": "Ma sœur, Praline, a sept ans.",
+          "en": "My sister, Praline, is seven.",
+          "fa": "ما سُر، پرالین، آ سِتان",
+          "pr": "mah SUHR, prah-LEEN, ah seh-TAHN"
+        },
+        {
+          "fr": "Au centre, ce sont mes grands-parents. Ma grand-mère adore les chats !",
+          "en": "In the middle are my grandparents. My grandmother loves cats!",
+          "fa": "اُ سانتر، سُ سُن مِ گران‌پاران. ما گران‌مِر آدُر لِ شا",
+          "pr": "oh SAHN-truh, suh sohn may grahn-pah-RAHN. mah grahn-MEHR ah-DOR lay SHAH"
+        },
+        {
+          "fr": "Mon oncle Félix est là aussi, avec sa femme et leurs enfants.",
+          "en": "My uncle Félix is there too, with his wife and their children.",
+          "fa": "مُنُنکل فِلیکس اِ لا اُسی، آوِک سا فام اِ لُرزانفان",
+          "pr": "moh-NOHN-kluh fay-LEEKS ay LAH oh-SEE, ah-VEK sah FAHM ay luhr-zahn-FAHN"
+        },
+        {
+          "fr": "Leurs enfants sont mes cousins.",
+          "en": "Their children are my cousins.",
+          "fa": "لُرزانفان سُن مِ کوزَن",
+          "pr": "luhr-zahn-FAHN sohn may koo-ZAN"
+        }
+      ],
+      "questions": [
+        {
+          "q": "Comment s'appelle le frère de Minou ?",
+          "hint": "What is Minou's brother called?",
+          "options": [
+            "Pompon",
+            "Gaston",
+            "Félix"
+          ],
+          "answer": "Pompon",
+          "optionsEn": {
+            "Pompon": "Pompon (a name)",
+            "Gaston": "Gaston (a name)",
+            "Félix": "Félix (a name)"
+          }
+        },
+        {
+          "q": "Quel âge a Praline ?",
+          "hint": "How old is Praline?",
+          "options": [
+            "sept ans",
+            "cinq ans",
+            "dix ans"
+          ],
+          "answer": "sept ans",
+          "optionsEn": {
+            "sept ans": "seven years old",
+            "cinq ans": "five years old",
+            "dix ans": "ten years old"
+          }
+        },
+        {
+          "q": "Qui est Félix ?",
+          "hint": "Who is Félix?",
+          "options": [
+            "l'oncle de Minou",
+            "le père de Minou",
+            "le cousin de Minou"
+          ],
+          "answer": "l'oncle de Minou",
+          "optionsEn": {
+            "l'oncle de Minou": "Minou's uncle",
+            "le père de Minou": "Minou's father",
+            "le cousin de Minou": "Minou's cousin"
+          }
+        },
+        {
+          "q": "Les enfants de Félix sont…",
+          "hint": "Félix's children are…",
+          "options": [
+            "les cousins de Minou",
+            "les frères de Minou",
+            "les neveux de Minou"
+          ],
+          "answer": "les cousins de Minou",
+          "optionsEn": {
+            "les cousins de Minou": "Minou's cousins",
+            "les frères de Minou": "Minou's brothers",
+            "les neveux de Minou": "Minou's nephews"
+          }
+        }
+      ]
+    },
+    {
+      "id": "r2",
+      "title": "Au café",
+      "lines": [
+        {
+          "who": "Léa",
+          "fr": "Sami, tu as des frères et sœurs ?",
+          "en": "Sami, do you have brothers and sisters?",
+          "fa": "سامی، تو آ دِ فرِر اِ سُر؟",
+          "pr": "sah-MEE, tü ah day FREHR ay SUHR?"
+        },
+        {
+          "who": "Sami",
+          "fr": "Oui, j'ai un frère et deux sœurs. Mon frère a dix ans.",
+          "en": "Yes, I have a brother and two sisters. My brother is ten.",
+          "fa": "وی، ژِ اَن فرِر اِ دُ سُر. مُن فرِر آ دیزان",
+          "pr": "WEE, zhay uhn FREHR ay duh SUHR. mohn FREHR ah dee-ZAHN"
+        },
+        {
+          "who": "Léa",
+          "fr": "Et tes sœurs ?",
+          "en": "And your sisters?",
+          "fa": "اِ تِ سُر؟",
+          "pr": "ay tay SUHR?"
+        },
+        {
+          "who": "Sami",
+          "fr": "Mes sœurs ont huit et neuf ans. Et toi ?",
+          "en": "My sisters are eight and nine. And you?",
+          "fa": "مِ سُر زُن ویت اِ نُوان. اِ توا؟",
+          "pr": "may SUHR zohn WEET ay nuh-VAHN. ay TWAH?"
+        },
+        {
+          "who": "Léa",
+          "fr": "Moi, je n'ai pas de frère, mais j'ai une demi-sœur. Sa mère est ma belle-mère.",
+          "en": "I don't have a brother, but I have a half sister. Her mother is my stepmother.",
+          "fa": "موا، ژُ نِ پا دُ فرِر، مِ ژِ یون دُمی‌سُر. سا مِر اِ ما بِل‌مِر",
+          "pr": "MWAH, zhuh nay pah duh FREHR, may zhay oon duh-mee-SUHR. sah MEHR ay mah bel-MEHR"
+        },
+        {
+          "who": "Sami",
+          "fr": "Et tes grands-parents ?",
+          "en": "And your grandparents?",
+          "fa": "اِ تِ گران‌پاران؟",
+          "pr": "ay tay grahn-pah-RAHN?"
+        },
+        {
+          "who": "Léa",
+          "fr": "Ma grand-mère habite chez nous. Mon grand-père habite à Lyon avec mon oncle.",
+          "en": "My grandmother lives with us. My grandfather lives in Lyon with my uncle.",
+          "fa": "ما گران‌مِر آبیت شِ نو. مُن گران‌پِر آبیت آ لیُن آوِک مُنُنکل",
+          "pr": "mah grahn-MEHR ah-BEET shay NOO. mohn grahn-PEHR ah-BEET ah lee-OHN ah-VEK moh-NOHN-kluh"
+        }
+      ],
+      "questions": [
+        {
+          "q": "Combien de sœurs a Sami ?",
+          "hint": "How many sisters does Sami have?",
+          "options": [
+            "deux",
+            "une",
+            "trois"
+          ],
+          "answer": "deux",
+          "optionsEn": {
+            "deux": "two",
+            "une": "one",
+            "trois": "three"
+          }
+        },
+        {
+          "q": "Quel âge a le frère de Sami ?",
+          "hint": "How old is Sami's brother?",
+          "options": [
+            "dix ans",
+            "huit ans",
+            "neuf ans"
+          ],
+          "answer": "dix ans",
+          "optionsEn": {
+            "dix ans": "ten years old",
+            "huit ans": "eight years old",
+            "neuf ans": "nine years old"
+          }
+        },
+        {
+          "q": "Qui habite chez Léa ?",
+          "hint": "Who lives at Léa's home?",
+          "options": [
+            "sa grand-mère",
+            "son grand-père",
+            "son oncle"
+          ],
+          "answer": "sa grand-mère",
+          "optionsEn": {
+            "sa grand-mère": "her grandmother",
+            "son grand-père": "her grandfather",
+            "son oncle": "her uncle"
+          }
+        },
+        {
+          "q": "La belle-mère de Léa est…",
+          "hint": "Léa's stepmother is…",
+          "options": [
+            "la mère de sa demi-sœur",
+            "la mère de Sami",
+            "la sœur de son père"
+          ],
+          "answer": "la mère de sa demi-sœur",
+          "optionsEn": {
+            "la mère de sa demi-sœur": "her half sister's mother",
+            "la mère de Sami": "Sami's mother",
+            "la sœur de son père": "her father's sister"
+          }
+        }
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "s1",
+      "fr": "Voici mon père.",
+      "en": "Here is my father.",
+      "alts": [
+        "Voilà mon père."
+      ],
+      "fa": "وواسی مُن پِر",
+      "pr": "vwah-SEE mohn PEHR"
+    },
+    {
+      "id": "s2",
+      "fr": "C'est ma mère.",
+      "en": "This is my mother.",
+      "alts": [
+        "Voici ma mère.",
+        "C'est ma maman."
+      ],
+      "fa": "سِ ما مِر",
+      "pr": "say mah MEHR"
+    },
+    {
+      "id": "s3",
+      "fr": "J'ai un frère et une sœur.",
+      "en": "I have a brother and a sister.",
+      "fa": "ژِ اَن فرِر اِ یون سُر",
+      "pr": "zhay uhn FREHR ay oon SUHR"
+    },
+    {
+      "id": "s4",
+      "fr": "Mes grands-parents habitent à Paris.",
+      "en": "My grandparents live in Paris.",
+      "fa": "مِ گران‌پاران آبیت آ پاری",
+      "pr": "may grahn-pah-RAHN ah-BEET ah pah-REE"
+    },
+    {
+      "id": "s5",
+      "fr": "Ma sœur a dix ans.",
+      "en": "My sister is ten years old.",
+      "alts": [
+        "Ma sœur a 10 ans."
+      ],
+      "fa": "ما سُر آ دیزان",
+      "pr": "mah SUHR ah dee-ZAHN"
+    },
+    {
+      "id": "s6",
+      "fr": "Son mari est sympathique.",
+      "en": "Her husband is nice.",
+      "alts": [
+        "Son mari est gentil.",
+        "Son mari est sympa."
+      ],
+      "fa": "سُن ماری اِ سَنپاتیک",
+      "pr": "sohn mah-REE ay sam-pah-TEEK"
+    },
+    {
+      "id": "s7",
+      "fr": "Sa femme s'appelle Claudine.",
+      "en": "His wife is named Claudine.",
+      "fa": "سا فام ساپِل کلودین",
+      "pr": "sah FAHM sah-PEL kloh-DEEN"
+    },
+    {
+      "id": "s8",
+      "fr": "Ton oncle a deux enfants.",
+      "en": "Your uncle has two children.",
+      "alts": [
+        "Votre oncle a deux enfants."
+      ],
+      "fa": "تُنُنکل آ دُزانفان",
+      "pr": "toh-NOHN-kluh ah duh-zahn-FAHN"
+    },
+    {
+      "id": "s9",
+      "fr": "Notre famille est grande.",
+      "en": "Our family is big.",
+      "fa": "نُتر فامی اِ گراند",
+      "pr": "NOH-truh fah-MEE-y ay GRAHND"
+    },
+    {
+      "id": "s10",
+      "fr": "Leurs enfants sont mes cousins.",
+      "en": "Their children are my cousins.",
+      "fa": "لُرزانفان سُن مِ کوزَن",
+      "pr": "luhr-zahn-FAHN sohn may koo-ZAN"
+    },
+    {
+      "id": "s11",
+      "fr": "Mon amie Agnès a un fils.",
+      "en": "My friend Agnès has a son.",
+      "fa": "مُنامی آنیِس آ اَن فیس",
+      "pr": "moh-nah-MEE ahn-YESS ah uhn FEESS"
+    },
+    {
+      "id": "s12",
+      "fr": "Votre tante est très active.",
+      "en": "Your aunt is very active.",
+      "alts": [
+        "Ta tante est très active."
+      ],
+      "fa": "وُتر تانت اِ ترِزاکتیو",
+      "pr": "VOH-truh TAHNT ay treh-zahk-TEEV"
+    },
+    {
+      "id": "s13",
+      "fr": "Mes neveux ont six et huit ans.",
+      "en": "My nephews are six and eight.",
+      "alts": [
+        "Mes neveux ont 6 et 8 ans."
+      ],
+      "fa": "مِ نُوُ زُن سیس اِ ویتان",
+      "pr": "may nuh-VUH zohn SEESS ay wee-TAHN"
+    },
+    {
+      "id": "s14",
+      "fr": "Ma grand-mère habite chez nous.",
+      "en": "My grandmother lives with us.",
+      "fa": "ما گران‌مِر آبیت شِ نو",
+      "pr": "mah grahn-MEHR ah-BEET shay NOO"
+    }
+  ],
+  "numberChant": {
+    "id": "comptine",
+    "title": "Un, deux, trois, nous irons au bois",
+    "lines": [
+      {
+        "fr": "Un, deux, trois, nous irons au bois.",
+        "en": "One, two, three, we'll go to the woods.",
+        "fa": "اَن، دُ، تروا، نوزیرُن اُ بوا",
+        "pr": "uhn, duh, TRWAH, noo-zee-ROHN oh BWAH"
+      },
+      {
+        "fr": "Quatre, cinq, six, cueillir des cerises.",
+        "en": "Four, five, six, to pick cherries.",
+        "fa": "کاتر، سَنک، سیس، کُیی‌یِر دِ سُریز",
+        "pr": "KAH-truh, SANK, SEESS, kuh-YEER day suh-REEZ"
+      },
+      {
+        "fr": "Sept, huit, neuf, dans mon panier neuf.",
+        "en": "Seven, eight, nine, in my new basket.",
+        "fa": "سِت، ویت، نُف، دان مُن پانیه نُف",
+        "pr": "SET, WEET, NUHF, dahn mohn pahn-YAY NUHF"
+      },
+      {
+        "fr": "Dix, onze, douze, elles seront toutes rouges.",
+        "en": "Ten, eleven, twelve, they'll all be red.",
+        "fa": "دیس، اُنز، دوز، اِل سُرُن توت روژ",
+        "pr": "DEESS, OHNZ, DOOZ, el suh-ROHN toot ROOZH"
+      }
+    ]
+  }
+}
