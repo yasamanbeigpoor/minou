@@ -664,3 +664,5 @@ html.no-pr.no-fa .pron { display: none; }
 .node.open:active { box-shadow: 0 1px 0 var(--line); }
 .pop-best { display: flex; align-items: center; gap: 6px; color: var(--good-deep); font-weight: 700; }
 .pop-best .ic { color: var(--good); }
+
+.version-line { text-align: center; color: var(--ink-2); font-size: 13px; padding: 8px 0 4px; }

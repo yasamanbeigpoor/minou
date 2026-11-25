@@ -12,6 +12,9 @@ import { sfx } from './sound.js';
 import { startTour } from './tour.js';
 import { applyPronClasses, prOn, faOn } from './fa.js';
 
+// Shown on the Me tab so it's easy to check which version is running. Bump with every release.
+export const APP_VERSION = '1.6 (25 Nov 2026)';
+
 const app = $('#app');
 let installEvt = null;
 addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); installEvt = e; });
@@ -356,6 +359,7 @@ function meScreen() {
       h('button', { class: 'btn text danger', onclick: () => {
         if (confirm('Erase all progress? This can’t be undone.')) { store.resetAll(); location.hash = '#/learn'; location.reload(); }
       } }, 'Erase all progress')),
+    h('p', { class: 'version-line' }, `Minou version ${APP_VERSION}`),
   );
 }
 
