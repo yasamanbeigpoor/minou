@@ -67,7 +67,10 @@ export function runLesson({ title, steps, mode = 'learn', onDone, onExit }) {
   const body = h('main', { class: 'l-body' });
   const skipBtn = h('button', { class: 'btn ghost', hidden: true }, '');
   const mainBtn = h('button', { class: 'btn primary wide' }, 'Check');
-  const foot = h('footer', { class: 'l-foot' }, skipBtn, mainBtn);
+  const backBtn = h('button', { class: 'btn ghost back-btn', 'aria-label': 'Back to the previous card', hidden: true, onclick: () => back() }, icon('back'), h('span', {}, 'Back'));
+  const foot = h('footer', { class: 'l-foot' }, backBtn, skipBtn, mainBtn);
+  // Questions already answered once: revisiting them is practice and isn't graded again.
+  const answered = new Set();
   const sheet = h('div', { class: 'sheet', hidden: true, role: 'status', 'aria-live': 'polite' });
   root.append(top, body, foot, sheet);
 
@@ -129,6 +132,7 @@ export function runLesson({ title, steps, mode = 'learn', onDone, onExit }) {
     body.innerHTML = '';
     body.scrollTop = 0;
     skipBtn.hidden = true;
+    backBtn.hidden = exam || prevIndex() < 0;
     mainBtn.disabled = false;
     mainBtn.className = 'btn primary wide';
 
@@ -173,6 +177,14 @@ export function runLesson({ title, steps, mode = 'learn', onDone, onExit }) {
     if (phase !== 'answer') return;
     phase = 'feedback';
     const ok = res.ok;
+    if (answered.has(step)) {
+      // A second try after going back: show the feedback, record nothing.
+      ok ? sfx.correct() : sfx.wrong();
+      current.lock?.(res);
+      showSheet(step, { ...res, note: [res.note, 'Practice only: this answer isn’t counted again.'].filter(Boolean).join(' ') });
+      return;
+    }
+    answered.add(step);
     graded += 1;
     if (step.itemId) store.record(step.itemId, res.grade, step.skill, step.label);
     if (res.items) res.items.forEach(([id, g]) => store.record(id, g, step.skill, null));
@@ -230,6 +242,21 @@ export function runLesson({ title, steps, mode = 'learn', onDone, onExit }) {
     foot.hidden = true;
     if (ok && step.speakAnswer && step.kind !== 'speak' && !step.audio) speak(step.speakAnswer);
     setTimeout(() => sheet.querySelector('button.wide')?.focus({ preventScroll: true }), 50);
+  }
+
+  function prevIndex() {
+    let k = i - 1;
+    while (k >= 0 && skipSpeak && queue[k].kind === 'speak') k--;
+    return k;
+  }
+
+  function back() {
+    const k = prevIndex();
+    if (k < 0) return;
+    sfx.tap();
+    stopSpeaking();
+    i = k;
+    show();
   }
 
   function next() {
@@ -335,7 +362,7 @@ const RENDER = {
     const gender = { m: 'masculine', f: 'feminine', mf: 'masc. or fem.', pl: 'plural' }[step.g];
     setTimeout(() => speak(step.fr), 300);
     put(body, 
-      promptHead({ say: 'Nouveau mot !', sub: 'New word. Tap to hear it again.' }),
+      promptHead({ say: 'Nouveau mot !', sub: 'Tap the word to hear it again.' }),
       h('div', { class: 'card intro' },
         h('span', { class: `pill g-${step.g}` }, gender),
         h('button', { class: 'intro-fr', lang: 'fr', onclick: () => speak(step.fr) }, step.fr, icon('sound')),
