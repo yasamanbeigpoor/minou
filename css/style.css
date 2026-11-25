@@ -654,3 +654,13 @@ html.no-pr.no-fa .pron { display: none; }
 .grid-note { color: var(--ink-2); }
 .num-grid.letters { grid-template-columns: repeat(auto-fill, minmax(78px, 1fr)); }
 .set-note { margin-top: 10px; font-size: 14px; }
+
+/* Open path: finished circles get a check badge */
+.node { position: relative; }
+.done-badge { position: absolute; right: -4px; bottom: -2px; width: 26px; height: 26px; border-radius: 50%;
+  background: var(--good); color: #fff; display: grid; place-items: center; box-shadow: 0 0 0 3px var(--bg); }
+.done-badge .ic { width: 16px; height: 16px; }
+.node.open { background: var(--surface); color: var(--iris); box-shadow: 0 6px 0 var(--line); border: 3px solid var(--iris-soft); }
+.node.open:active { box-shadow: 0 1px 0 var(--line); }
+.pop-best { display: flex; align-items: center; gap: 6px; color: var(--good-deep); font-weight: 700; }
+.pop-best .ic { color: var(--good); }

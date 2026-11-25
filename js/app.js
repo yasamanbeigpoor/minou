@@ -17,11 +17,12 @@ let installEvt = null;
 addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); installEvt = e; });
 
 const NODE_BLURB = {
-  alphabet: 'All 26 letters with their French names, the tricky pairs like G and J, the accents, and a spelling game.',
+  alphabet: 'All 26 letters with their French names, the tricky pairs like G and J, and a spelling game.',
+  accents: 'Every French accent: what it looks like, how it sounds, and how to type it. Then you hear words and pick the right spelling.',
   numbers: 'Count from 0 to 100: the numbers to learn by heart, the tens, and how French builds 70, 80 and 90.',
   vocab: (n) => `All ${n.mod.vocab.length} words of the module, in small groups with matching games, then reading, writing, listening and speaking practice.`,
   grammar: 'Minou explains the rule step by step, you drill it, then you do the textbook exercises.',
-  'module-review': 'Short readings, then a mixed test of the whole module. Pass it to unlock the next module.',
+  'module-review': 'Short readings, then a mixed test of the whole module.',
   review: 'A mixed recap of everything before this module, weighted toward what you’re about to forget.',
 };
 
@@ -113,7 +114,7 @@ function learnScreen() {
   const sections = [];
   const pre = preModules();
   if (pre.length) sections.push({ pre: true, nodes: pre.flatMap((m) => m.nodes), title: 'Les bases', titleEn: 'The basics',
-    sub: 'Start here: the alphabet and numbers 0–100' });
+    sub: 'Start here: the alphabet, accents and numbers 0–100' });
   for (const m of mainModules()) sections.push({ m, nodes: m.nodes, title: m.title, sub: m.subtitle });
 
   for (const sec of sections) {
@@ -126,10 +127,10 @@ function learnScreen() {
       const st = nodeState(n);
       const done = store.get().done[n.key];
       const off = OFFSETS[i % OFFSETS.length];
-      const btn = h('button', { class: `node ${st} t-${n.type}`, 'aria-label': `${n.titleEn || n.title}: ${n.subtitle}${st === 'locked' ? ' (locked)' : ''}`, onclick: () => openNode(n) },
-        icon(st === 'locked' ? 'lock' : n.icon));
+      const btn = h('button', { class: `node ${st} t-${n.type}`, 'aria-label': `${n.titleEn || n.title}: ${n.subtitle}${st === 'done' ? ' (completed)' : ''}`, onclick: () => openNode(n) },
+        icon(n.icon), st === 'done' ? h('span', { class: 'done-badge' }, icon('check')) : null);
       const li = h('li', { class: 'path-step', style: `--x:${off}px` },
-        st === 'current' ? h('span', { class: 'start-tag' }, done ? 'Again' : 'Start') : null,
+        st === 'current' ? h('span', { class: 'start-tag' }, 'Start') : null,
         btn,
         h('span', { class: 'node-label' }, h('span', { lang: 'fr' }, n.title), n.titleEn && n.titleEn !== n.title ? h('small', {}, n.titleEn) : null),
         done ? h('span', { class: 'node-stars', 'aria-label': `${done.stars} stars` }, ...[1, 2, 3].map((k) => h('i', { class: k <= done.stars ? 'on' : '' }))) : null);
@@ -170,15 +171,13 @@ function openNode(n) {
   const done = store.get().done[n.key];
   const blurb = typeof NODE_BLURB[n.type] === 'function' ? NODE_BLURB[n.type](n) : NODE_BLURB[n.type];
   const close = () => { ov.remove(); };
-  const action = st === 'locked'
-    ? h('p', { class: 'locked-note' }, icon('lock'), 'Finish the step before this one to unlock it.')
-    : h('button', { class: 'btn primary wide', onclick: () => { close(); startNode(n); } }, done ? 'Practise again' : 'Start lesson');
+  const action = h('button', { class: 'btn primary wide', onclick: () => { close(); startNode(n); } }, done ? 'Practise again' : 'Start lesson');
   const ov = h('div', { class: 'pop-ov', onclick: (e) => { if (e.target === ov) close(); } },
     h('div', { class: `pop t-${n.type}`, role: 'dialog', 'aria-modal': 'true', 'aria-label': n.title },
       h('div', { class: 'pop-head' }, h('span', { class: 'pop-ic' }, icon(n.icon)),
         h('div', {}, h('h3', { lang: 'fr' }, n.title, n.titleEn && n.titleEn !== n.title ? h('small', { class: 'banner-en' }, n.titleEn) : null), h('p', {}, n.subtitle))),
       h('p', { class: 'pop-blurb' }, blurb),
-      done ? h('p', { class: 'pop-best' }, `Best: ${Math.round(done.best * 100)}%  ·  Played ${done.times}×`) : null,
+      done ? h('p', { class: 'pop-best' }, icon('check'), `Completed. Best score ${Math.round(done.best * 100)}%, played ${done.times} ${done.times === 1 ? 'time' : 'times'}.`) : null,
       action));
   document.body.append(ov);
   ov.querySelector('button')?.focus();

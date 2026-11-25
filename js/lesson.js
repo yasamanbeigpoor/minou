@@ -25,7 +25,8 @@ const SAY_EN = {
   'Ajoute l’accent !': 'Add the accent!', 'Quel mot ?': 'Which word?', 'Épelle ce mot !': 'Spell this word!',
   'Épelle ton prénom !': 'Spell your first name!', 'Fais la liaison !': 'Link the sounds!', 'Nouveau mot !': 'New word!',
   'Écoute, je t’explique.': 'Listen, let me explain.', 'Nouvelle lettre !': 'New letter!', 'Un accent !': 'An accent!',
-  'Chante avec moi !': 'Sing along with me!', 'Une astuce !': 'A trick!',
+  'Chante avec moi !': 'Sing along with me!', 'Une astuce !': 'A trick!', 'Quelle orthographe ?': 'Which spelling?',
+  'Les lettres !': 'The letters!', 'De 0 à 20': 'From 0 to 20', 'Les dizaines': 'The tens',
 };
 const sayEn = (fr) => SAY_EN[fr] || (/ ou /.test(fr) ? fr.replace(' ou ', ' or ') : '');
 

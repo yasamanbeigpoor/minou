@@ -7,7 +7,7 @@ import { sfx } from './sound.js';
 const STEPS = [
   { fr: 'Bienvenue !', en: 'Welcome!', text: 'Here’s a quick tour so you know where everything is. It takes 30 seconds.' },
   { sel: '.module.is-pre .path-step .node', fr: 'Les bases', en: 'The basics',
-    text: 'Start here: one circle for the alphabet and one for numbers 0 to 100. Tap the circle marked Start.' },
+    text: 'Start here: the alphabet, the accents, and numbers 0 to 100. Every circle is open, so go in any order. Finished ones turn gold with a check mark.' },
   { sel: '.module.is-main .mod-banner', fr: 'Les modules', en: 'The modules',
     text: 'Each module has three circles: vocabulary, grammar, then a module review. From Module 2 on, a recap circle first reviews everything before it.' },
   { sel: '.module.is-main .banner-btn', fr: 'Le résumé', en: 'The summary',

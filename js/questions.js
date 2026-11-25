@@ -298,7 +298,7 @@ const sayOf = (mod, L) => (mod.letters || []).find((x) => x.l === L)?.say || L;
 
 // Spoken spelling: letters and accents by their French names, with pauses.
 export function spellOut(word, mod) {
-  const ACC = { é: 'e accent aigu', è: 'e accent grave', ê: 'e accent circonflexe', ë: 'e tréma', à: 'a accent grave',
+  const ACC = { â: 'a accent circonflexe', é: 'e accent aigu', è: 'e accent grave', ê: 'e accent circonflexe', ë: 'e tréma', à: 'a accent grave',
     ç: 'c cédille', ï: 'i tréma', î: 'i accent circonflexe', ô: 'o accent circonflexe', û: 'u accent circonflexe', ù: 'u accent grave' };
   return [...word.toLowerCase()].map((ch) => {
     if (ch === 'œ') return 'o e dans l’o';
@@ -359,6 +359,16 @@ export function accentQ(itemId, kind) {
       return { ...base, kind: 'type', skill: 'writing', say: 'Ajoute l’accent !', sub: `Type “${plain}” with the right accent.`,
         big: plain, audio: w, answers: [w], strictAccents: true, reveal: w, speakAnswer: w };
     }
+    case 'spot': {
+      // Hear a word, pick the right spelling among versions with the accent swapped.
+      const w = pick(a.words);
+      const variants = [...new Set((a.swap || []).map((x) => w.replace(a.mark, x)))].filter((v) => v !== w);
+      if (!variants.length) return accentQ(itemId, 'name');
+      const en = a.wordsEn?.[w];
+      return { ...base, kind: 'mcq', skill: 'listening', say: 'Quelle orthographe ?', sub: 'Listen. Which spelling is right?',
+        audio: w, options: shuffle([w, ...variants.slice(0, 3)]), answer: w, optionsFr: true, letters: w.length <= 3,
+        reveal: en ? `${w} (${en})` : w, speakAnswer: w };
+    }
   }
 }
 
@@ -390,7 +400,7 @@ export function questionFor(itemId, skill) {
   if (it.type === 'exercise') return exerciseQ(itemId);
   if (it.type === 'reading') return readingQ(itemId);
   if (it.type === 'letter') return letterQ(itemId, skill === 'reading' ? 'letter-name' : skill === 'speaking' ? 'say-letter' : 'hear-letter');
-  if (it.type === 'accent') return accentQ(itemId, skill === 'writing' ? 'word' : skill === 'listening' ? 'hear' : 'name');
+  if (it.type === 'accent') return accentQ(itemId, skill === 'writing' ? 'word' : skill === 'listening' ? pick(['hear', 'spot']) : 'name');
   if (it.type === 'spell') return spellQ(itemId, skill === 'speaking' ? 'speak' : 'listen');
   const table = KINDS[it.type];
   const skills = Object.keys(table);

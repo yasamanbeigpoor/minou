@@ -5,7 +5,7 @@ import { frNumber } from './numbers.js';
 export const DB = { classes: [], modules: [], items: {}, nodes: [] };
 
 const NODE_ICONS = {
-  alphabet: 'abc', numbers: 'hash', review: 'refresh', vocab: 'cards', grammar: 'key', 'module-review': 'crown',
+  alphabet: 'abc', accents: 'accent', numbers: 'hash', review: 'refresh', vocab: 'cards', grammar: 'key', 'module-review': 'crown',
 };
 
 export async function loadAll() {
@@ -85,15 +85,13 @@ function buildNodes() {
   }
 }
 
+// Every circle is open. Finished ones show as done; the first unfinished one is Minou's suggestion.
 export function nodeState(node) {
-  const chain = DB.chains[node.chain];
-  const i = chain.indexOf(node);
   if (isDone(node.key)) return 'done';
-  if (i === 0 || isDone(chain[i - 1].key)) return 'current';
-  return 'locked';
+  return node === currentNode() ? 'current' : 'open';
 }
 
-export const currentNode = (chain = 'main') => DB.chains[chain].find((n) => nodeState(n) === 'current') || null;
+export const currentNode = (chain = 'main') => DB.chains[chain].find((n) => !isDone(n.key)) || null;
 export const mainModules = () => DB.modules.filter((m) => !m.pre);
 export const preModules = () => DB.modules.filter((m) => m.pre);
 // Everything that comes before a module on the path (starter circles included).

@@ -21,6 +21,7 @@ export function buildNode(node) {
   const again = replaying(node);
   switch (node.type) {
     case 'alphabet': return buildAlphabet(m, again);
+    case 'accents': return buildAccents(m, again);
     case 'numbers': return buildNumbersLesson(m, again);
     case 'vocab': return buildVocab(m, again);
     case 'grammar': return buildGrammar(m, again);
@@ -61,19 +62,35 @@ function buildAlphabet(m, again) {
   const pickLetters = again ? weakest(letters.map(lid), 12) : [...shuffle(trapLetters).slice(0, 6), ...sample(letters.filter((L) => !trapLetters.includes(L)), 6)].map(lid);
   pickLetters.forEach((id, i) => steps.push(letterQ(id, ['hear-letter', 'letter-name', 'hear-letter', 'say-letter'][i % 4])));
   sample(m.traps || [], 4).forEach((p) => steps.push(trapQ(m, p)));
-  // Accents.
-  const acc = m.accents || [];
-  if (!again) {
-    steps.push({ kind: 'teach', title: 'Les accents', body:
-      'Accents change how a letter sounds, and sometimes what the word means. Tap each name to hear it.',
-      examples: acc.map((a) => ({ fr: a.name, en: `${a.mark}: ${a.hint}`, pr: a.pr, fa: a.fa })) });
-  }
-  sample(acc, 3).forEach((a) => steps.push(accentQ(aid(a), 'name')));
-  sample(acc, 2).forEach((a) => steps.push(accentQ(aid(a), 'word')));
   // Spelling.
   const spellIds = (m.spellWords || []).map((w) => `${m.key}:w:${w}`);
   (again ? weakest(spellIds, 3) : sample(spellIds, 3)).forEach((id) => steps.push(spellQ(id)));
   return steps.filter(Boolean);
+}
+
+// ---------- Accents: one circle ----------
+
+function buildAccents(m, again) {
+  const aid = (a) => `${m.key}:a:${a.id}`;
+  const acc = m.accents || [];
+  const steps = [];
+  if (!again) {
+    steps.push({ kind: 'teach', title: 'Why accents matter', body:
+      'French accents change how a vowel sounds, or tell two words apart: <b>ou</b> (or) and <b>où</b> (where), <b>a</b> (has) and <b>à</b> (to). Leaving one out is a spelling mistake, so Minou checks them strictly here.',
+      trick: 'On a phone, hold a letter down to pick its accent. On a Mac, hold the key down too. In Minou you can also tap the accent buttons under the answer box.' });
+    // Meet them in families: the e's, then a, u, i, o, and the cédille.
+    const families = [['aigu', 'grave', 'circ', 'trema'], ['agrave', 'acirc'], ['ugrave', 'ucirc'], ['icirc', 'itrema', 'ocirc'], ['cedille']];
+    for (const fam of families) {
+      const group = fam.map((id) => acc.find((a) => a.id === id)).filter(Boolean);
+      group.forEach((a) => steps.push(accentQ(aid(a), 'intro')));
+      group.forEach((a) => steps.push(accentQ(aid(a), 'spot')));
+    }
+  }
+  const pool = again ? weakest(acc.map(aid), 8) : shuffle(acc.map(aid)).slice(0, 8);
+  pool.forEach((id, i) => steps.push(accentQ(id, ['word', 'name', 'spot', 'hear'][i % 4])));
+  const spellIds = (m.spellWords || []).filter((w) => /[éèêëàâùûîïôç]/.test(w)).map((w) => `${m.key}:w:${w}`);
+  (again ? weakest(spellIds, 3) : sample(spellIds, 3)).forEach((id) => steps.push(spellQ(id)));
+  return steps;
 }
 
 // ---------- Numbers 0–100: one circle ----------

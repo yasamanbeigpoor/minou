@@ -11,7 +11,14 @@
       "type": "alphabet",
       "title": "L'alphabet",
       "titleEn": "The alphabet",
-      "subtitle": "Letters, tricky pairs, accents and spelling"
+      "subtitle": "The letters, the tricky pairs and spelling"
+    },
+    {
+      "id": "accents",
+      "type": "accents",
+      "title": "Les accents",
+      "titleEn": "Accents",
+      "subtitle": "é è ê ë à â ù û î ï ô ç"
     }
   ],
   "letters": [
@@ -315,113 +322,265 @@
       "id": "aigu",
       "mark": "é",
       "name": "e accent aigu",
-      "hint": "Sounds like “ay”. The most common accent.",
+      "pr": "uh ak-sahn tay-GÜ",
+      "fa": "اُ آکسان تِگو",
+      "hint": "Sounds like “ay”, a closed e. The most common accent in French.",
+      "trick": "Aigu goes UP, like your voice going up in “ay!”. Rising accent, rising sound.",
       "words": [
         "école",
         "bébé",
         "épouse"
       ],
-      "trick": "Aigu goes UP, like your voice going up in “ay!”. Rising accent, rising sound.",
-      "fa": "اُ آکسان تِگو",
-      "pr": "uh ak-sahn tay-GÜ",
       "wordsEn": {
         "école": "school",
         "bébé": "baby",
         "épouse": "wife"
-      }
+      },
+      "swap": [
+        "e",
+        "è",
+        "ê"
+      ]
     },
     {
       "id": "grave",
       "mark": "è",
       "name": "e accent grave",
-      "hint": "Sounds like “eh” in “bed”.",
+      "pr": "uh ak-sahn GRAHV",
+      "fa": "اُ آکسان گراو",
+      "hint": "Sounds like “eh” in “bed”, an open e.",
+      "trick": "Grave goes DOWN, like a grave in the ground. A low, open “eh”.",
       "words": [
         "mère",
         "père",
         "frère"
       ],
-      "trick": "Grave goes DOWN, like a grave in the ground. Low, open “eh”.",
-      "fa": "اُ آکسان گراو",
-      "pr": "uh ak-sahn GRAHV",
       "wordsEn": {
         "mère": "mother",
         "père": "father",
         "frère": "brother"
-      }
+      },
+      "swap": [
+        "e",
+        "é",
+        "ê"
+      ]
     },
     {
       "id": "circ",
       "mark": "ê",
       "name": "e accent circonflexe",
-      "hint": "Also “eh”. Often a missing s from old French: fête, like “feast”.",
-      "words": [
-        "être",
-        "fête",
-        "tête"
-      ],
-      "trick": "The circonflexe is a little hat hiding a lost s: forêt = forest, fête = feast, hôpital = hospital.",
-      "fa": "اُ آکسان سیرکُنفلِکس",
       "pr": "uh ak-sahn seer-kohn-FLEKS",
-      "wordsEn": {
-        "être": "to be",
-        "fête": "party",
-        "tête": "head"
-      }
-    },
-    {
-      "id": "cedille",
-      "mark": "ç",
-      "name": "c cédille",
-      "hint": "Makes C sound like S before a, o, u.",
+      "fa": "اُ آکسان سیرکُنفلِکس",
+      "hint": "Also an open “eh”, like è.",
+      "trick": "The circonflexe is a little hat hiding a lost s from old French: fête = feast, forêt = forest, tête (think “testa”).",
       "words": [
-        "garçon",
-        "français",
-        "ça"
+        "fête",
+        "tête",
+        "être"
       ],
-      "trick": "The cédille is a little tail that softens C into S: garçon, français.",
-      "fa": "سِه سِدی",
-      "pr": "say say-DEE-y",
       "wordsEn": {
-        "garçon": "boy",
-        "français": "French",
-        "ça": "that"
-      }
+        "fête": "party",
+        "tête": "head",
+        "être": "to be"
+      },
+      "swap": [
+        "e",
+        "é",
+        "è"
+      ]
     },
     {
       "id": "trema",
       "mark": "ë",
       "name": "e tréma",
-      "hint": "Two dots: say this vowel separately from the one before it.",
-      "words": [
-        "Noël",
-        "naïf"
-      ],
-      "trick": "The two dots split the vowels apart: Noël is “no-el”, not “nole”.",
-      "fa": "اُ تره‌ما",
       "pr": "uh tray-MAH",
+      "fa": "اُ ترِما",
+      "hint": "Two dots: say this vowel separately from the one before it.",
+      "trick": "The two dots split the vowels apart: Noël is “no-el”, not “nole”.",
+      "words": [
+        "Noël"
+      ],
       "wordsEn": {
-        "Noël": "Christmas",
-        "naïf": "naive"
-      }
+        "Noël": "Christmas"
+      },
+      "swap": [
+        "e",
+        "é",
+        "è"
+      ]
     },
     {
       "id": "agrave",
       "mark": "à",
       "name": "a accent grave",
-      "hint": "Same sound as a. It changes the meaning: à means “to”, a means “has”.",
+      "pr": "ah ak-sahn GRAHV",
+      "fa": "آ آکسان گراو",
+      "hint": "Same sound as a. It only tells two words apart: à means “to, at”, a means “has”.",
+      "trick": "The accent on à is a signpost pointing somewhere: à Paris = to Paris.",
       "words": [
         "à",
         "voilà",
         "là"
       ],
-      "trick": "The accent on à is a signpost: à = to. Without it, a = has.",
-      "fa": "آ آکسان گراو",
-      "pr": "ah ak-sahn GRAHV",
       "wordsEn": {
         "à": "to, at",
         "voilà": "there you go",
         "là": "there"
-      }
+      },
+      "swap": [
+        "a",
+        "â"
+      ]
+    },
+    {
+      "id": "acirc",
+      "mark": "â",
+      "name": "a accent circonflexe",
+      "pr": "ah ak-sahn seer-kohn-FLEKS",
+      "fa": "آ آکسان سیرکُنفلِکس",
+      "hint": "A slightly deeper “ah”. Often another lost s.",
+      "trick": "Château was once “chastel”, like castle. The hat replaced the s.",
+      "words": [
+        "gâteau",
+        "château",
+        "pâte"
+      ],
+      "wordsEn": {
+        "gâteau": "cake",
+        "château": "castle",
+        "pâte": "dough"
+      },
+      "swap": [
+        "a",
+        "à"
+      ]
+    },
+    {
+      "id": "ugrave",
+      "mark": "ù",
+      "name": "u accent grave",
+      "pr": "ü ak-sahn GRAHV",
+      "fa": "او آکسان گراو",
+      "hint": "Only in one word: où. It tells où (where) apart from ou (or).",
+      "trick": "Où has a little arrow asking “where?”. Ou without it just means “or”.",
+      "words": [
+        "où"
+      ],
+      "wordsEn": {
+        "où": "where"
+      },
+      "swap": [
+        "u",
+        "û"
+      ]
+    },
+    {
+      "id": "ucirc",
+      "mark": "û",
+      "name": "u accent circonflexe",
+      "pr": "ü ak-sahn seer-kohn-FLEKS",
+      "fa": "او آکسان سیرکُنفلِکس",
+      "hint": "Same sound as u. Tells sûr (sure) apart from sur (on).",
+      "trick": "Sûr wears a hat because it's sure of itself. Sur (on) sits on things bareheaded.",
+      "words": [
+        "sûr",
+        "août"
+      ],
+      "wordsEn": {
+        "sûr": "sure",
+        "août": "August"
+      },
+      "swap": [
+        "u",
+        "ù"
+      ]
+    },
+    {
+      "id": "icirc",
+      "mark": "î",
+      "name": "i accent circonflexe",
+      "pr": "ee ak-sahn seer-kohn-FLEKS",
+      "fa": "ای آکسان سیرکُنفلِکس",
+      "hint": "Same sound as i. Another lost s.",
+      "trick": "Île was once “isle”, like the English word. The hat replaced the s.",
+      "words": [
+        "île",
+        "dîner"
+      ],
+      "wordsEn": {
+        "île": "island",
+        "dîner": "dinner"
+      },
+      "swap": [
+        "i",
+        "ï"
+      ]
+    },
+    {
+      "id": "itrema",
+      "mark": "ï",
+      "name": "i tréma",
+      "pr": "ee tray-MAH",
+      "fa": "ای ترِما",
+      "hint": "Say the i separately from the vowel before it.",
+      "trick": "Naïf is “na-eef”, two sounds, not one.",
+      "words": [
+        "naïf",
+        "maïs"
+      ],
+      "wordsEn": {
+        "naïf": "naive",
+        "maïs": "corn"
+      },
+      "swap": [
+        "i",
+        "î"
+      ]
+    },
+    {
+      "id": "ocirc",
+      "mark": "ô",
+      "name": "o accent circonflexe",
+      "pr": "oh ak-sahn seer-kohn-FLEKS",
+      "fa": "اُ آکسان سیرکُنفلِکس",
+      "hint": "A closed, round “oh”.",
+      "trick": "Hôpital was once “hospital”. The hat ate the s.",
+      "words": [
+        "hôtel",
+        "bientôt",
+        "hôpital"
+      ],
+      "wordsEn": {
+        "hôtel": "hotel",
+        "bientôt": "soon",
+        "hôpital": "hospital"
+      },
+      "swap": [
+        "o"
+      ]
+    },
+    {
+      "id": "cedille",
+      "mark": "ç",
+      "name": "c cédille",
+      "pr": "say say-DEE-y",
+      "fa": "سِه سِدی",
+      "hint": "Makes C sound like S before a, o or u.",
+      "trick": "The cédille is a little tail that softens a hard C into an S: garçon, français, ça.",
+      "words": [
+        "garçon",
+        "français",
+        "ça"
+      ],
+      "wordsEn": {
+        "garçon": "boy",
+        "français": "French",
+        "ça": "that"
+      },
+      "swap": [
+        "c"
+      ]
     }
   ],
   "spellWords": [
@@ -446,7 +605,13 @@
     "trois",
     "sept",
     "huit",
-    "neuf"
+    "neuf",
+    "école",
+    "garçon",
+    "fête",
+    "île",
+    "hôtel",
+    "gâteau"
   ],
   "chant": {
     "id": "abc",
@@ -506,6 +671,14 @@
     "trois": "three",
     "sept": "seven",
     "huit": "eight",
-    "neuf": "nine"
+    "neuf": "nine",
+    "école": "school",
+    "garçon": "boy",
+    "fête": "party",
+    "où": "where",
+    "île": "island",
+    "hôtel": "hotel",
+    "gâteau": "cake",
+    "Noël": "Christmas"
   }
 }
