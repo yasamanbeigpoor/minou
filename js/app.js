@@ -256,7 +256,7 @@ function notesScreen(key) {
     if (m) return moduleNotes(m);
   }
   return h('div', { class: 'screen notes' },
-    h('header', { class: 'page-head' }, h('h1', {}, 'Notebook'), h('p', {}, 'One summary per module. Read it here or download it as a PDF.')),
+    h('header', { class: 'page-head' }, h('h1', {}, 'Notebook'), h('p', {}, 'One summary per module. Read it here, or open the PDF to save, share or print it.')),
     ...DB.classes.map((cls) => h('section', { class: 'notes-class' }, h('h2', { class: 'card-title' }, cls.title),
       ...DB.modules.filter((m) => m.classId === cls.id).map((m) =>
         h('a', { class: 'card note-link', href: `#/notes/${m.key}` },
@@ -270,13 +270,12 @@ function moduleNotes(m) {
   const fname = `Minou ${m.className} - ${m.pre ? '' : `Module ${m.number} - `}${m.title.replace(/'/g, '’')}.pdf`;
   // target=_blank matters on iPhone: inside a home-screen app it opens the PDF in a viewer with a Done
   // button that returns to Minou, instead of replacing the app with no way back.
-  const dl = h('a', { class: 'btn primary', href: pdf, download: fname, target: '_blank', rel: 'noopener', hidden: true }, icon('download'), 'Download PDF');
+  const dl = h('a', { class: 'btn primary', href: pdf, download: fname, target: '_blank', rel: 'noopener', hidden: true }, icon('download'), 'Open PDF');
   fetch(pdf, { method: 'HEAD' }).then((r) => { if (r.ok) dl.hidden = false; }).catch(() => {});
   return h('div', { class: 'screen module-notes' },
     h('div', { class: 'notes-bar' },
       h('a', { class: 'icon-btn', href: '#/notes', 'aria-label': 'Back to notebook' }, icon('back')),
-      h('div', { class: 'notes-actions' }, dl,
-        h('button', { class: 'btn ghost', onclick: () => print() }, icon('print'), 'Print'))),
+      h('div', { class: 'notes-actions' }, dl)),
     renderSummary(m, { interactive: true }));
 }
 
