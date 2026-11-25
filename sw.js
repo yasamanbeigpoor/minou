@@ -1,6 +1,6 @@
 // Offline support. App files: cache first, refreshed in the background.
 // Lesson content: network first, so new modules show up as soon as they're pushed.
-const VERSION = 'minou-v4';
+const VERSION = 'minou-v5';
 const SHELL = [
   './', 'index.html', 'manifest.webmanifest', 'css/style.css', 'css/fonts.css',
   'fonts/fredoka-latin-500-normal.woff2', 'fonts/fredoka-latin-600-normal.woff2', 'fonts/nunito-latin-400-normal.woff2',
@@ -14,7 +14,7 @@ const SHELL = [
 ];
 
 self.addEventListener('install', (e) => {
-  e.waitUntil(caches.open(VERSION).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
+  e.waitUntil(caches.open(VERSION).then((c) => c.addAll(SHELL.map((u) => new Request(u, { cache: 'reload' })))).then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', (e) => {
