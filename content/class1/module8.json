@@ -1,0 +1,1324 @@
+{
+  "id": "m8",
+  "number": 8,
+  "title": "Je peux, je veux, je sais",
+  "subtitle": "When and how often, new verbs, pouvoir, vouloir and savoir",
+  "source": "Vocabulaire chapitre 2; Grammaire 2.5 (pp. 100–102)",
+  "path": [
+    {
+      "id": "when",
+      "type": "vocab",
+      "title": "Quand ?",
+      "titleEn": "When",
+      "subtitle": "D'abord, ensuite, le lendemain…",
+      "items": [
+        "cematin",
+        "cesoir",
+        "dabord",
+        "ensuite",
+        "puis",
+        "alafin",
+        "avant",
+        "jusqua",
+        "lendemain",
+        "pendant",
+        "semprochaine"
+      ]
+    },
+    {
+      "id": "often",
+      "type": "vocab",
+      "title": "À quelle fréquence ?",
+      "titleEn": "How often",
+      "subtitle": "Toujours, parfois, jamais…",
+      "items": [
+        "toujours",
+        "jamais",
+        "parfois",
+        "dhabitude",
+        "unefois",
+        "levendredi",
+        "levendredisoir",
+        "tot",
+        "tard",
+        "debonneheure",
+        "enretard"
+      ]
+    },
+    {
+      "id": "verbs",
+      "type": "vocab",
+      "title": "Verbes",
+      "titleEn": "Verbs",
+      "subtitle": "Partir, prendre, voir, savoir…",
+      "items": [
+        "allumer",
+        "chercher",
+        "devoirs",
+        "laisser",
+        "partir",
+        "passer",
+        "pouvoir",
+        "prendre",
+        "savoir",
+        "voir",
+        "vouloir",
+        "arriver",
+        "changer",
+        "commencer",
+        "preparer",
+        "reparer",
+        "signifier",
+        "visiter"
+      ]
+    },
+    {
+      "id": "g25",
+      "type": "grammar",
+      "grammar": "g25",
+      "title": "Pouvoir, vouloir, savoir",
+      "titleEn": "Grammar 2.5",
+      "subtitle": "Je peux, je veux, je sais, je voudrais"
+    },
+    {
+      "id": "review",
+      "type": "module-review",
+      "title": "Révision du module",
+      "titleEn": "Module review",
+      "subtitle": "Reading, listening, speaking and a mixed test"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "cematin",
+      "fr": "ce matin",
+      "en": "this morning",
+      "pr": "suh mah-TAN",
+      "fa": "سُ ماتَن",
+      "g": "x"
+    },
+    {
+      "id": "cesoir",
+      "fr": "ce soir",
+      "en": "this evening, tonight",
+      "pr": "suh SWAR",
+      "fa": "سُ سوآر",
+      "g": "x"
+    },
+    {
+      "id": "dabord",
+      "fr": "d'abord",
+      "en": "first; at first",
+      "pr": "dah-BOR",
+      "fa": "دابُر",
+      "g": "x",
+      "trick": "D'abord, ensuite, puis: first, next, then."
+    },
+    {
+      "id": "ensuite",
+      "fr": "ensuite",
+      "en": "next; then",
+      "pr": "ahn-SWEET",
+      "fa": "آنسویت",
+      "g": "x",
+      "trick": "Ensuite: what comes in the suite, the follow-up."
+    },
+    {
+      "id": "puis",
+      "fr": "puis",
+      "en": "then, next",
+      "pr": "PWEE",
+      "fa": "پوئی",
+      "g": "x"
+    },
+    {
+      "id": "alafin",
+      "fr": "à la fin de",
+      "en": "at the end of",
+      "pr": "ah lah FAN duh",
+      "fa": "آ لا فَن دُ",
+      "g": "x",
+      "trick": "Fin = end, like at the end of a French film: FIN."
+    },
+    {
+      "id": "avant",
+      "fr": "avant de",
+      "en": "before",
+      "pr": "ah-VAHN duh",
+      "fa": "آوان دُ",
+      "g": "x",
+      "tip": "Avant de + infinitive: avant de partir = before leaving."
+    },
+    {
+      "id": "jusqua",
+      "fr": "jusqu'à",
+      "en": "until",
+      "pr": "zhüs-KAH",
+      "fa": "ژوسکا",
+      "g": "x"
+    },
+    {
+      "id": "lendemain",
+      "fr": "le lendemain",
+      "en": "the next day",
+      "pr": "luh lahn-duh-MAN",
+      "fa": "لُ لاندُمَن",
+      "g": "x",
+      "trick": "Lendemain contains demain (tomorrow)."
+    },
+    {
+      "id": "pendant",
+      "fr": "pendant la semaine",
+      "en": "during the week",
+      "pr": "pahn-DAHN lah suh-MEN",
+      "fa": "پاندان لا سُمِن",
+      "g": "x"
+    },
+    {
+      "id": "semprochaine",
+      "fr": "la semaine prochaine",
+      "en": "next week",
+      "pr": "lah suh-MEN proh-SHEN",
+      "fa": "لا سُمِن پرُشِن",
+      "g": "x"
+    },
+    {
+      "id": "toujours",
+      "fr": "toujours",
+      "en": "always",
+      "pr": "too-ZHOOR",
+      "fa": "توژور",
+      "g": "x",
+      "trick": "Toujours = tous les jours, every day: always."
+    },
+    {
+      "id": "jamais",
+      "fr": "jamais",
+      "en": "never",
+      "pr": "zhah-MEH",
+      "fa": "ژامِ",
+      "g": "x",
+      "tip": "With a verb: je ne mange jamais = I never eat."
+    },
+    {
+      "id": "parfois",
+      "fr": "parfois",
+      "en": "sometimes",
+      "pr": "par-FWAH",
+      "fa": "پارفوآ",
+      "g": "x"
+    },
+    {
+      "id": "dhabitude",
+      "fr": "d'habitude",
+      "en": "usually",
+      "pr": "dah-bee-TÜD",
+      "fa": "دابیتود",
+      "g": "x",
+      "trick": "D'habitude: out of habit, usually."
+    },
+    {
+      "id": "unefois",
+      "fr": "une fois par jour",
+      "en": "once a day",
+      "pr": "ün FWAH par ZHOOR",
+      "fa": "اون فوآ پار ژور",
+      "g": "x",
+      "trick": "Une fois = once; deux fois = twice."
+    },
+    {
+      "id": "levendredi",
+      "fr": "le vendredi",
+      "en": "on Fridays",
+      "pr": "luh vahn-druh-DEE",
+      "fa": "لُ واندرُدی",
+      "g": "x",
+      "tip": "Le + day = every week on that day. Vendredi alone = this Friday."
+    },
+    {
+      "id": "levendredisoir",
+      "fr": "le vendredi soir",
+      "en": "on Friday evenings",
+      "pr": "luh vahn-druh-DEE SWAR",
+      "fa": "لُ واندرُدی سوآر",
+      "g": "x"
+    },
+    {
+      "id": "tot",
+      "fr": "tôt",
+      "en": "early",
+      "pr": "TOH",
+      "fa": "تُ",
+      "g": "x"
+    },
+    {
+      "id": "tard",
+      "fr": "tard",
+      "en": "late (in the day)",
+      "pr": "TAR",
+      "fa": "تار",
+      "g": "x",
+      "trick": "Tard: tardy means late."
+    },
+    {
+      "id": "debonneheure",
+      "fr": "de bonne heure",
+      "en": "early (at an early hour)",
+      "pr": "duh boh-NUHR",
+      "fa": "دُ بُنُر",
+      "g": "x",
+      "trick": "Literally “at a good hour”: early."
+    },
+    {
+      "id": "enretard",
+      "fr": "en retard",
+      "en": "late (not on time)",
+      "pr": "ahn ruh-TAR",
+      "fa": "آن رُتار",
+      "g": "x",
+      "tip": "Tard = late in the day; en retard = late for something."
+    },
+    {
+      "id": "allumer",
+      "fr": "allumer un feu",
+      "en": "to light a fire",
+      "pr": "ah-lü-MAY uhn FUH",
+      "fa": "آلومه اَن فُ",
+      "g": "x"
+    },
+    {
+      "id": "chercher",
+      "fr": "chercher",
+      "en": "to search, to look for",
+      "pr": "shehr-SHAY",
+      "fa": "شِرشه",
+      "g": "x"
+    },
+    {
+      "id": "devoirs",
+      "fr": "faire ses devoirs",
+      "en": "to do one's homework",
+      "pr": "fehr say duh-VWAR",
+      "fa": "فِر سِ دُووآر",
+      "g": "x"
+    },
+    {
+      "id": "laisser",
+      "fr": "laisser par terre",
+      "en": "to leave on the floor",
+      "pr": "leh-SAY par TEHR",
+      "fa": "لِسه پار تِر",
+      "g": "x"
+    },
+    {
+      "id": "partir",
+      "fr": "partir",
+      "en": "to leave (a place)",
+      "pr": "par-TEER",
+      "fa": "پارتیر",
+      "g": "x",
+      "tip": "Partir = leave a place. Laisser = leave something somewhere."
+    },
+    {
+      "id": "passer",
+      "fr": "passer chez toi",
+      "en": "to come by your place",
+      "pr": "pah-SAY shay TWAH",
+      "fa": "پاسه شِ توآ",
+      "g": "x"
+    },
+    {
+      "id": "pouvoir",
+      "fr": "pouvoir",
+      "en": "to be able to, can",
+      "pr": "poo-VWAR",
+      "fa": "پووآر",
+      "g": "x"
+    },
+    {
+      "id": "prendre",
+      "fr": "prendre",
+      "en": "to take; to have (food, drink)",
+      "pr": "PRAHN-druh",
+      "fa": "پراندر",
+      "g": "x",
+      "tip": "Je prends un café = I'm having a coffee."
+    },
+    {
+      "id": "savoir",
+      "fr": "savoir",
+      "en": "to know (a fact, how to)",
+      "pr": "sah-VWAR",
+      "fa": "ساوآر",
+      "g": "x",
+      "trick": "Savoir: a savvy person knows things."
+    },
+    {
+      "id": "voir",
+      "fr": "voir",
+      "en": "to see",
+      "pr": "VWAR",
+      "fa": "ووآر",
+      "g": "x",
+      "trick": "Voir: a voyeur sees. Au revoir = until we see again."
+    },
+    {
+      "id": "vouloir",
+      "fr": "vouloir",
+      "en": "to want, to wish",
+      "pr": "voo-LWAR",
+      "fa": "وولوآر",
+      "g": "x"
+    },
+    {
+      "id": "arriver",
+      "fr": "arriver",
+      "en": "to arrive",
+      "pr": "ah-ree-VAY",
+      "fa": "آریوه",
+      "g": "x"
+    },
+    {
+      "id": "changer",
+      "fr": "changer",
+      "en": "to change",
+      "pr": "shahn-ZHAY",
+      "fa": "شانژه",
+      "g": "x"
+    },
+    {
+      "id": "commencer",
+      "fr": "commencer à",
+      "en": "to begin to",
+      "pr": "koh-mahn-SAY ah",
+      "fa": "کُمانسه آ",
+      "g": "x",
+      "tip": "Nous commençons: ç keeps the soft c."
+    },
+    {
+      "id": "preparer",
+      "fr": "préparer",
+      "en": "to prepare",
+      "pr": "pray-pah-RAY",
+      "fa": "پرِپاره",
+      "g": "x"
+    },
+    {
+      "id": "reparer",
+      "fr": "réparer",
+      "en": "to repair",
+      "pr": "ray-pah-RAY",
+      "fa": "رِپاره",
+      "g": "x"
+    },
+    {
+      "id": "signifier",
+      "fr": "signifier",
+      "en": "to mean",
+      "pr": "see-nyee-FYAY",
+      "fa": "سینیفیه",
+      "g": "x"
+    },
+    {
+      "id": "visiter",
+      "fr": "visiter",
+      "en": "to visit (a place)",
+      "pr": "vee-zee-TAY",
+      "fa": "ویزیته",
+      "g": "x",
+      "tip": "Only for places. To visit a person: rendre visite à."
+    }
+  ],
+  "grammars": [
+    {
+      "id": "g25",
+      "title": "Pouvoir, vouloir and savoir",
+      "section": "Grammaire 2.5",
+      "pages": "pp. 100–102",
+      "teach": [
+        {
+          "title": "Pouvoir (can) and vouloir (want)",
+          "body": "These two irregular verbs work the same way: <b>eu</b> in je, tu, il and ils; <b>ou</b> in nous and vous. Like aimer, they're followed by an infinitive.",
+          "table": {
+            "head": [
+              "",
+              "pouvoir",
+              "vouloir"
+            ],
+            "rows": [
+              [
+                "I",
+                "je peux",
+                "je veux"
+              ],
+              [
+                "you (tu)",
+                "tu peux",
+                "tu veux"
+              ],
+              [
+                "he / she / one",
+                "il peut",
+                "il veut"
+              ],
+              [
+                "we",
+                "nous pouvons",
+                "nous voulons"
+              ],
+              [
+                "you (vous)",
+                "vous pouvez",
+                "vous voulez"
+              ],
+              [
+                "they",
+                "ils peuvent",
+                "ils veulent"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "fr": "Je veux manger.",
+              "en": "I want to eat.",
+              "pr": "zhuh vuh mahn-ZHAY",
+              "fa": "ژُ وُ مانژه"
+            },
+            {
+              "fr": "Tu peux sortir ce soir ?",
+              "en": "Can you go out tonight?",
+              "pr": "tü puh sor-TEER suh SWAR",
+              "fa": "تو پُ سُرتیر سُ سوآر"
+            },
+            {
+              "fr": "Tu veux aller au cinéma ce soir ?",
+              "en": "Do you want to go to the movies tonight?",
+              "pr": "tü vuh ah-LAY oh see-nay-MAH suh SWAR",
+              "fa": "تو وُ آله اُ سینِما سُ سوآر"
+            },
+            {
+              "fr": "Je ne peux pas. Je suis fauché.",
+              "en": "I can't. I'm broke.",
+              "pr": "zhuh nuh puh PAH. zhuh swee foh-SHAY",
+              "fa": "ژُ نُ پُ پا. ژُ سوئی فُشه"
+            }
+          ],
+          "trick": "The “boot”: je, tu, il, ils say eu (peux, veux); nous and vous say ou (pouvons, voulons)."
+        },
+        {
+          "title": "Saying no",
+          "body": "Wrap <b>ne … pas</b> around pouvoir or vouloir; the infinitive comes after.",
+          "examples": [
+            {
+              "fr": "Je ne veux pas sortir.",
+              "en": "I don't want to go out.",
+              "pr": "zhuh nuh vuh PAH sor-TEER",
+              "fa": "ژُ نُ وُ پا سُرتیر"
+            },
+            {
+              "fr": "Je ne peux pas dormir.",
+              "en": "I can't sleep.",
+              "pr": "zhuh nuh puh PAH dor-MEER",
+              "fa": "ژُ نُ پُ پا دُرمیر"
+            }
+          ]
+        },
+        {
+          "title": "Savoir: to know a fact",
+          "body": "Use <b>savoir</b> for facts and information.",
+          "table": {
+            "head": [
+              "",
+              "savoir"
+            ],
+            "rows": [
+              [
+                "I",
+                "je sais"
+              ],
+              [
+                "you (tu)",
+                "tu sais"
+              ],
+              [
+                "he / she / one",
+                "il sait"
+              ],
+              [
+                "we",
+                "nous savons"
+              ],
+              [
+                "you (vous)",
+                "vous savez"
+              ],
+              [
+                "they",
+                "ils savent"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "fr": "Tu sais la date d'aujourd'hui ?",
+              "en": "Do you know today's date?",
+              "pr": "tü SEH lah DAHT doh-zhoor-DWEE",
+              "fa": "تو سِ لا دات دُژوردوئی"
+            },
+            {
+              "fr": "Je ne sais pas son adresse mail.",
+              "en": "I don't know her email address.",
+              "pr": "zhuh nuh seh PAH sohn-nah-DRESS MEHL",
+              "fa": "ژُ نُ سِ پا سُنادرِس مِیل"
+            },
+            {
+              "fr": "Je sais que c'est vrai.",
+              "en": "I know that it's true.",
+              "pr": "zhuh SEH kuh seh VREH",
+              "fa": "ژُ سِ کُ سِ ورِ"
+            }
+          ],
+          "trick": "Sais, sais, sait all sound like “seh”."
+        },
+        {
+          "title": "Savoir + infinitive: know how to",
+          "body": "<b>Savoir</b> + an infinitive means knowing <b>how</b> to do something.",
+          "examples": [
+            {
+              "fr": "Je sais nager.",
+              "en": "I know how to swim.",
+              "pr": "zhuh SEH nah-ZHAY",
+              "fa": "ژُ سِ ناژه"
+            },
+            {
+              "fr": "Je ne sais pas danser.",
+              "en": "I don't know how to dance.",
+              "pr": "zhuh nuh seh PAH dahn-SAY",
+              "fa": "ژُ نُ سِ پا دانسه"
+            },
+            {
+              "fr": "Tu sais cuisiner, n'est-ce pas ?",
+              "en": "You know how to cook, don't you?",
+              "pr": "tü SEH kwee-zee-NAY, ness-PAH",
+              "fa": "تو سِ کویزینه، نِس پا"
+            }
+          ],
+          "trick": "Can I swim? Je sais nager (I've learned it). Je peux nager (I'm allowed / able right now)."
+        },
+        {
+          "title": "Being polite: je voudrais",
+          "body": "<b>Je voudrais</b> or <b>j'aimerais</b> (I would like) is softer than <b>je veux</b>. Also: tu voudrais, il voudrait.",
+          "examples": [
+            {
+              "fr": "Je voudrais dormir maintenant !",
+              "en": "I'd like to sleep now!",
+              "pr": "zhuh voo-DREH dor-MEER mant-NAHN",
+              "fa": "ژُ وودرِ دُرمیر مَنتنان"
+            },
+            {
+              "fr": "Où est-ce que tu aimerais voyager ?",
+              "en": "Where would you like to travel?",
+              "pr": "oo ess-kuh tü em-REH vwah-yah-ZHAY",
+              "fa": "او اِسکُ تو اِمرِ ووآیاژه"
+            },
+            {
+              "fr": "Je voudrais aller en France.",
+              "en": "I'd like to go to France.",
+              "pr": "zhuh voo-DREH ah-LAY ahn FRAHNSS",
+              "fa": "ژُ وودرِ آله آن فرانس"
+            }
+          ],
+          "trick": "In a shop or café, always je voudrais: Je voudrais un café, s'il vous plaît."
+        }
+      ],
+      "notes": [
+        "pouvoir: je peux, tu peux, il peut, nous pouvons, vous pouvez, ils peuvent.",
+        "vouloir: je veux, tu veux, il veut, nous voulons, vous voulez, ils veulent.",
+        "savoir: je sais, tu sais, il sait, nous savons, vous savez, ils savent.",
+        "All three + infinitive: je veux manger, tu peux sortir, je sais nager.",
+        "Negative: je ne peux pas dormir.",
+        "Polite: je voudrais / j'aimerais = I would like."
+      ],
+      "tricks": {
+        "pv": "Pouvoir and vouloir are twins: eu for je, tu, il, ils; ou for nous, vous.",
+        "savoir": "Savoir = know a fact or know how. Sais, sais, sait = “seh”.",
+        "poli": "Je voudrais is the polite je veux."
+      },
+      "drills": [
+        {
+          "id": "p1",
+          "set": "Practice",
+          "text": "Je ___ manger. (vouloir)",
+          "options": [
+            "veux",
+            "veut",
+            "voulons",
+            "voulez",
+            "veulent"
+          ],
+          "answer": "veux",
+          "en": "I want to eat.",
+          "why": "Je: veux.",
+          "rule": "pv",
+          "after": 0
+        },
+        {
+          "id": "p2",
+          "set": "Practice",
+          "text": "Tu ___ sortir ce soir ? (pouvoir)",
+          "options": [
+            "peux",
+            "peut",
+            "pouvons",
+            "pouvez",
+            "peuvent"
+          ],
+          "answer": "peux",
+          "en": "Can you go out tonight?",
+          "why": "Tu: peux.",
+          "rule": "pv",
+          "after": 0
+        },
+        {
+          "id": "p3",
+          "set": "Practice",
+          "text": "Nous ___ aller au cinéma. (vouloir)",
+          "options": [
+            "veux",
+            "veut",
+            "voulons",
+            "voulez",
+            "veulent"
+          ],
+          "answer": "voulons",
+          "en": "We want to go to the movies.",
+          "why": "Nous: voulons (ou).",
+          "rule": "pv",
+          "after": 0
+        },
+        {
+          "id": "p4",
+          "set": "Practice",
+          "text": "Ils ne ___ pas venir. (pouvoir)",
+          "options": [
+            "peux",
+            "peut",
+            "pouvons",
+            "pouvez",
+            "peuvent"
+          ],
+          "answer": "peuvent",
+          "en": "They can't come.",
+          "why": "Ils: peuvent.",
+          "rule": "pv",
+          "after": 0
+        },
+        {
+          "id": "p5",
+          "set": "Practice",
+          "type": "type",
+          "text": "Vous ___ un café ? (vouloir)",
+          "answer": "voulez",
+          "accept": [
+            "voulez"
+          ],
+          "en": "Do you want a coffee?",
+          "why": "Vous: voulez.",
+          "rule": "pv",
+          "after": 0
+        },
+        {
+          "id": "p6",
+          "set": "Practice",
+          "type": "speak",
+          "fr": "ils veulent",
+          "en": "they want (“eel VUHL”)",
+          "after": 0
+        },
+        {
+          "id": "p7",
+          "set": "Practice",
+          "text": "I can't sleep.",
+          "options": [
+            "Je ne peux pas dormir.",
+            "Je peux ne pas dormir.",
+            "Je ne dormir pas peux."
+          ],
+          "answer": "Je ne peux pas dormir.",
+          "en": "",
+          "why": "ne + peux + pas + infinitive.",
+          "rule": "pv",
+          "after": 1
+        },
+        {
+          "id": "p8",
+          "set": "Practice",
+          "type": "sentence",
+          "text": "Say it in French: I don't want to go out.",
+          "answer": "Je ne veux pas sortir.",
+          "accept": [
+            "Je ne veux pas sortir."
+          ],
+          "en": "",
+          "why": "ne + veux + pas + sortir.",
+          "after": 1,
+          "rule": "pv"
+        },
+        {
+          "id": "p9",
+          "set": "Practice",
+          "text": "Tu ___ la date d'aujourd'hui ?",
+          "options": [
+            "sais",
+            "sait",
+            "savons",
+            "savez",
+            "savent"
+          ],
+          "answer": "sais",
+          "en": "Do you know today's date?",
+          "why": "Tu: sais.",
+          "rule": "savoir",
+          "after": 2
+        },
+        {
+          "id": "p10",
+          "set": "Practice",
+          "text": "Elle ___ que c'est vrai.",
+          "options": [
+            "sais",
+            "sait",
+            "savons",
+            "savez",
+            "savent"
+          ],
+          "answer": "sait",
+          "en": "She knows it's true.",
+          "why": "Elle: sait.",
+          "rule": "savoir",
+          "after": 2
+        },
+        {
+          "id": "p11",
+          "set": "Practice",
+          "text": "I know how to swim.",
+          "options": [
+            "Je sais nager.",
+            "Je peux nager.",
+            "Je connais nager."
+          ],
+          "answer": "Je sais nager.",
+          "en": "",
+          "why": "Know how to = savoir + infinitive.",
+          "rule": "savoir",
+          "after": 3
+        },
+        {
+          "id": "p12",
+          "set": "Practice",
+          "type": "sentence",
+          "text": "Say it in French: I don't know how to dance.",
+          "answer": "Je ne sais pas danser.",
+          "accept": [
+            "Je ne sais pas danser."
+          ],
+          "en": "",
+          "why": "ne + sais + pas + danser.",
+          "after": 3,
+          "rule": "savoir"
+        },
+        {
+          "id": "p13",
+          "set": "Practice",
+          "text": "The polite way to ask for a coffee:",
+          "options": [
+            "Je voudrais un café, s'il vous plaît.",
+            "Je veux un café.",
+            "Je peux un café."
+          ],
+          "answer": "Je voudrais un café, s'il vous plaît.",
+          "en": "",
+          "why": "Je voudrais is polite.",
+          "rule": "poli",
+          "after": 4
+        },
+        {
+          "id": "p14",
+          "set": "Practice",
+          "text": "Où est-ce que tu ___ voyager ?",
+          "options": [
+            "aimerais",
+            "aimes",
+            "aimez"
+          ],
+          "answer": "aimerais",
+          "en": "Where would you like to travel?",
+          "why": "Tu aimerais = you would like.",
+          "rule": "poli",
+          "after": 4
+        }
+      ],
+      "exercises": [
+        {
+          "id": "e8-1",
+          "set": "Exercice 8 · Désirs et possibilités",
+          "text": "(moi / aller en Europe l'été prochain) Oui, je ___ aller en Europe l'été prochain.",
+          "options": [
+            "veux",
+            "veut",
+            "voulons",
+            "voulez",
+            "veulent"
+          ],
+          "answer": "veux",
+          "en": "Yes, I want to go to Europe next summer.",
+          "why": "Wish: vouloir. Je: veux.",
+          "rule": "pv"
+        },
+        {
+          "id": "e8-1b",
+          "set": "Exercice 8 · Désirs et possibilités",
+          "text": "(moi / aller en Europe l'été prochain) Et je ___ aller en Europe : j'ai l'argent !",
+          "options": [
+            "peux",
+            "peut",
+            "pouvons",
+            "pouvez",
+            "peuvent"
+          ],
+          "answer": "peux",
+          "en": "And I can go to Europe: I have the money!",
+          "why": "Ability: pouvoir. Je: peux.",
+          "rule": "pv"
+        },
+        {
+          "id": "e8-2",
+          "set": "Exercice 8 · Désirs et possibilités",
+          "text": "(mes parents / passer l'hiver en Floride) Mes parents ___ passer l'hiver en Floride.",
+          "options": [
+            "veux",
+            "veut",
+            "voulons",
+            "voulez",
+            "veulent"
+          ],
+          "answer": "veulent",
+          "en": "My parents want to spend the winter in Florida.",
+          "why": "Ils: veulent.",
+          "rule": "pv"
+        },
+        {
+          "id": "e8-3",
+          "set": "Exercice 8 · Désirs et possibilités",
+          "text": "(le professeur / se lever tard en semaine) Le professeur ne ___ pas se lever tard en semaine.",
+          "options": [
+            "peux",
+            "peut",
+            "pouvons",
+            "pouvez",
+            "peuvent"
+          ],
+          "answer": "peut",
+          "en": "The teacher can't get up late during the week.",
+          "why": "Il: peut.",
+          "rule": "pv"
+        },
+        {
+          "id": "e8-4",
+          "set": "Exercice 8 · Désirs et possibilités",
+          "text": "(nous / comprendre un film en français) Nous ___ comprendre un film en français.",
+          "options": [
+            "peux",
+            "peut",
+            "pouvons",
+            "pouvez",
+            "peuvent"
+          ],
+          "answer": "pouvons",
+          "en": "We can understand a movie in French.",
+          "why": "Nous: pouvons.",
+          "rule": "pv"
+        },
+        {
+          "id": "e8-5",
+          "set": "Exercice 8 · Désirs et possibilités",
+          "text": "(mon amie / m'aider avec mes devoirs de français) Mon amie ___ m'aider avec mes devoirs de français.",
+          "options": [
+            "veux",
+            "veut",
+            "voulons",
+            "voulez",
+            "veulent"
+          ],
+          "answer": "veut",
+          "en": "My friend wants to help me with my French homework.",
+          "why": "Elle: veut.",
+          "rule": "pv"
+        },
+        {
+          "id": "e9-1",
+          "set": "Exercice 9 · Qu'est-ce que tu aimerais vraiment faire ?",
+          "text": "Oui, je ___ diner dans un bon restaurant français.",
+          "options": [
+            "voudrais",
+            "voudrait",
+            "voulez"
+          ],
+          "answer": "voudrais",
+          "en": "Yes, I'd like to have dinner in a good French restaurant.",
+          "why": "Je: voudrais (I would like).",
+          "rule": "poli"
+        },
+        {
+          "id": "e9-2",
+          "set": "Exercice 9 · Qu'est-ce que tu aimerais vraiment faire ?",
+          "text": "Non, je ne ___ pas manger des escargots.",
+          "options": [
+            "voudrais",
+            "voudrait",
+            "voulez"
+          ],
+          "answer": "voudrais",
+          "en": "No, I wouldn't like to eat snails.",
+          "why": "Je: voudrais (I would like).",
+          "rule": "poli"
+        },
+        {
+          "id": "e9-3",
+          "set": "Exercice 9 · Qu'est-ce que tu aimerais vraiment faire ?",
+          "text": "Oui, je ___ habiter à Paris.",
+          "options": [
+            "voudrais",
+            "voudrait",
+            "voulez"
+          ],
+          "answer": "voudrais",
+          "en": "Yes, I'd like to live in Paris.",
+          "why": "Je: voudrais (I would like).",
+          "rule": "poli"
+        },
+        {
+          "id": "e9-4",
+          "set": "Exercice 9 · Qu'est-ce que tu aimerais vraiment faire ?",
+          "text": "Oui, je ___ faire de la plongée sous-marine.",
+          "options": [
+            "voudrais",
+            "voudrait",
+            "voulez"
+          ],
+          "answer": "voudrais",
+          "en": "Yes, I'd like to go scuba diving.",
+          "why": "Je: voudrais (I would like).",
+          "rule": "poli"
+        },
+        {
+          "id": "e9-5",
+          "set": "Exercice 9 · Qu'est-ce que tu aimerais vraiment faire ?",
+          "text": "Non, je ne ___ pas visiter une autre planète.",
+          "options": [
+            "voudrais",
+            "voudrait",
+            "voulez"
+          ],
+          "answer": "voudrais",
+          "en": "No, I wouldn't like to visit another planet.",
+          "why": "Je: voudrais (I would like).",
+          "rule": "poli"
+        },
+        {
+          "id": "e9-6",
+          "set": "Exercice 9 · Qu'est-ce que tu aimerais vraiment faire ?",
+          "text": "Non, je ne ___ pas être présidente des États-Unis.",
+          "options": [
+            "voudrais",
+            "voudrait",
+            "voulez"
+          ],
+          "answer": "voudrais",
+          "en": "No, I wouldn't like to be president of the United States.",
+          "why": "Je: voudrais (I would like).",
+          "rule": "poli"
+        },
+        {
+          "id": "e10-1",
+          "set": "Exercice 10 · Savoir-faire",
+          "text": "Est-ce que vous ___ faire de l'escalade ?",
+          "options": [
+            "sais",
+            "sait",
+            "savons",
+            "savez",
+            "savent"
+          ],
+          "answer": "savez",
+          "en": "Do you know how to rock climb?",
+          "why": "Vous: savez.",
+          "rule": "savoir"
+        },
+        {
+          "id": "e10-2",
+          "set": "Exercice 10 · Savoir-faire",
+          "text": "Est-ce que votre père ___ faire la cuisine ?",
+          "options": [
+            "sais",
+            "sait",
+            "savons",
+            "savez",
+            "savent"
+          ],
+          "answer": "sait",
+          "en": "Does your father know how to cook?",
+          "why": "Il: sait.",
+          "rule": "savoir"
+        },
+        {
+          "id": "e10-3",
+          "set": "Exercice 10 · Savoir-faire",
+          "text": "Est-ce que votre sœur ___ réparer une voiture ?",
+          "options": [
+            "sais",
+            "sait",
+            "savons",
+            "savez",
+            "savent"
+          ],
+          "answer": "sait",
+          "en": "Does your sister know how to fix a car?",
+          "why": "Elle: sait.",
+          "rule": "savoir"
+        },
+        {
+          "id": "e10-4",
+          "set": "Exercice 10 · Savoir-faire",
+          "text": "Est-ce que vos amis et vous, vous ___ jouer au billard ?",
+          "options": [
+            "sais",
+            "sait",
+            "savons",
+            "savez",
+            "savent"
+          ],
+          "answer": "savez",
+          "en": "Do you and your friends know how to play pool?",
+          "why": "Vous: savez.",
+          "rule": "savoir"
+        },
+        {
+          "id": "e10-5",
+          "set": "Exercice 10 · Savoir-faire",
+          "text": "Est-ce que vos grands-parents ___ utiliser un ordinateur ?",
+          "options": [
+            "sais",
+            "sait",
+            "savons",
+            "savez",
+            "savent"
+          ],
+          "answer": "savent",
+          "en": "Do your grandparents know how to use a computer?",
+          "why": "Ils: savent.",
+          "rule": "savoir"
+        },
+        {
+          "id": "e10-6",
+          "set": "Exercice 10 · Savoir-faire",
+          "text": "___-vous allumer un feu ?",
+          "options": [
+            "Savez",
+            "Sait",
+            "Savons"
+          ],
+          "answer": "Savez",
+          "en": "Do you know how to light a fire?",
+          "why": "Vous: savez, at the start of the question.",
+          "rule": "savoir"
+        }
+      ]
+    }
+  ],
+  "readings": [
+    {
+      "id": "r1",
+      "title": "Ce soir, Minou ?",
+      "lines": [
+        {
+          "who": "Pompon",
+          "fr": "Minou, tu veux aller au cinéma ce soir ?",
+          "en": "Minou, do you want to go to the movies tonight?",
+          "pr": "mee-NOO, tü vuh ah-LAY oh see-nay-MAH suh SWAR",
+          "fa": "مینو، تو وُ آله اُ سینِما سُ سوآر"
+        },
+        {
+          "who": "Minou",
+          "fr": "Je voudrais bien, mais je ne peux pas. Je dois faire mes devoirs.",
+          "en": "I'd love to, but I can't. I have to do my homework.",
+          "pr": "zhuh voo-DREH BYAN, meh zhuh nuh puh PAH. zhuh DWAH fehr may duh-VWAR",
+          "fa": "ژُ وودرِ بیَن، مِ ژُ نُ پُ پا. ژُ دوآ فِر مِ دُووآر"
+        },
+        {
+          "who": "Pompon",
+          "fr": "Alors, demain ? Je peux passer chez toi à huit heures.",
+          "en": "Tomorrow, then? I can come by your place at eight.",
+          "pr": "ah-LOR, duh-MAN? zhuh puh pah-SAY shay TWAH ah wee-TUHR",
+          "fa": "آلُر، دُمَن؟ ژُ پُ پاسه شِ توآ آ ویتُر"
+        },
+        {
+          "who": "Minou",
+          "fr": "D'accord ! Tu sais où est le cinéma ?",
+          "en": "OK! Do you know where the cinema is?",
+          "pr": "dah-KOR! tü SEH oo ay luh see-nay-MAH",
+          "fa": "داکُر! تو سِ او اِ لُ سینِما"
+        },
+        {
+          "who": "Pompon",
+          "fr": "Oui, je sais. On ne peut pas arriver en retard !",
+          "en": "Yes, I know. We can't arrive late!",
+          "pr": "WEE, zhuh SEH. ohn nuh puh PAH ah-ree-VAY ahn ruh-TAR",
+          "fa": "وی، ژُ سِ. اُن نُ پُ پا آریوه آن رُتار"
+        }
+      ],
+      "questions": [
+        {
+          "q": "Est-ce que Minou peut aller au cinéma ce soir ?",
+          "hint": "Can Minou go to the movies tonight?",
+          "options": [
+            "Non, il ne peut pas.",
+            "Oui, il peut.",
+            "Il ne sait pas."
+          ],
+          "answer": "Non, il ne peut pas.",
+          "optionsEn": {
+            "Non, il ne peut pas.": "No, he can't.",
+            "Oui, il peut.": "Yes, he can.",
+            "Il ne sait pas.": "He doesn't know."
+          }
+        },
+        {
+          "q": "Pourquoi ?",
+          "hint": "Why?",
+          "options": [
+            "Il doit faire ses devoirs.",
+            "Il est fauché.",
+            "Il est en retard."
+          ],
+          "answer": "Il doit faire ses devoirs.",
+          "optionsEn": {
+            "Il doit faire ses devoirs.": "He has to do his homework.",
+            "Il est fauché.": "He's broke.",
+            "Il est en retard.": "He's late."
+          }
+        },
+        {
+          "q": "Quand est-ce que Pompon va passer chez Minou ?",
+          "hint": "When is Pompon going to come by?",
+          "options": [
+            "demain à huit heures",
+            "ce soir",
+            "le vendredi"
+          ],
+          "answer": "demain à huit heures",
+          "optionsEn": {
+            "demain à huit heures": "tomorrow at eight",
+            "ce soir": "tonight",
+            "le vendredi": "on Fridays"
+          }
+        },
+        {
+          "q": "Qui sait où est le cinéma ?",
+          "hint": "Who knows where the cinema is?",
+          "options": [
+            "Pompon",
+            "Minou",
+            "personne"
+          ],
+          "answer": "Pompon",
+          "optionsEn": {
+            "Pompon": "Pompon",
+            "Minou": "Minou",
+            "personne": "nobody"
+          }
+        }
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "u1",
+      "fr": "Je veux manger.",
+      "en": "I want to eat.",
+      "pr": "zhuh vuh mahn-ZHAY",
+      "fa": "ژُ وُ مانژه"
+    },
+    {
+      "id": "u2",
+      "fr": "Tu peux sortir ce soir ?",
+      "en": "Can you go out tonight?",
+      "pr": "tü puh sor-TEER suh SWAR",
+      "fa": "تو پُ سُرتیر سُ سوآر"
+    },
+    {
+      "id": "u3",
+      "fr": "Je ne peux pas dormir.",
+      "en": "I can't sleep.",
+      "pr": "zhuh nuh puh PAH dor-MEER",
+      "fa": "ژُ نُ پُ پا دُرمیر"
+    },
+    {
+      "id": "u4",
+      "fr": "Je sais nager.",
+      "en": "I know how to swim.",
+      "pr": "zhuh SEH nah-ZHAY",
+      "fa": "ژُ سِ ناژه"
+    },
+    {
+      "id": "u5",
+      "fr": "Je ne sais pas danser.",
+      "en": "I don't know how to dance.",
+      "pr": "zhuh nuh seh PAH dahn-SAY",
+      "fa": "ژُ نُ سِ پا دانسه"
+    },
+    {
+      "id": "u6",
+      "fr": "Je voudrais aller en France.",
+      "en": "I'd like to go to France.",
+      "pr": "zhuh voo-DREH ah-LAY ahn FRAHNSS",
+      "fa": "ژُ وودرِ آله آن فرانس"
+    },
+    {
+      "id": "u7",
+      "fr": "D'abord je me lève, ensuite je me douche.",
+      "en": "First I get up, then I shower.",
+      "pr": "dah-BOR zhuh muh LEV, ahn-SWEET zhuh muh DOOSH",
+      "fa": "دابُر ژُ مُ لِو، آنسویت ژُ مُ دوش"
+    },
+    {
+      "id": "u8",
+      "fr": "D'habitude, je me couche tôt.",
+      "en": "Usually I go to bed early.",
+      "pr": "dah-bee-TÜD, zhuh muh KOOSH TOH",
+      "fa": "دابیتود، ژُ مُ کوش تُ"
+    },
+    {
+      "id": "u9",
+      "fr": "Je ne suis jamais en retard.",
+      "en": "I'm never late.",
+      "pr": "zhuh nuh swee zhah-MEH ahn ruh-TAR",
+      "fa": "ژُ نُ سوئی ژامِ آن رُتار"
+    },
+    {
+      "id": "u10",
+      "fr": "Le vendredi soir, je sors avec mes amis.",
+      "en": "On Friday evenings I go out with my friends.",
+      "pr": "luh vahn-druh-DEE SWAR, zhuh SOR ah-VEK may-zah-MEE",
+      "fa": "لُ واندرُدی سوآر، ژُ سُر آوِک مِزامی"
+    },
+    {
+      "id": "u11",
+      "fr": "Je peux passer chez toi ?",
+      "en": "Can I come by your place?",
+      "pr": "zhuh puh pah-SAY shay TWAH",
+      "fa": "ژُ پُ پاسه شِ توآ"
+    }
+  ]
+}

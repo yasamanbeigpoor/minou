@@ -1,0 +1,537 @@
+{
+  "id": "m9",
+  "number": 9,
+  "title": "On y va ?",
+  "subtitle": "The subject pronoun on: people, you, we",
+  "source": "Grammaire 2.4 (p. 100)",
+  "path": [
+    {
+      "id": "g24",
+      "type": "grammar",
+      "grammar": "g24",
+      "title": "Le pronom on",
+      "titleEn": "Grammar 2.4",
+      "subtitle": "On parle français, on y va !"
+    },
+    {
+      "id": "review",
+      "type": "module-review",
+      "title": "Révision du module",
+      "titleEn": "Module review",
+      "subtitle": "Reading, listening, speaking and a mixed test"
+    }
+  ],
+  "vocab": [],
+  "grammars": [
+    {
+      "id": "g24",
+      "title": "The subject pronoun on",
+      "section": "Grammaire 2.4",
+      "pages": "p. 100",
+      "teach": [
+        {
+          "title": "On = people, you, they",
+          "body": "<b>On</b> means people in general: “you”, “they”, “people”, “one”. It always takes the <b>il / elle</b> form of the verb: <b>on fait</b>, <b>on va</b>, <b>on aime</b>.",
+          "examples": [
+            {
+              "fr": "En France, on fait les courses tous les jours.",
+              "en": "In France, people shop every day.",
+              "pr": "ahn FRAHNSS, ohn FEH lay KOORSS too lay ZHOOR",
+              "fa": "آن فرانس، اُن فِ لِ کورس تو لِ ژور"
+            },
+            {
+              "fr": "En France, on ne trouve pas de médicaments au supermarché.",
+              "en": "In France, you don't find medicine at the supermarket.",
+              "pr": "ahn FRAHNSS, ohn nuh troov PAH duh may-dee-kah-MAHN oh sü-pehr-mar-SHAY",
+              "fa": "آن فرانس، اُن نُ تروو پا دُ مِدیکامان اُ سوپِرمارشه"
+            },
+            {
+              "fr": "Est-ce qu'on parle anglais ici ?",
+              "en": "Does anyone speak English here?",
+              "pr": "ess-kohn PARL ahn-GLEH ee-SEE",
+              "fa": "اِسکُن پارل آنگلِ ایسی"
+            },
+            {
+              "fr": "Comment dit-on « water » ?",
+              "en": "How do you say “water”?",
+              "pr": "koh-MAHN dee-TOHN WAH-tuhr",
+              "fa": "کُمان دیتُن واتِر"
+            }
+          ],
+          "trick": "On always takes the il form: on fait, never on faisons."
+        },
+        {
+          "title": "On = we (everyday French)",
+          "body": "In conversation, French speakers usually say <b>on</b> instead of <b>nous</b>. The verb still takes the il form.",
+          "examples": [
+            {
+              "fr": "Vous rentrez à quelle heure, Monique et toi ?",
+              "en": "What time are you and Monique coming home?",
+              "pr": "voo rahn-TRAY ah kel UHR, moh-NEEK ay TWAH",
+              "fa": "وو رانتره آ کِل اُر، مُنیک اِ توآ"
+            },
+            {
+              "fr": "On rentre tard, après le film.",
+              "en": "We'll be home late, after the movie.",
+              "pr": "ohn RAHN-truh TAR, ah-PREH luh FEELM",
+              "fa": "اُن رانتر تار، آپرِ لُ فیلم"
+            },
+            {
+              "fr": "Albert et moi, on aime le cinéma.",
+              "en": "Albert and I like the movies.",
+              "pr": "al-BEHR ay MWAH, ohn-NEM luh see-nay-MAH",
+              "fa": "آلبِر اِ موا، اُنِم لُ سینِما"
+            },
+            {
+              "fr": "On y va ?",
+              "en": "Shall we go?",
+              "pr": "ohn-nee VAH",
+              "fa": "اُنی وا"
+            },
+            {
+              "fr": "On y va !",
+              "en": "Let's go!",
+              "pr": "ohn-nee VAH",
+              "fa": "اُنی وا"
+            }
+          ],
+          "trick": "Nous allons = on va. Same meaning, but on is what you'll hear on the street."
+        },
+        {
+          "title": "Hear the n",
+          "body": "The <b>n</b> of on is silent before a consonant: on fait (“ohn FEH”). Before a vowel it links: <b>on_achète</b> (“ohn-nah-SHET”), <b>on_aime</b> (“ohn-NEM”).",
+          "examples": [
+            {
+              "fr": "on fait",
+              "en": "we do, people do",
+              "pr": "ohn FEH",
+              "fa": "اُن فِ"
+            },
+            {
+              "fr": "on achète",
+              "en": "we buy, people buy",
+              "pr": "ohn-nah-SHET",
+              "fa": "اُناشِت"
+            },
+            {
+              "fr": "on aime",
+              "en": "we like, people like",
+              "pr": "ohn-NEM",
+              "fa": "اُنِم"
+            }
+          ],
+          "trick": "Vowel after on? Link the n, like nous_aimons."
+        }
+      ],
+      "notes": [
+        "On = people, you, they, one (general statements).",
+        "On = nous in everyday speech: On y va ! = Let's go!",
+        "On always takes the il / elle verb form: on fait, on va, on aime.",
+        "Negative: on ne va pas.",
+        "The n links before a vowel: on_achète, on_aime."
+      ],
+      "tricks": {
+        "on": "On + il form: on fait, on va, on mange.",
+        "nous": "Casual we = on: Albert et moi, on aime le cinéma."
+      },
+      "drills": [
+        {
+          "id": "o1",
+          "set": "Practice",
+          "text": "En France, on ___ les courses tous les jours.",
+          "options": [
+            "fait",
+            "faisons",
+            "font"
+          ],
+          "answer": "fait",
+          "en": "In France, people shop every day.",
+          "why": "On takes the il form: fait.",
+          "rule": "on",
+          "after": 0
+        },
+        {
+          "id": "o2",
+          "set": "Practice",
+          "text": "Est-ce qu'on ___ anglais ici ?",
+          "options": [
+            "parle",
+            "parlons",
+            "parlent"
+          ],
+          "answer": "parle",
+          "en": "Does anyone speak English here?",
+          "why": "On: parle.",
+          "rule": "on",
+          "after": 0
+        },
+        {
+          "id": "o3",
+          "set": "Practice",
+          "text": "“Comment dit-on « merci » ?” means…",
+          "options": [
+            "How do you say “merci”?",
+            "What does he say?",
+            "Who says “merci”?"
+          ],
+          "answer": "How do you say “merci”?",
+          "en": "",
+          "why": "On = you in general.",
+          "rule": "on",
+          "after": 0
+        },
+        {
+          "id": "o4",
+          "set": "Practice",
+          "text": "Albert et moi, on ___ le cinéma.",
+          "options": [
+            "aime",
+            "aimons",
+            "aiment"
+          ],
+          "answer": "aime",
+          "en": "Albert and I like the movies.",
+          "why": "On = we, but the verb takes the il form.",
+          "rule": "nous",
+          "after": 1
+        },
+        {
+          "id": "o5",
+          "set": "Practice",
+          "text": "Nous allons au café. = ___ au café.",
+          "options": [
+            "On va",
+            "On allons",
+            "On vont"
+          ],
+          "answer": "On va",
+          "en": "We're going to the café.",
+          "why": "On + il form of aller: va.",
+          "rule": "nous",
+          "after": 1
+        },
+        {
+          "id": "o6",
+          "set": "Practice",
+          "type": "speak",
+          "fr": "On y va !",
+          "en": "Let's go!",
+          "after": 1
+        },
+        {
+          "id": "o7",
+          "set": "Practice",
+          "type": "sentence",
+          "text": "Say it in French: We're coming home late. (use on)",
+          "answer": "On rentre tard.",
+          "accept": [
+            "On rentre tard."
+          ],
+          "en": "",
+          "why": "On + il form: rentre.",
+          "after": 1,
+          "rule": "nous"
+        },
+        {
+          "id": "o8",
+          "set": "Practice",
+          "text": "How is “on aime” said?",
+          "options": [
+            "ohn-NEM (the n links)",
+            "ohn EM (no link)"
+          ],
+          "answer": "ohn-NEM (the n links)",
+          "en": "",
+          "why": "Before a vowel, the n of on links.",
+          "rule": "on",
+          "after": 2
+        },
+        {
+          "id": "o9",
+          "set": "Practice",
+          "type": "sentence",
+          "text": "Say it in French: In Canada, people speak English and French.",
+          "answer": "Au Canada, on parle anglais et français.",
+          "accept": [
+            "Au Canada, on parle anglais et français.",
+            "Au Canada, on parle français et anglais."
+          ],
+          "en": "",
+          "why": "On = people.",
+          "after": 2,
+          "rule": "on"
+        }
+      ],
+      "exercisesIntro": {
+        "title": "Exercices du manuel",
+        "body": "Exercice 7 (p. 100): a curious French person asks about life in the United States. Your real answer can be oui or non; here you practise the forms with on."
+      },
+      "exercises": [
+        {
+          "id": "e7-1",
+          "set": "Exercice 7 · Aux États-Unis",
+          "text": "Aux États-Unis, est-ce qu'on regarde beaucoup la télévision ? — Oui, on ___ beaucoup la télévision.",
+          "options": [
+            "regarde",
+            "regardons",
+            "regardent"
+          ],
+          "answer": "regarde",
+          "en": "Do people watch a lot of TV in the US? Yes, people watch a lot of TV.",
+          "why": "On: regarde.",
+          "rule": "on"
+        },
+        {
+          "id": "e7-2",
+          "set": "Exercice 7 · Aux États-Unis",
+          "text": "Est-ce qu'on mange toujours des hamburgers ? — Non, on ne ___ pas toujours des hamburgers.",
+          "options": [
+            "mange",
+            "mangeons",
+            "mangent"
+          ],
+          "answer": "mange",
+          "en": "Do people always eat hamburgers? No, they don't always eat hamburgers.",
+          "why": "On: mange.",
+          "rule": "on"
+        },
+        {
+          "id": "e7-3",
+          "set": "Exercice 7 · Aux États-Unis",
+          "text": "Est-ce qu'on va au restaurant tous les jours ? — Non, on ne ___ pas au restaurant tous les jours.",
+          "options": [
+            "va",
+            "allons",
+            "vont"
+          ],
+          "answer": "va",
+          "en": "Do people go to restaurants every day? No.",
+          "why": "On: va.",
+          "rule": "on"
+        },
+        {
+          "id": "e7-4",
+          "set": "Exercice 7 · Aux États-Unis",
+          "text": "Est-ce qu'on dine à huit heures du soir ? — Non, on ne ___ pas à huit heures du soir.",
+          "options": [
+            "dine",
+            "dinons",
+            "dinent"
+          ],
+          "answer": "dine",
+          "en": "Do people eat dinner at 8 p.m.? No.",
+          "why": "On: dine.",
+          "rule": "on"
+        },
+        {
+          "id": "e7-5",
+          "set": "Exercice 7 · Aux États-Unis",
+          "text": "Est-ce qu'on aime les films français ? — Oui, on ___ les films français.",
+          "options": [
+            "aime",
+            "aimons",
+            "aiment"
+          ],
+          "answer": "aime",
+          "en": "Do people like French films? Yes.",
+          "why": "On: aime.",
+          "rule": "on"
+        },
+        {
+          "id": "e7-6",
+          "set": "Exercice 7 · Aux États-Unis",
+          "text": "Est-ce qu'on fait des promenades en famille le dimanche après-midi ? — Oui, on ___ des promenades en famille.",
+          "options": [
+            "fait",
+            "faisons",
+            "font"
+          ],
+          "answer": "fait",
+          "en": "Do families go for walks on Sunday afternoons? Yes.",
+          "why": "On: fait.",
+          "rule": "on"
+        },
+        {
+          "id": "e7-7",
+          "set": "Exercice 7 · Aux États-Unis",
+          "text": "Est-ce qu'on aime parler de la politique ? — Non, on n'___ pas parler de la politique.",
+          "options": [
+            "aime",
+            "aimons",
+            "aiment"
+          ],
+          "answer": "aime",
+          "en": "Do people like to talk about politics? No.",
+          "why": "On: n'aime pas.",
+          "rule": "on"
+        },
+        {
+          "id": "e7-8",
+          "set": "Exercice 7 · Aux États-Unis",
+          "text": "Est-ce qu'on étudie beaucoup la géographie ? — Non, on n'___ pas beaucoup la géographie.",
+          "options": [
+            "étudie",
+            "étudions",
+            "étudient"
+          ],
+          "answer": "étudie",
+          "en": "Do people study geography a lot? No.",
+          "why": "On: n'étudie pas.",
+          "rule": "on"
+        }
+      ]
+    }
+  ],
+  "readings": [
+    {
+      "id": "r1",
+      "title": "Au Québec, on…",
+      "lines": [
+        {
+          "fr": "Au Québec, on parle français.",
+          "en": "In Quebec, people speak French.",
+          "pr": "oh kay-BEK, ohn PARL frahn-SEH",
+          "fa": "اُ کِبِک، اُن پارل فرانسِ"
+        },
+        {
+          "fr": "En hiver, on fait du ski et du patin à glace.",
+          "en": "In winter, people ski and skate.",
+          "pr": "ahn-nee-VEHR, ohn FEH dü SKEE ay dü pah-TAN ah GLAHSS",
+          "fa": "آنیوِر، اُن فِ دو اِسکی اِ دو پاتَن آ گلاس"
+        },
+        {
+          "fr": "Au printemps, on va à la cabane à sucre.",
+          "en": "In spring, people go to the sugar shack.",
+          "pr": "oh pran-TAHN, ohn VAH ah lah kah-BAHN ah SÜ-kruh",
+          "fa": "اُ پرَنتان، اُن وا آ لا کابان آ سوکر"
+        },
+        {
+          "fr": "Minou et moi, on aime beaucoup Montréal. On y va ?",
+          "en": "Minou and I really like Montreal. Shall we go?",
+          "pr": "mee-NOO ay MWAH, ohn-NEM boh-KOO mohn-ray-AHL. ohn-nee VAH",
+          "fa": "مینو اِ موا، اُنِم بوکو مُنرِآل. اُنی وا"
+        }
+      ],
+      "questions": [
+        {
+          "q": "Quelle langue est-ce qu'on parle au Québec ?",
+          "hint": "What language do people speak in Quebec?",
+          "options": [
+            "le français",
+            "l'espagnol",
+            "l'allemand"
+          ],
+          "answer": "le français",
+          "optionsEn": {
+            "le français": "French",
+            "l'espagnol": "Spanish",
+            "l'allemand": "German"
+          }
+        },
+        {
+          "q": "Qu'est-ce qu'on fait en hiver ?",
+          "hint": "What do people do in winter?",
+          "options": [
+            "du ski et du patin",
+            "de la voile",
+            "du canoë"
+          ],
+          "answer": "du ski et du patin",
+          "optionsEn": {
+            "du ski et du patin": "skiing and skating",
+            "de la voile": "sailing",
+            "du canoë": "canoeing"
+          }
+        },
+        {
+          "q": "Où est-ce qu'on va au printemps ?",
+          "hint": "Where do people go in spring?",
+          "options": [
+            "à la cabane à sucre",
+            "à la plage",
+            "au cinéma"
+          ],
+          "answer": "à la cabane à sucre",
+          "optionsEn": {
+            "à la cabane à sucre": "to the sugar shack",
+            "à la plage": "to the beach",
+            "au cinéma": "to the movies"
+          }
+        },
+        {
+          "q": "Dans « Minou et moi, on aime Montréal », on veut dire…",
+          "hint": "In this sentence, on means…",
+          "options": [
+            "nous",
+            "les gens",
+            "ils"
+          ],
+          "answer": "nous",
+          "optionsEn": {
+            "nous": "we",
+            "les gens": "people",
+            "ils": "they"
+          }
+        }
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "u1",
+      "fr": "Est-ce qu'on parle anglais ici ?",
+      "en": "Does anyone speak English here?",
+      "pr": "ess-kohn PARL ahn-GLEH ee-SEE",
+      "fa": "اِسکُن پارل آنگلِ ایسی"
+    },
+    {
+      "id": "u2",
+      "fr": "Comment dit-on « water » ?",
+      "en": "How do you say “water”?",
+      "pr": "koh-MAHN dee-TOHN WAH-tuhr",
+      "fa": "کُمان دیتُن واتِر"
+    },
+    {
+      "id": "u3",
+      "fr": "On y va !",
+      "en": "Let's go!",
+      "pr": "ohn-nee VAH",
+      "fa": "اُنی وا"
+    },
+    {
+      "id": "u4",
+      "fr": "On rentre tard.",
+      "en": "We're coming home late.",
+      "pr": "ohn RAHN-truh TAR",
+      "fa": "اُن رانتر تار"
+    },
+    {
+      "id": "u5",
+      "fr": "Au Canada, on parle anglais et français.",
+      "en": "In Canada, people speak English and French.",
+      "pr": "oh kah-nah-DAH, ohn PARL ahn-GLEH ay frahn-SEH",
+      "fa": "اُ کانادا، اُن پارل آنگلِ اِ فرانسِ"
+    },
+    {
+      "id": "u6",
+      "fr": "En France, on fait les courses tous les jours.",
+      "en": "In France, people shop every day.",
+      "pr": "ahn FRAHNSS, ohn FEH lay KOORSS too lay ZHOOR",
+      "fa": "آن فرانس، اُن فِ لِ کورس تو لِ ژور"
+    },
+    {
+      "id": "u7",
+      "fr": "Albert et moi, on aime le cinéma.",
+      "en": "Albert and I like the movies.",
+      "pr": "al-BEHR ay MWAH, ohn-NEM luh see-nay-MAH",
+      "fa": "آلبِر اِ موا، اُنِم لُ سینِما"
+    },
+    {
+      "id": "u8",
+      "fr": "On ne va pas à l'école le samedi.",
+      "en": "We don't go to school on Saturdays.",
+      "pr": "ohn nuh VAH PAH ah lay-KOL luh sahm-DEE",
+      "fa": "اُن نُ وا پا آ لِکُل لُ سامدی"
+    }
+  ]
+}
