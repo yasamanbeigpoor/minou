@@ -1,0 +1,1733 @@
+{
+  "id": "m6",
+  "number": 6,
+  "title": "Quel temps fait-il ?",
+  "subtitle": "Weather, seasons, places, faire and reflexive verbs",
+  "source": "Vocabulaire chapitre 2; Grammaire 2.1 (p. 95), 2.2 (pp. 96–97)",
+  "path": [
+    {
+      "id": "weather",
+      "type": "vocab",
+      "title": "Quel temps fait-il ?",
+      "titleEn": "The weather",
+      "subtitle": "Il fait beau, il pleut, il neige…",
+      "items": [
+        "queltemps",
+        "beau",
+        "chaud",
+        "soleil",
+        "vent",
+        "frais",
+        "froid",
+        "mauvais",
+        "neige",
+        "pleut",
+        "brouillard",
+        "couvert"
+      ]
+    },
+    {
+      "id": "seasons",
+      "type": "vocab",
+      "title": "Les saisons et le ciel",
+      "titleEn": "Seasons and sky",
+      "subtitle": "En été, au printemps, le nuage…",
+      "items": [
+        "boue",
+        "ciel",
+        "climat",
+        "neige_n",
+        "nuage",
+        "soleil_n",
+        "ete",
+        "automne",
+        "hiver",
+        "printemps"
+      ]
+    },
+    {
+      "id": "places",
+      "type": "vocab",
+      "title": "Les endroits",
+      "titleEn": "Places",
+      "subtitle": "À la campagne, au marché, le lac…",
+      "items": [
+        "campagne",
+        "ecole",
+        "librairie",
+        "alamaison",
+        "marche",
+        "cheminee",
+        "arbre",
+        "cafe",
+        "gymnase",
+        "lac",
+        "parc",
+        "riviere",
+        "universite"
+      ]
+    },
+    {
+      "id": "g21",
+      "type": "grammar",
+      "grammar": "g21",
+      "title": "Le verbe faire",
+      "titleEn": "Grammar 2.1",
+      "subtitle": "Je fais, nous faisons, il fait beau"
+    },
+    {
+      "id": "g22",
+      "type": "grammar",
+      "grammar": "g22",
+      "title": "Les verbes pronominaux",
+      "titleEn": "Grammar 2.2",
+      "subtitle": "Je me lève, nous nous amusons"
+    },
+    {
+      "id": "review",
+      "type": "module-review",
+      "title": "Révision du module",
+      "titleEn": "Module review",
+      "subtitle": "Reading, listening, speaking and a mixed test"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "queltemps",
+      "fr": "Quel temps fait-il ?",
+      "en": "What's the weather like?",
+      "pr": "kel TAHN feh-TEEL",
+      "fa": "کِل تان فِتیل",
+      "g": "x",
+      "trick": "Literally “What weather does it make?” French weather uses faire."
+    },
+    {
+      "id": "beau",
+      "fr": "Il fait beau.",
+      "en": "It's nice.",
+      "pr": "eel feh BOH",
+      "fa": "ایل فِ بُ",
+      "g": "x"
+    },
+    {
+      "id": "chaud",
+      "fr": "Il fait chaud.",
+      "en": "It's warm.",
+      "pr": "eel feh SHOH",
+      "fa": "ایل فِ شُ",
+      "g": "x",
+      "trick": "Chaud is HOT, not cold! Think of a hot “chowder”."
+    },
+    {
+      "id": "soleil",
+      "fr": "Il fait du soleil.",
+      "en": "It's sunny.",
+      "pr": "eel feh dü soh-LAY",
+      "fa": "ایل فِ دو سُلِی",
+      "g": "x",
+      "trick": "Soleil: like “solar”."
+    },
+    {
+      "id": "vent",
+      "fr": "Il fait du vent.",
+      "en": "It's windy.",
+      "pr": "eel feh dü VAHN",
+      "fa": "ایل فِ دو وان",
+      "g": "x",
+      "trick": "Vent: wind comes through a vent."
+    },
+    {
+      "id": "frais",
+      "fr": "Il fait frais.",
+      "en": "It's cool.",
+      "pr": "eel feh FREH",
+      "fa": "ایل فِ فرِ",
+      "g": "x",
+      "trick": "Frais = fresh, cool air."
+    },
+    {
+      "id": "froid",
+      "fr": "Il fait froid.",
+      "en": "It's cold.",
+      "pr": "eel feh FRWAH",
+      "fa": "ایل فِ فروآ",
+      "g": "x",
+      "trick": "Froid sounds like “frozen”: cold."
+    },
+    {
+      "id": "mauvais",
+      "fr": "Il fait mauvais.",
+      "en": "The weather is bad.",
+      "pr": "eel feh moh-VEH",
+      "fa": "ایل فِ مُوِ",
+      "g": "x"
+    },
+    {
+      "id": "neige",
+      "fr": "Il neige.",
+      "en": "It's snowing.",
+      "pr": "eel NEHZH",
+      "fa": "ایل نِژ",
+      "g": "x"
+    },
+    {
+      "id": "pleut",
+      "fr": "Il pleut.",
+      "en": "It's raining.",
+      "pr": "eel PLUH",
+      "fa": "ایل پلُ",
+      "g": "x",
+      "trick": "Pleut: sounds like “plop”, the sound of rain."
+    },
+    {
+      "id": "brouillard",
+      "fr": "Il y a du brouillard.",
+      "en": "It's foggy.",
+      "pr": "eel-YAH dü broo-YAR",
+      "fa": "ایلیا دو برویار",
+      "g": "x"
+    },
+    {
+      "id": "couvert",
+      "fr": "Le ciel est couvert.",
+      "en": "It's cloudy.",
+      "pr": "luh SYEL ay koo-VEHR",
+      "fa": "لُ سیِل اِ کووِر",
+      "g": "x",
+      "trick": "Couvert = covered: the sky is covered with clouds."
+    },
+    {
+      "id": "boue",
+      "fr": "la boue",
+      "noun": "boue",
+      "pl": "boues",
+      "g": "f",
+      "en": "mud",
+      "pr": "lah BOO",
+      "fa": "لا بو"
+    },
+    {
+      "id": "ciel",
+      "fr": "le ciel",
+      "noun": "ciel",
+      "pl": "cieux",
+      "g": "m",
+      "en": "sky",
+      "pr": "luh SYEL",
+      "fa": "لُ سیِل",
+      "trick": "Ciel: like “ceiling”, the ceiling of the world."
+    },
+    {
+      "id": "climat",
+      "fr": "le climat",
+      "noun": "climat",
+      "pl": "climats",
+      "g": "m",
+      "en": "climate",
+      "pr": "luh klee-MAH",
+      "fa": "لُ کلیما",
+      "tip": "The t is silent."
+    },
+    {
+      "id": "neige_n",
+      "fr": "la neige",
+      "noun": "neige",
+      "pl": "neiges",
+      "g": "f",
+      "en": "snow",
+      "pr": "lah NEHZH",
+      "fa": "لا نِژ"
+    },
+    {
+      "id": "nuage",
+      "fr": "le nuage",
+      "noun": "nuage",
+      "pl": "nuages",
+      "g": "m",
+      "en": "cloud",
+      "pr": "luh nü-AHZH",
+      "fa": "لُ نواژ",
+      "tip": "Masculine, even though it ends in -e."
+    },
+    {
+      "id": "soleil_n",
+      "fr": "le soleil",
+      "noun": "soleil",
+      "pl": "soleils",
+      "g": "m",
+      "en": "sun",
+      "pr": "luh soh-LAY",
+      "fa": "لُ سُلِی"
+    },
+    {
+      "id": "ete",
+      "fr": "en été",
+      "en": "in summer",
+      "pr": "ahn-nay-TAY",
+      "fa": "آنِته",
+      "g": "x",
+      "trick": "Été: summer. The hat on the é is like a sun hat."
+    },
+    {
+      "id": "automne",
+      "fr": "en automne",
+      "en": "in autumn",
+      "pr": "ahn-noh-TUN",
+      "fa": "آنُتُن",
+      "g": "x",
+      "tip": "The m is silent: oh-TUN."
+    },
+    {
+      "id": "hiver",
+      "fr": "en hiver",
+      "en": "in winter",
+      "pr": "ahn-nee-VEHR",
+      "fa": "آنیوِر",
+      "g": "x",
+      "trick": "Hiver: animals hibernate in winter."
+    },
+    {
+      "id": "printemps",
+      "fr": "au printemps",
+      "en": "in spring",
+      "pr": "oh pran-TAHN",
+      "fa": "اُ پرَنتان",
+      "g": "x",
+      "trick": "Only spring takes au: au printemps. The others take en."
+    },
+    {
+      "id": "campagne",
+      "fr": "à la campagne",
+      "en": "in the country",
+      "pr": "ah lah kahn-PAHN-yuh",
+      "fa": "آ لا کانپانی",
+      "g": "x"
+    },
+    {
+      "id": "ecole",
+      "fr": "à l'école",
+      "en": "at school",
+      "pr": "ah lay-KOL",
+      "fa": "آ لِکُل",
+      "g": "x"
+    },
+    {
+      "id": "librairie",
+      "fr": "à la librairie",
+      "en": "at the bookstore",
+      "pr": "ah lah lee-breh-REE",
+      "fa": "آ لا لیبرِری",
+      "g": "x",
+      "trick": "Careful: une librairie is a bookSTORE. A library is une bibliothèque."
+    },
+    {
+      "id": "alamaison",
+      "fr": "à la maison",
+      "en": "at home",
+      "pr": "ah lah may-ZOHN",
+      "fa": "آ لا مِزُن",
+      "g": "x"
+    },
+    {
+      "id": "marche",
+      "fr": "au marché",
+      "en": "at the market",
+      "pr": "oh mar-SHAY",
+      "fa": "اُ مارشه",
+      "g": "x"
+    },
+    {
+      "id": "cheminee",
+      "fr": "dans la cheminée",
+      "en": "in the fireplace",
+      "pr": "dahn lah shuh-mee-NAY",
+      "fa": "دان لا شُمینه",
+      "g": "x"
+    },
+    {
+      "id": "arbre",
+      "fr": "sous un arbre",
+      "en": "under a tree",
+      "pr": "soo-zuh-NAR-bruh",
+      "fa": "سوزَنآربر",
+      "g": "x",
+      "trick": "Sous = under. Link the s: sous_un arbre."
+    },
+    {
+      "id": "cafe",
+      "fr": "le café",
+      "noun": "café",
+      "pl": "cafés",
+      "g": "m",
+      "en": "café",
+      "pr": "luh kah-FAY",
+      "fa": "لُ کافه"
+    },
+    {
+      "id": "gymnase",
+      "fr": "le gymnase",
+      "noun": "gymnase",
+      "pl": "gymnases",
+      "g": "m",
+      "en": "gym",
+      "pr": "luh zheem-NAHZ",
+      "fa": "لُ ژیمناز"
+    },
+    {
+      "id": "lac",
+      "fr": "le lac",
+      "noun": "lac",
+      "pl": "lacs",
+      "g": "m",
+      "en": "lake",
+      "pr": "luh LAHK",
+      "fa": "لُ لاک"
+    },
+    {
+      "id": "parc",
+      "fr": "le parc",
+      "noun": "parc",
+      "pl": "parcs",
+      "g": "m",
+      "en": "park",
+      "pr": "luh PARK",
+      "fa": "لُ پارک"
+    },
+    {
+      "id": "riviere",
+      "fr": "la rivière",
+      "noun": "rivière",
+      "pl": "rivières",
+      "g": "f",
+      "en": "river",
+      "pr": "lah ree-VYEHR",
+      "fa": "لا ریویِر"
+    },
+    {
+      "id": "universite",
+      "fr": "l'université",
+      "noun": "université",
+      "pl": "universités",
+      "g": "f",
+      "en": "university",
+      "pr": "lü-nee-vehr-see-TAY",
+      "fa": "لونیوِرسیته"
+    }
+  ],
+  "grammars": [
+    {
+      "id": "g21",
+      "title": "The verb faire",
+      "section": "Grammaire 2.1",
+      "pages": "p. 95",
+      "teach": [
+        {
+          "title": "Faire: to do, to make",
+          "body": "<b>Faire</b> is one of the most used verbs in French, and it's irregular. Listen: <b>fais</b>, <b>fais</b>, <b>fait</b> all sound like “feh”. <b>Faisons</b> sounds like “fuh-ZOHN”.",
+          "table": {
+            "head": [
+              "",
+              "faire"
+            ],
+            "rows": [
+              [
+                "I",
+                "je fais"
+              ],
+              [
+                "you (tu)",
+                "tu fais"
+              ],
+              [
+                "he / she / one",
+                "il fait"
+              ],
+              [
+                "we",
+                "nous faisons"
+              ],
+              [
+                "you (vous)",
+                "vous faites"
+              ],
+              [
+                "they",
+                "ils font"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "fr": "je fais",
+              "en": "I do, I make",
+              "pr": "zhuh FEH",
+              "fa": "ژُ فِ"
+            },
+            {
+              "fr": "nous faisons",
+              "en": "we do",
+              "pr": "noo fuh-ZOHN",
+              "fa": "نو فُزُن"
+            },
+            {
+              "fr": "vous faites",
+              "en": "you do",
+              "pr": "voo FET",
+              "fa": "وو فِت"
+            },
+            {
+              "fr": "ils font",
+              "en": "they do",
+              "pr": "eel FOHN",
+              "fa": "ایل فُن"
+            }
+          ],
+          "trick": "Vous faites rhymes with vous êtes. Ils font rhymes with ils sont, ils vont, ils ont."
+        },
+        {
+          "title": "What are you doing?",
+          "body": "Use <b>faire</b> to ask what someone is doing, or what work they do.",
+          "examples": [
+            {
+              "fr": "Qu'est-ce que tu fais ce soir ?",
+              "en": "What are you doing tonight?",
+              "pr": "kess-kuh tü FEH suh SWAR",
+              "fa": "کِسکُ تو فِ سُ سوآر"
+            },
+            {
+              "fr": "J'écoute de la musique.",
+              "en": "I'm listening to music.",
+              "pr": "zhay-KOOT duh lah mü-ZEEK",
+              "fa": "ژِکوت دُ لا موزیک"
+            },
+            {
+              "fr": "Que fait ton frère ?",
+              "en": "What does your brother do?",
+              "pr": "kuh FEH tohn FREHR",
+              "fa": "کُ فِ تُن فرِر"
+            },
+            {
+              "fr": "Il travaille dans un restaurant.",
+              "en": "He works in a restaurant.",
+              "pr": "eel trah-VAI dahn-zuhn res-toh-RAHN",
+              "fa": "ایل ترَوای دانزَن رِستُران"
+            }
+          ]
+        },
+        {
+          "title": "Weather uses faire",
+          "body": "Most weather expressions use <b>il fait</b>. <i>Il</i> here means “it”.",
+          "examples": [
+            {
+              "fr": "Quel temps fait-il ?",
+              "en": "What's the weather like?",
+              "pr": "kel TAHN feh-TEEL",
+              "fa": "کِل تان فِتیل"
+            },
+            {
+              "fr": "Il fait mauvais.",
+              "en": "The weather is bad.",
+              "pr": "eel feh moh-VEH",
+              "fa": "ایل فِ مُوِ"
+            },
+            {
+              "fr": "Il fait beau et il fait chaud.",
+              "en": "It's nice and warm.",
+              "pr": "eel feh BOH ay eel feh SHOH",
+              "fa": "ایل فِ بُ اِ ایل فِ شُ"
+            }
+          ],
+          "trick": "English says “it IS cold”. French says “it MAKES cold”: il fait froid. Except il pleut and il neige."
+        },
+        {
+          "title": "Activities with faire",
+          "body": "Many activities use <b>faire</b>: faire une promenade, faire du camping, faire de la voile, faire de l'anglais (study English).",
+          "examples": [
+            {
+              "fr": "Au lac, nous faisons de la voile.",
+              "en": "At the lake, we go sailing.",
+              "pr": "oh LAHK, noo fuh-ZOHN duh lah VWAHL",
+              "fa": "اُ لاک، نو فُزُن دُ لا ووآل"
+            },
+            {
+              "fr": "Je fais de l'anglais pour être professeur d'anglais.",
+              "en": "I'm studying English to be an English teacher.",
+              "pr": "zhuh FEH duh lahn-GLEH poor EH-truh proh-feh-SUHR dahn-GLEH",
+              "fa": "ژُ فِ دُ لانگلِ پور اِتر پروفِسُر دانگلِ"
+            },
+            {
+              "fr": "Vous faites du camping ?",
+              "en": "Do you go camping?",
+              "pr": "voo FET dü kahn-PEENG",
+              "fa": "وو فِت دو کانپینگ"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "faire: je fais, tu fais, il fait, nous faisons, vous faites, ils font.",
+        "Fais, fais, fait all sound like “feh”; faisons = “fuh-ZOHN”.",
+        "Qu'est-ce que tu fais ? = What are you doing?",
+        "Weather: Il fait beau / chaud / froid / frais / mauvais / du soleil / du vent. But: il pleut, il neige.",
+        "Activities: faire une promenade, faire du camping, faire de la voile, faire de l'anglais."
+      ],
+      "tricks": {
+        "faire": "Vous faites rhymes with vous êtes; ils font rhymes with ils sont.",
+        "weather": "French weather “makes”: il fait froid. Rain and snow have their own verbs: il pleut, il neige."
+      },
+      "drills": [
+        {
+          "id": "f1",
+          "set": "Practice",
+          "text": "Je ___ du camping.",
+          "options": [
+            "fais",
+            "fait",
+            "faisons",
+            "faites",
+            "font"
+          ],
+          "answer": "fais",
+          "en": "I go camping.",
+          "why": "With je: fais.",
+          "rule": "faire",
+          "after": 0
+        },
+        {
+          "id": "f2",
+          "set": "Practice",
+          "text": "Nous ___ une promenade.",
+          "options": [
+            "fais",
+            "fait",
+            "faisons",
+            "faites",
+            "font"
+          ],
+          "answer": "faisons",
+          "en": "We take a walk.",
+          "why": "With nous: faisons.",
+          "rule": "faire",
+          "after": 0
+        },
+        {
+          "id": "f3",
+          "set": "Practice",
+          "text": "Vous ___ de l'anglais ?",
+          "options": [
+            "fais",
+            "fait",
+            "faisons",
+            "faites",
+            "font"
+          ],
+          "answer": "faites",
+          "en": "Are you studying English?",
+          "why": "With vous: faites, like vous êtes.",
+          "rule": "faire",
+          "after": 0
+        },
+        {
+          "id": "f4",
+          "set": "Practice",
+          "text": "Ils ___ de la voile.",
+          "options": [
+            "fais",
+            "fait",
+            "faisons",
+            "faites",
+            "font"
+          ],
+          "answer": "font",
+          "en": "They go sailing.",
+          "why": "With ils: font, like ils sont.",
+          "rule": "faire",
+          "after": 0
+        },
+        {
+          "id": "f5",
+          "set": "Practice",
+          "type": "speak",
+          "fr": "nous faisons",
+          "en": "we do (“noo fuh-ZOHN”)",
+          "after": 0
+        },
+        {
+          "id": "f6",
+          "set": "Practice",
+          "type": "type",
+          "text": "Qu'est-ce que tu ___ ce soir ? (faire)",
+          "answer": "fais",
+          "accept": [
+            "fais"
+          ],
+          "en": "What are you doing tonight?",
+          "why": "With tu: fais.",
+          "rule": "faire",
+          "after": 1
+        },
+        {
+          "id": "f7",
+          "set": "Practice",
+          "text": "Que ___ ton frère ?",
+          "options": [
+            "fais",
+            "fait",
+            "faisons",
+            "faites",
+            "font"
+          ],
+          "answer": "fait",
+          "en": "What does your brother do?",
+          "why": "Ton frère = il: fait.",
+          "rule": "faire",
+          "after": 1
+        },
+        {
+          "id": "f8",
+          "set": "Practice",
+          "text": "It's cold.",
+          "options": [
+            "Il fait froid.",
+            "Il est froid.",
+            "Il a froid."
+          ],
+          "answer": "Il fait froid.",
+          "en": "",
+          "why": "Weather uses il fait.",
+          "rule": "weather",
+          "after": 2
+        },
+        {
+          "id": "f9",
+          "set": "Practice",
+          "text": "It's raining.",
+          "options": [
+            "Il pleut.",
+            "Il fait pleut.",
+            "Il fait de la pluie."
+          ],
+          "answer": "Il pleut.",
+          "en": "",
+          "why": "Rain has its own verb: il pleut.",
+          "rule": "weather",
+          "after": 2
+        },
+        {
+          "id": "f10",
+          "set": "Practice",
+          "type": "sentence",
+          "text": "Say it in French: What's the weather like?",
+          "answer": "Quel temps fait-il ?",
+          "accept": [
+            "Quel temps fait-il ?",
+            "Quel temps il fait ?"
+          ],
+          "en": "",
+          "why": "Literally: what weather does it make?",
+          "after": 2,
+          "rule": "weather"
+        },
+        {
+          "id": "f11",
+          "set": "Practice",
+          "type": "sentence",
+          "text": "Say it in French: It's nice and sunny.",
+          "answer": "Il fait beau et il fait du soleil.",
+          "accept": [
+            "Il fait beau et il fait du soleil.",
+            "Il fait beau et du soleil.",
+            "Il fait beau, il fait du soleil."
+          ],
+          "en": "",
+          "why": "Both use il fait.",
+          "after": 2,
+          "rule": "weather"
+        },
+        {
+          "id": "f12",
+          "set": "Practice",
+          "text": "Vous ___ du camping ?",
+          "options": [
+            "fais",
+            "fait",
+            "faisons",
+            "faites",
+            "font"
+          ],
+          "answer": "faites",
+          "en": "Do you go camping?",
+          "why": "With vous: faites.",
+          "rule": "faire",
+          "after": 3
+        }
+      ],
+      "exercises": [
+        {
+          "id": "e1-1a",
+          "set": "Exercice 1 · Les activités",
+          "text": "Est-ce que tes copains aussi ___ du français ?",
+          "options": [
+            "fais",
+            "fait",
+            "faisons",
+            "faites",
+            "font"
+          ],
+          "answer": "font",
+          "en": "Do your friends also study French?",
+          "why": "Tes copains = ils: font.",
+          "rule": "faire"
+        },
+        {
+          "id": "e1-1b",
+          "set": "Exercice 1 · Les activités",
+          "text": "Ou est-ce qu'ils ___ de l'espagnol ?",
+          "options": [
+            "fais",
+            "fait",
+            "faisons",
+            "faites",
+            "font"
+          ],
+          "answer": "font",
+          "en": "Or are they studying Spanish?",
+          "why": "Ils: font.",
+          "rule": "faire"
+        },
+        {
+          "id": "e1-2a",
+          "set": "Exercice 1 · Les activités",
+          "text": "Qu'est-ce que tu ___ comme études ?",
+          "options": [
+            "fais",
+            "fait",
+            "faisons",
+            "faites",
+            "font"
+          ],
+          "answer": "fais",
+          "en": "What are you studying?",
+          "why": "Tu: fais.",
+          "rule": "faire"
+        },
+        {
+          "id": "e1-2b",
+          "set": "Exercice 1 · Les activités",
+          "text": "Tu ___ de la chimie, de l'économie, de la littérature ?",
+          "options": [
+            "fais",
+            "fait",
+            "faisons",
+            "faites",
+            "font"
+          ],
+          "answer": "fais",
+          "en": "Are you studying chemistry, economics, literature?",
+          "why": "Tu: fais.",
+          "rule": "faire"
+        },
+        {
+          "id": "e1-3",
+          "set": "Exercice 1 · Les activités",
+          "text": "Que ___ ta mère ? Elle travaille dans un bureau ?",
+          "options": [
+            "fais",
+            "fait",
+            "faisons",
+            "faites",
+            "font"
+          ],
+          "answer": "fait",
+          "en": "What does your mother do? Does she work in an office?",
+          "why": "Ta mère = elle: fait.",
+          "rule": "faire"
+        },
+        {
+          "id": "e1-4",
+          "set": "Exercice 1 · Les activités",
+          "text": "Que ___ ton père ? Où est-ce qu'il travaille ?",
+          "options": [
+            "fais",
+            "fait",
+            "faisons",
+            "faites",
+            "font"
+          ],
+          "answer": "fait",
+          "en": "What does your father do? Where does he work?",
+          "why": "Ton père = il: fait.",
+          "rule": "faire"
+        },
+        {
+          "id": "e1-5a",
+          "set": "Exercice 1 · Les activités",
+          "text": "Tes copains et toi, qu'est-ce que vous ___ ensemble le weekend ?",
+          "options": [
+            "fais",
+            "fait",
+            "faisons",
+            "faites",
+            "font"
+          ],
+          "answer": "faites",
+          "en": "Your friends and you, what do you do together on weekends?",
+          "why": "Vous: faites.",
+          "rule": "faire"
+        },
+        {
+          "id": "e1-5b",
+          "set": "Exercice 1 · Les activités",
+          "text": "Vous ___ du camping ? Vous jouez aux jeux vidéo ?",
+          "options": [
+            "fais",
+            "fait",
+            "faisons",
+            "faites",
+            "font"
+          ],
+          "answer": "faites",
+          "en": "Do you go camping? Do you play video games?",
+          "why": "Vous: faites.",
+          "rule": "faire"
+        },
+        {
+          "id": "e1-6",
+          "set": "Exercice 1 · Les activités",
+          "text": "Ta famille et toi, est-ce que vous ___ des voyages ensemble ?",
+          "options": [
+            "fais",
+            "fait",
+            "faisons",
+            "faites",
+            "font"
+          ],
+          "answer": "faites",
+          "en": "Your family and you, do you take trips together?",
+          "why": "Vous: faites.",
+          "rule": "faire"
+        }
+      ]
+    },
+    {
+      "id": "g22",
+      "title": "Reflexive verbs",
+      "section": "Grammaire 2.2",
+      "pages": "pp. 96–97",
+      "teach": [
+        {
+          "title": "Doing something to yourself",
+          "body": "A <b>reflexive verb</b> has a pronoun that points back to the subject: <b>je me</b>, <b>tu te</b>, <b>il se</b>. Many French verbs are reflexive where English isn't.",
+          "examples": [
+            {
+              "fr": "Comment s'appelle cet étudiant ?",
+              "en": "What's that student's name?",
+              "pr": "koh-MAHN sah-PEL set ay-tü-DYAHN",
+              "fa": "کُمان ساپِل سِت اِتودیان"
+            },
+            {
+              "fr": "Il s'appelle Daniel.",
+              "en": "His name is Daniel.",
+              "pr": "eel sah-PEL dah-NYEL",
+              "fa": "ایل ساپِل دانیِل"
+            },
+            {
+              "fr": "Je me lève toujours à 7 heures du matin.",
+              "en": "I always get up at 7 in the morning.",
+              "pr": "zhuh muh LEV too-ZHOOR ah SET UHR dü mah-TAN",
+              "fa": "ژُ مُ لِو توژور آ سِت اُر دو ماتَن"
+            }
+          ],
+          "trick": "You already know one: je m'appelle = I call myself."
+        },
+        {
+          "title": "The pronouns: me, te, se, nous, vous, se",
+          "body": "Put the pronoun right before the verb. <b>Me, te, se</b> become <b>m', t', s'</b> before a vowel or silent h: <b>je m'amuse</b>, <b>il s'habille</b>.",
+          "table": {
+            "head": [
+              "",
+              "se promener",
+              "s'amuser"
+            ],
+            "rows": [
+              [
+                "I",
+                "je me promène",
+                "je m'amuse"
+              ],
+              [
+                "you (tu)",
+                "tu te promènes",
+                "tu t'amuses"
+              ],
+              [
+                "he / she / one",
+                "il se promène",
+                "il s'amuse"
+              ],
+              [
+                "we",
+                "nous nous promenons",
+                "nous nous amusons"
+              ],
+              [
+                "you (vous)",
+                "vous vous promenez",
+                "vous vous amusez"
+              ],
+              [
+                "they",
+                "ils se promènent",
+                "ils s'amusent"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "fr": "nous nous promenons",
+              "en": "we take a walk (no z sound)",
+              "pr": "noo noo proh-muh-NOHN",
+              "fa": "نو نو پرُمُنُن"
+            },
+            {
+              "fr": "nous nous amusons",
+              "en": "we have fun (link: noo noo-zah-mü-ZOHN)",
+              "pr": "noo noo-zah-mü-ZOHN",
+              "fa": "نو نوزامیزُن"
+            }
+          ],
+          "trick": "Nous nous, vous vous: say the pronoun twice. Before a vowel, the second one links with a z."
+        },
+        {
+          "title": "In real life",
+          "body": "Here are reflexive verbs in everyday sentences.",
+          "examples": [
+            {
+              "fr": "Raoul et moi, nous nous amusons avec nos amis français.",
+              "en": "Raoul and I have a good time with our French friends.",
+              "pr": "rah-OOL ay MWAH, noo noo-zah-mü-ZOHN ah-VEK noh-zah-MEE frahn-SEH",
+              "fa": "رائول اِ موا، نو نوزامیزُن آوِک نُزامی فرانسِ"
+            },
+            {
+              "fr": "Elle se couche tard et elle se lève tôt.",
+              "en": "She goes to bed late and gets up early.",
+              "pr": "el suh KOOSH TAR ay el suh LEV TOH",
+              "fa": "اِل سُ کوش تار اِ اِل سُ لِو تُ"
+            },
+            {
+              "fr": "Tu te baignes souvent dans ce lac ?",
+              "en": "Do you often swim in this lake?",
+              "pr": "tü tuh BEN-yuh soo-VAHN dahn suh LAHK",
+              "fa": "تو تُ بِنی سووان دان سُ لاک"
+            }
+          ]
+        },
+        {
+          "title": "Saying no",
+          "body": "In a negative sentence, <b>ne</b> goes before the pronoun and <b>pas</b> after the verb: <b>ne + se + verb + pas</b>.",
+          "examples": [
+            {
+              "fr": "Il ne se lève pas tout de suite.",
+              "en": "He doesn't get up right away.",
+              "pr": "eel nuh suh LEV pah too-tuh-SWEET",
+              "fa": "ایل نُ سُ لِو پا توتسویت"
+            },
+            {
+              "fr": "Albert ne se couche pas avant minuit.",
+              "en": "Albert doesn't go to bed before midnight.",
+              "pr": "al-BEHR nuh suh KOOSH pah ah-VAHN mee-NWEE",
+              "fa": "آلبِر نُ سُ کوش پا آوان مینوئی"
+            }
+          ],
+          "trick": "The pronoun sticks to its verb, so ne and pas wrap around both: ne SE LÈVE pas."
+        },
+        {
+          "title": "After aimer and préférer",
+          "body": "When a reflexive verb follows another verb, it stays in the infinitive, but its pronoun still matches the subject: <b>j'aime me…</b>, <b>tu aimes te…</b>, <b>vous aimez vous…</b>.",
+          "examples": [
+            {
+              "fr": "Est-ce que vous aimez vous promener en ville ?",
+              "en": "Do you like to take walks in the city?",
+              "pr": "ess-kuh voo-zeh-MAY voo proh-muh-NAY ahn VEEL",
+              "fa": "اِسکُ وو زِمه وو پرُمُنه آن ویل"
+            },
+            {
+              "fr": "Non, je préfère me promener à la campagne.",
+              "en": "No, I prefer to take walks in the country.",
+              "pr": "NOHN, zhuh pray-FEHR muh proh-muh-NAY ah lah kahn-PAHN-yuh",
+              "fa": "نُن، ژُ پرِفِر مُ پرُمُنه آ لا کانپانی"
+            },
+            {
+              "fr": "Adrienne aime rester chez elle et se reposer.",
+              "en": "Adrienne likes to stay home and rest.",
+              "pr": "ah-dree-EN EM res-TAY shay-ZEL ay suh ruh-poh-ZAY",
+              "fa": "آدریِن اِم رِسته شِزِل اِ سُ رُپُزه"
+            }
+          ],
+          "trick": "J'aime ME coucher tôt. The pronoun always matches the person: me for je."
+        }
+      ],
+      "notes": [
+        "Reflexive pronouns: me, te, se, nous, vous, se (m', t', s' before a vowel or silent h).",
+        "je me lève, tu te lèves, il se lève, nous nous levons, vous vous levez, ils se lèvent.",
+        "Negative: je ne me lève pas.",
+        "After aimer / préférer: j'aime me coucher tôt; tu préfères te lever tard.",
+        "Nous nous amusons: the second nous links with a z before a vowel."
+      ],
+      "tricks": {
+        "pron": "Match the pronoun to the person: je me, tu te, il se, nous nous, vous vous, ils se.",
+        "neg": "ne + pronoun + verb + pas: je ne me lève pas.",
+        "inf": "After aimer: j'aime ME coucher, tu aimes TE coucher."
+      },
+      "drills": [
+        {
+          "id": "r1",
+          "set": "Practice",
+          "text": "Je ___ lève à 7 heures.",
+          "options": [
+            "me",
+            "te",
+            "se"
+          ],
+          "answer": "me",
+          "en": "I get up at 7.",
+          "why": "With je: me.",
+          "rule": "pron",
+          "after": 0
+        },
+        {
+          "id": "r2",
+          "set": "Practice",
+          "text": "Comment ___ appelle cet étudiant ?",
+          "options": [
+            "s'",
+            "se",
+            "m'"
+          ],
+          "answer": "s'",
+          "en": "What's that student's name?",
+          "why": "Il: se, and s' before a vowel.",
+          "rule": "pron",
+          "after": 0
+        },
+        {
+          "id": "r3",
+          "set": "Practice",
+          "text": "Tu ___ promènes au parc ?",
+          "options": [
+            "te",
+            "se",
+            "me"
+          ],
+          "answer": "te",
+          "en": "Do you walk in the park?",
+          "why": "With tu: te.",
+          "rule": "pron",
+          "after": 1
+        },
+        {
+          "id": "r4",
+          "set": "Practice",
+          "text": "Nous ___ amusons bien.",
+          "options": [
+            "nous",
+            "se",
+            "vous"
+          ],
+          "answer": "nous",
+          "en": "We have a good time.",
+          "why": "With nous: nous nous.",
+          "rule": "pron",
+          "after": 1
+        },
+        {
+          "id": "r5",
+          "set": "Practice",
+          "text": "Elles ___ habillent.",
+          "options": [
+            "s'",
+            "se",
+            "nous"
+          ],
+          "answer": "s'",
+          "en": "They get dressed.",
+          "why": "Elles: se, and s' before the silent h.",
+          "rule": "pron",
+          "after": 1
+        },
+        {
+          "id": "r6",
+          "set": "Practice",
+          "type": "type",
+          "text": "Vous ___ promenez en ville ? (pronoun)",
+          "answer": "vous",
+          "accept": [
+            "vous"
+          ],
+          "en": "Do you walk in the city?",
+          "why": "With vous: vous vous.",
+          "rule": "pron",
+          "after": 1
+        },
+        {
+          "id": "r7",
+          "set": "Practice",
+          "type": "speak",
+          "fr": "nous nous amusons",
+          "en": "we have fun (link: noo noo-zah-mü-ZOHN)",
+          "after": 1
+        },
+        {
+          "id": "r8",
+          "set": "Practice",
+          "text": "Elle se couche tard et elle ___ tôt.",
+          "options": [
+            "se lève",
+            "se lèves",
+            "me lève"
+          ],
+          "answer": "se lève",
+          "en": "She goes to bed late and gets up early.",
+          "why": "Elle: se lève.",
+          "rule": "pron",
+          "after": 2
+        },
+        {
+          "id": "r9",
+          "set": "Practice",
+          "text": "He doesn't get up right away.",
+          "options": [
+            "Il ne se lève pas tout de suite.",
+            "Il se ne lève pas tout de suite.",
+            "Il ne lève se pas tout de suite."
+          ],
+          "answer": "Il ne se lève pas tout de suite.",
+          "en": "",
+          "why": "ne + se + lève + pas.",
+          "rule": "neg",
+          "after": 3
+        },
+        {
+          "id": "r10",
+          "set": "Practice",
+          "type": "sentence",
+          "text": "Say it in French: I don't go to bed before midnight.",
+          "answer": "Je ne me couche pas avant minuit.",
+          "accept": [
+            "Je ne me couche pas avant minuit."
+          ],
+          "en": "",
+          "why": "ne + me + couche + pas.",
+          "after": 3,
+          "rule": "neg"
+        },
+        {
+          "id": "r11",
+          "set": "Practice",
+          "text": "J'aime ___ coucher tôt.",
+          "options": [
+            "me",
+            "se",
+            "te"
+          ],
+          "answer": "me",
+          "en": "I like to go to bed early.",
+          "why": "After aimer, the pronoun still matches je: me.",
+          "rule": "inf",
+          "after": 4
+        },
+        {
+          "id": "r12",
+          "set": "Practice",
+          "text": "Vous aimez ___ promener en ville ?",
+          "options": [
+            "vous",
+            "se",
+            "nous"
+          ],
+          "answer": "vous",
+          "en": "Do you like to walk in the city?",
+          "why": "Matches vous: vous promener.",
+          "rule": "inf",
+          "after": 4
+        },
+        {
+          "id": "r13",
+          "set": "Practice",
+          "type": "sentence",
+          "text": "Say it in French: She likes to rest.",
+          "answer": "Elle aime se reposer.",
+          "accept": [
+            "Elle aime se reposer."
+          ],
+          "en": "",
+          "why": "Elle: se reposer.",
+          "after": 4,
+          "rule": "inf"
+        }
+      ],
+      "exercises": [
+        {
+          "id": "e2-1",
+          "set": "Exercice 2 · Les habitudes et les préférences",
+          "text": "(se lever tôt) — Est-ce que tu te lèves tôt ? — Oui, je ___ tôt.",
+          "options": [
+            "me lève",
+            "te lèves",
+            "se lève"
+          ],
+          "answer": "me lève",
+          "en": "Do you get up early? Yes, I get up early.",
+          "why": "Je: me lève.",
+          "rule": "pron"
+        },
+        {
+          "id": "e2-2",
+          "set": "Exercice 2 · Les habitudes et les préférences",
+          "text": "(se maquiller tous les jours) — Est-ce que tu ___ tous les jours ?",
+          "options": [
+            "te maquilles",
+            "se maquille",
+            "me maquille"
+          ],
+          "answer": "te maquilles",
+          "en": "Do you put on makeup every day?",
+          "why": "Tu: te maquilles.",
+          "rule": "pron"
+        },
+        {
+          "id": "e2-3",
+          "set": "Exercice 2 · Les habitudes et les préférences",
+          "text": "(se laver les cheveux tous les jours) — Oui, je ___ les cheveux tous les jours.",
+          "options": [
+            "me lave",
+            "te laves",
+            "se lave"
+          ],
+          "answer": "me lave",
+          "en": "Yes, I wash my hair every day.",
+          "why": "Je: me lave.",
+          "rule": "pron"
+        },
+        {
+          "id": "e2-4",
+          "set": "Exercice 2 · Les habitudes et les préférences",
+          "text": "(se brosser les dents trois fois par jour) — Est-ce que tu ___ les dents trois fois par jour ?",
+          "options": [
+            "te brosses",
+            "se brosse",
+            "me brosse"
+          ],
+          "answer": "te brosses",
+          "en": "Do you brush your teeth three times a day?",
+          "why": "Tu: te brosses.",
+          "rule": "pron"
+        },
+        {
+          "id": "e2-5",
+          "set": "Exercice 2 · Les habitudes et les préférences",
+          "text": "(aimer se coucher tard) — Tu aimes te coucher tard ? — Oui, j'aime ___ tard.",
+          "options": [
+            "me coucher",
+            "se coucher",
+            "te coucher"
+          ],
+          "answer": "me coucher",
+          "en": "Do you like going to bed late? Yes, I like going to bed late.",
+          "why": "After aimer, the pronoun matches je: me coucher.",
+          "rule": "inf"
+        },
+        {
+          "id": "e2-6",
+          "set": "Exercice 2 · Les habitudes et les préférences",
+          "text": "(préférer se doucher le soir) — Tu préfères ___ le soir ?",
+          "options": [
+            "te doucher",
+            "se doucher",
+            "me doucher"
+          ],
+          "answer": "te doucher",
+          "en": "Do you prefer to shower in the evening?",
+          "why": "Matches tu: te doucher.",
+          "rule": "inf"
+        },
+        {
+          "id": "e2-7",
+          "set": "Exercice 2 · Les habitudes et les préférences",
+          "text": "(aimer se détendre après les cours) — Non, je n'aime pas ___ après les cours.",
+          "options": [
+            "me détendre",
+            "se détendre",
+            "te détendre"
+          ],
+          "answer": "me détendre",
+          "en": "No, I don't like to relax after class.",
+          "why": "Matches je: me détendre.",
+          "rule": "inf"
+        },
+        {
+          "id": "e2-8",
+          "set": "Exercice 2 · Les habitudes et les préférences",
+          "text": "(préférer se lever tard le weekend) — Oui, je préfère ___ tard le weekend.",
+          "options": [
+            "me lever",
+            "se lever",
+            "me lève"
+          ],
+          "answer": "me lever",
+          "en": "Yes, I prefer to get up late on weekends.",
+          "why": "After préférer: infinitive me lever.",
+          "rule": "inf"
+        },
+        {
+          "id": "e3-1",
+          "set": "Exercice 3 · Êtes-vous des étudiants typiques ?",
+          "text": "Les étudiants s'amusent bien le vendredi soir. → Mes copains et moi, ___ bien le vendredi soir.",
+          "options": [
+            "nous nous amusons",
+            "nous s'amusons",
+            "nous nous amusez"
+          ],
+          "answer": "nous nous amusons",
+          "en": "Students have fun on Friday nights. My friends and I have fun on Friday nights.",
+          "why": "Nous: nous nous amusons.",
+          "rule": "pron"
+        },
+        {
+          "id": "e3-2",
+          "set": "Exercice 3 · Êtes-vous des étudiants typiques ?",
+          "text": "Les étudiants s'habillent toujours en jean. → Mes copains et moi, ___ toujours en jean.",
+          "options": [
+            "nous nous habillons",
+            "nous s'habillons",
+            "nous nous habillent"
+          ],
+          "answer": "nous nous habillons",
+          "en": "Students always dress in jeans. My friends and I always dress in jeans.",
+          "why": "Nous: nous nous habillons.",
+          "rule": "pron"
+        },
+        {
+          "id": "e3-3",
+          "set": "Exercice 3 · Êtes-vous des étudiants typiques ?",
+          "text": "Les étudiants ne se reposent pas assez. → Mes copains et moi, ___ assez.",
+          "options": [
+            "nous ne nous reposons pas",
+            "nous nous ne reposons pas",
+            "nous ne reposons nous pas"
+          ],
+          "answer": "nous ne nous reposons pas",
+          "en": "Students don't rest enough. My friends and I don't rest enough.",
+          "why": "ne + nous + reposons + pas.",
+          "rule": "neg"
+        },
+        {
+          "id": "e3-4",
+          "set": "Exercice 3 · Êtes-vous des étudiants typiques ?",
+          "text": "Les étudiants se couchent après minuit. → Mes copains et moi, ___ après minuit.",
+          "options": [
+            "nous nous couchons",
+            "nous se couchons",
+            "nous nous couchent"
+          ],
+          "answer": "nous nous couchons",
+          "en": "Students go to bed after midnight. My friends and I go to bed after midnight.",
+          "why": "Nous: nous nous couchons.",
+          "rule": "pron"
+        },
+        {
+          "id": "e3-5",
+          "set": "Exercice 3 · Êtes-vous des étudiants typiques ?",
+          "text": "Les étudiants se lèvent tard le weekend. → Mes copains et moi, ___ tard le weekend.",
+          "options": [
+            "nous nous levons",
+            "nous nous lèvons",
+            "nous se levons"
+          ],
+          "answer": "nous nous levons",
+          "en": "Students get up late on weekends. My friends and I get up late on weekends.",
+          "why": "Nous levons has no accent: the è only appears when the ending is silent.",
+          "rule": "pron"
+        }
+      ]
+    }
+  ],
+  "readings": [
+    {
+      "id": "r1",
+      "title": "La météo au Canada",
+      "lines": [
+        {
+          "fr": "Au Canada, en hiver, il fait froid et il neige.",
+          "en": "In Canada, in winter, it's cold and it snows.",
+          "pr": "oh kah-nah-DAH, ahn-nee-VEHR, eel feh FRWAH ay eel NEHZH",
+          "fa": "اُ کانادا، آنیوِر، ایل فِ فروآ اِ ایل نِژ"
+        },
+        {
+          "fr": "Au printemps, il pleut souvent et il y a de la boue.",
+          "en": "In spring, it often rains and there's mud.",
+          "pr": "oh pran-TAHN, eel PLUH soo-VAHN ay eel-YAH duh lah BOO",
+          "fa": "اُ پرَنتان، ایل پلُ سووان اِ ایلیا دُ لا بو"
+        },
+        {
+          "fr": "En été, il fait chaud et il fait du soleil.",
+          "en": "In summer, it's hot and sunny.",
+          "pr": "ahn-nay-TAY, eel feh SHOH ay eel feh dü soh-LAY",
+          "fa": "آنِته، ایل فِ شُ اِ ایل فِ دو سُلِی"
+        },
+        {
+          "fr": "En automne, il fait frais et il fait du vent.",
+          "en": "In autumn, it's cool and windy.",
+          "pr": "ahn-noh-TUN, eel feh FREH ay eel feh dü VAHN",
+          "fa": "آنُتُن، ایل فِ فرِ اِ ایل فِ دو وان"
+        }
+      ],
+      "questions": [
+        {
+          "q": "Quel temps fait-il en hiver ?",
+          "hint": "What's the weather like in winter?",
+          "options": [
+            "Il fait froid et il neige.",
+            "Il fait chaud.",
+            "Il fait du soleil."
+          ],
+          "answer": "Il fait froid et il neige.",
+          "optionsEn": {
+            "Il fait froid et il neige.": "It's cold and snowing.",
+            "Il fait chaud.": "It's hot.",
+            "Il fait du soleil.": "It's sunny."
+          }
+        },
+        {
+          "q": "Quand est-ce qu'il y a de la boue ?",
+          "hint": "When is there mud?",
+          "options": [
+            "au printemps",
+            "en été",
+            "en automne"
+          ],
+          "answer": "au printemps",
+          "optionsEn": {
+            "au printemps": "in spring",
+            "en été": "in summer",
+            "en automne": "in autumn"
+          }
+        },
+        {
+          "q": "Quel temps fait-il en été ?",
+          "hint": "What's the weather like in summer?",
+          "options": [
+            "Il fait chaud.",
+            "Il neige.",
+            "Il fait frais."
+          ],
+          "answer": "Il fait chaud.",
+          "optionsEn": {
+            "Il fait chaud.": "It's hot.",
+            "Il neige.": "It snows.",
+            "Il fait frais.": "It's cool."
+          }
+        },
+        {
+          "q": "Quand est-ce qu'il fait du vent ?",
+          "hint": "When is it windy?",
+          "options": [
+            "en automne",
+            "en hiver",
+            "au printemps"
+          ],
+          "answer": "en automne",
+          "optionsEn": {
+            "en automne": "in autumn",
+            "en hiver": "in winter",
+            "au printemps": "in spring"
+          }
+        }
+      ]
+    },
+    {
+      "id": "r2",
+      "title": "La journée de Minou",
+      "lines": [
+        {
+          "fr": "Minou se réveille à sept heures, mais il ne se lève pas tout de suite.",
+          "en": "Minou wakes up at seven, but he doesn't get up right away.",
+          "pr": "mee-NOO suh ray-VAY ah set-UHR, meh eel nuh suh LEV pah too-tuh-SWEET",
+          "fa": "مینو سُ رِوِی آ سِتُر، مِ ایل نُ سُ لِو پا توتسویت"
+        },
+        {
+          "fr": "Il fait beau, alors il se promène au parc.",
+          "en": "It's nice out, so he takes a walk in the park.",
+          "pr": "eel feh BOH, ah-LOR eel suh proh-MEN oh PARK",
+          "fa": "ایل فِ بُ، آلُر ایل سُ پرُمِن اُ پارک"
+        },
+        {
+          "fr": "L'après-midi, il se repose sous un arbre.",
+          "en": "In the afternoon, he rests under a tree.",
+          "pr": "lah-preh-mee-DEE, eel suh ruh-POHZ soo-zuh-NAR-bruh",
+          "fa": "لاپرِمیدی، ایل سُ رُپُز سوزَنآربر"
+        },
+        {
+          "fr": "Quand il pleut, il reste à la maison, près de la cheminée.",
+          "en": "When it rains, he stays home, near the fireplace.",
+          "pr": "kahn-teel PLUH, eel REST ah lah may-ZOHN, preh duh lah shuh-mee-NAY",
+          "fa": "کانتیل پلُ، ایل رِست آ لا مِزُن، پرِ دُ لا شُمینه"
+        },
+        {
+          "fr": "Le soir, il se couche tôt. Il aime se reposer !",
+          "en": "In the evening, he goes to bed early. He likes to rest!",
+          "pr": "luh SWAR, eel suh KOOSH TOH. eel EM suh ruh-poh-ZAY",
+          "fa": "لُ سوآر، ایل سُ کوش تُ. ایل اِم سُ رُپُزه"
+        }
+      ],
+      "questions": [
+        {
+          "q": "À quelle heure Minou se réveille-t-il ?",
+          "hint": "What time does Minou wake up?",
+          "options": [
+            "à sept heures",
+            "à huit heures",
+            "à midi"
+          ],
+          "answer": "à sept heures",
+          "optionsEn": {
+            "à sept heures": "at seven",
+            "à huit heures": "at eight",
+            "à midi": "at noon"
+          }
+        },
+        {
+          "q": "Où est-ce que Minou se promène ?",
+          "hint": "Where does Minou take a walk?",
+          "options": [
+            "au parc",
+            "au marché",
+            "à l'école"
+          ],
+          "answer": "au parc",
+          "optionsEn": {
+            "au parc": "in the park",
+            "au marché": "at the market",
+            "à l'école": "at school"
+          }
+        },
+        {
+          "q": "Où est-ce qu'il se repose l'après-midi ?",
+          "hint": "Where does he rest in the afternoon?",
+          "options": [
+            "sous un arbre",
+            "dans la cheminée",
+            "au café"
+          ],
+          "answer": "sous un arbre",
+          "optionsEn": {
+            "sous un arbre": "under a tree",
+            "dans la cheminée": "in the fireplace",
+            "au café": "at the café"
+          }
+        },
+        {
+          "q": "Qu'est-ce qu'il fait quand il pleut ?",
+          "hint": "What does he do when it rains?",
+          "options": [
+            "Il reste à la maison.",
+            "Il fait une promenade.",
+            "Il se baigne dans le lac."
+          ],
+          "answer": "Il reste à la maison.",
+          "optionsEn": {
+            "Il reste à la maison.": "He stays home.",
+            "Il fait une promenade.": "He takes a walk.",
+            "Il se baigne dans le lac.": "He swims in the lake."
+          }
+        }
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "u1",
+      "fr": "Quel temps fait-il ?",
+      "en": "What's the weather like?",
+      "pr": "kel TAHN feh-TEEL",
+      "fa": "کِل تان فِتیل"
+    },
+    {
+      "id": "u2",
+      "fr": "Il fait froid en hiver.",
+      "en": "It's cold in winter.",
+      "pr": "eel feh FRWAH ahn-nee-VEHR",
+      "fa": "ایل فِ فروآ آنیوِر"
+    },
+    {
+      "id": "u3",
+      "fr": "Au printemps, il pleut souvent.",
+      "en": "In spring, it often rains.",
+      "pr": "oh pran-TAHN, eel PLUH soo-VAHN",
+      "fa": "اُ پرَنتان، ایل پلُ سووان"
+    },
+    {
+      "id": "u4",
+      "fr": "Qu'est-ce que tu fais ce soir ?",
+      "en": "What are you doing tonight?",
+      "pr": "kess-kuh tü FEH suh SWAR",
+      "fa": "کِسکُ تو فِ سُ سوآر"
+    },
+    {
+      "id": "u5",
+      "fr": "Nous faisons une promenade au parc.",
+      "en": "We're taking a walk in the park.",
+      "pr": "noo fuh-ZOHN ün proh-muh-NAHD oh PARK",
+      "fa": "نو فُزُن اون پرُمُناد اُ پارک"
+    },
+    {
+      "id": "u6",
+      "fr": "Vous faites du camping ?",
+      "en": "Do you go camping?",
+      "pr": "voo FET dü kahn-PEENG",
+      "fa": "وو فِت دو کانپینگ"
+    },
+    {
+      "id": "u7",
+      "fr": "Je me lève à sept heures.",
+      "en": "I get up at seven.",
+      "pr": "zhuh muh LEV ah set-UHR",
+      "fa": "ژُ مُ لِو آ سِتُر"
+    },
+    {
+      "id": "u8",
+      "fr": "Elle se couche tard.",
+      "en": "She goes to bed late.",
+      "pr": "el suh KOOSH TAR",
+      "fa": "اِل سُ کوش تار"
+    },
+    {
+      "id": "u9",
+      "fr": "Nous nous amusons bien.",
+      "en": "We're having a good time.",
+      "pr": "noo noo-zah-mü-ZOHN BYAN",
+      "fa": "نو نوزامیزُن بیَن"
+    },
+    {
+      "id": "u10",
+      "fr": "Il ne se lève pas tôt.",
+      "en": "He doesn't get up early.",
+      "pr": "eel nuh suh LEV pah TOH",
+      "fa": "ایل نُ سُ لِو پا تُ"
+    },
+    {
+      "id": "u11",
+      "fr": "J'aime me promener à la campagne.",
+      "en": "I like to take walks in the country.",
+      "pr": "ZHEM muh proh-muh-NAY ah lah kahn-PAHN-yuh",
+      "fa": "ژِم مُ پرُمُنه آ لا کانپانی"
+    },
+    {
+      "id": "u12",
+      "fr": "Tu te brosses les dents ?",
+      "en": "Are you brushing your teeth?",
+      "pr": "tü tuh BROSS lay DAHN",
+      "fa": "تو تُ بروس لِ دان"
+    }
+  ]
+}
