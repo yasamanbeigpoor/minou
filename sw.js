@@ -1,6 +1,6 @@
 // Offline support. App files: cache first, refreshed in the background.
 // Lesson content: network first, so new modules show up as soon as they're pushed.
-const VERSION = 'minou-v19';
+const VERSION = 'minou-v20';
 const SHELL = [
   './', 'index.html', 'manifest.webmanifest', 'css/style.css', 'css/fonts.css',
   'fonts/fredoka-latin-500-normal.woff2', 'fonts/fredoka-latin-600-normal.woff2', 'fonts/nunito-latin-400-normal.woff2',
@@ -9,7 +9,7 @@ const SHELL = [
   'fonts/vazirmatn-arabic-500-normal.woff2', 'summary.html', 'icons/icon-512.png', 'icons/icon.svg', 'icons/icon-192.png',
   'js/app.js', 'js/util.js', 'js/store.js', 'js/srs.js', 'js/data.js', 'js/questions.js', 'js/build.js',
   'js/lesson.js', 'js/minou.js', 'js/icons.js', 'js/speech.js', 'js/sound.js', 'js/numbers.js',
-  'js/confetti.js', 'js/summary.js', 'js/fa.js', 'js/tour.js', 'js/sync.js',
+  'js/confetti.js', 'js/summary.js', 'js/fa.js', 'js/tour.js', 'js/sync.js', 'js/gloss.js',
   'content/classes.json',
 ];
 

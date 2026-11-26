@@ -1,4 +1,5 @@
 // Loads class and module content and builds the learning path.
+import { loadGlossary } from './gloss.js';
 import { isDone } from './store.js';
 import { frNumber } from './numbers.js';
 
@@ -9,6 +10,7 @@ const NODE_ICONS = {
 };
 
 export async function loadAll() {
+  const glossary = loadGlossary();
   const res = await fetch('content/classes.json', { cache: 'no-cache' });
   const { classes } = await res.json();
   DB.classes = classes;
@@ -31,6 +33,7 @@ export async function loadAll() {
   }
   indexItems();
   buildNodes();
+  await glossary;
   return DB;
 }
 

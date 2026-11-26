@@ -1,5 +1,6 @@
 // The lesson player: renders each step, checks answers and gives feedback.
 import { h, $, shuffle, checkFrench, clean, similarity, pick, sleep } from './util.js';
+import { frText } from './gloss.js';
 import { speak, speakAll, stopAll, listen, stopListening, cancelListening, sttSupported, stopSpeaking } from './speech.js';
 import { sfx } from './sound.js';
 import { minouSVG, setMood, LINES } from './minou.js';
@@ -361,15 +362,15 @@ function bigText(step) {
   }
   if (!step.big) return null;
   const cls = `big ${step.hero ? 'hero' : ''}`;
-  const kids = [h('span', { lang: step.speakBig ? 'fr' : 'en' }, step.big)];
+  const kids = [step.speakBig ? frText(step.big) : h('span', { lang: 'en' }, step.big)];
   if (step.speakBig) kids.push(h('button', { class: 'icon-btn tiny', 'aria-label': 'Hear it', onclick: () => speak(step.speakBig) }, icon('sound')));
   return h('div', { class: 'big-wrap' }, h('div', { class: cls }, ...kids), pron(step.bigPr, step.bigFa, 'center'));
 }
 
 function clozeParts(text) {
   const [a, b] = text.split('___');
-  if (b === undefined) return [text];
-  return [a, h('span', { class: 'blank' }, '____'), b];
+  if (b === undefined) return [frText(text)];
+  return [frText(a), h('span', { class: 'blank' }, '____'), frText(b)];
 }
 
 function passageCard(reading, { compact = false } = {}) {
@@ -378,7 +379,7 @@ function passageCard(reading, { compact = false } = {}) {
     const en = l.en ? h('span', { class: 'en', hidden: !reading.showEn }, l.en) : h('span', { class: 'en', hidden: true });
     return h('button', { class: 'p-line', onclick: () => speak(l.fr) },
       l.who ? h('b', { class: 'who' }, l.who) : null,
-      h('span', { class: 'fr', lang: 'fr' }, l.fr), pron(l.pr, l.fa), en);
+      frText(l.fr, 'span', { class: 'fr' }), pron(l.pr, l.fa), en);
   });
   const toggle = h('button', { class: 'chip', 'aria-pressed': 'false', onclick: () => {
     showEn = !showEn;
@@ -489,7 +490,7 @@ const RENDER = {
       promptHead({ say: 'Nouveau mot !', sub: 'Tap the word to hear it again.' }),
       h('div', { class: 'card intro' },
         h('span', { class: `pill g-${step.g}` }, gender),
-        h('button', { class: 'intro-fr', lang: 'fr', onclick: () => speak(step.fr) }, step.fr, icon('sound')),
+        h('button', { class: 'intro-fr', lang: 'fr', onclick: () => speak(step.fr) }, frText(step.fr), icon('sound')),
         pron(step.pr, step.fa, 'center big-pron'),
         h('div', { class: 'intro-en' }, step.en),
         step.tip ? h('p', { class: 'tip' }, step.tip) : null,
@@ -548,7 +549,7 @@ const RENDER = {
     }
     if (step.examples) {
       kids.push(h('ul', { class: 'examples' }, ...step.examples.map((e) =>
-        h('li', {}, h('button', { class: 'ex', onclick: () => speak(e.fr) }, icon('sound'), h('span', { lang: 'fr' }, e.fr)), pron(e.pr, e.fa, 'indent'), h('span', { class: 'en' }, e.en)))));
+        h('li', {}, h('button', { class: 'ex', onclick: () => speak(e.fr) }, icon('sound'), frText(e.fr)), pron(e.pr, e.fa, 'indent'), h('span', { class: 'en' }, e.en)))));
     }
     if (step.trick) kids.push(trickBox(step.trick));
     put(body, promptHead({ say: 'Écoute, je t’explique.', sub: 'A quick rule from Minou.' }), h('div', { class: 'card teach' }, ...kids));
@@ -729,7 +730,7 @@ const RENDER = {
     let tries = 0;
     const status = h('p', { class: 'mic-status', role: 'status' }, canListen ? 'Tap the mic and speak.' : 'Say it out loud, then check yourself.');
     const phrase = h('div', { class: 'speak-card' },
-      step.showDigits ? h('div', { class: 'big hero' }, step.digits) : h('div', { class: 'speak-fr', lang: 'fr' }, step.fr),
+      step.showDigits ? h('div', { class: 'big hero' }, step.digits) : frText(step.fr, 'div', { class: 'speak-fr' }),
       step.showDigits && step.fr !== step.digits ? h('div', { class: 'speak-sub', lang: 'fr' }, step.fr) : null,
       pron(step.pr, step.fa, 'center'),
       h('div', { class: 'speak-en' }, step.showDigits ? (step.en && !/^\d+$/.test(step.en) ? step.en : 'Say it in French') : step.en),

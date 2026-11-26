@@ -1,5 +1,6 @@
 // Module summary: used for the in-app notebook and for the downloadable PDF.
 import { h } from './util.js';
+import { frText, frSpacing } from './gloss.js';
 import { frNumber, frDigits, range } from './numbers.js';
 import { speak } from './speech.js';
 import { icon } from './icons.js';
@@ -9,8 +10,8 @@ const G = { m: 'm.', f: 'f.', mf: 'm./f.', pl: 'pl.', adj: 'adj.' };
 
 export function renderSummary(m, { interactive = true } = {}) {
   const say = (fr, label = fr) => interactive
-    ? h('button', { class: 'say-btn', lang: 'fr', onclick: () => speak(fr) }, label, icon('sound'))
-    : h('span', { lang: 'fr' }, label);
+    ? h('button', { class: 'say-btn', lang: 'fr', onclick: () => speak(fr) }, frText(label), icon('sound'))
+    : h('span', { lang: 'fr' }, frSpacing(label));
 
   const out = h('article', { class: 'summary' });
 

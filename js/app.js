@@ -13,7 +13,7 @@ import { startTour } from './tour.js';
 import { applyPronClasses, prOn, faOn } from './fa.js';
 
 // Shown on the Me tab so it's easy to check which version is running. Bump with every release.
-export const APP_VERSION = '2.7 (25 Nov 2026)';
+export const APP_VERSION = '2.8 (25 Nov 2026)';
 
 const app = $('#app');
 let installEvt = null;
@@ -289,10 +289,12 @@ function notesScreen(key) {
   const files = (m) => h('ul', { class: 'file-list' },
     h('li', {}, h('a', { class: 'file-row', href: `#/notes/${m.key}` },
       icon('notes'), h('span', {}, h('b', {}, 'Notes'), h('small', {}, 'Read and listen in the app')), icon('back', 'flip'))),
-    h('li', {}, h('a', { class: 'file-row', href: pdfFor(m, false), target: '_blank', rel: 'noopener' },
-      icon('download'), h('span', {}, h('b', {}, 'PDF summary'), h('small', {}, 'With English pronunciation')), icon('back', 'flip'))),
-    h('li', {}, h('a', { class: 'file-row', href: pdfFor(m, true), target: '_blank', rel: 'noopener' },
-      icon('download'), h('span', {}, h('b', {}, 'PDF summary with Persian'), h('small', { lang: 'fa', dir: 'rtl' }, 'با تلفظ فارسی')), icon('back', 'flip'))));
+    h('li', {}, pdfButton(h('a', { class: 'file-row', href: pdfFor(m, false), target: '_blank', rel: 'noopener' },
+      icon('download'), h('span', {}, h('b', { class: 'pdf-label' }, 'PDF summary'), h('small', {}, 'With English pronunciation · save, share or print')), icon('back', 'flip')),
+      pdfFor(m, false), pdfName(m, false), 'PDF summary')),
+    h('li', {}, pdfButton(h('a', { class: 'file-row', href: pdfFor(m, true), target: '_blank', rel: 'noopener' },
+      icon('download'), h('span', {}, h('b', { class: 'pdf-label' }, 'PDF summary with Persian'), h('small', { lang: 'fa', dir: 'rtl' }, 'با تلفظ فارسی')), icon('back', 'flip')),
+      pdfFor(m, true), pdfName(m, true), 'PDF summary with Persian')));
   const block = (m) => h('div', { class: 'file-group' },
     h('h3', { class: 'file-group-title' }, h('span', { lang: 'fr' }, m.title), h('small', {}, m.subtitle)), files(m));
   const pre = preModules();
@@ -308,10 +310,9 @@ function notesScreen(key) {
 
 function moduleNotes(m) {
   const pdf = `summaries/${m.classId}-${m.id}${faOn() ? '-fa' : ''}.pdf`;
-  const fname = `Minou ${m.className} - ${m.pre ? '' : `Module ${m.number} - `}${m.title.replace(/'/g, '’')}.pdf`;
-  // target=_blank matters on iPhone: inside a home-screen app it opens the PDF in a viewer with a Done
-  // button that returns to Minou, instead of replacing the app with no way back.
-  const dl = h('a', { class: 'btn primary', href: pdf, download: fname, target: '_blank', rel: 'noopener', hidden: true }, icon('download'), 'Open PDF');
+  const fname = pdfName(m, faOn());
+  const dl = pdfButton(h('a', { class: 'btn primary', href: pdf, download: fname, target: '_blank', rel: 'noopener', hidden: true }, icon('download'), h('span', { class: 'pdf-label' }, 'Save or share PDF')),
+    pdf, fname, 'Save or share PDF');
   fetch(pdf, { method: 'HEAD' }).then((r) => { if (r.ok) dl.hidden = false; }).catch(() => {});
   return h('div', { class: 'screen module-notes' },
     h('div', { class: 'notes-bar' },
@@ -319,6 +320,46 @@ function moduleNotes(m) {
       h('div', { class: 'notes-actions' }, dl)),
     renderSummary(m, { interactive: true }));
 }
+
+
+// ---------- PDFs ----------
+// Inside the home-screen app on iPhone, opening a PDF link covers the app with a viewer that has
+// no Back, Share or Save button. So PDFs go through the share sheet instead (Save to Files,
+// Print, Messages, Books…). Computers without a share sheet just open the PDF in a new tab.
+const pdfCache = new Map();
+async function pdfFile(url, name) {
+  if (!pdfCache.has(url)) {
+    const r = await fetch(url);
+    if (!r.ok) throw new Error('PDF not found');
+    pdfCache.set(url, new File([await r.blob()], name, { type: 'application/pdf' }));
+  }
+  return pdfCache.get(url);
+}
+const canShareFiles = () => {
+  try { return !!navigator.canShare && navigator.canShare({ files: [new File([''], 'x.pdf', { type: 'application/pdf' })] }); } catch { return false; }
+};
+function pdfButton(el, url, name, label) {
+  const text = el.querySelector('.pdf-label') || el;
+  const reset = () => { text.textContent = label; };
+  el.addEventListener('pointerdown', () => { pdfFile(url, name).catch(() => {}); });   // start loading early
+  el.addEventListener('click', async (e) => {
+    if (!canShareFiles()) return;   // let the link open the PDF normally
+    e.preventDefault();
+    try {
+      if (!pdfCache.has(url)) text.textContent = 'Preparing…';
+      const file = await pdfFile(url, name);
+      reset();
+      await navigator.share({ files: [file], title: name.replace(/\.pdf$/, '') });
+    } catch (err) {
+      if (err?.name === 'AbortError') return reset();          // closed the share sheet
+      if (err?.name === 'NotAllowedError') { text.textContent = 'Ready: tap again'; return; }   // took too long: the next tap shares
+      reset();
+      alert('Couldn’t open the PDF. Check your connection and try again.');
+    }
+  });
+  return el;
+}
+const pdfName = (m, fa) => `Minou ${m.className} - ${m.pre ? '' : `Module ${m.number} - `}${m.title.replace(/'/g, '’').replace(/[?!:]/g, '').trim()}${fa ? ' (Persian)' : ''}.pdf`;
 
 // ---------- Me ----------
 
