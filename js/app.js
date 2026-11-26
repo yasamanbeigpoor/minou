@@ -13,7 +13,7 @@ import { startTour } from './tour.js';
 import { applyPronClasses, prOn, faOn } from './fa.js';
 
 // Shown on the Me tab so it's easy to check which version is running. Bump with every release.
-export const APP_VERSION = '2.9 (26 Nov 2026)';
+export const APP_VERSION = '2.10 (26 Nov 2026)';
 
 const app = $('#app');
 let installEvt = null;
@@ -303,16 +303,40 @@ function notesScreen(key) {
 }
 
 function moduleNotes(m) {
-  const pdf = `summaries/${m.classId}-${m.id}${faOn() ? '-fa' : ''}.pdf`;
-  const fname = pdfName(m, faOn());
-  const dl = pdfButton(h('a', { class: 'btn primary', href: pdf, download: fname, target: '_blank', rel: 'noopener', hidden: true }, icon('download'), h('span', { class: 'pdf-label' }, 'Save or share PDF')),
-    pdf, fname, 'Save or share PDF');
-  fetch(pdf, { method: 'HEAD' }).then((r) => { if (r.ok) dl.hidden = false; }).catch(() => {});
+  const open = h('button', { class: 'btn primary', onclick: () => pdfPreview(m) }, icon('notes'), h('span', {}, 'View PDF'));
   return h('div', { class: 'screen module-notes' },
     h('div', { class: 'notes-bar' },
       h('a', { class: 'icon-btn', href: '#/notes', 'aria-label': 'Back to notebook' }, icon('back')),
-      h('div', { class: 'notes-actions' }, dl)),
+      h('div', { class: 'notes-actions' }, open)),
     renderSummary(m, { interactive: true }));
+}
+
+// A look at the PDF before saving it. It shows the same page the PDF is printed from, inside
+// Minou, with a Close button that always works, so the app never gets stuck in a viewer.
+function pdfPreview(m) {
+  const fa = faOn();
+  const pdf = `summaries/${m.classId}-${m.id}${fa ? '-fa' : ''}.pdf`;
+  const name = pdfName(m, fa);
+  const close = () => {
+    ov.remove();
+    document.body.classList.remove('in-preview');
+    removeEventListener('hashchange', close);
+    document.removeEventListener('keydown', onKey);
+  };
+  const onKey = (e) => { if (e.key === 'Escape') close(); };
+  const share = pdfButton(h('a', { class: 'btn primary small', href: pdf, download: name, target: '_blank', rel: 'noopener' },
+    icon('download'), h('span', { class: 'pdf-label' }, 'Save or share')), pdf, name, 'Save or share');
+  const frame = h('iframe', { class: 'pdf-frame', title: `PDF preview: ${m.title}`, src: `summary.html?m=${encodeURIComponent(m.key)}&fa=${fa ? 1 : 0}` });
+  const ov = h('div', { class: 'pdf-preview', role: 'dialog', 'aria-modal': 'true', 'aria-label': 'PDF preview' },
+    h('div', { class: 'pdf-bar' },
+      h('button', { class: 'btn ghost small', onclick: close }, icon('close'), h('span', {}, 'Close')),
+      h('span', { class: 'pdf-title' }, 'Preview'),
+      share),
+    frame);
+  document.body.append(ov);
+  document.body.classList.add('in-preview');
+  addEventListener('hashchange', close);
+  document.addEventListener('keydown', onKey);
 }
 
 
