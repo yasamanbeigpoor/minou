@@ -1,0 +1,1503 @@
+{
+  "id": "m7",
+  "number": 7,
+  "title": "On y va !",
+  "subtitle": "Daily routine, sports and leisure, aller and the near future",
+  "source": "Vocabulaire chapitre 2; Grammaire 2.3 (pp. 98–99)",
+  "path": [
+    {
+      "id": "care",
+      "type": "vocab",
+      "title": "Les soins corporels",
+      "titleEn": "Personal care",
+      "subtitle": "Le savon, se brosser les dents…",
+      "items": [
+        "brosse",
+        "miroir",
+        "rasoir",
+        "savon",
+        "shampoing",
+        "sebrosser",
+        "selavervisage",
+        "sedoucher",
+        "bain",
+        "sesecher",
+        "seraser",
+        "semaquiller"
+      ]
+    },
+    {
+      "id": "routine",
+      "type": "vocab",
+      "title": "La routine",
+      "titleEn": "Daily routine",
+      "subtitle": "Se réveiller, se dépêcher, s'endormir…",
+      "items": [
+        "sereveiller",
+        "selever",
+        "sedepecher",
+        "shabiller",
+        "sedeshabiller",
+        "secoucher",
+        "sendormir"
+      ]
+    },
+    {
+      "id": "faire",
+      "type": "vocab",
+      "title": "Sports avec faire",
+      "titleEn": "Sports with faire",
+      "subtitle": "Faire du vélo, de la voile…",
+      "items": [
+        "canoe",
+        "courses",
+        "escalade",
+        "escrime",
+        "gym",
+        "patin",
+        "planche",
+        "plongee",
+        "promvoiture",
+        "sieste",
+        "sport",
+        "velo",
+        "voile"
+      ]
+    },
+    {
+      "id": "leisure",
+      "type": "vocab",
+      "title": "Les loisirs",
+      "titleEn": "Leisure",
+      "subtitle": "Courir, bavarder, monter à cheval…",
+      "items": [
+        "apprendre",
+        "bavarder",
+        "courir",
+        "pageweb",
+        "sedetendre",
+        "sentrainer",
+        "feter",
+        "frisbee",
+        "piano",
+        "cheval",
+        "pecher",
+        "autobus",
+        "sepromener",
+        "rever",
+        "sortir",
+        "explorer",
+        "piloter",
+        "piqueniquer",
+        "surfer"
+      ]
+    },
+    {
+      "id": "g23",
+      "type": "grammar",
+      "grammar": "g23",
+      "title": "Le verbe aller",
+      "titleEn": "Grammar 2.3",
+      "subtitle": "Je vais, au / aux, j'y vais, futur proche"
+    },
+    {
+      "id": "review",
+      "type": "module-review",
+      "title": "Révision du module",
+      "titleEn": "Module review",
+      "subtitle": "Reading, listening, speaking and a mixed test"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "brosse",
+      "fr": "la brosse à dents",
+      "noun": "brosse à dents",
+      "pl": "brosses à dents",
+      "g": "f",
+      "en": "toothbrush",
+      "pr": "lah BROSS ah DAHN",
+      "fa": "لا بروس آ دان",
+      "trick": "Brosse = brush; dents = teeth (dentist)."
+    },
+    {
+      "id": "miroir",
+      "fr": "le miroir",
+      "noun": "miroir",
+      "pl": "miroirs",
+      "g": "m",
+      "en": "mirror",
+      "pr": "luh mee-RWAR",
+      "fa": "لُ میروآر"
+    },
+    {
+      "id": "rasoir",
+      "fr": "le rasoir",
+      "noun": "rasoir",
+      "pl": "rasoirs",
+      "g": "m",
+      "en": "razor",
+      "pr": "luh rah-ZWAR",
+      "fa": "لُ رازوآر",
+      "trick": "Rasoir sounds like razor."
+    },
+    {
+      "id": "savon",
+      "fr": "le savon",
+      "noun": "savon",
+      "pl": "savons",
+      "g": "m",
+      "en": "soap",
+      "pr": "luh sah-VOHN",
+      "fa": "لُ ساوُن"
+    },
+    {
+      "id": "shampoing",
+      "fr": "le shampoing",
+      "noun": "shampoing",
+      "pl": "shampoings",
+      "g": "m",
+      "en": "shampoo",
+      "pr": "luh shahn-PWAN",
+      "fa": "لُ شانپوَن"
+    },
+    {
+      "id": "sebrosser",
+      "fr": "se brosser les dents",
+      "en": "to brush one's teeth",
+      "pr": "suh broh-SAY lay DAHN",
+      "fa": "سُ بروسه لِ دان",
+      "g": "x"
+    },
+    {
+      "id": "selavervisage",
+      "fr": "se laver le visage",
+      "en": "to wash one's face",
+      "pr": "suh lah-VAY luh vee-ZAHZH",
+      "fa": "سُ لاوه لُ ویزاژ",
+      "g": "x",
+      "trick": "Visage = face (like a visor)."
+    },
+    {
+      "id": "sedoucher",
+      "fr": "se doucher",
+      "en": "to take a shower",
+      "pr": "suh doo-SHAY",
+      "fa": "سُ دوشه",
+      "g": "x",
+      "trick": "Une douche = a shower."
+    },
+    {
+      "id": "bain",
+      "fr": "prendre un bain",
+      "en": "to take a bath",
+      "pr": "PRAHN-druh uhn BAN",
+      "fa": "پراندر اَن بَن",
+      "g": "x",
+      "tip": "Not reflexive: je prends un bain."
+    },
+    {
+      "id": "sesecher",
+      "fr": "se sécher",
+      "en": "to dry off",
+      "pr": "suh say-SHAY",
+      "fa": "سُ سِشه",
+      "g": "x",
+      "tip": "Like préférer: je me sèche, nous nous séchons."
+    },
+    {
+      "id": "seraser",
+      "fr": "se raser",
+      "en": "to shave",
+      "pr": "suh rah-ZAY",
+      "fa": "سُ رازه",
+      "g": "x",
+      "trick": "Se raser: use a rasoir."
+    },
+    {
+      "id": "semaquiller",
+      "fr": "se maquiller",
+      "en": "to put on makeup",
+      "pr": "suh mah-kee-YAY",
+      "fa": "سُ ماکیه",
+      "g": "x",
+      "trick": "Maquillage = makeup."
+    },
+    {
+      "id": "sereveiller",
+      "fr": "se réveiller",
+      "en": "to wake up",
+      "pr": "suh ray-vay-YAY",
+      "fa": "سُ رِوِیه",
+      "g": "x",
+      "trick": "Un réveil = an alarm clock."
+    },
+    {
+      "id": "selever",
+      "fr": "se lever",
+      "en": "to get up",
+      "pr": "suh luh-VAY",
+      "fa": "سُ لُوه",
+      "g": "x",
+      "tip": "je me lève, nous nous levons."
+    },
+    {
+      "id": "sedepecher",
+      "fr": "se dépêcher",
+      "en": "to hurry",
+      "pr": "suh day-peh-SHAY",
+      "fa": "سُ دِپِشه",
+      "g": "x",
+      "trick": "Dépêche-toi ! = Hurry up! A dispatch is sent in a hurry."
+    },
+    {
+      "id": "shabiller",
+      "fr": "s'habiller",
+      "en": "to get dressed",
+      "pr": "sah-bee-YAY",
+      "fa": "سابیه",
+      "g": "x"
+    },
+    {
+      "id": "sedeshabiller",
+      "fr": "se déshabiller",
+      "en": "to undress",
+      "pr": "suh day-zah-bee-YAY",
+      "fa": "سُ دِزابیه",
+      "g": "x",
+      "trick": "Dés- = un-: déshabiller = un-dress."
+    },
+    {
+      "id": "secoucher",
+      "fr": "se coucher",
+      "en": "to go to bed; to lie down",
+      "pr": "suh koo-SHAY",
+      "fa": "سُ کوشه",
+      "g": "x"
+    },
+    {
+      "id": "sendormir",
+      "fr": "s'endormir",
+      "en": "to fall asleep",
+      "pr": "sahn-dor-MEER",
+      "fa": "ساندُرمیر",
+      "g": "x",
+      "trick": "Dormir = to sleep; s'endormir = to fall asleep."
+    },
+    {
+      "id": "canoe",
+      "fr": "faire du canoë",
+      "en": "to go canoeing",
+      "pr": "fehr dü kah-noh-AY",
+      "fa": "فِر دو کانُئه",
+      "g": "x"
+    },
+    {
+      "id": "courses",
+      "fr": "faire des courses",
+      "en": "to do errands",
+      "pr": "fehr day KOORSS",
+      "fa": "فِر دِ کورس",
+      "g": "x"
+    },
+    {
+      "id": "escalade",
+      "fr": "faire de l'escalade",
+      "en": "to go rock climbing",
+      "pr": "fehr duh less-kah-LAHD",
+      "fa": "فِر دُ لِسکالاد",
+      "g": "x",
+      "trick": "Escalade: like an escalator going up."
+    },
+    {
+      "id": "escrime",
+      "fr": "faire de l'escrime",
+      "en": "to fence (do fencing)",
+      "pr": "fehr duh less-KREEM",
+      "fa": "فِر دُ لِسکریم",
+      "g": "x"
+    },
+    {
+      "id": "gym",
+      "fr": "faire de la gymnastique",
+      "en": "to exercise",
+      "pr": "fehr duh lah zheem-nahs-TEEK",
+      "fa": "فِر دُ لا ژیمناستیک",
+      "g": "x"
+    },
+    {
+      "id": "patin",
+      "fr": "faire du patin à glace",
+      "en": "to ice-skate",
+      "pr": "fehr dü pah-TAN ah GLAHSS",
+      "fa": "فِر دو پاتَن آ گلاس",
+      "g": "x",
+      "trick": "Glace = ice."
+    },
+    {
+      "id": "planche",
+      "fr": "faire de la planche à voile",
+      "en": "to windsurf",
+      "pr": "fehr duh lah PLAHNSH ah VWAHL",
+      "fa": "فِر دُ لا پلانش آ ووآل",
+      "g": "x",
+      "trick": "Planche = board; voile = sail."
+    },
+    {
+      "id": "plongee",
+      "fr": "faire de la plongée sous-marine",
+      "en": "to scuba dive",
+      "pr": "fehr duh lah plohn-ZHAY soo-mah-REEN",
+      "fa": "فِر دُ لا پلُنژه سومارین",
+      "g": "x",
+      "trick": "Sous-marine = under the sea, like a submarine."
+    },
+    {
+      "id": "promvoiture",
+      "fr": "faire une promenade en voiture",
+      "en": "to go for a (car) ride",
+      "pr": "fehr ün proh-muh-NAHD ahn vwah-TÜR",
+      "fa": "فِر اون پرُمُناد آن ووآتور",
+      "g": "x"
+    },
+    {
+      "id": "sieste",
+      "fr": "faire la sieste",
+      "en": "to take a nap",
+      "pr": "fehr lah SYEST",
+      "fa": "فِر لا سیِست",
+      "g": "x",
+      "trick": "Sieste: a siesta."
+    },
+    {
+      "id": "sport",
+      "fr": "faire du sport",
+      "en": "to do sports",
+      "pr": "fehr dü SPOR",
+      "fa": "فِر دو اِسپُر",
+      "g": "x"
+    },
+    {
+      "id": "velo",
+      "fr": "faire du vélo",
+      "en": "to bicycle",
+      "pr": "fehr dü vay-LOH",
+      "fa": "فِر دو وِلُ",
+      "g": "x",
+      "trick": "Vélo: a velocipede, an old word for bicycle."
+    },
+    {
+      "id": "voile",
+      "fr": "faire de la voile",
+      "en": "to sail",
+      "pr": "fehr duh lah VWAHL",
+      "fa": "فِر دُ لا ووآل",
+      "g": "x"
+    },
+    {
+      "id": "apprendre",
+      "fr": "apprendre à nager",
+      "en": "to learn to swim",
+      "pr": "ah-PRAHN-druh ah nah-ZHAY",
+      "fa": "آپراندر آ ناژه",
+      "g": "x",
+      "trick": "Apprendre: an apprentice learns."
+    },
+    {
+      "id": "bavarder",
+      "fr": "bavarder avec des amis",
+      "en": "to chat with friends",
+      "pr": "bah-var-DAY ah-VEK day-zah-MEE",
+      "fa": "باوارده آوِک دِزامی",
+      "g": "x"
+    },
+    {
+      "id": "courir",
+      "fr": "courir",
+      "en": "to run",
+      "pr": "koo-REER",
+      "fa": "کوریر",
+      "g": "x",
+      "trick": "Courir: a courier runs with messages."
+    },
+    {
+      "id": "pageweb",
+      "fr": "créer une page web",
+      "en": "to create a web page",
+      "pr": "kray-AY ün PAHZH WEB",
+      "fa": "کرِئه اون پاژ وِب",
+      "g": "x"
+    },
+    {
+      "id": "sedetendre",
+      "fr": "se détendre",
+      "en": "to relax",
+      "pr": "suh day-TAHN-druh",
+      "fa": "سُ دِتاندر",
+      "g": "x"
+    },
+    {
+      "id": "sentrainer",
+      "fr": "s'entraîner",
+      "en": "to work out, to train",
+      "pr": "sahn-treh-NAY",
+      "fa": "سانترِنه",
+      "g": "x",
+      "trick": "S'entraîner: like a trainer at the gym.",
+      "alts": [
+        "s'entrainer"
+      ]
+    },
+    {
+      "id": "feter",
+      "fr": "fêter un anniversaire",
+      "en": "to celebrate a birthday",
+      "pr": "feh-TAY uh-nah-nee-vehr-SEHR",
+      "fa": "فِته اَنانیوِرسِر",
+      "g": "x",
+      "trick": "Fêter: have a fête, a party."
+    },
+    {
+      "id": "frisbee",
+      "fr": "jouer au frisbee",
+      "en": "to play frisbee",
+      "pr": "zhoo-AY oh freez-BEE",
+      "fa": "ژوئه اُ فریزبی",
+      "g": "x"
+    },
+    {
+      "id": "piano",
+      "fr": "jouer du piano",
+      "en": "to play the piano",
+      "pr": "zhoo-AY dü pyah-NOH",
+      "fa": "ژوئه دو پیانُ",
+      "g": "x",
+      "tip": "Instruments use jouer du / de la; games use jouer au."
+    },
+    {
+      "id": "cheval",
+      "fr": "monter à cheval",
+      "en": "to go horseback riding",
+      "pr": "mohn-TAY ah shuh-VAHL",
+      "fa": "مُنته آ شُوال",
+      "g": "x",
+      "trick": "Cheval: a chevalier rides a horse."
+    },
+    {
+      "id": "pecher",
+      "fr": "pêcher",
+      "en": "to fish",
+      "pr": "peh-SHAY",
+      "fa": "پِشه",
+      "g": "x",
+      "tip": "Not pécher (to sin)! The ê is the fish one."
+    },
+    {
+      "id": "autobus",
+      "fr": "prendre l'autobus",
+      "en": "to take the city bus",
+      "pr": "PRAHN-druh loh-toh-BÜSS",
+      "fa": "پراندر لُتُبوس",
+      "g": "x"
+    },
+    {
+      "id": "sepromener",
+      "fr": "se promener",
+      "en": "to take a walk",
+      "pr": "suh proh-muh-NAY",
+      "fa": "سُ پرُمُنه",
+      "g": "x"
+    },
+    {
+      "id": "rever",
+      "fr": "rêver de voyager",
+      "en": "to dream of traveling",
+      "pr": "reh-VAY duh vwah-yah-ZHAY",
+      "fa": "رِوه دُ ووآیاژه",
+      "g": "x",
+      "trick": "Rêver: like a reverie, a daydream."
+    },
+    {
+      "id": "sortir",
+      "fr": "sortir de la routine quotidienne",
+      "en": "to escape the daily grind",
+      "pr": "sor-TEER duh lah roo-TEEN koh-tee-DYEN",
+      "fa": "سُرتیر دُ لا روتین کُتیدیِن",
+      "g": "x"
+    },
+    {
+      "id": "explorer",
+      "fr": "explorer",
+      "en": "to explore",
+      "pr": "ex-ploh-RAY",
+      "fa": "اِکسپلُره",
+      "g": "x"
+    },
+    {
+      "id": "piloter",
+      "fr": "piloter",
+      "en": "to pilot, to fly",
+      "pr": "pee-loh-TAY",
+      "fa": "پیلُته",
+      "g": "x"
+    },
+    {
+      "id": "piqueniquer",
+      "fr": "piqueniquer",
+      "en": "to have a picnic",
+      "pr": "peek-nee-KAY",
+      "fa": "پیکنیکه",
+      "g": "x",
+      "alts": [
+        "pique-niquer"
+      ]
+    },
+    {
+      "id": "surfer",
+      "fr": "surfer sur Internet",
+      "en": "to surf the internet",
+      "pr": "sür-FAY sür an-tehr-NET",
+      "fa": "سورفه سور اَنتِرنِت",
+      "g": "x"
+    }
+  ],
+  "grammars": [
+    {
+      "id": "g23",
+      "title": "The verb aller, contractions of à",
+      "section": "Grammaire 2.3",
+      "pages": "pp. 98–99",
+      "teach": [
+        {
+          "title": "Aller: to go",
+          "body": "<b>Aller</b> is irregular: it doesn't follow the -er pattern. Je <b>vais</b>, tu <b>vas</b> and il <b>va</b> all start with v; only nous and vous keep <b>all-</b>.",
+          "table": {
+            "head": [
+              "",
+              "aller"
+            ],
+            "rows": [
+              [
+                "I",
+                "je vais"
+              ],
+              [
+                "you (tu)",
+                "tu vas"
+              ],
+              [
+                "he / she / one",
+                "il va"
+              ],
+              [
+                "we",
+                "nous allons"
+              ],
+              [
+                "you (vous)",
+                "vous allez"
+              ],
+              [
+                "they",
+                "ils vont"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "fr": "Qu'est-ce que vous faites ce soir ?",
+              "en": "What are you doing tonight?",
+              "pr": "kess-kuh voo FET suh SWAR",
+              "fa": "کِسکُ وو فِت سُ سوآر"
+            },
+            {
+              "fr": "Nous allons chez Raoul.",
+              "en": "We're going to Raoul's.",
+              "pr": "noo-zah-LOHN shay rah-OOL",
+              "fa": "نوزالُن شِ رائول"
+            },
+            {
+              "fr": "Mes parents vont à l'église tous les dimanches.",
+              "en": "My parents go to church every Sunday.",
+              "pr": "may pah-RAHN vohn-tah lay-GLEEZ too lay dee-MAHNSH",
+              "fa": "مِ پاران وُنتا لِگلیز تو لِ دیمانش"
+            }
+          ],
+          "trick": "Ils vont rhymes with ils font, ils sont, ils ont. Nous_allons and vous_allez link with a z."
+        },
+        {
+          "title": "à + le = au, à + les = aux",
+          "body": "To say “to” a place, use <b>à</b>. Like de, it merges with le and les: <b>à + le = au</b>, <b>à + les = aux</b>. <b>À la</b> and <b>à l'</b> don't change.",
+          "table": {
+            "head": [
+              "",
+              "to the …"
+            ],
+            "rows": [
+              [
+                "à + le",
+                "au"
+              ],
+              [
+                "à + la",
+                "à la"
+              ],
+              [
+                "à + l'",
+                "à l'"
+              ],
+              [
+                "à + les",
+                "aux"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "fr": "Ils vont souvent au café avec leurs amis.",
+              "en": "They often go to the café with their friends.",
+              "pr": "eel vohn soo-VAHN oh kah-FAY ah-VEK luhr-zah-MEE",
+              "fa": "ایل وُن سووان اُ کافه آوِک لُرزامی"
+            },
+            {
+              "fr": "Bernard aime aller aux Halles quand il va à Paris.",
+              "en": "Bernard likes to go to Les Halles when he goes to Paris.",
+              "pr": "behr-NAR EM ah-LAY oh AHL kahn-teel VAH ah pah-REE",
+              "fa": "بِرنار اِم آله اُ آل کانتیل وا آ پاری"
+            },
+            {
+              "fr": "Allons-y !",
+              "en": "Let's go!",
+              "pr": "ah-lohn-ZEE",
+              "fa": "آلُنزی"
+            },
+            {
+              "fr": "Vas-y ! Allez-y !",
+              "en": "Go ahead!",
+              "pr": "vah-ZEE! ah-lay-ZEE",
+              "fa": "وازی! آلِزی"
+            }
+          ],
+          "trick": "Same rule as de: only le and les merge. au, aux; but à la, à l'."
+        },
+        {
+          "title": "Y = there",
+          "body": "<b>Y</b> replaces <b>à</b> + a place (or dans / chez + a place). It means “there” and goes right before the verb.",
+          "examples": [
+            {
+              "fr": "Est-ce que Fatima va à la bibliothèque aujourd'hui ?",
+              "en": "Is Fatima going to the library today?",
+              "pr": "ess-kuh fah-tee-MAH VAH ah lah bee-blee-oh-TEK oh-zhoor-DWEE",
+              "fa": "اِسکُ فاتیما وا آ لا بیبلیُتِک اُژوردوئی"
+            },
+            {
+              "fr": "Oui, elle y va après ses cours.",
+              "en": "Yes, she's going (there) after her classes.",
+              "pr": "WEE, el-ee VAH ah-PREH say KOOR",
+              "fa": "وی، اِلی وا آپرِ سِ کور"
+            },
+            {
+              "fr": "Tu vas chez Denise ce soir ? Oui, j'y vais.",
+              "en": "Are you going to Denise's tonight? Yes, I'm going.",
+              "pr": "tü VAH shay duh-NEEZ suh SWAR? WEE, zhee VEH",
+              "fa": "تو وا شِ دُنیز سُ سوآر؟ وی، ژی وِ"
+            },
+            {
+              "fr": "Non, je n'y vais pas.",
+              "en": "No, I'm not going (there).",
+              "pr": "NOHN, zhuh nee VEH PAH",
+              "fa": "نُن، ژُ نی وِ پا"
+            }
+          ],
+          "trick": "J'y vais = I'm going there. Je n'y vais pas = I'm not going there."
+        },
+        {
+          "title": "Futur proche: going to do something",
+          "body": "<b>aller + infinitive</b> = “going to do”. Conjugate aller, keep the second verb in the infinitive.",
+          "examples": [
+            {
+              "fr": "Où est-ce que vous allez diner ce soir ?",
+              "en": "Where are you going to have dinner tonight?",
+              "pr": "oo ess-kuh voo-zah-LAY dee-NAY suh SWAR",
+              "fa": "او اِسکُ وو زاله دینه سُ سوآر"
+            },
+            {
+              "fr": "Je vais diner chez Michèle.",
+              "en": "I'm going to have dinner at Michèle's.",
+              "pr": "zhuh VEH dee-NAY shay mee-SHEL",
+              "fa": "ژُ وِ دینه شِ میشِل"
+            },
+            {
+              "fr": "Demain, je vais me lever à 7 heures.",
+              "en": "Tomorrow I'm going to get up at 7.",
+              "pr": "duh-MAN, zhuh VEH muh luh-VAY ah set-UHR",
+              "fa": "دُمَن، ژُ وِ مُ لُوه آ سِتُر"
+            }
+          ],
+          "trick": "Just like English: I'm going to eat = je vais manger."
+        },
+        {
+          "title": "Talking about the future",
+          "body": "These time words go well with the futur proche.",
+          "examples": [
+            {
+              "fr": "demain",
+              "en": "tomorrow",
+              "pr": "duh-MAN",
+              "fa": "دُمَن"
+            },
+            {
+              "fr": "demain matin, demain après-midi, demain soir",
+              "en": "tomorrow morning, afternoon, evening",
+              "pr": "duh-MAN mah-TAN, duh-MAN ah-preh-mee-DEE, duh-MAN SWAR",
+              "fa": "دُمَن ماتَن، دُمَن آپرِمیدی، دُمَن سوآر"
+            },
+            {
+              "fr": "samedi prochain",
+              "en": "next Saturday",
+              "pr": "sahm-DEE proh-SHAN",
+              "fa": "سامدی پرُشَن"
+            },
+            {
+              "fr": "la semaine prochaine, l'année prochaine",
+              "en": "next week, next year",
+              "pr": "lah suh-MEN proh-SHEN, lah-NAY proh-SHEN",
+              "fa": "لا سُمِن پرُشِن، لانه پرُشِن"
+            },
+            {
+              "fr": "dans un mois, dans un an",
+              "en": "in a month, in a year",
+              "pr": "dahn-zuhn MWAH, dahn-zuh-NAHN",
+              "fa": "دانزَن موآ، دانزَنان"
+            }
+          ],
+          "trick": "Prochain / prochaine = next. It goes after the noun: samedi prochain."
+        }
+      ],
+      "notes": [
+        "aller: je vais, tu vas, il va, nous allons, vous allez, ils vont.",
+        "à + le = au, à + les = aux; à la and à l' don't change.",
+        "Y = there: j'y vais, elle y va, je n'y vais pas.",
+        "Futur proche: aller + infinitive: je vais diner, nous allons partir.",
+        "Allons-y ! = Let's go! Vas-y ! / Allez-y ! = Go ahead!",
+        "demain, samedi prochain, la semaine prochaine, dans un mois."
+      ],
+      "tricks": {
+        "aller": "Ils vont rhymes with ils font, ils sont, ils ont.",
+        "a": "Only le and les merge: au, aux.",
+        "y": "Y = there, right before the verb: j'y vais.",
+        "futur": "Going to do = aller + infinitive: je vais manger."
+      },
+      "drills": [
+        {
+          "id": "a1",
+          "set": "Practice",
+          "text": "Je ___ au cinéma.",
+          "options": [
+            "vais",
+            "vas",
+            "va",
+            "allons",
+            "allez",
+            "vont"
+          ],
+          "answer": "vais",
+          "en": "I'm going to the movies.",
+          "why": "With je: vais.",
+          "rule": "aller",
+          "after": 0
+        },
+        {
+          "id": "a2",
+          "set": "Practice",
+          "text": "Nous ___ chez Raoul.",
+          "options": [
+            "vais",
+            "vas",
+            "va",
+            "allons",
+            "allez",
+            "vont"
+          ],
+          "answer": "allons",
+          "en": "We're going to Raoul's.",
+          "why": "With nous: allons.",
+          "rule": "aller",
+          "after": 0
+        },
+        {
+          "id": "a3",
+          "set": "Practice",
+          "text": "Mes parents ___ à l'église.",
+          "options": [
+            "vais",
+            "vas",
+            "va",
+            "allons",
+            "allez",
+            "vont"
+          ],
+          "answer": "vont",
+          "en": "My parents go to church.",
+          "why": "They: vont.",
+          "rule": "aller",
+          "after": 0
+        },
+        {
+          "id": "a4",
+          "set": "Practice",
+          "type": "speak",
+          "fr": "nous allons",
+          "en": "we go (link: noo-zah-LOHN)",
+          "after": 0
+        },
+        {
+          "id": "a5",
+          "set": "Practice",
+          "text": "Ils vont ___ café.",
+          "options": [
+            "au",
+            "à la",
+            "à l'",
+            "aux"
+          ],
+          "answer": "au",
+          "en": "They're going to the café.",
+          "why": "Le café: à + le = au.",
+          "rule": "a",
+          "after": 1
+        },
+        {
+          "id": "a6",
+          "set": "Practice",
+          "text": "Bernard aime aller ___ Halles.",
+          "options": [
+            "au",
+            "à la",
+            "à l'",
+            "aux"
+          ],
+          "answer": "aux",
+          "en": "Bernard likes going to Les Halles.",
+          "why": "Les Halles: à + les = aux.",
+          "rule": "a",
+          "after": 1
+        },
+        {
+          "id": "a7",
+          "set": "Practice",
+          "text": "Je vais ___ bibliothèque.",
+          "options": [
+            "au",
+            "à la",
+            "à l'",
+            "aux"
+          ],
+          "answer": "à la",
+          "en": "I'm going to the library.",
+          "why": "La bibliothèque: à la stays.",
+          "rule": "a",
+          "after": 1
+        },
+        {
+          "id": "a8",
+          "set": "Practice",
+          "type": "type",
+          "text": "Tu vas ___ hôpital ?",
+          "answer": "à l'",
+          "accept": [
+            "à l'",
+            "à l’"
+          ],
+          "en": "Are you going to the hospital?",
+          "why": "L'hôpital: à l' stays.",
+          "rule": "a",
+          "after": 1
+        },
+        {
+          "id": "a9",
+          "set": "Practice",
+          "text": "Let's go!",
+          "options": [
+            "Allons-y !",
+            "Vas-y !",
+            "Va !"
+          ],
+          "answer": "Allons-y !",
+          "en": "",
+          "why": "Allons-y = let's go.",
+          "rule": "aller",
+          "after": 1
+        },
+        {
+          "id": "a10",
+          "set": "Practice",
+          "text": "Tu vas au parc ? — Oui, j'___ vais.",
+          "options": [
+            "y",
+            "en",
+            "le"
+          ],
+          "answer": "y",
+          "en": "Are you going to the park? Yes, I'm going (there).",
+          "why": "Y replaces au parc.",
+          "rule": "y",
+          "after": 2
+        },
+        {
+          "id": "a11",
+          "set": "Practice",
+          "text": "No, I'm not going (there).",
+          "options": [
+            "Non, je n'y vais pas.",
+            "Non, je ne vais y pas.",
+            "Non, j'y ne vais pas."
+          ],
+          "answer": "Non, je n'y vais pas.",
+          "en": "",
+          "why": "n' + y + vais + pas.",
+          "rule": "y",
+          "after": 2
+        },
+        {
+          "id": "a12",
+          "set": "Practice",
+          "text": "Ce soir, je ___ diner chez Michèle.",
+          "options": [
+            "vais",
+            "vas",
+            "va",
+            "allons",
+            "allez",
+            "vont"
+          ],
+          "answer": "vais",
+          "en": "Tonight I'm going to have dinner at Michèle's.",
+          "why": "Futur proche: je vais + infinitive.",
+          "rule": "futur",
+          "after": 3
+        },
+        {
+          "id": "a13",
+          "set": "Practice",
+          "text": "Nous allons ___ un film.",
+          "options": [
+            "regarder",
+            "regardons",
+            "regardez"
+          ],
+          "answer": "regarder",
+          "en": "We're going to watch a movie.",
+          "why": "After aller, the infinitive.",
+          "rule": "futur",
+          "after": 3
+        },
+        {
+          "id": "a14",
+          "set": "Practice",
+          "type": "sentence",
+          "text": "Say it in French: I'm going to eat at the restaurant.",
+          "answer": "Je vais manger au restaurant.",
+          "accept": [
+            "Je vais manger au restaurant.",
+            "Je vais diner au restaurant.",
+            "Je vais dîner au restaurant."
+          ],
+          "en": "",
+          "why": "Futur proche + au restaurant.",
+          "after": 3,
+          "rule": "futur"
+        },
+        {
+          "id": "a15",
+          "set": "Practice",
+          "text": "next Saturday",
+          "options": [
+            "samedi prochain",
+            "prochain samedi",
+            "samedi dernier"
+          ],
+          "answer": "samedi prochain",
+          "en": "",
+          "why": "Prochain goes after the day.",
+          "rule": "futur",
+          "after": 4
+        }
+      ],
+      "exercises": [
+        {
+          "id": "e4-1",
+          "set": "Exercice 4 · Dans la classe de Mme Martin",
+          "text": "Moi, je ___ à la plage avec mes copains ce weekend.",
+          "options": [
+            "vais",
+            "vas",
+            "va",
+            "allons",
+            "allez",
+            "vont"
+          ],
+          "answer": "vais",
+          "en": "I'm going to the beach with my friends this weekend.",
+          "why": "Je: vais.",
+          "rule": "aller"
+        },
+        {
+          "id": "e4-2",
+          "set": "Exercice 4 · Dans la classe de Mme Martin",
+          "text": "Ce soir, nous ___ tous chez Daniel écouter de la musique.",
+          "options": [
+            "vais",
+            "vas",
+            "va",
+            "allons",
+            "allez",
+            "vont"
+          ],
+          "answer": "allons",
+          "en": "Tonight we're all going to Daniel's to listen to music.",
+          "why": "Nous: allons.",
+          "rule": "aller"
+        },
+        {
+          "id": "e4-3",
+          "set": "Exercice 4 · Dans la classe de Mme Martin",
+          "text": "Mme Martin, vous ___ au nouveau restaurant italien ce soir, n'est-ce pas ?",
+          "options": [
+            "vais",
+            "vas",
+            "va",
+            "allons",
+            "allez",
+            "vont"
+          ],
+          "answer": "allez",
+          "en": "Mrs. Martin, you're going to the new Italian restaurant tonight, right?",
+          "why": "Vous: allez.",
+          "rule": "aller"
+        },
+        {
+          "id": "e4-4",
+          "set": "Exercice 4 · Dans la classe de Mme Martin",
+          "text": "Louis et Albert ___ au café maintenant, comme d'habitude.",
+          "options": [
+            "vais",
+            "vas",
+            "va",
+            "allons",
+            "allez",
+            "vont"
+          ],
+          "answer": "vont",
+          "en": "Louis and Albert are going to the café now, as usual.",
+          "why": "Ils: vont.",
+          "rule": "aller"
+        },
+        {
+          "id": "e4-5",
+          "set": "Exercice 4 · Dans la classe de Mme Martin",
+          "text": "Daniel, tu ___ au cinéma demain avec une nouvelle amie, n'est-ce pas ?",
+          "options": [
+            "vais",
+            "vas",
+            "va",
+            "allons",
+            "allez",
+            "vont"
+          ],
+          "answer": "vas",
+          "en": "Daniel, you're going to the movies tomorrow with a new friend, right?",
+          "why": "Tu: vas.",
+          "rule": "aller"
+        },
+        {
+          "id": "e4-6",
+          "set": "Exercice 4 · Dans la classe de Mme Martin",
+          "text": "Et Raoul ___ à Montréal ce weekend. Il a de la chance !",
+          "options": [
+            "vais",
+            "vas",
+            "va",
+            "allons",
+            "allez",
+            "vont"
+          ],
+          "answer": "va",
+          "en": "And Raoul is going to Montreal this weekend. He's lucky!",
+          "why": "Il: va.",
+          "rule": "aller"
+        },
+        {
+          "id": "e5-1",
+          "set": "Exercice 5 · Où vas-tu ?",
+          "text": "(la piscine) Tu vas ___ piscine ? — Oui, j'y vais.",
+          "options": [
+            "au",
+            "à la",
+            "à l'",
+            "aux"
+          ],
+          "answer": "à la",
+          "en": "Are you going to the pool? Yes, I go there.",
+          "why": "La piscine: à la.",
+          "rule": "a"
+        },
+        {
+          "id": "e5-2",
+          "set": "Exercice 5 · Où vas-tu ?",
+          "text": "(le théâtre) Tu vas ___ théâtre ? — Oui, j'y vais.",
+          "options": [
+            "au",
+            "à la",
+            "à l'",
+            "aux"
+          ],
+          "answer": "au",
+          "en": "Are you going to the theatre? Yes, I go there.",
+          "why": "Le théâtre: au.",
+          "rule": "a"
+        },
+        {
+          "id": "e5-3",
+          "set": "Exercice 5 · Où vas-tu ?",
+          "text": "(le bar) Tu vas ___ bar ? — Oui, j'y vais.",
+          "options": [
+            "au",
+            "à la",
+            "à l'",
+            "aux"
+          ],
+          "answer": "au",
+          "en": "Are you going to the bar? Yes, I go there.",
+          "why": "Le bar: au.",
+          "rule": "a"
+        },
+        {
+          "id": "e5-4",
+          "set": "Exercice 5 · Où vas-tu ?",
+          "text": "(l'hôpital) Tu vas ___ hôpital ? — Oui, j'y vais.",
+          "options": [
+            "au",
+            "à la",
+            "à l'",
+            "aux"
+          ],
+          "answer": "à l'",
+          "en": "Are you going to the hospital? Yes, I go there.",
+          "why": "L'hôpital: à l'.",
+          "rule": "a"
+        },
+        {
+          "id": "e5-5",
+          "set": "Exercice 5 · Où vas-tu ?",
+          "text": "(le gymnase) Tu vas ___ gymnase ? — Oui, j'y vais.",
+          "options": [
+            "au",
+            "à la",
+            "à l'",
+            "aux"
+          ],
+          "answer": "au",
+          "en": "Are you going to the gym? Yes, I go there.",
+          "why": "Le gymnase: au.",
+          "rule": "a"
+        },
+        {
+          "id": "e5-6",
+          "set": "Exercice 5 · Où vas-tu ?",
+          "text": "(la banque) Tu vas ___ banque ? — Oui, j'y vais.",
+          "options": [
+            "au",
+            "à la",
+            "à l'",
+            "aux"
+          ],
+          "answer": "à la",
+          "en": "Are you going to the bank? Yes, I go there.",
+          "why": "La banque: à la.",
+          "rule": "a"
+        },
+        {
+          "id": "e5-7",
+          "set": "Exercice 5 · Où vas-tu ?",
+          "text": "(le café) Tu vas ___ café ? — Oui, j'y vais.",
+          "options": [
+            "au",
+            "à la",
+            "à l'",
+            "aux"
+          ],
+          "answer": "au",
+          "en": "Are you going to the café? Yes, I go there.",
+          "why": "Le café: au.",
+          "rule": "a"
+        },
+        {
+          "id": "e5-8",
+          "set": "Exercice 5 · Où vas-tu ?",
+          "text": "(l'église) Tu vas ___ église ? — Oui, j'y vais.",
+          "options": [
+            "au",
+            "à la",
+            "à l'",
+            "aux"
+          ],
+          "answer": "à l'",
+          "en": "Are you going to the church? Yes, I go there.",
+          "why": "L'église: à l'.",
+          "rule": "a"
+        },
+        {
+          "id": "e6-1",
+          "set": "Exercice 6 · Les projets",
+          "text": "Ce soir, est-ce que vous allez faire vos devoirs ou sortir avec des amis ? — Ce soir, je ___ mes devoirs.",
+          "options": [
+            "vais faire",
+            "vais fais",
+            "va faire"
+          ],
+          "answer": "vais faire",
+          "en": "Tonight are you going to do your homework or go out with friends? Tonight I'm going to do my homework.",
+          "why": "je vais + infinitive.",
+          "rule": "futur"
+        },
+        {
+          "id": "e6-2",
+          "set": "Exercice 6 · Les projets",
+          "text": "Demain matin, allez-vous vous lever à 7 h ou dormir jusqu'à 9 h ? — Demain matin, je vais ___ à 7 h.",
+          "options": [
+            "me lever",
+            "se lever",
+            "me lève"
+          ],
+          "answer": "me lever",
+          "en": "Tomorrow morning, are you going to get up at 7 or sleep until 9? I'm going to get up at 7.",
+          "why": "Infinitive, with the pronoun for je: me lever.",
+          "rule": "futur"
+        },
+        {
+          "id": "e6-3",
+          "set": "Exercice 6 · Les projets",
+          "text": "Demain soir, est-ce que vous allez regarder votre émission préférée ou vous coucher de bonne heure ? — Je vais ___ de bonne heure.",
+          "options": [
+            "me coucher",
+            "vous coucher",
+            "me couche"
+          ],
+          "answer": "me coucher",
+          "en": "Tomorrow night, are you going to watch your favourite show or go to bed early? I'm going to go to bed early.",
+          "why": "Pronoun for je: me coucher.",
+          "rule": "futur"
+        },
+        {
+          "id": "e6-4",
+          "set": "Exercice 6 · Les projets",
+          "text": "Ce weekend, est-ce que vos amis vont faire du ski ou regarder un film ensemble ? — Mes amis ___ du ski.",
+          "options": [
+            "vont faire",
+            "va faire",
+            "vont font"
+          ],
+          "answer": "vont faire",
+          "en": "This weekend, are your friends going skiing or watching a movie together? My friends are going skiing.",
+          "why": "Ils vont + infinitive.",
+          "rule": "futur"
+        },
+        {
+          "id": "e6-5",
+          "set": "Exercice 6 · Les projets",
+          "text": "Samedi soir, est-ce que votre camarade de chambre va rester à la maison ou aller à un concert ? — Il ___ à un concert.",
+          "options": [
+            "va aller",
+            "va va",
+            "vais aller"
+          ],
+          "answer": "va aller",
+          "en": "Saturday night, is your roommate going to stay home or go to a concert? He's going to go to a concert.",
+          "why": "Il va + aller (yes, aller twice!).",
+          "rule": "futur"
+        }
+      ]
+    }
+  ],
+  "readings": [
+    {
+      "id": "r1",
+      "title": "Le weekend de Minou",
+      "lines": [
+        {
+          "fr": "Samedi prochain, Minou va faire du vélo au parc.",
+          "en": "Next Saturday, Minou is going to ride his bike in the park.",
+          "pr": "sahm-DEE proh-SHAN, mee-NOO VAH fehr dü vay-LOH oh PARK",
+          "fa": "سامدی پرُشَن، مینو وا فِر دو وِلُ اُ پارک"
+        },
+        {
+          "fr": "Après, il va aller au marché avec Pompon.",
+          "en": "After that, he's going to go to the market with Pompon.",
+          "pr": "ah-PREH, eel VAH ah-LAY oh mar-SHAY ah-VEK pohn-POHN",
+          "fa": "آپرِ، ایل وا آله اُ مارشه آوِک پُنپُن"
+        },
+        {
+          "fr": "Le soir, ses amis vont fêter son anniversaire.",
+          "en": "In the evening, his friends are going to celebrate his birthday.",
+          "pr": "luh SWAR, say-zah-MEE vohn feh-TAY sohn-nah-nee-vehr-SEHR",
+          "fa": "لُ سوآر، سِزامی وُن فِته سُنانیوِرسِر"
+        },
+        {
+          "fr": "Dimanche, il va faire la sieste. Il ne va pas se dépêcher !",
+          "en": "On Sunday, he's going to take a nap. He's not going to hurry!",
+          "pr": "dee-MAHNSH, eel VAH fehr lah SYEST. eel nuh VAH PAH suh day-peh-SHAY",
+          "fa": "دیمانش، ایل وا فِر لا سیِست. ایل نُ وا پا سُ دِپِشه"
+        }
+      ],
+      "questions": [
+        {
+          "q": "Où est-ce que Minou va faire du vélo ?",
+          "hint": "Where is Minou going to ride his bike?",
+          "options": [
+            "au parc",
+            "au marché",
+            "à la piscine"
+          ],
+          "answer": "au parc",
+          "optionsEn": {
+            "au parc": "in the park",
+            "au marché": "at the market",
+            "à la piscine": "at the pool"
+          }
+        },
+        {
+          "q": "Avec qui va-t-il au marché ?",
+          "hint": "Who is he going to the market with?",
+          "options": [
+            "avec Pompon",
+            "avec ses parents",
+            "seul"
+          ],
+          "answer": "avec Pompon",
+          "optionsEn": {
+            "avec Pompon": "with Pompon",
+            "avec ses parents": "with his parents",
+            "seul": "alone"
+          }
+        },
+        {
+          "q": "Qu'est-ce que ses amis vont faire samedi soir ?",
+          "hint": "What are his friends going to do Saturday night?",
+          "options": [
+            "fêter son anniversaire",
+            "faire du ski",
+            "jouer du piano"
+          ],
+          "answer": "fêter son anniversaire",
+          "optionsEn": {
+            "fêter son anniversaire": "celebrate his birthday",
+            "faire du ski": "go skiing",
+            "jouer du piano": "play the piano"
+          }
+        },
+        {
+          "q": "Qu'est-ce que Minou va faire dimanche ?",
+          "hint": "What is Minou going to do on Sunday?",
+          "options": [
+            "la sieste",
+            "de l'escalade",
+            "des courses"
+          ],
+          "answer": "la sieste",
+          "optionsEn": {
+            "la sieste": "take a nap",
+            "de l'escalade": "go rock climbing",
+            "des courses": "do errands"
+          }
+        }
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "u1",
+      "fr": "Je me réveille à sept heures.",
+      "en": "I wake up at seven.",
+      "pr": "zhuh muh ray-VAY ah set-UHR",
+      "fa": "ژُ مُ رِوِی آ سِتُر"
+    },
+    {
+      "id": "u2",
+      "fr": "Je me brosse les dents.",
+      "en": "I brush my teeth.",
+      "pr": "zhuh muh BROSS lay DAHN",
+      "fa": "ژُ مُ بروس لِ دان"
+    },
+    {
+      "id": "u3",
+      "fr": "Elle s'habille et elle se dépêche.",
+      "en": "She gets dressed and hurries.",
+      "pr": "el sah-BEE ay el suh day-PESH",
+      "fa": "اِل سابی اِ اِل سُ دِپِش"
+    },
+    {
+      "id": "u4",
+      "fr": "Tu t'endors devant la télé ?",
+      "en": "Do you fall asleep in front of the TV?",
+      "pr": "tü tahn-DOR duh-VAHN lah tay-LAY",
+      "fa": "تو تاندُر دُوان لا تِله"
+    },
+    {
+      "id": "u5",
+      "fr": "Nous allons au cinéma ce soir.",
+      "en": "We're going to the movies tonight.",
+      "pr": "noo-zah-LOHN oh see-nay-MAH suh SWAR",
+      "fa": "نوزالُن اُ سینِما سُ سوآر"
+    },
+    {
+      "id": "u6",
+      "fr": "Ils vont souvent au café.",
+      "en": "They often go to the café.",
+      "pr": "eel vohn soo-VAHN oh kah-FAY",
+      "fa": "ایل وُن سووان اُ کافه"
+    },
+    {
+      "id": "u7",
+      "fr": "Tu vas à la piscine ? Oui, j'y vais.",
+      "en": "Are you going to the pool? Yes, I'm going.",
+      "pr": "tü VAH ah lah pee-SEEN? WEE, zhee VEH",
+      "fa": "تو وا آ لا پیسین؟ وی، ژی وِ"
+    },
+    {
+      "id": "u8",
+      "fr": "Je vais faire du vélo demain.",
+      "en": "I'm going to ride my bike tomorrow.",
+      "pr": "zhuh VEH fehr dü vay-LOH duh-MAN",
+      "fa": "ژُ وِ فِر دو وِلُ دُمَن"
+    },
+    {
+      "id": "u9",
+      "fr": "Samedi prochain, nous allons faire du camping.",
+      "en": "Next Saturday, we're going camping.",
+      "pr": "sahm-DEE proh-SHAN, noo-zah-LOHN fehr dü kahn-PEENG",
+      "fa": "سامدی پرُشَن، نوزالُن فِر دو کانپینگ"
+    },
+    {
+      "id": "u10",
+      "fr": "Allons-y !",
+      "en": "Let's go!",
+      "pr": "ah-lohn-ZEE",
+      "fa": "آلُنزی"
+    },
+    {
+      "id": "u11",
+      "fr": "J'aime jouer du piano.",
+      "en": "I like to play the piano.",
+      "pr": "ZHEM zhoo-AY dü pyah-NOH",
+      "fa": "ژِم ژوئه دو پیانُ"
+    },
+    {
+      "id": "u12",
+      "fr": "Il va faire la sieste.",
+      "en": "He's going to take a nap.",
+      "pr": "eel VAH fehr lah SYEST",
+      "fa": "ایل وا فِر لا سیِست"
+    }
+  ]
+}
