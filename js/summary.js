@@ -5,7 +5,7 @@ import { speak } from './speech.js';
 import { icon } from './icons.js';
 import { pron, prNumber, faNumber } from './fa.js';
 
-const G = { m: 'm.', f: 'f.', mf: 'm./f.', pl: 'pl.' };
+const G = { m: 'm.', f: 'f.', mf: 'm./f.', pl: 'pl.', adj: 'adj.' };
 
 export function renderSummary(m, { interactive = true } = {}) {
   const say = (fr, label = fr) => interactive

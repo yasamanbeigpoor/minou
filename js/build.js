@@ -210,7 +210,8 @@ function buildGrammarLesson(m, g, again) {
   });
   if (g.chant) steps.push(chantStep(g.chant, 'A little song to remember it. Tap Listen to all.'));
   if (exercises.length) {
-    steps.push({ kind: 'teach', title: 'Exercices du manuel', body: `Now the exercises from your textbook (${g.section}, ${g.pages}). Every answer gets instant feedback.` });
+    steps.push(g.exercisesIntro ? { kind: 'teach', ...g.exercisesIntro }
+      : { kind: 'teach', title: 'Exercices du manuel', body: `Now the exercises from your textbook (${g.section}, ${g.pages}). Every answer gets instant feedback.` });
     steps.push(...exercises);
   }
   return steps.filter(Boolean);

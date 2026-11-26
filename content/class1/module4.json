@@ -1,0 +1,1138 @@
+{
+  "id": "m4",
+  "number": 4,
+  "title": "C'est à qui ?",
+  "subtitle": "Countries, nationalities, and saying whose: de, du, des",
+  "source": "Les pays et les nationalités; Grammaire 1.6 (pp. 73–74)",
+  "path": [
+    {
+      "id": "pays",
+      "type": "vocab",
+      "title": "Les pays",
+      "titleEn": "Countries",
+      "subtitle": "12 countries, with le, la, l' or les",
+      "items": [
+        "algerie",
+        "allemagne",
+        "belgique",
+        "canada",
+        "chine",
+        "espagne",
+        "etatsunis",
+        "france",
+        "japon",
+        "quebec",
+        "senegal",
+        "suisse"
+      ]
+    },
+    {
+      "id": "nat",
+      "type": "vocab",
+      "title": "Les nationalités",
+      "titleEn": "Nationalities",
+      "subtitle": "Algérien, canadienne, suisse…",
+      "items": [
+        "algerien",
+        "allemand",
+        "belge",
+        "canadien",
+        "chinois",
+        "espagnol",
+        "americain",
+        "francais",
+        "japonais",
+        "quebecois",
+        "senegalais",
+        "suisse_n"
+      ]
+    },
+    {
+      "id": "vocab",
+      "type": "vocab",
+      "title": "Les choses et les gens",
+      "titleEn": "Things and people",
+      "subtitle": "9 nouns from the examples",
+      "items": [
+        "voiture",
+        "jardin",
+        "bicyclette",
+        "chat",
+        "livre",
+        "ami",
+        "amie",
+        "professeur",
+        "photo"
+      ]
+    },
+    {
+      "id": "g16",
+      "type": "grammar",
+      "grammar": "g16",
+      "title": "Contractions de de",
+      "titleEn": "Grammar 1.6",
+      "subtitle": "la voiture de Paul, du, des"
+    },
+    {
+      "id": "review",
+      "type": "module-review",
+      "title": "Révision du module",
+      "titleEn": "Module review",
+      "subtitle": "Reading, listening, speaking and a mixed test"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "algerie",
+      "fr": "l'Algérie",
+      "noun": "Algérie",
+      "pl": "Algérie",
+      "g": "f",
+      "en": "Algeria",
+      "pr": "lahl-zhay-REE",
+      "fa": "لالژِری"
+    },
+    {
+      "id": "allemagne",
+      "fr": "l'Allemagne",
+      "noun": "Allemagne",
+      "pl": "Allemagne",
+      "g": "f",
+      "en": "Germany",
+      "pr": "lahl-MAHN-yuh",
+      "fa": "لالمانی",
+      "trick": "Allemagne: from the Alemanni, an old German tribe."
+    },
+    {
+      "id": "belgique",
+      "fr": "la Belgique",
+      "noun": "Belgique",
+      "pl": "Belgique",
+      "g": "f",
+      "en": "Belgium",
+      "pr": "lah bel-ZHEEK",
+      "fa": "لا بِلژیک"
+    },
+    {
+      "id": "canada",
+      "fr": "le Canada",
+      "noun": "Canada",
+      "pl": "Canada",
+      "g": "m",
+      "en": "Canada",
+      "pr": "luh kah-nah-DAH",
+      "fa": "لُ کانادا"
+    },
+    {
+      "id": "chine",
+      "fr": "la Chine",
+      "noun": "Chine",
+      "pl": "Chine",
+      "g": "f",
+      "en": "China",
+      "pr": "lah SHEEN",
+      "fa": "لا شین"
+    },
+    {
+      "id": "espagne",
+      "fr": "l'Espagne",
+      "noun": "Espagne",
+      "pl": "Espagne",
+      "g": "f",
+      "en": "Spain",
+      "pr": "less-PAHN-yuh",
+      "fa": "لِسپانی"
+    },
+    {
+      "id": "etatsunis",
+      "fr": "les États-Unis",
+      "noun": "États-Unis",
+      "pl": "États-Unis",
+      "g": "pl",
+      "en": "the United States",
+      "pr": "lay-zay-tah-zü-NEE",
+      "fa": "لِزِتازونی",
+      "tip": "Plural and masculine: les États-Unis."
+    },
+    {
+      "id": "france",
+      "fr": "la France",
+      "noun": "France",
+      "pl": "France",
+      "g": "f",
+      "en": "France",
+      "pr": "lah FRAHNSS",
+      "fa": "لا فرانس"
+    },
+    {
+      "id": "japon",
+      "fr": "le Japon",
+      "noun": "Japon",
+      "pl": "Japon",
+      "g": "m",
+      "en": "Japan",
+      "pr": "luh zhah-POHN",
+      "fa": "لُ ژاپُن"
+    },
+    {
+      "id": "quebec",
+      "fr": "le Québec",
+      "noun": "Québec",
+      "pl": "Québec",
+      "g": "m",
+      "en": "Quebec",
+      "pr": "luh kay-BEK",
+      "fa": "لُ کِبِک"
+    },
+    {
+      "id": "senegal",
+      "fr": "le Sénégal",
+      "noun": "Sénégal",
+      "pl": "Sénégal",
+      "g": "m",
+      "en": "Senegal",
+      "pr": "luh say-nay-GAHL",
+      "fa": "لُ سِنِگال"
+    },
+    {
+      "id": "suisse",
+      "fr": "la Suisse",
+      "noun": "Suisse",
+      "pl": "Suisse",
+      "g": "f",
+      "en": "Switzerland",
+      "pr": "lah SWEESS",
+      "fa": "لا سوییس"
+    },
+    {
+      "id": "algerien",
+      "fr": "algérien",
+      "en": "Algerian",
+      "pr": "ahl-zhay-RYAN",
+      "fa": "آلژِریَن",
+      "g": "adj",
+      "alts": [
+        "algérienne"
+      ],
+      "tip": "Feminine: algérienne (ahl-zhay-RYEN)."
+    },
+    {
+      "id": "allemand",
+      "fr": "allemand",
+      "en": "German",
+      "pr": "ahl-MAHN",
+      "fa": "آلمان",
+      "g": "adj",
+      "alts": [
+        "allemande"
+      ],
+      "tip": "Feminine: allemande (ahl-MAHND)."
+    },
+    {
+      "id": "belge",
+      "fr": "belge",
+      "en": "Belgian",
+      "pr": "BELZH",
+      "fa": "بِلژ",
+      "g": "adj",
+      "tip": "Same for men and women."
+    },
+    {
+      "id": "canadien",
+      "fr": "canadien",
+      "en": "Canadian",
+      "pr": "kah-nah-DYAN",
+      "fa": "کانادیَن",
+      "g": "adj",
+      "alts": [
+        "canadienne"
+      ],
+      "tip": "Feminine: canadienne (kah-nah-DYEN)."
+    },
+    {
+      "id": "chinois",
+      "fr": "chinois",
+      "en": "Chinese",
+      "pr": "shee-NWAH",
+      "fa": "شینوآ",
+      "g": "adj",
+      "alts": [
+        "chinoise"
+      ],
+      "tip": "Feminine: chinoise (shee-NWAHZ)."
+    },
+    {
+      "id": "espagnol",
+      "fr": "espagnol",
+      "en": "Spanish",
+      "pr": "ess-pahn-YOHL",
+      "fa": "اِسپانیُل",
+      "g": "adj",
+      "alts": [
+        "espagnole"
+      ],
+      "tip": "Feminine: espagnole, sounds the same."
+    },
+    {
+      "id": "americain",
+      "fr": "américain",
+      "en": "American",
+      "pr": "ah-may-ree-KAN",
+      "fa": "آمِریکَن",
+      "g": "adj",
+      "alts": [
+        "américaine"
+      ],
+      "tip": "Feminine: américaine (ah-may-ree-KEN)."
+    },
+    {
+      "id": "francais",
+      "fr": "français",
+      "en": "French",
+      "pr": "frahn-SEH",
+      "fa": "فرانسِ",
+      "g": "adj",
+      "alts": [
+        "française"
+      ],
+      "tip": "Feminine: française (frahn-SEZ)."
+    },
+    {
+      "id": "japonais",
+      "fr": "japonais",
+      "en": "Japanese",
+      "pr": "zhah-poh-NEH",
+      "fa": "ژاپُنِ",
+      "g": "adj",
+      "alts": [
+        "japonaise"
+      ],
+      "tip": "Feminine: japonaise (zhah-poh-NEZ)."
+    },
+    {
+      "id": "quebecois",
+      "fr": "québécois",
+      "en": "Quebecer, from Quebec",
+      "pr": "kay-bay-KWAH",
+      "fa": "کِبِکوآ",
+      "g": "adj",
+      "alts": [
+        "québécoise"
+      ],
+      "tip": "Feminine: québécoise (kay-bay-KWAHZ)."
+    },
+    {
+      "id": "senegalais",
+      "fr": "sénégalais",
+      "en": "Senegalese",
+      "pr": "say-nay-gah-LEH",
+      "fa": "سِنِگالِ",
+      "g": "adj",
+      "alts": [
+        "sénégalaise"
+      ],
+      "tip": "Feminine: sénégalaise (say-nay-gah-LEZ)."
+    },
+    {
+      "id": "suisse_n",
+      "fr": "suisse",
+      "en": "Swiss",
+      "pr": "SWEESS",
+      "fa": "سوییس",
+      "g": "adj",
+      "tip": "Same for men and women."
+    },
+    {
+      "id": "voiture",
+      "fr": "la voiture",
+      "noun": "voiture",
+      "pl": "voitures",
+      "g": "f",
+      "en": "car",
+      "pr": "lah vwah-TÜR",
+      "fa": "لا ووآتور",
+      "trick": "Voiture: a car is a vehicle you “voyage” in."
+    },
+    {
+      "id": "jardin",
+      "fr": "le jardin",
+      "noun": "jardin",
+      "pl": "jardins",
+      "g": "m",
+      "en": "garden",
+      "pr": "luh zhar-DAN",
+      "fa": "لُ ژاردَن",
+      "trick": "Jardin sounds like “garden” said with a French accent."
+    },
+    {
+      "id": "bicyclette",
+      "fr": "la bicyclette",
+      "noun": "bicyclette",
+      "pl": "bicyclettes",
+      "g": "f",
+      "en": "bicycle",
+      "pr": "lah bee-see-KLET",
+      "fa": "لا بیسیکلِت",
+      "trick": "Bicyclette is just “bicycle” plus -ette."
+    },
+    {
+      "id": "chat",
+      "fr": "le chat",
+      "noun": "chat",
+      "pl": "chats",
+      "g": "m",
+      "en": "cat",
+      "pr": "luh SHAH",
+      "fa": "لُ شا",
+      "trick": "Chat: like Minou! The t is silent: “shah”."
+    },
+    {
+      "id": "livre",
+      "fr": "le livre",
+      "noun": "livre",
+      "pl": "livres",
+      "g": "m",
+      "en": "book",
+      "pr": "luh LEE-vruh",
+      "fa": "لُ لیوخ",
+      "trick": "Livre: a library is full of livres."
+    },
+    {
+      "id": "ami",
+      "fr": "l'ami",
+      "noun": "ami",
+      "pl": "amis",
+      "g": "m",
+      "en": "friend (male)",
+      "pr": "lah-MEE",
+      "fa": "لامی",
+      "trick": "Ami: “amicable” means friendly."
+    },
+    {
+      "id": "amie",
+      "fr": "l'amie",
+      "noun": "amie",
+      "pl": "amies",
+      "g": "f",
+      "en": "friend (female)",
+      "pr": "lah-MEE",
+      "fa": "لامی",
+      "tip": "Sounds exactly like l'ami. Only the spelling shows it's a woman."
+    },
+    {
+      "id": "professeur",
+      "fr": "le professeur",
+      "noun": "professeur",
+      "pl": "professeurs",
+      "g": "m",
+      "en": "teacher, professor",
+      "pr": "luh proh-feh-SUHR",
+      "fa": "لُ پروفِسُر"
+    },
+    {
+      "id": "photo",
+      "fr": "la photo",
+      "noun": "photo",
+      "pl": "photos",
+      "g": "f",
+      "en": "photo",
+      "pr": "lah foh-TOH",
+      "fa": "لا فُتُ"
+    }
+  ],
+  "grammars": [
+    {
+      "id": "g16",
+      "title": "Contractions of de",
+      "section": "Grammaire 1.6",
+      "pages": "pp. 73–74",
+      "teach": [
+        {
+          "title": "Paul's car = the car of Paul",
+          "body": "French has no <b>'s</b>. Say “the car <b>of</b> Paul”: the thing first, then <b>de</b> + the person.",
+          "examples": [
+            {
+              "fr": "la voiture de Paul",
+              "en": "Paul's car",
+              "pr": "lah vwah-TÜR duh POHL",
+              "fa": "لا ووآتور دُ پُل"
+            },
+            {
+              "fr": "Est-ce que c'est la sœur de Denise ?",
+              "en": "Is that Denise's sister?",
+              "pr": "ess-kuh SAY lah SUHR duh duh-NEEZ",
+              "fa": "اِسکُ سِ لا سُر دُ دُنیز"
+            },
+            {
+              "fr": "Oui, c'est sa sœur.",
+              "en": "Yes, that's her sister.",
+              "pr": "WEE, SAY sah SUHR",
+              "fa": "وی، سِ سا سُر"
+            }
+          ],
+          "trick": "Flip it: Paul's car → the car of Paul → la voiture de Paul."
+        },
+        {
+          "title": "de + le = du, de + les = des",
+          "body": "When <b>de</b> meets <b>le</b> or <b>les</b>, they join: <b>de + le = du</b>, <b>de + les = des</b>. <b>De la</b> and <b>de l'</b> never change.",
+          "table": {
+            "head": [
+              "",
+              "the … of"
+            ],
+            "rows": [
+              [
+                "de + le",
+                "du"
+              ],
+              [
+                "de + la",
+                "de la"
+              ],
+              [
+                "de + l'",
+                "de l'"
+              ],
+              [
+                "de + les",
+                "des"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "fr": "Voici les livres du professeur.",
+              "en": "Here are the teacher's books.",
+              "pr": "vwah-SEE lay LEE-vruh dü proh-feh-SUHR",
+              "fa": "وواسی لِ لیوخ دو پروفِسُر"
+            },
+            {
+              "fr": "C'est la voiture des amis de Patrick.",
+              "en": "It's Patrick's friends' car.",
+              "pr": "SAY lah vwah-TÜR day-zah-MEE duh pah-TREEK",
+              "fa": "سِ لا ووآتور دِزامی دُ پاتریک"
+            },
+            {
+              "fr": "Voici la sœur de l'amie de Sarah.",
+              "en": "Here is Sarah's friend's sister.",
+              "pr": "vwah-SEE lah SUHR duh lah-MEE duh sah-RAH",
+              "fa": "وواسی لا سُر دُ لامی دُ سارا"
+            }
+          ],
+          "trick": "Only the boys merge: le and les join with de (du, des). La and l' stay apart."
+        },
+        {
+          "title": "A person who isn't named",
+          "body": "To talk about someone without their name, use <b>de</b> + article + noun. You can chain them.",
+          "examples": [
+            {
+              "fr": "C'est le chat de la sœur de Paul.",
+              "en": "It's Paul's sister's cat.",
+              "pr": "SAY luh SHAH duh lah SUHR duh POHL",
+              "fa": "سِ لُ شا دُ لا سُر دُ پُل"
+            },
+            {
+              "fr": "La femme de l'oncle Victor a 43 ans.",
+              "en": "Uncle Victor's wife is 43 years old.",
+              "pr": "lah FAHM duh LOHN-kluh veek-TOR ah kah-RAHNT-TRWAH-ZAHN",
+              "fa": "لا فام دُ لُنکل ویکتُر آ کارانت‌تروآزان"
+            },
+            {
+              "fr": "le mari de la femme blonde",
+              "en": "the blond woman's husband",
+              "pr": "luh mah-REE duh lah FAHM BLOHND",
+              "fa": "لُ ماری دُ لا فام بلُند"
+            }
+          ]
+        },
+        {
+          "title": "Des has two meanings",
+          "body": "1. <b>des</b> = some, the plural of un / une: un ami algérien → <b>des</b> amis algériens.<br>2. <b>des</b> = of the (de + les): Voilà le père <b>des</b> enfants.",
+          "examples": [
+            {
+              "fr": "des amis algériens",
+              "en": "(some) Algerian friends",
+              "pr": "day-zah-MEE ahl-zhay-RYAN",
+              "fa": "دِزامی آلژِریَن"
+            },
+            {
+              "fr": "Voilà le père des enfants.",
+              "en": "There's the children's father.",
+              "pr": "vwah-LAH luh PEHR day-zahn-FAHN",
+              "fa": "وُآلا لُ پِر دِزانفان"
+            }
+          ],
+          "trick": "Ask: can I say “of the”? Yes → de + les. No → it just means “some”."
+        }
+      ],
+      "notes": [
+        "No 's in French: la voiture de Paul = Paul's car (the car of Paul).",
+        "de + le = du, de + les = des. De la and de l' don't change.",
+        "Person without a name: de + article + noun: le chat de la sœur de Paul.",
+        "Des = some (plural of un/une) or of the (de + les)."
+      ],
+      "tricks": {
+        "de": "Flip it: Paul's car → la voiture de Paul.",
+        "contract": "Only le and les merge with de: du, des. La and l' stay apart.",
+        "des": "Can you say “of the”? Then des = de + les. If not, des = some."
+      },
+      "drills": [
+        {
+          "id": "d1",
+          "set": "Practice",
+          "text": "C'est la maison ___ Marie.",
+          "options": [
+            "de",
+            "du",
+            "des"
+          ],
+          "answer": "de",
+          "en": "It's Marie's house.",
+          "why": "A name takes plain de.",
+          "rule": "de",
+          "after": 0
+        },
+        {
+          "id": "d2",
+          "set": "Practice",
+          "type": "sentence",
+          "text": "Say it in French: It's Paul's car.",
+          "answer": "C'est la voiture de Paul.",
+          "accept": [
+            "C'est la voiture de Paul."
+          ],
+          "en": "",
+          "why": "The car of Paul: la voiture de Paul.",
+          "after": 0,
+          "rule": "de"
+        },
+        {
+          "id": "d3",
+          "set": "Practice",
+          "text": "Voici les livres ___ professeur.",
+          "options": [
+            "du",
+            "de la",
+            "de l'",
+            "des"
+          ],
+          "answer": "du",
+          "en": "Here are the teacher's books.",
+          "why": "Le professeur: de + le = du.",
+          "rule": "contract",
+          "after": 1
+        },
+        {
+          "id": "d4",
+          "set": "Practice",
+          "text": "C'est la voiture ___ amis de Patrick.",
+          "options": [
+            "du",
+            "de la",
+            "de l'",
+            "des"
+          ],
+          "answer": "des",
+          "en": "It's Patrick's friends' car.",
+          "why": "Les amis: de + les = des.",
+          "rule": "contract",
+          "after": 1
+        },
+        {
+          "id": "d5",
+          "set": "Practice",
+          "text": "Voici la sœur ___ amie de Sarah.",
+          "options": [
+            "du",
+            "de la",
+            "de l'",
+            "des"
+          ],
+          "answer": "de l'",
+          "en": "Here is Sarah's friend's sister.",
+          "why": "L'amie: de + l' doesn't change.",
+          "rule": "contract",
+          "after": 1
+        },
+        {
+          "id": "d6",
+          "set": "Practice",
+          "text": "C'est le jardin ___ mère de Luc.",
+          "options": [
+            "du",
+            "de la",
+            "de l'",
+            "des"
+          ],
+          "answer": "de la",
+          "en": "It's Luc's mother's garden.",
+          "why": "La mère: de + la doesn't change.",
+          "rule": "contract",
+          "after": 1
+        },
+        {
+          "id": "d7",
+          "set": "Practice",
+          "type": "type",
+          "text": "Voilà le chat ___ enfants.",
+          "answer": "des",
+          "accept": [
+            "des"
+          ],
+          "en": "There's the children's cat.",
+          "why": "Les enfants: de + les = des.",
+          "rule": "contract",
+          "after": 1
+        },
+        {
+          "id": "d8",
+          "set": "Practice",
+          "type": "type",
+          "text": "C'est la bicyclette ___ frère de Julie.",
+          "answer": "du",
+          "accept": [
+            "du"
+          ],
+          "en": "It's Julie's brother's bicycle.",
+          "why": "Le frère: de + le = du.",
+          "rule": "contract",
+          "after": 1
+        },
+        {
+          "id": "d9",
+          "set": "Practice",
+          "type": "speak",
+          "fr": "les livres du professeur",
+          "en": "the teacher's books",
+          "after": 1
+        },
+        {
+          "id": "d10",
+          "set": "Practice",
+          "text": "C'est le chat ___ sœur de Paul.",
+          "options": [
+            "du",
+            "de la",
+            "de l'",
+            "des"
+          ],
+          "answer": "de la",
+          "en": "It's Paul's sister's cat.",
+          "why": "La sœur: de la.",
+          "rule": "contract",
+          "after": 2
+        },
+        {
+          "id": "d11",
+          "set": "Practice",
+          "text": "La femme ___ oncle Victor a 43 ans.",
+          "options": [
+            "du",
+            "de la",
+            "de l'",
+            "des"
+          ],
+          "answer": "de l'",
+          "en": "Uncle Victor's wife is 43.",
+          "why": "L'oncle: de l'.",
+          "rule": "contract",
+          "after": 2
+        },
+        {
+          "id": "d12",
+          "set": "Practice",
+          "type": "sentence",
+          "text": "Say it in French: It's the teacher's car.",
+          "answer": "C'est la voiture du professeur.",
+          "accept": [
+            "C'est la voiture du professeur."
+          ],
+          "en": "",
+          "why": "Le professeur: de + le = du.",
+          "after": 2,
+          "rule": "contract"
+        },
+        {
+          "id": "d13",
+          "set": "Practice",
+          "text": "In “Voilà le père des enfants”, des means…",
+          "options": [
+            "of the",
+            "some",
+            "the"
+          ],
+          "answer": "of the",
+          "en": "",
+          "why": "You can say “the father of the children”: de + les.",
+          "rule": "des",
+          "after": 3
+        },
+        {
+          "id": "d14",
+          "set": "Practice",
+          "text": "In “J'ai des amis algériens”, des means…",
+          "options": [
+            "some",
+            "of the",
+            "the"
+          ],
+          "answer": "some",
+          "en": "",
+          "why": "Plural of un ami: some friends.",
+          "rule": "des",
+          "after": 3
+        },
+        {
+          "id": "d15",
+          "set": "Practice",
+          "type": "speak",
+          "fr": "Voilà le père des enfants.",
+          "en": "There's the children's father.",
+          "after": 3
+        }
+      ],
+      "exercises": [
+        {
+          "id": "e13-1",
+          "set": "Exercice 13 · L'album de Raoul",
+          "text": "(Paul) Voici la voiture ___. Elle est rapide.",
+          "options": [
+            "de Paul",
+            "du Paul",
+            "des Paul"
+          ],
+          "answer": "de Paul",
+          "en": "Here's Paul's car. It's fast.",
+          "why": "A name takes plain de.",
+          "rule": "de"
+        },
+        {
+          "id": "e13-2",
+          "set": "Exercice 13 · L'album de Raoul",
+          "text": "(les petites filles) La femme blonde est notre amie Marie. C'est la mère ___.",
+          "options": [
+            "des petites filles",
+            "de les petites filles",
+            "du petites filles"
+          ],
+          "answer": "des petites filles",
+          "en": "The blond woman is our friend Marie. She's the little girls' mother.",
+          "why": "de + les = des.",
+          "rule": "contract"
+        },
+        {
+          "id": "e13-3",
+          "set": "Exercice 13 · L'album de Raoul",
+          "text": "(la femme blonde) Ça, c'est le mari ___. Il s'appelle Albert.",
+          "options": [
+            "de la femme blonde",
+            "du femme blonde",
+            "des femme blonde"
+          ],
+          "answer": "de la femme blonde",
+          "en": "That's the blond woman's husband. His name is Albert.",
+          "why": "de + la doesn't change.",
+          "rule": "contract"
+        },
+        {
+          "id": "e13-4",
+          "set": "Exercice 13 · L'album de Raoul",
+          "text": "(Mme Haddad) Voilà la belle maison ___. Quel beau jardin !",
+          "options": [
+            "de Mme Haddad",
+            "du Mme Haddad",
+            "de la Mme Haddad"
+          ],
+          "answer": "de Mme Haddad",
+          "en": "There's Mrs. Haddad's beautiful house. What a lovely garden!",
+          "why": "A name (with Mme) takes plain de.",
+          "rule": "de"
+        },
+        {
+          "id": "e13-5",
+          "set": "Exercice 13 · L'album de Raoul",
+          "text": "(le cousin de mon père) Voici la fille ___. Elle s'appelle Claire.",
+          "options": [
+            "du cousin de mon père",
+            "de le cousin de mon père",
+            "des cousin de mon père"
+          ],
+          "answer": "du cousin de mon père",
+          "en": "Here's my father's cousin's daughter. Her name is Claire.",
+          "why": "de + le = du.",
+          "rule": "contract"
+        },
+        {
+          "id": "e13-6",
+          "set": "Exercice 13 · L'album de Raoul",
+          "text": "(Claire) Voici l'ami ___. Il est beau, n'est-ce pas ?",
+          "options": [
+            "de Claire",
+            "du Claire",
+            "de la Claire"
+          ],
+          "answer": "de Claire",
+          "en": "Here's Claire's friend. He's handsome, isn't he?",
+          "why": "A name takes plain de.",
+          "rule": "de"
+        },
+        {
+          "id": "e14-1",
+          "set": "Exercice 14 · Relations familiales",
+          "text": "La grand-mère, c'est la femme ___.",
+          "options": [
+            "du grand-père",
+            "de la grand-père",
+            "de le grand-père"
+          ],
+          "answer": "du grand-père",
+          "en": "The grandmother is the grandfather's wife.",
+          "why": "Le grand-père: du.",
+          "rule": "contract"
+        },
+        {
+          "id": "e14-2",
+          "set": "Exercice 14 · Relations familiales",
+          "text": "La tante, c'est la femme ___.",
+          "options": [
+            "de l'oncle",
+            "du oncle",
+            "de le oncle"
+          ],
+          "answer": "de l'oncle",
+          "en": "The aunt is the uncle's wife.",
+          "why": "L'oncle: de l' doesn't change.",
+          "rule": "contract"
+        },
+        {
+          "id": "e14-3",
+          "set": "Exercice 14 · Relations familiales",
+          "text": "Le cousin, c'est le fils ___.",
+          "options": [
+            "de l'oncle et de la tante",
+            "du oncle et du tante",
+            "des oncle et tante"
+          ],
+          "answer": "de l'oncle et de la tante",
+          "en": "The cousin is the son of the uncle and aunt.",
+          "why": "L'oncle: de l'. La tante: de la.",
+          "rule": "contract"
+        },
+        {
+          "id": "e14-4",
+          "set": "Exercice 14 · Relations familiales",
+          "text": "La belle-sœur, c'est la femme ___.",
+          "options": [
+            "du frère",
+            "de la frère",
+            "de le frère"
+          ],
+          "answer": "du frère",
+          "en": "The sister-in-law is the brother's wife.",
+          "why": "Le frère: du.",
+          "rule": "contract"
+        },
+        {
+          "id": "e14-5",
+          "set": "Exercice 14 · Relations familiales",
+          "text": "Le grand-père, c'est le père ___.",
+          "options": [
+            "du père ou de la mère",
+            "de le père ou de le mère",
+            "des père ou mère"
+          ],
+          "answer": "du père ou de la mère",
+          "en": "The grandfather is the father of the father or of the mother.",
+          "why": "Le père: du. La mère: de la.",
+          "rule": "contract"
+        },
+        {
+          "id": "e14-6",
+          "set": "Exercice 14 · Relations familiales",
+          "text": "L'oncle, c'est le père ___.",
+          "options": [
+            "du cousin",
+            "de la cousin",
+            "de le cousin"
+          ],
+          "answer": "du cousin",
+          "en": "The uncle is the cousin's father.",
+          "why": "Le cousin: du.",
+          "rule": "contract"
+        }
+      ]
+    }
+  ],
+  "readings": [
+    {
+      "id": "r1",
+      "title": "L'album de Minou",
+      "lines": [
+        {
+          "fr": "Voici l'album de photos de Minou.",
+          "en": "Here is Minou's photo album.",
+          "pr": "vwah-SEE lahl-BOHM duh foh-TOH duh mee-NOO",
+          "fa": "وواسی لالبُم دُ فُتُ دُ مینو"
+        },
+        {
+          "fr": "Ça, c'est la maison des parents de Minou, à Lyon.",
+          "en": "That's Minou's parents' house, in Lyon.",
+          "pr": "SAH, SAY lah may-ZOHN day pah-RAHN duh mee-NOO, ah lee-OHN",
+          "fa": "سا، سِ لا مِزُن دِ پاران دُ مینو، آ لیُن"
+        },
+        {
+          "fr": "Voici la voiture du père de Minou. Elle est rouge.",
+          "en": "Here's Minou's father's car. It's red.",
+          "pr": "vwah-SEE lah vwah-TÜR dü PEHR duh mee-NOO. el ay ROOZH",
+          "fa": "وواسی لا ووآتور دو پِر دُ مینو. اِل اِ روژ"
+        },
+        {
+          "fr": "Et voilà le jardin de la grand-mère. Il est grand !",
+          "en": "And there's the grandmother's garden. It's big!",
+          "pr": "ay vwah-LAH luh zhar-DAN duh lah grahn-MEHR. eel ay GRAHN",
+          "fa": "اِ وُآلا لُ ژاردَن دُ لا گرانمِر. ایل اِ گران"
+        },
+        {
+          "fr": "Pompon, c'est le chat de l'oncle de Minou.",
+          "en": "Pompon is Minou's uncle's cat.",
+          "pr": "pohn-POHN, SAY luh SHAH duh LOHN-kluh duh mee-NOO",
+          "fa": "پُنپُن، سِ لُ شا دُ لُنکل دُ مینو"
+        }
+      ],
+      "questions": [
+        {
+          "q": "Où est la maison des parents de Minou ?",
+          "hint": "Where is Minou's parents' house?",
+          "options": [
+            "à Lyon",
+            "à Paris",
+            "à Montréal"
+          ],
+          "answer": "à Lyon",
+          "optionsEn": {
+            "à Lyon": "in Lyon",
+            "à Paris": "in Paris",
+            "à Montréal": "in Montreal"
+          }
+        },
+        {
+          "q": "La voiture rouge, c'est la voiture de qui ?",
+          "hint": "Whose is the red car?",
+          "options": [
+            "du père de Minou",
+            "de la grand-mère",
+            "de l'oncle"
+          ],
+          "answer": "du père de Minou",
+          "optionsEn": {
+            "du père de Minou": "Minou's father's",
+            "de la grand-mère": "the grandmother's",
+            "de l'oncle": "the uncle's"
+          }
+        },
+        {
+          "q": "Le grand jardin, c'est le jardin de qui ?",
+          "hint": "Whose is the big garden?",
+          "options": [
+            "de la grand-mère",
+            "des parents",
+            "du chat"
+          ],
+          "answer": "de la grand-mère",
+          "optionsEn": {
+            "de la grand-mère": "the grandmother's",
+            "des parents": "the parents'",
+            "du chat": "the cat's"
+          }
+        },
+        {
+          "q": "Pompon, c'est le chat de qui ?",
+          "hint": "Whose cat is Pompon?",
+          "options": [
+            "de l'oncle de Minou",
+            "du père de Minou",
+            "de Minou"
+          ],
+          "answer": "de l'oncle de Minou",
+          "optionsEn": {
+            "de l'oncle de Minou": "Minou's uncle's",
+            "du père de Minou": "Minou's father's",
+            "de Minou": "Minou's"
+          }
+        }
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "u1",
+      "fr": "C'est la voiture de Paul.",
+      "en": "It's Paul's car.",
+      "pr": "SAY lah vwah-TÜR duh POHL",
+      "fa": "سِ لا ووآتور دُ پُل"
+    },
+    {
+      "id": "u2",
+      "fr": "Voici les livres du professeur.",
+      "en": "Here are the teacher's books.",
+      "pr": "vwah-SEE lay LEE-vruh dü proh-feh-SUHR",
+      "fa": "وواسی لِ لیوخ دو پروفِسُر"
+    },
+    {
+      "id": "u3",
+      "fr": "C'est le chat de la sœur de Paul.",
+      "en": "It's Paul's sister's cat.",
+      "pr": "SAY luh SHAH duh lah SUHR duh POHL",
+      "fa": "سِ لُ شا دُ لا سُر دُ پُل"
+    },
+    {
+      "id": "u4",
+      "fr": "Voilà le père des enfants.",
+      "en": "There's the children's father.",
+      "pr": "vwah-LAH luh PEHR day-zahn-FAHN",
+      "fa": "وُآلا لُ پِر دِزانفان"
+    },
+    {
+      "id": "u5",
+      "fr": "C'est la maison de ma tante.",
+      "en": "It's my aunt's house.",
+      "pr": "SAY lah may-ZOHN duh mah TAHNT",
+      "fa": "سِ لا مِزُن دُ ما تانت"
+    },
+    {
+      "id": "u6",
+      "fr": "La femme de l'oncle a quarante ans.",
+      "en": "The uncle's wife is forty.",
+      "pr": "lah FAHM duh LOHN-kluh ah kah-RAHNT AHN",
+      "fa": "لا فام دُ لُنکل آ کارانت آن"
+    },
+    {
+      "id": "u7",
+      "fr": "C'est le jardin du grand-père.",
+      "en": "It's the grandfather's garden.",
+      "pr": "SAY luh zhar-DAN dü grahn-PEHR",
+      "fa": "سِ لُ ژاردَن دو گرانپِر"
+    },
+    {
+      "id": "u8",
+      "fr": "Voici la bicyclette des enfants.",
+      "en": "Here's the children's bicycle.",
+      "pr": "vwah-SEE lah bee-see-KLET day-zahn-FAHN",
+      "fa": "وواسی لا بیسیکلِت دِزانفان"
+    },
+    {
+      "id": "u9",
+      "fr": "Le mari de Marie s'appelle Albert.",
+      "en": "Marie's husband is called Albert.",
+      "pr": "luh mah-REE duh mah-REE sah-PEL ahl-BEHR",
+      "fa": "لُ ماری دُ ماری ساپِل آلبِر"
+    },
+    {
+      "id": "u10",
+      "fr": "J'ai des amis algériens.",
+      "en": "I have (some) Algerian friends.",
+      "pr": "ZHAY day-zah-MEE ahl-zhay-RYAN",
+      "fa": "ژِ دِزامی آلژِریَن"
+    }
+  ]
+}

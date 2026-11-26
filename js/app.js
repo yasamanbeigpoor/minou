@@ -13,7 +13,7 @@ import { startTour } from './tour.js';
 import { applyPronClasses, prOn, faOn } from './fa.js';
 
 // Shown on the Me tab so it's easy to check which version is running. Bump with every release.
-export const APP_VERSION = '2.2 (25 Nov 2026)';
+export const APP_VERSION = '2.3 (25 Nov 2026)';
 
 const app = $('#app');
 let installEvt = null;

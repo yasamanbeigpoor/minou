@@ -701,3 +701,4 @@ html.no-pr.no-fa .pron { display: none; }
 .file-row b { display: block; font-weight: 700; font-size: 15px; }
 .file-row small { display: block; color: var(--ink-2); font-size: 13px; }
 .file-row > .ic:last-child { margin-left: auto; color: var(--ink-2); flex: none; }
+.pill.g-adj { background: var(--iris-soft); color: var(--iris-deep); }

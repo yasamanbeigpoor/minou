@@ -10,7 +10,46 @@
       "type": "vocab",
       "title": "Verbes en -er",
       "titleEn": "-er verbs",
-      "subtitle": "22 everyday verbs from page 72"
+      "subtitle": "22 everyday verbs from page 72",
+      "items": [
+        "chanter",
+        "chercher",
+        "cuisiner",
+        "danser",
+        "dejeuner",
+        "dessiner",
+        "diner",
+        "donner",
+        "ecouter",
+        "inviter",
+        "jouer",
+        "manger",
+        "nager",
+        "parler",
+        "regarder",
+        "rencontrer",
+        "rentrer",
+        "rester",
+        "voyager",
+        "travailler",
+        "habiter",
+        "etudier"
+      ]
+    },
+    {
+      "id": "places",
+      "type": "vocab",
+      "title": "Les endroits",
+      "titleEn": "Places",
+      "subtitle": "Office, mall, house, hospital…",
+      "items": [
+        "bordmer",
+        "bureau",
+        "centrecom",
+        "maison",
+        "appartement",
+        "hopital"
+      ]
     },
     {
       "id": "g14",
@@ -234,6 +273,70 @@
       "fa": "اِتودیه",
       "g": "x",
       "trick": "Étudier: a student (étudiant) studies."
+    },
+    {
+      "id": "bordmer",
+      "fr": "au bord de la mer",
+      "en": "at the seashore",
+      "pr": "oh BOR duh lah MEHR",
+      "fa": "اُ بُر دُ لا مِر",
+      "g": "x",
+      "trick": "Le bord = the edge; la mer = the sea. At the edge of the sea."
+    },
+    {
+      "id": "bureau",
+      "fr": "le bureau",
+      "noun": "bureau",
+      "pl": "bureaux",
+      "g": "m",
+      "en": "office",
+      "pr": "luh bü-ROH",
+      "fa": "لُ بورُ",
+      "trick": "A bureau is also an office in English (a travel bureau)."
+    },
+    {
+      "id": "centrecom",
+      "fr": "le centre commercial",
+      "noun": "centre commercial",
+      "pl": "centres commerciaux",
+      "g": "m",
+      "en": "shopping mall",
+      "pr": "luh SAHN-truh koh-mehr-SYAHL",
+      "fa": "لُ سانتر کُمِرسیال",
+      "trick": "A commercial centre: where all the shops are."
+    },
+    {
+      "id": "maison",
+      "fr": "la maison",
+      "noun": "maison",
+      "pl": "maisons",
+      "g": "f",
+      "en": "house",
+      "pr": "lah may-ZOHN",
+      "fa": "لا مِزُن",
+      "trick": "Maison: like “mansion”, a big house."
+    },
+    {
+      "id": "appartement",
+      "fr": "l'appartement",
+      "noun": "appartement",
+      "pl": "appartements",
+      "g": "m",
+      "en": "apartment",
+      "pr": "lah-par-tuh-MAHN",
+      "fa": "لاپارتُمان",
+      "tip": "Same word as English, with two p's. Masculine."
+    },
+    {
+      "id": "hopital",
+      "fr": "l'hôpital",
+      "noun": "hôpital",
+      "pl": "hôpitaux",
+      "g": "m",
+      "en": "hospital",
+      "pr": "loh-pee-TAHL",
+      "fa": "لُپیتال",
+      "trick": "The ô hides a lost s: hospital → hôpital."
     }
   ],
   "grammars": [

@@ -60,7 +60,9 @@ export function speakables() {
         (t.numbers || []).forEach((n) => add(frNumber(n)));
       }
       (g.chant?.lines || []).forEach((l) => add(l.fr));
+      (g.exercisesIntro?.examples || []).forEach((e) => add(e.fr));
       for (const x of [...(g.drills || []), ...(g.exercises || [])]) {
+        if (x.quiet) continue;
         if (x.type === 'listen-digits' || x.type === 'speak') { add(x.say || x.fr); continue; }
         (x.options || []).forEach(add);
         add(x.answer);

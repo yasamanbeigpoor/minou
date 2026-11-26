@@ -415,7 +415,7 @@ function accentBar(input) {
 
 const RENDER = {
   intro(step, body) {
-    const gender = { m: 'masculine', f: 'feminine', mf: 'masc. or fem.', pl: 'plural', x: 'expression' }[step.g];
+    const gender = { m: 'masculine', f: 'feminine', mf: 'masc. or fem.', pl: 'plural', x: 'expression', adj: 'adjective' }[step.g];
     setTimeout(() => speak(step.fr), 300);
     put(body, 
       promptHead({ say: 'Nouveau mot !', sub: 'Tap the word to hear it again.' }),
@@ -518,7 +518,7 @@ const RENDER = {
       chosen = idx;
       buttons.forEach((b, j) => b.classList.toggle('sel', j === idx));
       sfx.tap();
-      if (step.optionsFr) speak(opts[idx]);
+      if (step.optionsFr && step.speakAnswer !== null) speak(opts[idx]);
       ctx.ready(true);
     }
     put(body, 

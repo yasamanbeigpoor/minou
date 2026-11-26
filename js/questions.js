@@ -75,7 +75,8 @@ export function matchQ(itemIds) {
 // ---------- Sentences ----------
 
 function sentenceTiles(s, mod) {
-  const words = s.fr.replace(/([.!?])$/, '').split(' ');
+  // French puts a space before ? and !, so strip it too: no empty tile.
+  const words = s.fr.replace(/\s*[.!?]$/, '').split(' ').filter(Boolean);
   // Distractors: swap a possessive or add a family word that isn't in the sentence.
   const POSS = ['mon', 'ma', 'mes', 'ton', 'ta', 'tes', 'son', 'sa', 'ses', 'notre', 'nos', 'leur', 'leurs', 'votre', 'vos'];
   const extra = [];
@@ -86,9 +87,9 @@ function sentenceTiles(s, mod) {
     extra.push(alt);
   }
   // Distractor words: nouns from the module, or single words from its other sentences.
-  let nouns = (mod.vocab || []).map((v) => v.noun).filter((n) => n && !lower.includes(n) && !n.includes('-'));
+  let nouns = (mod.vocab || []).map((v) => v.noun).filter((n) => n && !lower.includes(n) && !/[- ]/.test(n));
   if (!nouns.length) {
-    nouns = [...new Set((mod.sentences || []).flatMap((x) => x.fr.replace(/[.!?]$/, '').split(' ')))]
+    nouns = [...new Set((mod.sentences || []).flatMap((x) => x.fr.replace(/\s*[.!?]$/, '').split(' ')))]
       .filter((w) => !lower.includes(w.toLowerCase()) && w.length > 2);
   }
   extra.push(...sample(nouns, owned ? 1 : 2));
@@ -249,7 +250,8 @@ export function exerciseQ(itemId) {
   return { ...base, kind: 'mcq', skill: 'reading', say: x.text.includes('___') ? 'Complète la phrase.' : 'Choisis la bonne réponse.',
     sub: x.set === 'Practice' ? 'Pick the right answer.' : x.set,
     text: x.text, en: x.en, options: x.options, answer: x.answer, keepOrder: true, optionsFr: true, reveal: filled,
-    speakAnswer: filled.replace(/^—\s*/, '').replace(/\s*\([^)]*\)\s*$/, '').replace(/^[\d.]+\s*=\s*/, '') };
+    // quiet: answers like emails and postal codes, which a voice can't read well, aren't spoken.
+    speakAnswer: x.quiet ? null : filled.replace(/^—\s*/, '').replace(/\s*\([^)]*\)\s*$/, '').replace(/^[\d.]+\s*=\s*/, '') };
 }
 
 // ---------- Reading ----------

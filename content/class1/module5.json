@@ -1,0 +1,1013 @@
+{
+  "id": "m5",
+  "number": 5,
+  "title": "Ma fiche",
+  "subtitle": "Filling in a form: name, age, address, hobbies",
+  "source": "Fiche biographique (class handout)",
+  "path": [
+    {
+      "id": "vocab",
+      "type": "vocab",
+      "title": "Les mots de la fiche",
+      "titleEn": "Form words",
+      "subtitle": "16 words you'll see on a form"
+    },
+    {
+      "id": "g-fiche",
+      "type": "grammar",
+      "grammar": "g-fiche",
+      "title": "Remplir une fiche",
+      "titleEn": "Filling in a form",
+      "subtitle": "The questions, spelling emails, provinces"
+    },
+    {
+      "id": "review",
+      "type": "module-review",
+      "title": "Révision du module",
+      "titleEn": "Module review",
+      "subtitle": "Reading, listening, speaking and a mixed test"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "fiche",
+      "fr": "la fiche biographique",
+      "noun": "fiche biographique",
+      "pl": "fiches biographiques",
+      "g": "f",
+      "en": "personal information form",
+      "pr": "lah FEESH bee-oh-grah-FEEK",
+      "fa": "لا فیش بیوگرافیک",
+      "trick": "Biographique: like a biography, but just the facts."
+    },
+    {
+      "id": "nom",
+      "fr": "le nom",
+      "noun": "nom",
+      "pl": "noms",
+      "g": "m",
+      "en": "last name, family name (on a form)",
+      "pr": "luh NOHN",
+      "fa": "لُ نُن",
+      "trick": "Careful! On a form, nom is your LAST name."
+    },
+    {
+      "id": "prenom",
+      "fr": "le prénom",
+      "noun": "prénom",
+      "pl": "prénoms",
+      "g": "m",
+      "en": "first name",
+      "pr": "luh pray-NOHN",
+      "fa": "لُ پرِنُن",
+      "trick": "Pré = before: the name that comes before your last name."
+    },
+    {
+      "id": "sexe",
+      "fr": "le sexe",
+      "noun": "sexe",
+      "pl": "sexes",
+      "g": "m",
+      "en": "sex (on a form)",
+      "pr": "luh SEKS",
+      "fa": "لُ سِکس"
+    },
+    {
+      "id": "masculin",
+      "fr": "masculin",
+      "en": "male",
+      "pr": "mahs-kü-LAN",
+      "fa": "ماسکولَن",
+      "g": "x"
+    },
+    {
+      "id": "feminin",
+      "fr": "féminin",
+      "en": "female",
+      "pr": "fay-mee-NAN",
+      "fa": "فِمینَن",
+      "g": "x"
+    },
+    {
+      "id": "age",
+      "fr": "l'âge",
+      "noun": "âge",
+      "pl": "âges",
+      "g": "m",
+      "en": "age",
+      "pr": "LAHZH",
+      "fa": "لاژ",
+      "tip": "L'âge is masculine, even though it ends in -e."
+    },
+    {
+      "id": "adresse",
+      "fr": "l'adresse",
+      "noun": "adresse",
+      "pl": "adresses",
+      "g": "f",
+      "en": "address",
+      "pr": "lah-DRESS",
+      "fa": "لادرِس",
+      "trick": "Adresse has one d, unlike English address."
+    },
+    {
+      "id": "ville",
+      "fr": "la ville",
+      "noun": "ville",
+      "pl": "villes",
+      "g": "f",
+      "en": "city",
+      "pr": "lah VEEL",
+      "fa": "لا ویل",
+      "trick": "Ville: like the “-ville” at the end of town names."
+    },
+    {
+      "id": "province",
+      "fr": "la province",
+      "noun": "province",
+      "pl": "provinces",
+      "g": "f",
+      "en": "province",
+      "pr": "lah proh-VANSS",
+      "fa": "لا پروواَنس"
+    },
+    {
+      "id": "codepostal",
+      "fr": "le code postal",
+      "noun": "code postal",
+      "pl": "codes postaux",
+      "g": "m",
+      "en": "postal code",
+      "pr": "luh KOD pohs-TAHL",
+      "fa": "لُ کُد پُستال"
+    },
+    {
+      "id": "numero",
+      "fr": "le numéro de téléphone",
+      "noun": "numéro de téléphone",
+      "pl": "numéros de téléphone",
+      "g": "m",
+      "en": "phone number",
+      "pr": "luh nü-may-ROH duh tay-lay-FOHN",
+      "fa": "لُ نومِرُ دُ تِلِفُن"
+    },
+    {
+      "id": "mail",
+      "fr": "l'adresse mail",
+      "noun": "adresse mail",
+      "pl": "adresses mail",
+      "g": "f",
+      "en": "email address",
+      "pr": "lah-DRESS MEHL",
+      "fa": "لادرِس مِیل",
+      "alts": [
+        "le courriel"
+      ],
+      "tip": "In Québec people also say le courriel."
+    },
+    {
+      "id": "passetemps",
+      "fr": "les passe-temps",
+      "noun": "passe-temps",
+      "pl": "passe-temps",
+      "g": "pl",
+      "en": "hobbies, pastimes",
+      "pr": "lay pahss-TAHN",
+      "fa": "لِ پاس‌تان",
+      "trick": "Passe-temps: things that pass the time."
+    },
+    {
+      "id": "preferences",
+      "fr": "les préférences",
+      "noun": "préférence",
+      "pl": "préférences",
+      "g": "pl",
+      "en": "likes, preferences",
+      "pr": "lay pray-fay-RAHNSS",
+      "fa": "لِ پرِفِرانس"
+    },
+    {
+      "id": "arobase",
+      "fr": "l'arobase",
+      "noun": "arobase",
+      "pl": "arobases",
+      "g": "f",
+      "en": "@ (at sign)",
+      "pr": "lah-roh-BAHZ",
+      "fa": "لاروباز",
+      "trick": "Arobase: the @ in every email address."
+    }
+  ],
+  "grammars": [
+    {
+      "id": "g-fiche",
+      "title": "Filling in a form",
+      "section": "Fiche biographique",
+      "pages": "class handout",
+      "teach": [
+        {
+          "title": "The lines on the form",
+          "body": "A <b>fiche biographique</b> asks for your basic facts. The one trap: <b>nom</b> is your <b>last</b> name, and <b>prénom</b> is your first name.",
+          "table": {
+            "head": [
+              "",
+              "On the form"
+            ],
+            "rows": [
+              [
+                "last name",
+                "nom"
+              ],
+              [
+                "first name",
+                "prénom"
+              ],
+              [
+                "sex",
+                "sexe"
+              ],
+              [
+                "male / female",
+                "masculin / féminin"
+              ],
+              [
+                "age",
+                "âge"
+              ],
+              [
+                "city",
+                "ville"
+              ],
+              [
+                "province",
+                "province"
+              ],
+              [
+                "postal code",
+                "code postal"
+              ],
+              [
+                "phone number",
+                "numéro de téléphone"
+              ],
+              [
+                "email address",
+                "adresse mail"
+              ],
+              [
+                "hobbies and likes",
+                "passe-temps et préférences"
+              ]
+            ]
+          },
+          "trick": "Pré = before: the prénom comes before the nom. Léa (prénom) Tremblay (nom)."
+        },
+        {
+          "title": "The questions behind each line",
+          "body": "Someone filling the form with you will ask these. Notice <b>J'ai … ans</b>: in French you <i>have</i> an age.",
+          "examples": [
+            {
+              "fr": "Quel est ton nom ?",
+              "en": "What's your last name?",
+              "pr": "kel ay tohn NOHN",
+              "fa": "کِل اِ تُن نُن"
+            },
+            {
+              "fr": "Quel est ton prénom ?",
+              "en": "What's your first name?",
+              "pr": "kel ay tohn pray-NOHN",
+              "fa": "کِل اِ تُن پرِنُن"
+            },
+            {
+              "fr": "Quel âge as-tu ?",
+              "en": "How old are you?",
+              "pr": "kel AHZH ah-TÜ",
+              "fa": "کِل آژ آتو"
+            },
+            {
+              "fr": "J'ai vingt-deux ans.",
+              "en": "I'm twenty-two.",
+              "pr": "zhay vant-duh-ZAHN",
+              "fa": "ژِ وَنت‌دُزان"
+            },
+            {
+              "fr": "Où habites-tu ?",
+              "en": "Where do you live?",
+              "pr": "OO ah-beet-TÜ",
+              "fa": "او آبیت‌تو"
+            },
+            {
+              "fr": "J'habite à Ottawa, en Ontario.",
+              "en": "I live in Ottawa, in Ontario.",
+              "pr": "zhah-BEET ah oh-tah-WAH, ahn-nohn-tah-RYOH",
+              "fa": "ژابیت آ اُتاوا، آنُنتاریُ"
+            },
+            {
+              "fr": "Quel est ton numéro de téléphone ?",
+              "en": "What's your phone number?",
+              "pr": "kel ay tohn nü-may-ROH duh tay-lay-FOHN",
+              "fa": "کِل اِ تُن نومِرُ دُ تِلِفُن"
+            },
+            {
+              "fr": "Quelle est ton adresse mail ?",
+              "en": "What's your email address?",
+              "pr": "kel ay tohn-nah-DRESS MEHL",
+              "fa": "کِل اِ تُنادرِس مِیل"
+            },
+            {
+              "fr": "Quels sont tes passe-temps ?",
+              "en": "What are your hobbies?",
+              "pr": "kel sohn tay pahss-TAHN",
+              "fa": "کِل سُن تِ پاس‌تان"
+            }
+          ],
+          "trick": "Age uses avoir: J'ai 22 ans, never “je suis 22”."
+        },
+        {
+          "title": "Spelling it out loud",
+          "body": "Read an email address symbol by symbol: <b>@</b> = <b>arobase</b>, <b>.</b> = <b>point</b>, <b>-</b> = <b>tiret</b>, <b>_</b> = <b>tiret bas</b>.<br><br>For a postal code, use the French letter names: <b>K1N 6N5</b> = “ka, un, enne, six, enne, cinq”.<br><br>In Canada, phone numbers are usually read in groups or digit by digit: 613 555 0142.",
+          "examples": [
+            {
+              "fr": "léa point tremblay arobase exemple point ca",
+              "en": "lea.tremblay@exemple.ca",
+              "pr": "lay-AH pwan trahn-BLAY ah-roh-BAHZ eg-ZAHN-pluh pwan say-AH",
+              "fa": "لِآ پوآن ترانبلِ آروباز اِگزانپل پوآن سِآ"
+            }
+          ],
+          "trick": "Arobase = @. Point = dot."
+        },
+        {
+          "grid": true,
+          "say": "J'habite en Ontario.",
+          "sub": "Provinces: en for most, au for masculine ones. Tap each one to hear it.",
+          "tiles": [
+            {
+              "big": "ON",
+              "fr": "en Ontario",
+              "pr": "ahn-nohn-tah-RYOH",
+              "fa": "آنُنتاریُ"
+            },
+            {
+              "big": "QC",
+              "fr": "au Québec",
+              "pr": "oh kay-BEK",
+              "fa": "اُ کِبِک"
+            },
+            {
+              "big": "BC",
+              "fr": "en Colombie-Britannique",
+              "pr": "ahn koh-lohn-BEE bree-tah-NEEK",
+              "fa": "آن کُلُنبی بریتانیک"
+            },
+            {
+              "big": "AB",
+              "fr": "en Alberta",
+              "pr": "ahn-nahl-behr-TAH",
+              "fa": "آنآلبِرتا"
+            },
+            {
+              "big": "MB",
+              "fr": "au Manitoba",
+              "pr": "oh mah-nee-toh-BAH",
+              "fa": "اُ مانیتُبا"
+            },
+            {
+              "big": "NS",
+              "fr": "en Nouvelle-Écosse",
+              "pr": "ahn noo-VEL ay-KOSS",
+              "fa": "آن نووِل اِکُس"
+            }
+          ]
+        },
+        {
+          "title": "Hobbies and likes",
+          "body": "For <b>passe-temps et préférences</b>, use what you learned in Module 2: <b>J'aime</b> + a verb or a thing.",
+          "examples": [
+            {
+              "fr": "J'aime nager, lire et écouter de la musique.",
+              "en": "I like swimming, reading and listening to music.",
+              "pr": "ZHEM nah-ZHAY, LEER ay ay-koo-TAY duh lah mü-ZEEK",
+              "fa": "ژِم ناژه، لیر اِ اِکوته دُ لا موزیک"
+            },
+            {
+              "fr": "J'adore le cinéma.",
+              "en": "I love movies.",
+              "pr": "zhah-DOR luh see-nay-MAH",
+              "fa": "ژادُر لُ سینِما"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "nom = last name. prénom = first name.",
+        "sexe: masculin (male) / féminin (female).",
+        "Age uses avoir: J'ai 22 ans.",
+        "@ = arobase, . = point, - = tiret, _ = tiret bas.",
+        "Postal codes use the French letter names: K1N 6N5 = ka, un, enne, six, enne, cinq.",
+        "en Ontario, en Alberta… but au Québec, au Manitoba."
+      ],
+      "tricks": {
+        "nom": "Nom is your last name. Pré-nom comes before it.",
+        "age": "In French you have an age: J'ai 22 ans.",
+        "mail": "Arobase = @, point = dot.",
+        "prov": "en for most provinces, au for masculine ones (le Québec, le Manitoba)."
+      },
+      "drills": [
+        {
+          "id": "f1",
+          "set": "Practice",
+          "text": "On a French form, nom means…",
+          "options": [
+            "last name",
+            "first name",
+            "nickname"
+          ],
+          "answer": "last name",
+          "en": "",
+          "why": "Nom = family name.",
+          "rule": "nom",
+          "after": 0
+        },
+        {
+          "id": "f2",
+          "set": "Practice",
+          "text": "On a French form, prénom means…",
+          "options": [
+            "first name",
+            "last name",
+            "middle name"
+          ],
+          "answer": "first name",
+          "en": "",
+          "why": "Pré = before: the first name.",
+          "rule": "nom",
+          "after": 0
+        },
+        {
+          "id": "f3",
+          "set": "Practice",
+          "text": "Léa Tremblay: prénom : ___",
+          "options": [
+            "Léa",
+            "Tremblay"
+          ],
+          "answer": "Léa",
+          "en": "Léa Tremblay: first name",
+          "why": "Her first name is Léa.",
+          "rule": "nom",
+          "quiet": true,
+          "after": 0
+        },
+        {
+          "id": "f4",
+          "set": "Practice",
+          "text": "Quel âge as-tu ?",
+          "options": [
+            "J'ai vingt-deux ans.",
+            "Je suis vingt-deux ans.",
+            "J'habite vingt-deux."
+          ],
+          "answer": "J'ai vingt-deux ans.",
+          "en": "How old are you?",
+          "why": "Age uses avoir: j'ai … ans.",
+          "rule": "age",
+          "after": 1
+        },
+        {
+          "id": "f5",
+          "set": "Practice",
+          "text": "Où habites-tu ?",
+          "options": [
+            "J'habite à Ottawa.",
+            "Je m'appelle Ottawa.",
+            "J'ai Ottawa."
+          ],
+          "answer": "J'habite à Ottawa.",
+          "en": "Where do you live?",
+          "why": "Habiter: j'habite à + city.",
+          "rule": "age",
+          "after": 1
+        },
+        {
+          "id": "f6",
+          "set": "Practice",
+          "text": "Quel est ton prénom ?",
+          "options": [
+            "Léa.",
+            "Tremblay.",
+            "Vingt-deux ans."
+          ],
+          "answer": "Léa.",
+          "en": "What's your first name?",
+          "why": "Prénom = first name.",
+          "rule": "nom",
+          "after": 1
+        },
+        {
+          "id": "f7",
+          "set": "Practice",
+          "type": "sentence",
+          "text": "Say it in French: I'm thirty years old.",
+          "answer": "J'ai trente ans.",
+          "accept": [
+            "J'ai trente ans.",
+            "J'ai 30 ans."
+          ],
+          "en": "",
+          "why": "Age uses avoir: j'ai … ans.",
+          "after": 1,
+          "rule": "age"
+        },
+        {
+          "id": "f8",
+          "set": "Practice",
+          "type": "speak",
+          "fr": "Quelle est ton adresse mail ?",
+          "en": "What's your email address?",
+          "after": 1
+        },
+        {
+          "id": "f9",
+          "set": "Practice",
+          "text": "In an email, @ is said…",
+          "options": [
+            "arobase",
+            "point",
+            "tiret"
+          ],
+          "answer": "arobase",
+          "en": "",
+          "why": "Arobase = @.",
+          "rule": "mail",
+          "after": 2
+        },
+        {
+          "id": "f10",
+          "set": "Practice",
+          "text": "“léa point tremblay arobase exemple point ca” is…",
+          "options": [
+            "lea.tremblay@exemple.ca",
+            "lea-tremblay@exemple.ca",
+            "lea_tremblay@exemple.ca"
+          ],
+          "answer": "lea.tremblay@exemple.ca",
+          "en": "",
+          "why": "Point = dot (.).",
+          "rule": "mail",
+          "quiet": true,
+          "after": 2
+        },
+        {
+          "id": "f11",
+          "set": "Practice",
+          "text": "J'habite ___ Ontario.",
+          "options": [
+            "en",
+            "au",
+            "à"
+          ],
+          "answer": "en",
+          "en": "I live in Ontario.",
+          "why": "Most provinces take en.",
+          "rule": "prov",
+          "after": 3
+        },
+        {
+          "id": "f12",
+          "set": "Practice",
+          "text": "J'habite ___ Québec.",
+          "options": [
+            "au",
+            "en",
+            "à"
+          ],
+          "answer": "au",
+          "en": "I live in Quebec.",
+          "why": "Le Québec is masculine: au.",
+          "rule": "prov",
+          "after": 3
+        },
+        {
+          "id": "f13",
+          "set": "Practice",
+          "text": "J'habite ___ Toronto.",
+          "options": [
+            "à",
+            "en",
+            "au"
+          ],
+          "answer": "à",
+          "en": "I live in Toronto.",
+          "why": "Cities take à.",
+          "rule": "prov",
+          "after": 3
+        },
+        {
+          "id": "f14",
+          "set": "Practice",
+          "type": "sentence",
+          "text": "Say it in French: I like to read and swim.",
+          "answer": "J'aime lire et nager.",
+          "accept": [
+            "J'aime lire et nager.",
+            "J'aime nager et lire."
+          ],
+          "en": "",
+          "why": "J'aime + infinitive.",
+          "after": 4,
+          "rule": "age"
+        }
+      ],
+      "exercisesIntro": {
+        "title": "La fiche de Léa",
+        "body": "Read how Léa introduces herself, then fill in her form, line by line.",
+        "examples": [
+          {
+            "fr": "Bonjour ! Je m'appelle Léa Tremblay.",
+            "en": "Hello! My name is Léa Tremblay.",
+            "pr": "bohn-ZHOOR! zhuh mah-PEL lay-AH trahn-BLAY",
+            "fa": "بُنژور! ژُ ماپِل لِآ ترانبلِ"
+          },
+          {
+            "fr": "J'ai vingt-deux ans.",
+            "en": "I'm twenty-two.",
+            "pr": "zhay vant-duh-ZAHN",
+            "fa": "ژِ وَنت‌دُزان"
+          },
+          {
+            "fr": "J'habite à Ottawa, en Ontario.",
+            "en": "I live in Ottawa, in Ontario.",
+            "pr": "zhah-BEET ah oh-tah-WAH, ahn-nohn-tah-RYOH",
+            "fa": "ژابیت آ اُتاوا، آنُنتاریُ"
+          },
+          {
+            "fr": "Mon code postal, c'est K1N 6N5.",
+            "en": "My postal code is K1N 6N5.",
+            "pr": "mohn KOD pohs-TAHL, SAY kah, uhn, EN, SEESS, EN, SANK",
+            "fa": "مُن کُد پُستال، سِ کا، اَن، اِن، سیس، اِن، سَنک"
+          },
+          {
+            "fr": "Mon numéro de téléphone, c'est le 613 555 0142.",
+            "en": "My phone number is 613 555 0142.",
+            "pr": "mohn nü-may-ROH duh tay-lay-FOHN, SAY luh SEESS AN TRWAH, SANK SANK SANK, ZAY-ROH AN KAHTR DUH",
+            "fa": "مُن نومِرُ دُ تِلِفُن، سِ لُ سیس اَن تروآ، سَنک سَنک سَنک، زِرُ اَن کاتر دُ"
+          },
+          {
+            "fr": "Mon adresse mail, c'est léa point tremblay arobase exemple point ca.",
+            "en": "My email is lea.tremblay@exemple.ca.",
+            "pr": "mohn-nah-DRESS MEHL, SAY lay-AH pwan trahn-BLAY ah-roh-BAHZ eg-ZAHN-pluh pwan say-AH",
+            "fa": "مُنادرِس مِیل، سِ لِآ پوآن ترانبلِ آروباز اِگزانپل پوآن سِآ"
+          },
+          {
+            "fr": "J'aime nager, lire et écouter de la musique.",
+            "en": "I like swimming, reading and listening to music.",
+            "pr": "ZHEM nah-ZHAY, LEER ay ay-koo-TAY duh lah mü-ZEEK",
+            "fa": "ژِم ناژه، لیر اِ اِکوته دُ لا موزیک"
+          }
+        ]
+      },
+      "exercises": [
+        {
+          "id": "e1",
+          "set": "La fiche de Léa",
+          "text": "nom : ___",
+          "options": [
+            "Tremblay",
+            "Léa",
+            "Ottawa"
+          ],
+          "answer": "Tremblay",
+          "en": "last name",
+          "why": "Nom = last name.",
+          "rule": "nom",
+          "quiet": true
+        },
+        {
+          "id": "e2",
+          "set": "La fiche de Léa",
+          "text": "prénom : ___",
+          "options": [
+            "Léa",
+            "Tremblay",
+            "Ontario"
+          ],
+          "answer": "Léa",
+          "en": "first name",
+          "why": "Prénom = first name.",
+          "rule": "nom",
+          "quiet": true
+        },
+        {
+          "id": "e3",
+          "set": "La fiche de Léa",
+          "text": "sexe : ___",
+          "options": [
+            "féminin",
+            "masculin"
+          ],
+          "answer": "féminin",
+          "en": "sex",
+          "why": "Léa is a woman: féminin.",
+          "rule": "nom",
+          "quiet": true
+        },
+        {
+          "id": "e4",
+          "set": "La fiche de Léa",
+          "text": "âge : ___",
+          "options": [
+            "22 ans",
+            "12 ans",
+            "32 ans"
+          ],
+          "answer": "22 ans",
+          "en": "age",
+          "why": "Vingt-deux = 22.",
+          "rule": "age",
+          "quiet": true
+        },
+        {
+          "id": "e5",
+          "set": "La fiche de Léa",
+          "text": "ville : ___",
+          "options": [
+            "Ottawa",
+            "Ontario",
+            "Toronto"
+          ],
+          "answer": "Ottawa",
+          "en": "city",
+          "why": "Ottawa is the city.",
+          "rule": "prov",
+          "quiet": true
+        },
+        {
+          "id": "e6",
+          "set": "La fiche de Léa",
+          "text": "province : ___",
+          "options": [
+            "Ontario",
+            "Ottawa",
+            "Québec"
+          ],
+          "answer": "Ontario",
+          "en": "province",
+          "why": "Ontario is the province.",
+          "rule": "prov",
+          "quiet": true
+        },
+        {
+          "id": "e7",
+          "set": "La fiche de Léa",
+          "text": "code postal : ___",
+          "options": [
+            "K1N 6N5",
+            "K1N 5N6",
+            "613 555"
+          ],
+          "answer": "K1N 6N5",
+          "en": "postal code",
+          "why": "Ka, un, enne, six, enne, cinq.",
+          "rule": "mail",
+          "quiet": true
+        },
+        {
+          "id": "e8",
+          "set": "La fiche de Léa",
+          "text": "numéro de téléphone : ___",
+          "options": [
+            "613 555 0142",
+            "613 555 0124",
+            "555 613 0142"
+          ],
+          "answer": "613 555 0142",
+          "en": "phone number",
+          "why": "Six-un-trois, cinq-cinq-cinq, zéro-un-quatre-deux.",
+          "rule": "mail",
+          "quiet": true
+        },
+        {
+          "id": "e9",
+          "set": "La fiche de Léa",
+          "text": "adresse mail : ___",
+          "options": [
+            "lea.tremblay@exemple.ca",
+            "tremblay.lea@exemple.ca",
+            "lea.tremblay@exemple.fr"
+          ],
+          "answer": "lea.tremblay@exemple.ca",
+          "en": "email address",
+          "why": "Léa point Tremblay arobase exemple point ca.",
+          "rule": "mail",
+          "quiet": true
+        },
+        {
+          "id": "e10",
+          "set": "La fiche de Léa",
+          "text": "passe-temps et préférences : ___",
+          "options": [
+            "nager, lire, la musique",
+            "danser, cuisiner, le cinéma",
+            "voyager, chanter, le sport"
+          ],
+          "answer": "nager, lire, la musique",
+          "en": "hobbies and likes",
+          "why": "J'aime nager, lire et écouter de la musique.",
+          "rule": "age",
+          "quiet": true
+        }
+      ]
+    }
+  ],
+  "readings": [
+    {
+      "id": "r1",
+      "title": "La fiche de Minou",
+      "lines": [
+        {
+          "who": "Prof",
+          "fr": "Bonjour ! Quel est ton nom ?",
+          "en": "Hello! What's your last name?",
+          "pr": "bohn-ZHOOR! kel ay tohn NOHN",
+          "fa": "بُنژور! کِل اِ تُن نُن"
+        },
+        {
+          "who": "Minou",
+          "fr": "Mon nom, c'est Lechat. Mon prénom, c'est Minou.",
+          "en": "My last name is Lechat. My first name is Minou.",
+          "pr": "mohn NOHN, SAY luh-SHAH. mohn pray-NOHN, SAY mee-NOO",
+          "fa": "مُن نُن، سِ لُشا. مُن پرِنُن، سِ مینو"
+        },
+        {
+          "who": "Prof",
+          "fr": "Quel âge as-tu ?",
+          "en": "How old are you?",
+          "pr": "kel AHZH ah-TÜ",
+          "fa": "کِل آژ آتو"
+        },
+        {
+          "who": "Minou",
+          "fr": "J'ai cinq ans.",
+          "en": "I'm five.",
+          "pr": "zhay SANK AHN",
+          "fa": "ژِ سَنک آن"
+        },
+        {
+          "who": "Prof",
+          "fr": "Où habites-tu ?",
+          "en": "Where do you live?",
+          "pr": "OO ah-beet-TÜ",
+          "fa": "او آبیت‌تو"
+        },
+        {
+          "who": "Minou",
+          "fr": "J'habite à Montréal, au Québec.",
+          "en": "I live in Montreal, in Quebec.",
+          "pr": "zhah-BEET ah mohn-ray-AHL, oh kay-BEK",
+          "fa": "ژابیت آ مُنرِآل، اُ کِبِک"
+        },
+        {
+          "who": "Prof",
+          "fr": "Quels sont tes passe-temps ?",
+          "en": "What are your hobbies?",
+          "pr": "kel sohn tay pahss-TAHN",
+          "fa": "کِل سُن تِ پاس‌تان"
+        },
+        {
+          "who": "Minou",
+          "fr": "J'aime dormir, manger et regarder les oiseaux.",
+          "en": "I like sleeping, eating and watching birds.",
+          "pr": "ZHEM dor-MEER, mahn-ZHAY ay ruh-gar-DAY lay-zwah-ZOH",
+          "fa": "ژِم دُرمیر، مانژه اِ رُگارده لِزوآزُ"
+        }
+      ],
+      "questions": [
+        {
+          "q": "Quel est le prénom de Minou ?",
+          "hint": "What's Minou's first name?",
+          "options": [
+            "Minou",
+            "Lechat",
+            "Montréal"
+          ],
+          "answer": "Minou",
+          "optionsEn": {
+            "Minou": "Minou",
+            "Lechat": "Lechat",
+            "Montréal": "Montreal"
+          }
+        },
+        {
+          "q": "Quel est le nom de Minou ?",
+          "hint": "What's Minou's last name?",
+          "options": [
+            "Lechat",
+            "Minou",
+            "Québec"
+          ],
+          "answer": "Lechat",
+          "optionsEn": {
+            "Lechat": "Lechat",
+            "Minou": "Minou",
+            "Québec": "Quebec"
+          }
+        },
+        {
+          "q": "Quel âge a Minou ?",
+          "hint": "How old is Minou?",
+          "options": [
+            "cinq ans",
+            "quinze ans",
+            "cent ans"
+          ],
+          "answer": "cinq ans",
+          "optionsEn": {
+            "cinq ans": "five",
+            "quinze ans": "fifteen",
+            "cent ans": "a hundred"
+          }
+        },
+        {
+          "q": "Dans quelle province habite Minou ?",
+          "hint": "Which province does Minou live in?",
+          "options": [
+            "au Québec",
+            "en Ontario",
+            "en Alberta"
+          ],
+          "answer": "au Québec",
+          "optionsEn": {
+            "au Québec": "in Quebec",
+            "en Ontario": "in Ontario",
+            "en Alberta": "in Alberta"
+          }
+        }
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "u1",
+      "fr": "Quel est ton nom ?",
+      "en": "What's your last name?",
+      "pr": "kel ay tohn NOHN",
+      "fa": "کِل اِ تُن نُن"
+    },
+    {
+      "id": "u2",
+      "fr": "Quel est ton prénom ?",
+      "en": "What's your first name?",
+      "pr": "kel ay tohn pray-NOHN",
+      "fa": "کِل اِ تُن پرِنُن"
+    },
+    {
+      "id": "u3",
+      "fr": "Quel âge as-tu ?",
+      "en": "How old are you?",
+      "pr": "kel AHZH ah-TÜ",
+      "fa": "کِل آژ آتو"
+    },
+    {
+      "id": "u4",
+      "fr": "J'ai vingt-deux ans.",
+      "en": "I'm twenty-two.",
+      "pr": "zhay vant-duh-ZAHN",
+      "fa": "ژِ وَنت‌دُزان"
+    },
+    {
+      "id": "u5",
+      "fr": "J'habite à Ottawa, en Ontario.",
+      "en": "I live in Ottawa, in Ontario.",
+      "pr": "zhah-BEET ah oh-tah-WAH, ahn-nohn-tah-RYOH",
+      "fa": "ژابیت آ اُتاوا، آنُنتاریُ"
+    },
+    {
+      "id": "u6",
+      "fr": "Quel est ton numéro de téléphone ?",
+      "en": "What's your phone number?",
+      "pr": "kel ay tohn nü-may-ROH duh tay-lay-FOHN",
+      "fa": "کِل اِ تُن نومِرُ دُ تِلِفُن"
+    },
+    {
+      "id": "u7",
+      "fr": "Quelle est ton adresse mail ?",
+      "en": "What's your email address?",
+      "pr": "kel ay tohn-nah-DRESS MEHL",
+      "fa": "کِل اِ تُنادرِس مِیل"
+    },
+    {
+      "id": "u8",
+      "fr": "Quels sont tes passe-temps ?",
+      "en": "What are your hobbies?",
+      "pr": "kel sohn tay pahss-TAHN",
+      "fa": "کِل سُن تِ پاس‌تان"
+    },
+    {
+      "id": "u9",
+      "fr": "J'aime nager et lire.",
+      "en": "I like swimming and reading.",
+      "pr": "ZHEM nah-ZHAY ay LEER",
+      "fa": "ژِم ناژه اِ لیر"
+    }
+  ]
+}
