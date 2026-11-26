@@ -13,7 +13,7 @@ import { startTour } from './tour.js';
 import { applyPronClasses, prOn, faOn } from './fa.js';
 
 // Shown on the Me tab so it's easy to check which version is running. Bump with every release.
-export const APP_VERSION = '2.8 (25 Nov 2026)';
+export const APP_VERSION = '2.9 (26 Nov 2026)';
 
 const app = $('#app');
 let installEvt = null;
@@ -285,21 +285,15 @@ function notesScreen(key) {
     if (m) return moduleNotes(m);
   }
   // One section per module, like the Learn tab, with that module's files listed under it.
-  const pdfFor = (m, fa) => `summaries/${m.classId}-${m.id}${fa ? '-fa' : ''}.pdf`;
+  // One row per module: its summary, which you can read and listen to here, or save as a PDF.
   const files = (m) => h('ul', { class: 'file-list' },
     h('li', {}, h('a', { class: 'file-row', href: `#/notes/${m.key}` },
-      icon('notes'), h('span', {}, h('b', {}, 'Notes'), h('small', {}, 'Read and listen in the app')), icon('back', 'flip'))),
-    h('li', {}, pdfButton(h('a', { class: 'file-row', href: pdfFor(m, false), target: '_blank', rel: 'noopener' },
-      icon('download'), h('span', {}, h('b', { class: 'pdf-label' }, 'PDF summary'), h('small', {}, 'With English pronunciation · save, share or print')), icon('back', 'flip')),
-      pdfFor(m, false), pdfName(m, false), 'PDF summary')),
-    h('li', {}, pdfButton(h('a', { class: 'file-row', href: pdfFor(m, true), target: '_blank', rel: 'noopener' },
-      icon('download'), h('span', {}, h('b', { class: 'pdf-label' }, 'PDF summary with Persian'), h('small', { lang: 'fa', dir: 'rtl' }, 'با تلفظ فارسی')), icon('back', 'flip')),
-      pdfFor(m, true), pdfName(m, true), 'PDF summary with Persian')));
+      icon('notes'), h('span', {}, h('b', {}, 'Summary'), h('small', {}, 'Read and listen here, or save it as a PDF')), icon('back', 'flip'))));
   const block = (m) => h('div', { class: 'file-group' },
     h('h3', { class: 'file-group-title' }, h('span', { lang: 'fr' }, m.title), h('small', {}, m.subtitle)), files(m));
   const pre = preModules();
   return h('div', { class: 'screen notes' },
-    h('header', { class: 'page-head' }, h('h1', {}, 'Notebook'), h('p', {}, 'Each module’s notes and PDFs. Open a PDF to save, share or print it.')),
+    h('header', { class: 'page-head' }, h('h1', {}, 'Notebook'), h('p', {}, 'One summary per module. Open it to read and listen, or save it as a PDF.')),
     pre.length ? h('section', { class: 'card notes-sec' },
       h('span', { class: 'mod-num' }, 'Before Module 1'), h('h2', { lang: 'fr' }, 'Les bases', h('small', { class: 'banner-en' }, 'The basics')),
       ...pre.map(block)) : null,
