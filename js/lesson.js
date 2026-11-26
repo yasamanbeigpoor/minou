@@ -1,6 +1,6 @@
 // The lesson player: renders each step, checks answers and gives feedback.
 import { h, $, shuffle, checkFrench, clean, similarity, pick, sleep } from './util.js';
-import { speak, speakAll, stopAll, listen, sttSupported, stopSpeaking } from './speech.js';
+import { speak, speakAll, stopAll, listen, stopListening, cancelListening, sttSupported, stopSpeaking } from './speech.js';
 import { sfx } from './sound.js';
 import { minouSVG, setMood, LINES } from './minou.js';
 import { icon } from './icons.js';
@@ -12,6 +12,7 @@ import { faNumber, prNumber } from './fa.js';
 
 // English for every French line Minou says.
 const SAY_EN = {
+  'D’où viens-tu ?': 'Where are you from?', "D'où viens-tu ?": 'Where are you from?',
   'Choisis la bonne réponse.': 'Pick the right answer.',
   'Écoute et écris les chiffres.': 'Listen and write the digits.', 'Lis le numéro à voix haute.': 'Read the number out loud.', 'Les mois': 'The months',
   'Que veut dire… ?': 'What does it mean?', 'Comment dit-on… ?': 'How do you say…?', 'Écoute bien !': 'Listen carefully!',
@@ -36,7 +37,7 @@ const sayEn = (fr) => SAY_EN[fr] || (/ ou /.test(fr) ? fr.replace(' ou ', ' or '
 const put = (parent, ...kids) => parent.append(...kids.filter((k) => k != null && k !== false));
 
 const GRADED = new Set(['mcq', 'type', 'bank', 'match', 'speak']);
-const ACCENTS = ['é', 'è', 'ê', 'à', 'â', 'ç', 'î', 'ï', 'ô', 'œ', 'ù', 'û', 'ë'];
+const ACCENTS = ['é', 'è', 'ê', 'ë', 'à', 'â', 'ç', 'î', 'ï', 'ô', 'œ', 'ù', 'û', 'ü'];
 
 export function runLesson({ title, steps, mode = 'learn', onDone, onExit }) {
   const root = $('#lesson');
@@ -100,6 +101,7 @@ export function runLesson({ title, steps, mode = 'learn', onDone, onExit }) {
   function cleanup(exited) {
     clearInterval(timerId);
     stopSpeaking();
+    cancelListening();
     document.removeEventListener('keydown', onKey);
     root.hidden = true;
     root.innerHTML = '';
@@ -125,6 +127,7 @@ export function runLesson({ title, steps, mode = 'learn', onDone, onExit }) {
   // ----- Step flow -----
   function show() {
     stopAll();
+    cancelListening();
     while (i < queue.length && skipSpeak && queue[i].kind === 'speak') i++;
     if (i >= queue.length) return finish();
     phase = 'answer';
@@ -179,6 +182,14 @@ export function runLesson({ title, steps, mode = 'learn', onDone, onExit }) {
       mainBtn.hidden = false;
       mainBtn.textContent = 'Continue';
       mainBtn.onclick = () => next();
+      // Skip the rest of the teaching cards in a row and go straight to the next question.
+      let q = i + 1;
+      while (q < queue.length && !GRADED.has(queue[q].kind)) q++;
+      if (!exam && q > i + 1) {
+        skipBtn.hidden = false;
+        skipBtn.textContent = 'Skip';
+        skipBtn.onclick = () => { sfx.tap(); stopSpeaking(); i = q; show(); };
+      }
     }
   }
 
@@ -382,14 +393,22 @@ function passageCard(reading, { compact = false } = {}) {
 }
 
 function accentBar(input) {
-  return h('div', { class: 'accents', role: 'group', 'aria-label': 'Accented letters' },
-    ...ACCENTS.map((ch) => h('button', { class: 'key', type: 'button', tabindex: '-1', onmousedown: (e) => e.preventDefault(), onclick: () => {
-      const s = input.selectionStart ?? input.value.length, e2 = input.selectionEnd ?? s;
-      input.value = input.value.slice(0, s) + ch + input.value.slice(e2);
-      input.focus();
-      input.setSelectionRange(s + 1, s + 1);
-      input.dispatchEvent(new Event('input'));
-    } }, ch)));
+  // Accent keys add a letter without closing the phone's keyboard: on touch screens the letter
+  // goes in on touchend (and the tap is cancelled so the text box keeps focus).
+  const add = (ch) => {
+    const s = input.selectionStart ?? input.value.length, e2 = input.selectionEnd ?? s;
+    input.value = input.value.slice(0, s) + ch + input.value.slice(e2);
+    input.focus();
+    input.setSelectionRange(s + 1, s + 1);
+    input.dispatchEvent(new Event('input'));
+  };
+  return h('div', { class: 'accent-wrap' },
+    h('p', { class: 'accent-help' }, 'Tap the box to type. Use these keys for accents.'),
+    h('div', { class: 'accents', role: 'group', 'aria-label': 'Accented letters' },
+      ...ACCENTS.map((ch) => h('button', { class: 'key', type: 'button', tabindex: '-1',
+        onmousedown: (e) => e.preventDefault(),
+        ontouchend: (e) => { e.preventDefault(); add(ch); },
+        onclick: () => add(ch) }, ch))));
 }
 
 // ---------- Renderers ----------
@@ -528,9 +547,9 @@ const RENDER = {
 
   type(step, body, ctx) {
     const input = step.long
-      ? h('textarea', { class: 'answer', rows: '2', lang: 'fr', autocomplete: 'off', autocapitalize: 'off', spellcheck: 'false', placeholder: 'Type in French' })
+      ? h('textarea', { class: 'answer', rows: '2', lang: 'fr', autocomplete: 'off', autocapitalize: 'off', spellcheck: 'false', placeholder: 'Tap here to type in French' })
       : h('input', { class: 'answer', type: 'text', lang: step.numeric ? 'en' : 'fr', inputmode: step.numeric ? 'numeric' : 'text',
-        autocomplete: 'off', autocapitalize: 'off', spellcheck: 'false', placeholder: step.numeric ? 'Digits' : 'Type in French' });
+        autocomplete: 'off', autocapitalize: 'off', spellcheck: 'false', placeholder: step.numeric ? 'Tap here to type the digits' : 'Tap here to type in French' });
     input.addEventListener('input', () => ctx.ready(input.value.trim().length > 0));
     input.addEventListener('keydown', (e) => { if (e.key === 'Enter' && step.long) { e.preventDefault(); ctx.submit(); } });
     put(body, 
@@ -642,14 +661,19 @@ const RENDER = {
 
     if (canListen) {
       const mic = h('button', { class: 'mic', 'aria-label': 'Start speaking' }, icon('mic'));
-      const giveUp = h('button', { class: 'btn ghost small', hidden: true, onclick: () => ctx.grade({ ok: true, grade: 2, note: 'Marked as said. Keep practising out loud!' }) }, 'I said it, mark it');
+      // If the mic can't hear, you can still grade yourself.
+      const selfNo = h('button', { class: 'btn bad soft', onclick: () => ctx.grade({ ok: false, grade: 1 }) }, 'Not quite');
+      const selfYes = h('button', { class: 'btn good', onclick: () => ctx.grade({ ok: true, grade: 2, note: 'Marked as said. Keep practising out loud!' }) }, 'I said it right');
+      const giveUp = h('div', { class: 'self-check', hidden: true }, selfNo, selfYes);
       mic.onclick = async () => {
-        if (mic.classList.contains('on')) return;
+        // Tapping again while listening stops the mic and checks what was heard.
+        if (mic.classList.contains('on')) { status.textContent = 'Checking…'; stopListening(); return; }
         stopSpeaking();
         status.textContent = 'Starting the mic…';
         try {
-          const alts = await listen({ onStart: () => { mic.classList.add('on'); status.textContent = 'Listening… speak now.'; } });
+          const alts = await listen({ onStart: () => { mic.classList.add('on'); mic.setAttribute('aria-label', 'Stop speaking'); status.textContent = 'Listening… speak now. Tap the mic when you’re done.'; } });
           mic.classList.remove('on');
+          mic.setAttribute('aria-label', 'Start speaking');
           const target = step.fr;
           let best = 0, heard = alts[0];
           for (const a of alts) {
@@ -668,6 +692,8 @@ const RENDER = {
           }
         } catch (err) {
           mic.classList.remove('on');
+          mic.setAttribute('aria-label', 'Start speaking');
+          if (err.message === 'Stopped.') return;
           status.textContent = err.message;
           giveUp.hidden = false;
         }

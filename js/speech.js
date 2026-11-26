@@ -98,31 +98,67 @@ const Rec = window.SpeechRecognition || window.webkitSpeechRecognition;
 export const sttSupported = () => !!Rec;
 
 // Listen once. Resolves with a list of transcripts (best first), or rejects with a readable message.
+// Safari (especially the home-screen app) sometimes never ends a recognition on its own, so:
+// interim results are kept and used if the mic stops without a final result, listening stops by
+// itself after 7 seconds, stopListening() ends it early, and a stuck mic is given up after a grace period.
+let active = null;
+export function stopListening() { active?.finish(); }
+// Throw away a listen that's in progress (for example when the card changes).
+export function cancelListening() { active?.abort(); }
+
 export function listen({ onStart } = {}) {
   return new Promise((resolve, reject) => {
     if (!Rec) return reject(new Error('Speech recognition isn’t available in this browser. Use Chrome or Safari.'));
+    if (active) active.abort();
     const r = new Rec();
     r.lang = 'fr-FR';
-    r.interimResults = false;
+    r.interimResults = true;
+    r.continuous = false;
     r.maxAlternatives = 5;
-    let done = false;
-    r.onstart = () => onStart && onStart();
+    let settled = false, latest = null, timer = null, grace = null;
+    const end = (fn, val) => {
+      if (settled) return;
+      settled = true;
+      clearTimeout(timer); clearTimeout(grace);
+      if (active === ctl) active = null;
+      try { r.abort(); } catch {}
+      fn(val);
+    };
+    const giveBack = () => latest?.length
+      ? end(resolve, latest)
+      : end(reject, new Error('Minou didn’t hear anything. Tap the mic and try again, or use the buttons below.'));
+    const ctl = {
+      // Stop listening and use what was heard so far.
+      finish() {
+        try { r.stop(); } catch {}
+        clearTimeout(grace);
+        grace = setTimeout(giveBack, 1500);
+      },
+      abort() { end(reject, new Error('Stopped.')); },
+    };
+    active = ctl;
+    r.onstart = () => {
+      onStart && onStart();
+      timer = setTimeout(() => ctl.finish(), 7000);
+    };
     r.onresult = (e) => {
-      done = true;
-      const alts = Array.from(e.results[0]).map((a) => a.transcript);
-      resolve(alts);
+      const res = e.results[e.results.length - 1];
+      latest = Array.from(res).map((a) => a.transcript).filter(Boolean);
+      if (res.isFinal) end(resolve, latest);
     };
     r.onerror = (e) => {
-      done = true;
+      if (e.error === 'no-speech' || e.error === 'aborted') return giveBack();
       const msg = {
         'not-allowed': 'Microphone access is blocked. Allow the mic for this site, then try again.',
-        'no-speech': 'Minou didn’t hear anything. Tap the mic and speak a little louder.',
+        'service-not-allowed': 'Speech recognition is turned off on this device. Use the buttons below instead.',
         'audio-capture': 'No microphone found.',
         network: 'Speech recognition needs an internet connection.',
       }[e.error] || 'Couldn’t catch that. Try again.';
-      reject(new Error(msg));
+      end(reject, new Error(msg));
     };
-    r.onend = () => { if (!done) reject(new Error('Minou didn’t hear anything. Tap the mic and try again.')); };
-    try { r.start(); } catch { reject(new Error('The mic is busy. Try again in a second.')); }
+    r.onend = () => giveBack();
+    try { r.start(); } catch { end(reject, new Error('The mic is busy. Try again in a second.')); }
+    // If the mic never even starts, don't leave the card hanging.
+    setTimeout(() => { if (!settled && !timer) end(reject, new Error('The mic didn’t start. Use the buttons below instead.')); }, 5000);
   });
 }
