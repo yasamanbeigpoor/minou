@@ -1,6 +1,6 @@
 // The lesson player: renders each step, checks answers and gives feedback.
 import { h, $, shuffle, checkFrench, clean, similarity, pick, sleep } from './util.js';
-import { speak, listen, sttSupported, stopSpeaking } from './speech.js';
+import { speak, speakAll, stopAll, listen, sttSupported, stopSpeaking } from './speech.js';
 import { sfx } from './sound.js';
 import { minouSVG, setMood, LINES } from './minou.js';
 import { icon } from './icons.js';
@@ -124,6 +124,7 @@ export function runLesson({ title, steps, mode = 'learn', onDone, onExit }) {
 
   // ----- Step flow -----
   function show() {
+    stopAll();
     while (i < queue.length && skipSpeak && queue[i].kind === 'speak') i++;
     if (i >= queue.length) return finish();
     phase = 'answer';
@@ -304,6 +305,24 @@ export function runLesson({ title, steps, mode = 'learn', onDone, onExit }) {
 
 // ---------- Shared prompt pieces ----------
 
+// "Listen to all" that turns into "Stop" while it plays; tap again to stop.
+function listenAllBtn(getTexts) {
+  let playing = false;
+  const label = h('span', {}, 'Listen to all');
+  const btn = h('button', { class: 'chip', 'aria-pressed': 'false', onclick: () => {
+    if (playing) { stopAll(); return; }
+    playing = true;
+    label.textContent = 'Stop';
+    btn.setAttribute('aria-pressed', 'true');
+    speakAll(getTexts(), () => {
+      playing = false;
+      label.textContent = 'Listen to all';
+      btn.setAttribute('aria-pressed', 'false');
+    });
+  } }, icon('sound'), label);
+  return btn;
+}
+
 function promptHead(step) {
   const cat = minouSVG({ size: 58, mood: 'idle' });
   const en = sayEn(step.say || '');
@@ -356,9 +375,7 @@ function passageCard(reading, { compact = false } = {}) {
     toggle.lastChild.textContent = showEn ? 'Hide English' : 'Show English';
     lines.forEach((ln) => (ln.querySelector('.en').hidden = !showEn));
   } }, icon('eye'), h('span', {}, showEn ? 'Hide English' : 'Show English'));
-  const playAll = h('button', { class: 'chip', onclick: async () => {
-    for (const l of reading.lines) await speak(l.fr);
-  } }, icon('sound'), h('span', {}, 'Listen to all'));
+  const playAll = listenAllBtn(() => reading.lines.map((l) => l.fr));
   return h('section', { class: `passage ${compact ? 'compact' : ''}` },
     h('div', { class: 'p-head' }, h('h3', {}, reading.title), h('div', { class: 'p-tools' }, playAll, toggle)),
     ...lines);
@@ -459,8 +476,7 @@ const RENDER = {
   // A grid of tap-to-hear tiles: numbers by default, or any {big, fr, say, pr, fa} tiles.
   numbers(step, body) {
     const tiles = step.tiles || step.nums.map((n) => ({ big: String(n), fr: numberWord(n), pr: prNumber(n), fa: faNumber(n) }));
-    const all = h('button', { class: 'chip', onclick: async () => { for (const t of tiles) await speak(t.say || t.fr); } },
-      icon('sound'), h('span', {}, 'Listen to all'));
+    const all = listenAllBtn(() => tiles.map((t) => t.say || t.fr));
     put(body, promptHead(step), step.note ? h('p', { class: 'grid-note' }, step.note) : null, all,
       h('div', { class: `num-grid ${step.gridClass || ''}` }, ...tiles.map((t) =>
         h('button', { class: 'num-tile', onclick: () => speak(t.say || t.fr) },

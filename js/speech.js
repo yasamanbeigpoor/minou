@@ -24,14 +24,40 @@ function pickVoice() {
 }
 if ('speechSynthesis' in window) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
 
+let pending = null;   // resolves the speak() promise that is playing now
+
 export function stopSpeaking() {
   if (current) { current.pause(); current = null; }
   if ('speechSynthesis' in window) speechSynthesis.cancel();
+  if (pending) { const done = pending; pending = null; done(); }
+}
+
+// "Listen to all": plays a list of lines one after another. Any other sound, or stopAll(),
+// ends the run. onEnd is called once when the run finishes or is stopped.
+let allRun = 0;
+let running = false;
+export async function speakAll(texts, onEnd) {
+  const my = ++allRun;
+  running = true;
+  for (const t of texts) {
+    if (my !== allRun) break;
+    await speak(t, { keepAll: true });
+  }
+  if (my === allRun) { allRun++; running = false; }
+  onEnd?.();
+}
+// Stops a "Listen to all" run if one is playing; other sounds are left alone.
+export function stopAll() {
+  if (!running) return;
+  running = false;
+  allRun++;
+  stopSpeaking();
 }
 
 export const hasRecording = (text) => !!(index && index[key(text)]);
 
-export async function speak(text, { slow = false } = {}) {
+export async function speak(text, { slow = false, keepAll = false } = {}) {
+  if (!keepAll) { allRun++; running = false; }
   if (!text) return;
   if (!index) await ready;
   stopSpeaking();
@@ -43,8 +69,10 @@ export async function speak(text, { slow = false } = {}) {
       a.playbackRate = slow ? Math.max(0.5, 0.65 * rate) : rate;
       a.preservesPitch = true;
       current = a;
-      a.onended = a.onerror = () => resolve();
-      a.play().catch(() => resolve());
+      const done = () => { if (pending === done) pending = null; resolve(); };
+      pending = done;
+      a.onended = a.onerror = done;
+      a.play().catch(done);
     });
   }
   return browserVoice(text, slow);
@@ -58,9 +86,11 @@ function browserVoice(text, slow) {
     u.lang = frVoice.lang;
     const base = get().settings.rate || 0.9;
     u.rate = slow ? Math.max(0.5, base * 0.6) : base;
-    u.onend = u.onerror = () => resolve();
+    const done = () => { if (pending === done) pending = null; resolve(); };
+    pending = done;
+    u.onend = u.onerror = done;
     speechSynthesis.speak(u);
-    setTimeout(resolve, 600 + text.length * 120);
+    setTimeout(done, 600 + text.length * 120);
   });
 }
 
