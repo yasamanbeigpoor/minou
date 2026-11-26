@@ -392,6 +392,74 @@ function passageCard(reading, { compact = false } = {}) {
     ...lines);
 }
 
+// The on-screen French keyboard, used on phones and tablets. iPhones won't let a web page open
+// the system keyboard reliably (and can't switch it to French), so Minou brings its own:
+// AZERTY letters, every accent, an apostrophe, and a 123 page for digits.
+const KB_LETTERS = [
+  ['a', 'z', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
+  ['q', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm'],
+  ['shift', 'w', 'x', 'c', 'v', 'b', 'n', "'", '-', 'back'],
+];
+const KB_ACCENTS = ['é', 'è', 'ê', 'à', 'â', 'ç', 'î', 'ï', 'ô', 'û', 'ù', 'ë', 'ü', 'œ'];
+const KB_NUMBERS = [
+  ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
+  ['-', '/', ':', ';', '(', ')', '€', '$', '@', '"'],
+  ['!', "'", '«', '»', '%', '+', '=', 'back'],
+];
+const KB_DIGITS = [['1', '2', '3'], ['4', '5', '6'], ['7', '8', '9'], ['.', '0', 'back']];
+
+function frenchKeyboard(input, { numeric = false, onEnter } = {}) {
+  let shift = false, page = 'abc';
+  const wrap = h('div', { class: `fkb ${numeric ? 'digits' : ''}`, role: 'group', 'aria-label': 'French keyboard' });
+  const insert = (text) => {
+    const s = input.selectionStart ?? input.value.length, e = input.selectionEnd ?? s;
+    input.value = input.value.slice(0, s) + text + input.value.slice(e);
+    input.setSelectionRange?.(s + text.length, s + text.length);
+    input.dispatchEvent(new Event('input'));
+  };
+  const backspace = () => {
+    const s = input.selectionStart ?? input.value.length, e = input.selectionEnd ?? s;
+    if (s !== e) { input.value = input.value.slice(0, s) + input.value.slice(e); input.setSelectionRange?.(s, s); }
+    else if (s > 0) { input.value = input.value.slice(0, s - 1) + input.value.slice(s); input.setSelectionRange?.(s - 1, s - 1); }
+    input.dispatchEvent(new Event('input'));
+  };
+  const press = (k) => {
+    if (k === 'back') backspace();
+    else if (k === 'shift') { shift = !shift; draw(); return; }
+    else if (k === '123' || k === 'ABC') { page = k === '123' ? 'num' : 'abc'; draw(); return; }
+    else if (k === 'space') insert(' ');
+    else if (k === 'enter') { onEnter?.(); return; }
+    else {
+      insert(shift ? k.toUpperCase() : k);
+      if (shift) { shift = false; draw(); }
+    }
+  };
+  // Keys act on touchend (the tap is cancelled so the page doesn't zoom or move focus);
+  // a mouse click works too, for testing on a computer.
+  const key = (k, cls = '') => {
+    const label = { back: '⌫', shift: '⇧', space: 'espace', enter: '↵' }[k] || (shift && k.length === 1 ? k.toUpperCase() : k);
+    const b = h('button', { type: 'button', tabindex: '-1', class: `fk ${cls} ${k === 'shift' && shift ? 'on' : ''}`,
+      'aria-label': { back: 'Delete', shift: 'Capital letter', space: 'Space', enter: 'Check', '123': 'Numbers', ABC: 'Letters' }[k] || k,
+      onmousedown: (e) => e.preventDefault(),
+      ontouchend: (e) => { e.preventDefault(); press(k); },
+      onclick: () => press(k) }, label);
+    return b;
+  };
+  function draw() {
+    wrap.innerHTML = '';
+    if (numeric) {
+      KB_DIGITS.forEach((row) => wrap.append(h('div', { class: 'fk-row' }, ...row.map((k) => key(k, k === 'back' ? 'wide' : '')))));
+      return;
+    }
+    wrap.append(h('div', { class: 'fk-row accents' }, ...KB_ACCENTS.map((k) => key(k, 'acc'))));
+    const rows = page === 'abc' ? KB_LETTERS : KB_NUMBERS;
+    rows.forEach((row) => wrap.append(h('div', { class: 'fk-row' }, ...row.map((k) => key(k, k === 'back' || k === 'shift' ? 'wide' : '')))));
+    wrap.append(h('div', { class: 'fk-row' }, key(page === 'abc' ? '123' : 'ABC', 'wide'), key(','), key('space', 'space'), key('.'), key('?'), key('enter', 'wide enter')));
+  }
+  draw();
+  return wrap;
+}
+
 function accentBar(input) {
   // Accent keys add a letter without closing the phone's keyboard: on touch screens the letter
   // goes in on touchend (and the tap is cancelled so the text box keeps focus).
@@ -552,27 +620,23 @@ const RENDER = {
         autocomplete: 'off', autocapitalize: 'off', spellcheck: 'false', placeholder: step.numeric ? 'Tap here to type the digits' : 'Tap here to type in French' });
     input.addEventListener('input', () => ctx.ready(input.value.trim().length > 0));
     input.addEventListener('keydown', (e) => { if (e.key === 'Enter' && step.long) { e.preventDefault(); ctx.submit(); } });
-    put(body, 
+    // Phones and tablets get Minou's own French keyboard; computers type on their real keyboard.
+    const touch = matchMedia('(pointer: coarse)').matches || navigator.maxTouchPoints > 0;
+    if (touch) {
+      input.setAttribute('inputmode', 'none');   // keep the phone's own keyboard away
+      input.readOnly = false;
+    }
+    put(body,
       promptHead(step),
       step.audio ? audioBlock(step.audio) : null,
       bigText(step),
       input,
-      step.numeric ? null : accentBar(input),
+      touch ? frenchKeyboard(input, { numeric: !!step.numeric, onEnter: () => ctx.submit() })
+        : (step.numeric ? null : accentBar(input)),
     );
-    // On phones, don't focus the box by itself: iOS then shows the cursor but won't open the
-    // keyboard when you tap the box. Tapping it opens the keyboard. With a real keyboard
-    // (laptop), focus right away so you can just type.
-    const touch = matchMedia('(pointer: coarse)').matches || navigator.maxTouchPoints > 0;
-    if (!touch) setTimeout(() => input.focus(), 80);
-    else {
-      // If the box somehow has focus without a keyboard, a tap re-focuses it inside the tap,
-      // which makes iOS open the keyboard.
-      input.addEventListener('touchend', () => {
-        const vv = window.visualViewport;
-        const keyboardHidden = !vv || vv.height > window.innerHeight * 0.85;
-        if (document.activeElement === input && keyboardHidden) { input.blur(); input.focus(); }
-      });
-    }
+    if (touch) input.placeholder = step.numeric ? 'Type the digits below' : 'Type with the keyboard below';
+    // Focus so the cursor shows (with inputmode none the phone's keyboard stays hidden).
+    setTimeout(() => input.focus({ preventScroll: true }), 80);
     return {
       check() {
         const v = input.value;

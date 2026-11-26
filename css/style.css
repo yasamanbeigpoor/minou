@@ -702,3 +702,18 @@ html.no-pr.no-fa .pron { display: none; }
 .file-row small { display: block; color: var(--ink-2); font-size: 13px; }
 .file-row > .ic:last-child { margin-left: auto; color: var(--ink-2); flex: none; }
 .pill.g-adj { background: var(--iris-soft); color: var(--iris-deep); }
+
+/* Minou's on-screen French keyboard (phones and tablets) */
+.fkb { display: flex; flex-direction: column; gap: 7px; margin-top: 12px; padding: 8px 4px 10px; border-radius: 16px; background: var(--line); user-select: none; -webkit-user-select: none; }
+.fk-row { display: flex; gap: 5px; justify-content: center; }
+.fk { flex: 1 1 0; min-width: 0; height: 44px; padding: 0; border: none; border-radius: 9px; background: var(--surface); color: var(--ink); font: 600 19px var(--body); box-shadow: 0 2px 0 rgba(0, 0, 0, .25); touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+.fk:active { background: var(--iris-soft); transform: translateY(1px); box-shadow: none; }
+.fk.acc { height: 38px; font-size: 17px; color: var(--iris); background: var(--iris-soft); }
+.fk-row.accents { flex-wrap: wrap; }
+.fk-row.accents .fk { flex: 0 0 calc((100% - 6 * 5px) / 7); }
+.fk.wide { flex: 1.5 1 0; font-size: 18px; }
+.fk.space { flex: 5 1 0; font-size: 15px; color: var(--ink-2); }
+.fk.enter { background: var(--iris); color: #fff; }
+.fk.on { background: var(--iris); color: #fff; }
+.fkb.digits { max-width: 320px; margin-left: auto; margin-right: auto; }
+.fkb.digits .fk { height: 50px; font-size: 22px; }
