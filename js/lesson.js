@@ -559,7 +559,20 @@ const RENDER = {
       input,
       step.numeric ? null : accentBar(input),
     );
-    setTimeout(() => input.focus(), 80);
+    // On phones, don't focus the box by itself: iOS then shows the cursor but won't open the
+    // keyboard when you tap the box. Tapping it opens the keyboard. With a real keyboard
+    // (laptop), focus right away so you can just type.
+    const touch = matchMedia('(pointer: coarse)').matches || navigator.maxTouchPoints > 0;
+    if (!touch) setTimeout(() => input.focus(), 80);
+    else {
+      // If the box somehow has focus without a keyboard, a tap re-focuses it inside the tap,
+      // which makes iOS open the keyboard.
+      input.addEventListener('touchend', () => {
+        const vv = window.visualViewport;
+        const keyboardHidden = !vv || vv.height > window.innerHeight * 0.85;
+        if (document.activeElement === input && keyboardHidden) { input.blur(); input.focus(); }
+      });
+    }
     return {
       check() {
         const v = input.value;
