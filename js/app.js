@@ -13,7 +13,7 @@ import { startTour } from './tour.js';
 import { applyPronClasses, prOn, faOn } from './fa.js';
 
 // Shown on the Me tab so it's easy to check which version is running. Bump with every release.
-export const APP_VERSION = '1.8 (25 Nov 2026)';
+export const APP_VERSION = '1.9 (25 Nov 2026)';
 
 const app = $('#app');
 let installEvt = null;
@@ -208,7 +208,8 @@ function startNode(n) {
     onExit: route,
     onDone: (result) => {
       store.markActive();
-      const stars = store.finishNode(n.key, result.accuracy);
+      // Skipping every question doesn't finish the circle.
+      const stars = result.graded || !result.skipped ? store.finishNode(n.key, result.accuracy) : 0;
       showResults({ title: n.title, result, mode: 'learn', stars, onContinue: route });
     },
   });

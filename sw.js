@@ -1,6 +1,6 @@
 // Offline support. App files: cache first, refreshed in the background.
 // Lesson content: network first, so new modules show up as soon as they're pushed.
-const VERSION = 'minou-v8';
+const VERSION = 'minou-v9';
 const SHELL = [
   './', 'index.html', 'manifest.webmanifest', 'css/style.css', 'css/fonts.css',
   'fonts/fredoka-latin-500-normal.woff2', 'fonts/fredoka-latin-600-normal.woff2', 'fonts/nunito-latin-400-normal.woff2',

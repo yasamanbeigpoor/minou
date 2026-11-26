@@ -90,6 +90,7 @@ export function runLesson({ title, steps, mode = 'learn', onDone, onExit }) {
   }
 
   let current = null;     // controller for the current step
+  let droppedSkips = 0;   // questions skipped twice: they count as not-yet-right for the stars
   let phase = 'answer';   // 'answer' | 'feedback'
 
   function confirmExit() {
@@ -161,6 +162,11 @@ export function runLesson({ title, steps, mode = 'learn', onDone, onExit }) {
         };
       } else {
         mainBtn.hidden = !!current.hideCheck;
+        if (!exam && !answered.has(step)) {
+          skipBtn.hidden = false;
+          skipBtn.textContent = step.skipped ? 'Skip again' : 'Skip';
+          skipBtn.onclick = () => skip(step);
+        }
       }
       mainBtn.onclick = () => {
         if (phase === 'answer') {
@@ -261,6 +267,18 @@ export function runLesson({ title, steps, mode = 'learn', onDone, onExit }) {
     show();
   }
 
+  // Skip a question without answering: it comes back once at the end of the lesson.
+  // Skipping it a second time drops it. Skipped questions never count as wrong.
+  function skip(step) {
+    if (phase !== 'answer') return;
+    sfx.tap();
+    stopSpeaking();
+    queue.splice(i, 1);
+    if (!step.skipped) queue.push({ ...step, skipped: true });
+    else droppedSkips += 1;
+    show();
+  }
+
   function next() {
     i += 1;
     show();
@@ -269,15 +287,15 @@ export function runLesson({ title, steps, mode = 'learn', onDone, onExit }) {
   function finish() {
     const seconds = Math.round((Date.now() - startedAt) / 1000);
     cleanup(false);
-    const result = { xp, graded, firstTry, misses, seconds, answersBySkill, accuracy: clampAcc(firstTryAccuracy()) };
+    const result = { xp, graded, skipped: droppedSkips, firstTry, misses, seconds, answersBySkill, accuracy: clampAcc(firstTryAccuracy()) };
     if (onDone) onDone(result);
   }
 
   function firstTryAccuracy() {
     const originals = queue.filter((s) => !s.retry && GRADED.has(s.kind)).length;
-    if (!originals) return 1;
+    if (!originals) return droppedSkips ? 0 : 1;
     const missedFirst = misses.filter((m) => !m.retry).length;
-    return (originals - missedFirst) / originals;
+    return (originals - missedFirst) / (originals + droppedSkips);
   }
   const clampAcc = (a) => Math.max(0, Math.min(1, a));
 
@@ -395,16 +413,21 @@ const RENDER = {
   },
 
   accent(step, body) {
-    setTimeout(() => speak(step.name), 300);
-    put(body, 
-      promptHead({ say: 'Un accent !', sub: 'Tap the words to hear how it sounds.' }),
+    // The accent's sound comes first (heard in a real word). Its name, used only when
+    // spelling out loud, is a separate, smaller button so it isn't mistaken for the sound.
+    const sample = step.words[0];
+    setTimeout(() => speak(sample), 300);
+    put(body,
+      promptHead({ say: 'Un accent !', sub: 'Tap the letter or the words to hear the sound.' }),
       h('div', { class: 'card intro letter-card' },
-        h('button', { class: 'letter-big', 'aria-label': `Hear ${step.name}`, onclick: () => speak(step.name) }, h('span', { class: 'lb-upper' }, step.mark)),
-        h('div', { class: 'letter-say', lang: 'fr' }, step.name),
-        pron(step.pr, step.fa, 'center big-pron'),
+        h('button', { class: 'letter-big', 'aria-label': `Hear ${step.mark} in ${sample}`, onclick: () => speak(sample) }, h('span', { class: 'lb-upper' }, step.mark)),
         h('p', { class: 'tip' }, step.hint),
         h('div', { class: 'chip-row' }, ...step.words.map((w) => h('button', { class: 'chip', onclick: () => speak(w) }, icon('sound'),
           h('span', { lang: 'fr' }, w), step.wordsEn?.[w] ? h('span', { class: 'chip-en' }, step.wordsEn[w]) : null))),
+        h('div', { class: 'accent-name' },
+          h('span', { class: 'an-label' }, 'Its name, for spelling out loud'),
+          h('button', { class: 'chip', onclick: () => speak(step.name) }, icon('sound'), h('span', { lang: 'fr' }, step.name)),
+          pron(step.pr, step.fa, 'center')),
         step.trick ? trickBox(step.trick) : null),
     );
     return {};

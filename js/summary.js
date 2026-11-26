@@ -109,7 +109,7 @@ function grammarSection(g, say) {
         h('tbody', {}, ...t.table.rows.map((r) => h('tr', {}, ...r.map((c, i) => i === 0 ? h('th', { scope: 'row' }, c) : h('td', {}, say(c))))))));
     }
     if (t.tiles) {
-      sec.append(h('h3', {}, t.sub?.split('.')[0] || 'Words'), h('div', { class: 'sum-nums' },
+      sec.append(h('h3', {}, (t.sub || 'Words').replace(/\s*Tap each one to hear it\.?$/, '').replace(/\.$/, '')), h('div', { class: 'sum-nums' },
         ...t.tiles.map((x) => h('div', { class: 'sum-num' }, h('b', {}, x.big), h('span', {}, say(x.fr), pron(x.pr, x.fa))))));
     }
   }

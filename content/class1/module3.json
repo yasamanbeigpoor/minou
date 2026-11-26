@@ -1,0 +1,1892 @@
+{
+  "id": "m3",
+  "number": 3,
+  "title": "D'où viens-tu ?",
+  "subtitle": "Venir, where you're from, and -er verbs",
+  "source": "Grammaire 1.4 (pp. 70–71), Grammaire 1.5 (pp. 71–73)",
+  "path": [
+    {
+      "id": "vocab",
+      "type": "vocab",
+      "title": "Verbes en -er",
+      "titleEn": "-er verbs",
+      "subtitle": "22 everyday verbs from page 72"
+    },
+    {
+      "id": "g14",
+      "type": "grammar",
+      "grammar": "g14",
+      "title": "Venir",
+      "titleEn": "Grammar 1.4",
+      "subtitle": "D'où viens-tu ? de, du, des"
+    },
+    {
+      "id": "g15",
+      "type": "grammar",
+      "grammar": "g15",
+      "title": "Les verbes en -er",
+      "titleEn": "Grammar 1.5",
+      "subtitle": "Je travaille, j'habite, nous mangeons"
+    },
+    {
+      "id": "review",
+      "type": "module-review",
+      "title": "Révision du module",
+      "titleEn": "Module review",
+      "subtitle": "Reading, listening, speaking and a mixed test"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "chanter",
+      "fr": "chanter",
+      "en": "to sing",
+      "pr": "shahn-TAY",
+      "fa": "شانته",
+      "g": "x",
+      "trick": "Chanter: a chant is a song."
+    },
+    {
+      "id": "chercher",
+      "fr": "chercher",
+      "en": "to look for; to go get",
+      "pr": "shehr-SHAY",
+      "fa": "شِرشه",
+      "g": "x",
+      "trick": "Chercher sounds like “search”: to look for."
+    },
+    {
+      "id": "cuisiner",
+      "fr": "cuisiner",
+      "en": "to cook",
+      "pr": "kwee-zee-NAY",
+      "fa": "کویزینه",
+      "g": "x",
+      "trick": "Cuisine = food, kitchen."
+    },
+    {
+      "id": "danser",
+      "fr": "danser",
+      "en": "to dance",
+      "pr": "dahn-SAY",
+      "fa": "دانسه",
+      "g": "x"
+    },
+    {
+      "id": "dejeuner",
+      "fr": "déjeuner",
+      "en": "to eat lunch",
+      "pr": "day-zhuh-NAY",
+      "fa": "دِژُنه",
+      "g": "x",
+      "trick": "Dé-jeûner = un-fast, like break-fast. In France it means lunch."
+    },
+    {
+      "id": "dessiner",
+      "fr": "dessiner",
+      "en": "to draw",
+      "pr": "day-see-NAY",
+      "fa": "دِسینه",
+      "g": "x",
+      "trick": "Dessiner: to make a design, a drawing."
+    },
+    {
+      "id": "diner",
+      "fr": "diner",
+      "en": "to eat dinner",
+      "pr": "dee-NAY",
+      "fa": "دینه",
+      "g": "x",
+      "alts": [
+        "dîner"
+      ],
+      "trick": "Diner = to dine, to have dinner."
+    },
+    {
+      "id": "donner",
+      "fr": "donner",
+      "en": "to give",
+      "pr": "doh-NAY",
+      "fa": "دُنه",
+      "g": "x",
+      "trick": "Donner: a donor gives."
+    },
+    {
+      "id": "ecouter",
+      "fr": "écouter",
+      "en": "to listen to",
+      "pr": "ay-koo-TAY",
+      "fa": "اِکوته",
+      "g": "x",
+      "tip": "No “to” needed: j'écoute la radio = I listen to the radio."
+    },
+    {
+      "id": "inviter",
+      "fr": "inviter",
+      "en": "to invite",
+      "pr": "an-vee-TAY",
+      "fa": "اَنویته",
+      "g": "x"
+    },
+    {
+      "id": "jouer",
+      "fr": "jouer",
+      "en": "to play",
+      "pr": "zhoo-AY",
+      "fa": "ژوئه",
+      "g": "x",
+      "trick": "Jouer à + a game: jouer au tennis."
+    },
+    {
+      "id": "manger",
+      "fr": "manger",
+      "en": "to eat",
+      "pr": "mahn-ZHAY",
+      "fa": "مانژه",
+      "g": "x",
+      "trick": "A manger is where animals eat. Nous mangeons keeps an e."
+    },
+    {
+      "id": "nager",
+      "fr": "nager",
+      "en": "to swim",
+      "pr": "nah-ZHAY",
+      "fa": "ناژه",
+      "g": "x"
+    },
+    {
+      "id": "parler",
+      "fr": "parler",
+      "en": "to talk; to speak",
+      "pr": "par-LAY",
+      "fa": "پارله",
+      "g": "x",
+      "trick": "Parler: parliament, where people talk."
+    },
+    {
+      "id": "regarder",
+      "fr": "regarder",
+      "en": "to look at; to watch",
+      "pr": "ruh-gar-DAY",
+      "fa": "رُگارده",
+      "g": "x",
+      "tip": "No “at” needed: je regarde la télé."
+    },
+    {
+      "id": "rencontrer",
+      "fr": "rencontrer",
+      "en": "to meet",
+      "pr": "rahn-kohn-TRAY",
+      "fa": "رانکُنتره",
+      "g": "x",
+      "trick": "Rencontrer: to have an encounter."
+    },
+    {
+      "id": "rentrer",
+      "fr": "rentrer",
+      "en": "to return, come back (home)",
+      "pr": "rahn-TRAY",
+      "fa": "رانتره",
+      "g": "x",
+      "trick": "Rentrer = re-enter: come back home."
+    },
+    {
+      "id": "rester",
+      "fr": "rester",
+      "en": "to stay",
+      "pr": "res-TAY",
+      "fa": "رِسته",
+      "g": "x",
+      "trick": "Rester = to stay, not to rest!"
+    },
+    {
+      "id": "voyager",
+      "fr": "voyager",
+      "en": "to travel",
+      "pr": "vwah-yah-ZHAY",
+      "fa": "ووآیاژه",
+      "g": "x",
+      "trick": "Voyager = to go on a voyage. Nous voyageons keeps an e."
+    },
+    {
+      "id": "travailler",
+      "fr": "travailler",
+      "en": "to work",
+      "pr": "trah-vah-YAY",
+      "fa": "تراوایه",
+      "g": "x",
+      "trick": "The “aill” sounds like “eye”: trah-vah-YAY."
+    },
+    {
+      "id": "habiter",
+      "fr": "habiter",
+      "en": "to live (in a place)",
+      "pr": "ah-bee-TAY",
+      "fa": "آبیته",
+      "g": "x",
+      "trick": "Habiter: your habitat is where you live. The h is silent: j'habite."
+    },
+    {
+      "id": "etudier",
+      "fr": "étudier",
+      "en": "to study",
+      "pr": "ay-tü-DYAY",
+      "fa": "اِتودیه",
+      "g": "x",
+      "trick": "Étudier: a student (étudiant) studies."
+    }
+  ],
+  "grammars": [
+    {
+      "id": "g14",
+      "title": "The verb venir",
+      "section": "Grammaire 1.4",
+      "pages": "pp. 70–71",
+      "teach": [
+        {
+          "title": "Venir: to come",
+          "body": "<b>Venir</b> is irregular. In the singular, the endings are <b>-s, -s, -t</b>, and all three sound the same: “vyan”. The plurals end in <b>-ons, -ez, -ent</b> like most verbs.",
+          "table": {
+            "head": [
+              "",
+              "venir"
+            ],
+            "rows": [
+              [
+                "I",
+                "je viens"
+              ],
+              [
+                "you (tu)",
+                "tu viens"
+              ],
+              [
+                "he / she / one",
+                "il vient"
+              ],
+              [
+                "we",
+                "nous venons"
+              ],
+              [
+                "you (vous)",
+                "vous venez"
+              ],
+              [
+                "they",
+                "ils viennent"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "fr": "je viens",
+              "en": "I come (sounds like “vyan”)",
+              "pr": "zhuh VYAN",
+              "fa": "ژُ ویَن"
+            },
+            {
+              "fr": "nous venons",
+              "en": "we come",
+              "pr": "noo vuh-NOHN",
+              "fa": "نو وُنُن"
+            },
+            {
+              "fr": "ils viennent",
+              "en": "they come (double n: “vyen”)",
+              "pr": "eel VYEN",
+              "fa": "ایل ویِن"
+            }
+          ],
+          "trick": "Je viens, tu viens, il vient all sound like “vyan”. Ils viennent has a double n and an open “vyen”."
+        },
+        {
+          "title": "Where are you from?",
+          "body": "Use <b>venir de</b> to ask or say where someone is from. Before a vowel, <b>de</b> becomes <b>d'</b>: <b>d'où</b> = from where. <b>Devenir</b> (to become) and <b>revenir</b> (to come back) work like venir.",
+          "examples": [
+            {
+              "fr": "D'où vient Madame Martin ?",
+              "en": "Where is Madame Martin from?",
+              "pr": "DOO vyan mah-DAHM mar-TAN",
+              "fa": "دو ویَن مادام مارتَن"
+            },
+            {
+              "fr": "Elle vient de Montréal.",
+              "en": "She's from Montreal.",
+              "pr": "el vyan duh mohn-ray-AHL",
+              "fa": "اِل ویَن دُ مُنرِآل"
+            },
+            {
+              "fr": "Et d'où viens-tu ?",
+              "en": "And where are you from?",
+              "pr": "ay DOO vyan-TÜ",
+              "fa": "اِ دو ویَن‌تو"
+            },
+            {
+              "fr": "Moi, je viens de Kansas City.",
+              "en": "I'm from Kansas City.",
+              "pr": "MWAH, zhuh VYAN duh kahn-ZAHS see-TEE",
+              "fa": "موا، ژُ ویَن دُ کانزاس سیتی"
+            }
+          ],
+          "trick": "D'où = de + où: from where. D'où viens-tu ? = Where are you from?"
+        },
+        {
+          "title": "Which country? Which city?",
+          "body": "To ask for a specific country or city, use <b>De quel pays … ?</b> (pays is masculine) or <b>De quelle ville … ?</b> (ville is feminine).",
+          "examples": [
+            {
+              "fr": "De quel pays vient Julien Leroux ?",
+              "en": "What country does Julien Leroux come from?",
+              "pr": "duh kel pay-EE vyan zhü-LYAN luh-ROO",
+              "fa": "دُ کِل پِئی ویَن ژولیَن لُرو"
+            },
+            {
+              "fr": "Il vient de Belgique.",
+              "en": "He comes from Belgium.",
+              "pr": "eel vyan duh bel-ZHEEK",
+              "fa": "ایل ویَن دُ بِلژیک"
+            },
+            {
+              "fr": "De quelle ville viennent les Lasalle ?",
+              "en": "What city do the Lasalles come from?",
+              "pr": "duh kel VEEL vyen lay lah-SAHL",
+              "fa": "دُ کِل ویل ویِن لِ لاسال"
+            },
+            {
+              "fr": "Ils viennent de Lyon.",
+              "en": "They come from Lyon.",
+              "pr": "eel VYEN duh lee-OHN",
+              "fa": "ایل ویِن دُ لیُن"
+            }
+          ]
+        },
+        {
+          "title": "De, du or des?",
+          "body": "With cities and most countries ending in <b>-e</b> (feminine), use <b>de</b>: de Paris, de France. With masculine countries, use <b>du</b>: du Canada, du Japon. With plural countries, use <b>des</b>: des États-Unis. Before a vowel, <b>de</b> becomes <b>d'</b>: d'Algérie, d'Espagne.",
+          "examples": [
+            {
+              "fr": "Tu viens de France ?",
+              "en": "Are you from France?",
+              "pr": "tü vyan duh FRAHNS",
+              "fa": "تو ویَن دُ فرانس"
+            },
+            {
+              "fr": "Non, il vient du Canada.",
+              "en": "No, he's from Canada.",
+              "pr": "NOHN, eel vyan dü kah-nah-DAH",
+              "fa": "نُن، ایل ویَن دو کانادا"
+            },
+            {
+              "fr": "Je viens des États-Unis.",
+              "en": "I'm from the United States.",
+              "pr": "zhuh vyan day-zay-tah-zü-NEE",
+              "fa": "ژُ ویَن دِزِتازونی"
+            }
+          ],
+          "trick": "Ends in -e? Use de: de France, de Belgique. Otherwise du: du Canada. Plural: des États-Unis."
+        },
+        {
+          "grid": true,
+          "say": "D'où viens-tu ?",
+          "sub": "Where are you from? Countries with de, du, des. Tap each one to hear it.",
+          "tiles": [
+            {
+              "big": "🇫🇷",
+              "fr": "de France",
+              "pr": "duh FRAHNS",
+              "fa": "دُ فرانس"
+            },
+            {
+              "big": "🇧🇪",
+              "fr": "de Belgique",
+              "pr": "duh bel-ZHEEK",
+              "fa": "دُ بِلژیک"
+            },
+            {
+              "big": "🇨🇭",
+              "fr": "de Suisse",
+              "pr": "duh SWEESS",
+              "fa": "دُ سوییس"
+            },
+            {
+              "big": "🇩🇿",
+              "fr": "d'Algérie",
+              "pr": "dahl-zhay-REE",
+              "fa": "دالژِری"
+            },
+            {
+              "big": "🇪🇸",
+              "fr": "d'Espagne",
+              "pr": "dess-PAHN-yuh",
+              "fa": "دِسپانی"
+            },
+            {
+              "big": "🇨🇦",
+              "fr": "du Canada",
+              "pr": "dü kah-nah-DAH",
+              "fa": "دو کانادا"
+            },
+            {
+              "big": "🇯🇵",
+              "fr": "du Japon",
+              "pr": "dü zhah-POHN",
+              "fa": "دو ژاپُن"
+            },
+            {
+              "big": "🇧🇷",
+              "fr": "du Brésil",
+              "pr": "dü bray-ZEEL",
+              "fa": "دو برِزیل"
+            },
+            {
+              "big": "🇵🇹",
+              "fr": "du Portugal",
+              "pr": "dü por-tü-GAHL",
+              "fa": "دو پُرتوگال"
+            },
+            {
+              "big": "🇺🇸",
+              "fr": "des États-Unis",
+              "pr": "day-zay-tah-zü-NEE",
+              "fa": "دِزِتازونی"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "venir: je viens, tu viens, il/elle/on vient, nous venons, vous venez, ils/elles viennent.",
+        "Singular endings -s, -s, -t all sound like “vyan”. Ils viennent sounds like “vyen”.",
+        "D'où viens-tu ? Je viens de Toronto.",
+        "De quel pays … ? (masculine) De quelle ville … ? (feminine)",
+        "de + city or feminine country (de France), du + masculine country (du Canada), des + plural (des États-Unis), d' before a vowel (d'Algérie).",
+        "devenir (to become) and revenir (to come back) are conjugated like venir."
+      ],
+      "drills": [
+        {
+          "id": "v1",
+          "set": "Practice",
+          "text": "Je ___ de Montréal.",
+          "options": [
+            "viens",
+            "vient",
+            "venons",
+            "venez",
+            "viennent"
+          ],
+          "answer": "viens",
+          "en": "I'm from Montreal.",
+          "why": "With je: viens.",
+          "rule": "venir",
+          "after": 0
+        },
+        {
+          "id": "v2",
+          "set": "Practice",
+          "text": "Elle ___ de Lyon.",
+          "options": [
+            "viens",
+            "vient",
+            "venons",
+            "venez",
+            "viennent"
+          ],
+          "answer": "vient",
+          "en": "She's from Lyon.",
+          "why": "With il / elle: vient (with a t).",
+          "rule": "venir",
+          "after": 0
+        },
+        {
+          "id": "v3",
+          "set": "Practice",
+          "text": "Nous ___ de Paris.",
+          "options": [
+            "viens",
+            "vient",
+            "venons",
+            "venez",
+            "viennent"
+          ],
+          "answer": "venons",
+          "en": "We're from Paris.",
+          "why": "With nous: venons.",
+          "rule": "venir",
+          "after": 0
+        },
+        {
+          "id": "v4",
+          "set": "Practice",
+          "text": "Ils ___ de Montréal.",
+          "options": [
+            "viens",
+            "vient",
+            "venons",
+            "venez",
+            "viennent"
+          ],
+          "answer": "viennent",
+          "en": "They're from Montreal.",
+          "why": "With ils: viennent, double n.",
+          "rule": "venir",
+          "after": 0
+        },
+        {
+          "id": "v5",
+          "set": "Practice",
+          "type": "speak",
+          "fr": "ils viennent",
+          "en": "they come (“eel VYEN”)",
+          "after": 0
+        },
+        {
+          "id": "v6",
+          "set": "Practice",
+          "text": "D'où ___-vous ?",
+          "options": [
+            "viens",
+            "vient",
+            "venons",
+            "venez",
+            "viennent"
+          ],
+          "answer": "venez",
+          "en": "Where are you from?",
+          "why": "With vous: venez.",
+          "rule": "venir",
+          "after": 1
+        },
+        {
+          "id": "v7",
+          "set": "Practice",
+          "type": "type",
+          "text": "Tu ___ de France ? (venir)",
+          "answer": "viens",
+          "accept": [
+            "viens"
+          ],
+          "en": "Are you from France?",
+          "why": "With tu: viens.",
+          "rule": "venir",
+          "after": 1
+        },
+        {
+          "id": "v8",
+          "set": "Practice",
+          "type": "sentence",
+          "text": "Say it in French: Where are you from? (use tu)",
+          "answer": "D'où viens-tu ?",
+          "accept": [
+            "D'où viens-tu ?",
+            "Tu viens d'où ?",
+            "D'où est-ce que tu viens ?"
+          ],
+          "en": "",
+          "why": "D'où + venir.",
+          "after": 1,
+          "rule": "venir"
+        },
+        {
+          "id": "v9",
+          "set": "Practice",
+          "text": "Je ___ à la maison à six heures. (revenir)",
+          "options": [
+            "reviens",
+            "revient",
+            "revenons"
+          ],
+          "answer": "reviens",
+          "en": "I come back home at six.",
+          "why": "Revenir works like venir: je reviens.",
+          "rule": "venir",
+          "after": 1
+        },
+        {
+          "id": "v10",
+          "set": "Practice",
+          "text": "___ pays vient Julien ?",
+          "options": [
+            "De quel",
+            "De quelle",
+            "D'où"
+          ],
+          "answer": "De quel",
+          "en": "What country is Julien from?",
+          "why": "Pays is masculine: quel.",
+          "rule": "quel",
+          "after": 2
+        },
+        {
+          "id": "v11",
+          "set": "Practice",
+          "text": "___ ville viennent les Lasalle ?",
+          "options": [
+            "De quelle",
+            "De quel",
+            "D'où"
+          ],
+          "answer": "De quelle",
+          "en": "What city do the Lasalles come from?",
+          "why": "Ville is feminine: quelle.",
+          "rule": "quel",
+          "after": 2
+        },
+        {
+          "id": "v12",
+          "set": "Practice",
+          "text": "Il vient ___ Canada.",
+          "options": [
+            "de",
+            "du",
+            "des"
+          ],
+          "answer": "du",
+          "en": "He's from Canada.",
+          "why": "Le Canada is masculine: du.",
+          "rule": "de",
+          "after": 3
+        },
+        {
+          "id": "v13",
+          "set": "Practice",
+          "text": "Je viens ___ États-Unis.",
+          "options": [
+            "de",
+            "du",
+            "des"
+          ],
+          "answer": "des",
+          "en": "I'm from the United States.",
+          "why": "Les États-Unis is plural: des.",
+          "rule": "de",
+          "after": 3
+        },
+        {
+          "id": "v14",
+          "set": "Practice",
+          "text": "Elle vient ___ France.",
+          "options": [
+            "de",
+            "du",
+            "des"
+          ],
+          "answer": "de",
+          "en": "She's from France.",
+          "why": "La France is feminine: de.",
+          "rule": "de",
+          "after": 3
+        },
+        {
+          "id": "v15",
+          "set": "Practice",
+          "text": "Ils viennent ___ Japon.",
+          "options": [
+            "de",
+            "du",
+            "des"
+          ],
+          "answer": "du",
+          "en": "They're from Japan.",
+          "why": "Le Japon is masculine: du.",
+          "rule": "de",
+          "after": 3
+        },
+        {
+          "id": "v16",
+          "set": "Practice",
+          "text": "Tu viens ___ Paris ?",
+          "options": [
+            "de",
+            "du",
+            "des"
+          ],
+          "answer": "de",
+          "en": "Are you from Paris?",
+          "why": "Cities always take de.",
+          "rule": "de",
+          "after": 3
+        },
+        {
+          "id": "v17",
+          "set": "Practice",
+          "type": "sentence",
+          "text": "Say it in French: I'm from Canada.",
+          "answer": "Je viens du Canada.",
+          "accept": [
+            "Je viens du Canada."
+          ],
+          "en": "",
+          "why": "Le Canada is masculine: du.",
+          "after": 4,
+          "rule": "de"
+        }
+      ],
+      "tricks": {
+        "venir": "Je viens, tu viens, il vient all sound like “vyan”. Only nous venons, vous venez, ils viennent sound different.",
+        "quel": "Quel for masculine words (pays), quelle for feminine words (ville).",
+        "de": "Ends in -e? de France. Masculine? du Canada. Plural? des États-Unis."
+      },
+      "exercises": [
+        {
+          "id": "e10-1",
+          "set": "Exercice 10 · À la maison internationale",
+          "text": "Voici mon ami Jean-Michel. Il ___ du Canada et il parle français.",
+          "options": [
+            "viens",
+            "vient",
+            "venons",
+            "venez",
+            "viennent"
+          ],
+          "answer": "vient",
+          "en": "Here's my friend Jean-Michel. He's from Canada and he speaks French.",
+          "why": "Il: vient.",
+          "rule": "venir"
+        },
+        {
+          "id": "e10-2",
+          "set": "Exercice 10 · À la maison internationale",
+          "text": "Voilà Julie et Mark. Ils ___ des États-Unis.",
+          "options": [
+            "viens",
+            "vient",
+            "venons",
+            "venez",
+            "viennent"
+          ],
+          "answer": "viennent",
+          "en": "There are Julie and Mark. They're from the United States.",
+          "why": "Ils: viennent.",
+          "rule": "venir"
+        },
+        {
+          "id": "e10-3a",
+          "set": "Exercice 10 · À la maison internationale",
+          "text": "Voilà Mohammed. Il ___ d'Algérie…",
+          "options": [
+            "viens",
+            "vient",
+            "venons",
+            "venez",
+            "viennent"
+          ],
+          "answer": "vient",
+          "en": "There's Mohammed. He's from Algeria…",
+          "why": "Il: vient.",
+          "rule": "venir"
+        },
+        {
+          "id": "e10-3b",
+          "set": "Exercice 10 · À la maison internationale",
+          "text": "…et sa femme Natacha ___ de Russie.",
+          "options": [
+            "viens",
+            "vient",
+            "venons",
+            "venez",
+            "viennent"
+          ],
+          "answer": "vient",
+          "en": "…and his wife Natacha is from Russia.",
+          "why": "Natacha = elle: vient.",
+          "rule": "venir"
+        },
+        {
+          "id": "e10-4",
+          "set": "Exercice 10 · À la maison internationale",
+          "text": "Voilà Carmen et José. Ils ___ de Madrid, en Espagne.",
+          "options": [
+            "viens",
+            "vient",
+            "venons",
+            "venez",
+            "viennent"
+          ],
+          "answer": "viennent",
+          "en": "There are Carmen and José. They're from Madrid, in Spain.",
+          "why": "Ils: viennent.",
+          "rule": "venir"
+        },
+        {
+          "id": "e10-5a",
+          "set": "Exercice 10 · À la maison internationale",
+          "text": "Et vous, d'où ___-vous ?",
+          "options": [
+            "viens",
+            "vient",
+            "venons",
+            "venez",
+            "viennent"
+          ],
+          "answer": "venez",
+          "en": "And you, where are you from?",
+          "why": "Vous: venez.",
+          "rule": "venir"
+        },
+        {
+          "id": "e10-5b",
+          "set": "Exercice 10 · À la maison internationale",
+          "text": "— Nous ___ de Côte d'Ivoire.",
+          "options": [
+            "viens",
+            "vient",
+            "venons",
+            "venez",
+            "viennent"
+          ],
+          "answer": "venons",
+          "en": "We're from Ivory Coast.",
+          "why": "Nous: venons.",
+          "rule": "venir"
+        },
+        {
+          "id": "e10-6a",
+          "set": "Exercice 10 · À la maison internationale",
+          "text": "Christiane, tu ___ de Suisse, n'est-ce pas ?",
+          "options": [
+            "viens",
+            "vient",
+            "venons",
+            "venez",
+            "viennent"
+          ],
+          "answer": "viens",
+          "en": "Christiane, you're from Switzerland, aren't you?",
+          "why": "Tu: viens.",
+          "rule": "venir"
+        },
+        {
+          "id": "e10-6b",
+          "set": "Exercice 10 · À la maison internationale",
+          "text": "— Oui, je ___ de Genève.",
+          "options": [
+            "viens",
+            "vient",
+            "venons",
+            "venez",
+            "viennent"
+          ],
+          "answer": "viens",
+          "en": "Yes, I'm from Geneva.",
+          "why": "Je: viens.",
+          "rule": "venir"
+        }
+      ]
+    },
+    {
+      "id": "g15",
+      "title": "Present tense of -er verbs",
+      "section": "Grammaire 1.5",
+      "pages": "pp. 71–73",
+      "teach": [
+        {
+          "title": "Regular -er verbs",
+          "body": "Most verbs ending in <b>-er</b> work exactly like aimer (the only exception is <b>aller</b>). Drop <b>-er</b>, then add <b>-e, -es, -e, -ons, -ez, -ent</b>. The forms in the L-shape all sound the same because their endings are silent.",
+          "table": {
+            "head": [
+              "",
+              "travailler (to work)"
+            ],
+            "rows": [
+              [
+                "I",
+                "je travaille"
+              ],
+              [
+                "you (tu)",
+                "tu travailles"
+              ],
+              [
+                "he / she / one",
+                "il travaille"
+              ],
+              [
+                "we",
+                "nous travaillons"
+              ],
+              [
+                "you (vous)",
+                "vous travaillez"
+              ],
+              [
+                "they",
+                "ils travaillent"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "fr": "je travaille",
+              "en": "I work (the “aill” sounds like “eye”)",
+              "pr": "zhuh trah-VAI",
+              "fa": "ژُ ترَوای"
+            },
+            {
+              "fr": "nous travaillons",
+              "en": "we work",
+              "pr": "noo trah-vah-YOHN",
+              "fa": "نو تراوایُن"
+            }
+          ],
+          "trick": "Drop -er, add -e, -es, -e, -ons, -ez, -ent. Only -ons and -ez are heard."
+        },
+        {
+          "title": "Verbs that start with a vowel or h",
+          "body": "With <b>habiter</b> (the h is silent) and <b>étudier</b>, <b>je</b> becomes <b>j'</b>, and the s of nous, vous, ils, elles links with a z sound.",
+          "table": {
+            "head": [
+              "",
+              "habiter (to live)"
+            ],
+            "rows": [
+              [
+                "I",
+                "j'habite"
+              ],
+              [
+                "you (tu)",
+                "tu habites"
+              ],
+              [
+                "he / she / one",
+                "il habite"
+              ],
+              [
+                "we",
+                "nous habitons"
+              ],
+              [
+                "you (vous)",
+                "vous habitez"
+              ],
+              [
+                "they",
+                "ils habitent"
+              ]
+            ]
+          },
+          "examples": [
+            {
+              "fr": "nous habitons",
+              "en": "we live (z: noo-zah-bee-TOHN)",
+              "pr": "noo-zah-bee-TOHN",
+              "fa": "نوزابیتُن"
+            },
+            {
+              "fr": "ils habitent",
+              "en": "they live (z: eel-zah-BEET)",
+              "pr": "eel-zah-BEET",
+              "fa": "ایلزابیت"
+            },
+            {
+              "fr": "j'étudie",
+              "en": "I study / I am studying / I do study",
+              "pr": "zhay-tü-DEE",
+              "fa": "ژِتودی"
+            }
+          ],
+          "trick": "Vowel or silent h? Je becomes j', and you link with a z: nous_habitons, ils_habitent."
+        },
+        {
+          "title": "One French tense, three English ones",
+          "body": "The French present tense covers three English forms. There's no separate “am -ing” in French.",
+          "examples": [
+            {
+              "fr": "Denise travaille à la bibliothèque ce soir.",
+              "en": "Denise is working at the library tonight.",
+              "pr": "duh-NEEZ trah-VAI ah lah bee-blee-oh-TEK suh SWAR",
+              "fa": "دُنیز ترَوای آ لا بیبلیُتِک سُ سوآر"
+            },
+            {
+              "fr": "Denise travaille à la bibliothèque tous les samedis.",
+              "en": "Denise works at the library every Saturday.",
+              "pr": "duh-NEEZ trah-VAI ah lah bee-blee-oh-TEK too lay sahm-DEE",
+              "fa": "دُنیز ترَوای آ لا بیبلیُتِک تو لِ سامدی"
+            },
+            {
+              "fr": "Oui, Denise travaille quelquefois le dimanche.",
+              "en": "Yes, Denise does work on Sundays sometimes.",
+              "pr": "WEE, duh-NEEZ trah-VAI kel-kuh-FWAH luh dee-MAHNSH",
+              "fa": "وی، دُنیز ترَوای کِلکُفوا لُ دیمانش"
+            }
+          ],
+          "trick": "Je travaille = I work, I'm working, I do work. One French form, three English ones."
+        },
+        {
+          "title": "Small spelling changes",
+          "body": "A few -er verbs change spelling to keep their sound. <b>Manger</b> and <b>voyager</b> keep an <b>e</b> in the nous form: nous mangeons. <b>Commencer</b> gets a <b>ç</b>: nous commençons. <b>Préférer</b>, <b>acheter</b> and <b>appeler</b> change before the silent endings: je préfère, j'achète, je m'appelle.",
+          "examples": [
+            {
+              "fr": "nous mangeons",
+              "en": "we eat (the e keeps the soft g)",
+              "pr": "noo mahn-ZHOHN",
+              "fa": "نو مانژُن"
+            },
+            {
+              "fr": "nous commençons",
+              "en": "we start (the ç keeps the soft c)",
+              "pr": "noo koh-mahn-SOHN",
+              "fa": "نو کُمانسُن"
+            },
+            {
+              "fr": "je préfère",
+              "en": "I prefer",
+              "pr": "zhuh pray-FEHR",
+              "fa": "ژُ پرِفِر"
+            }
+          ],
+          "trick": "Ge and ce stay soft: mangeons, commençons. Without the e or ç they'd sound hard."
+        }
+      ],
+      "notes": [
+        "-er verbs: drop -er, add -e, -es, -e, -ons, -ez, -ent (aller is the exception).",
+        "The L-shape (je, tu, il, ils) all sound alike: the endings are silent.",
+        "Vowel or silent h: j'habite, j'étudie, and liaison: nous_habitons, ils_habitent.",
+        "Je travaille = I work, I'm working, I do work.",
+        "Spelling changes: nous mangeons, nous voyageons, nous commençons; je préfère, j'achète, je m'appelle.",
+        "In travailler, “aill” sounds like “eye”."
+      ],
+      "drills": [
+        {
+          "id": "r1",
+          "set": "Practice",
+          "text": "Je ___ à la bibliothèque. (travailler)",
+          "options": [
+            "travaillons",
+            "travaillez",
+            "travaille"
+          ],
+          "answer": "travaille",
+          "en": "I work at the library.",
+          "why": "Je: -e.",
+          "rule": "er",
+          "after": 0
+        },
+        {
+          "id": "r2",
+          "set": "Practice",
+          "text": "Vous ___ la radio ? (écouter)",
+          "options": [
+            "écoute",
+            "écoutez",
+            "écoutons"
+          ],
+          "answer": "écoutez",
+          "en": "Do you listen to the radio?",
+          "why": "Vous: -ez.",
+          "rule": "er",
+          "after": 0
+        },
+        {
+          "id": "r3",
+          "set": "Practice",
+          "text": "Elles ___ au restaurant. (diner)",
+          "options": [
+            "dinons",
+            "dinent",
+            "dines"
+          ],
+          "answer": "dinent",
+          "en": "They eat dinner at the restaurant.",
+          "why": "Elles: -ent (silent).",
+          "rule": "er",
+          "after": 0
+        },
+        {
+          "id": "r4",
+          "set": "Practice",
+          "text": "Il ___ un livre. (chercher)",
+          "options": [
+            "cherchons",
+            "cherches",
+            "cherche"
+          ],
+          "answer": "cherche",
+          "en": "He's looking for a book.",
+          "why": "Il: -e.",
+          "rule": "er",
+          "after": 0
+        },
+        {
+          "id": "r5",
+          "set": "Practice",
+          "type": "type",
+          "text": "Ils ___ beaucoup. (parler)",
+          "answer": "parlent",
+          "accept": [
+            "parlent"
+          ],
+          "en": "They talk a lot.",
+          "why": "Ils: -ent. Silent, but you write it!",
+          "rule": "er",
+          "after": 0
+        },
+        {
+          "id": "r6",
+          "set": "Practice",
+          "text": "___ habite à Toronto.",
+          "options": [
+            "J'",
+            "Je",
+            "Jé"
+          ],
+          "answer": "J'",
+          "en": "I live in Toronto.",
+          "why": "Habite starts with a silent h: je becomes j'.",
+          "rule": "vowel",
+          "after": 1
+        },
+        {
+          "id": "r7",
+          "set": "Practice",
+          "text": "Tu ___ à Paris ? (habiter)",
+          "options": [
+            "habites",
+            "habitons",
+            "habitez"
+          ],
+          "answer": "habites",
+          "en": "Do you live in Paris?",
+          "why": "Tu: -es.",
+          "rule": "er",
+          "after": 1
+        },
+        {
+          "id": "r8",
+          "set": "Practice",
+          "text": "Nous ___ le français. (étudier)",
+          "options": [
+            "étudiez",
+            "étudient",
+            "étudions"
+          ],
+          "answer": "étudions",
+          "en": "We're studying French.",
+          "why": "Nous: -ons.",
+          "rule": "er",
+          "after": 1
+        },
+        {
+          "id": "r9",
+          "set": "Practice",
+          "type": "speak",
+          "fr": "nous habitons",
+          "en": "we live (link: noo-zah-bee-TOHN)",
+          "after": 1
+        },
+        {
+          "id": "r10",
+          "set": "Practice",
+          "type": "speak",
+          "fr": "ils habitent",
+          "en": "they live (link: eel-zah-BEET)",
+          "after": 1
+        },
+        {
+          "id": "r11",
+          "set": "Practice",
+          "text": "“Je travaille.” means…",
+          "options": [
+            "I work / I'm working",
+            "I worked",
+            "I will work"
+          ],
+          "answer": "I work / I'm working",
+          "en": "",
+          "why": "The French present covers both.",
+          "rule": "meaning",
+          "after": 2
+        },
+        {
+          "id": "r12",
+          "set": "Practice",
+          "type": "sentence",
+          "text": "Say it in French: She is studying French.",
+          "answer": "Elle étudie le français.",
+          "accept": [
+            "Elle étudie le français."
+          ],
+          "en": "",
+          "why": "No “is -ing” in French: elle étudie.",
+          "after": 2,
+          "rule": "meaning"
+        },
+        {
+          "id": "r13",
+          "set": "Practice",
+          "type": "type",
+          "text": "Nous ___ à midi. (manger)",
+          "answer": "mangeons",
+          "accept": [
+            "mangeons"
+          ],
+          "en": "We eat at noon.",
+          "why": "Keep the e: mangeons, so the g stays soft.",
+          "rule": "spell",
+          "after": 3
+        },
+        {
+          "id": "r14",
+          "set": "Practice",
+          "type": "type",
+          "text": "Nous ___ beaucoup. (voyager)",
+          "answer": "voyageons",
+          "accept": [
+            "voyageons"
+          ],
+          "en": "We travel a lot.",
+          "why": "Keep the e: voyageons.",
+          "rule": "spell",
+          "after": 3
+        },
+        {
+          "id": "r15",
+          "set": "Practice",
+          "type": "sentence",
+          "text": "Say it in French: We live in Toronto.",
+          "answer": "Nous habitons à Toronto.",
+          "accept": [
+            "Nous habitons à Toronto.",
+            "On habite à Toronto."
+          ],
+          "en": "",
+          "why": "Nous habitons, and à before a city.",
+          "after": 3,
+          "rule": "er"
+        }
+      ],
+      "tricks": {
+        "er": "Drop -er, add -e, -es, -e, -ons, -ez, -ent. Only -ons and -ez are heard.",
+        "vowel": "Vowel or silent h: je becomes j', and link with a z.",
+        "meaning": "One French present = three English forms: I work, I'm working, I do work.",
+        "spell": "Keep g and c soft: mangeons, voyageons, commençons."
+      },
+      "exercises": [
+        {
+          "id": "e11-1",
+          "set": "Exercice 11 · La vie de Joël",
+          "type": "type",
+          "text": "Moi, je ___ à la piscine le samedi. (nager)",
+          "answer": "nage",
+          "accept": [
+            "nage"
+          ],
+          "en": "I swim at the pool on Saturdays.",
+          "why": "Je: -e.",
+          "rule": "er"
+        },
+        {
+          "id": "e11-2",
+          "set": "Exercice 11 · La vie de Joël",
+          "type": "type",
+          "text": "Ma sœur Clarisse ___ beaucoup au téléphone. (parler)",
+          "answer": "parle",
+          "accept": [
+            "parle"
+          ],
+          "en": "My sister Clarisse talks on the phone a lot.",
+          "why": "Elle: -e.",
+          "rule": "er"
+        },
+        {
+          "id": "e11-3",
+          "set": "Exercice 11 · La vie de Joël",
+          "type": "type",
+          "text": "Et toi aussi, Marise, tu ___ souvent au téléphone, non ? (parler)",
+          "answer": "parles",
+          "accept": [
+            "parles"
+          ],
+          "en": "And you too, Marise, you often talk on the phone, right?",
+          "why": "Tu: -es.",
+          "rule": "er"
+        },
+        {
+          "id": "e11-4",
+          "set": "Exercice 11 · La vie de Joël",
+          "type": "type",
+          "text": "Nous ___ à 20 heures, d'habitude. (diner)",
+          "answer": "dinons",
+          "accept": [
+            "dinons",
+            "dînons"
+          ],
+          "en": "We usually eat dinner at 8 p.m.",
+          "why": "Nous: -ons.",
+          "rule": "er"
+        },
+        {
+          "id": "e11-5",
+          "set": "Exercice 11 · La vie de Joël",
+          "type": "type",
+          "text": "Ma tante Christine ___ dans un hôpital. (travailler)",
+          "answer": "travaille",
+          "accept": [
+            "travaille"
+          ],
+          "en": "My aunt Christine works in a hospital.",
+          "why": "Elle: -e.",
+          "rule": "er"
+        },
+        {
+          "id": "e11-6",
+          "set": "Exercice 11 · La vie de Joël",
+          "type": "type",
+          "text": "Mes grands-parents ___ dans la même ville que nous. (habiter)",
+          "answer": "habitent",
+          "accept": [
+            "habitent"
+          ],
+          "en": "My grandparents live in the same city as us.",
+          "why": "Ils: -ent.",
+          "rule": "er"
+        },
+        {
+          "id": "e11-7",
+          "set": "Exercice 11 · La vie de Joël",
+          "type": "type",
+          "text": "Mes amis et moi, nous ___ souvent. (chanter)",
+          "answer": "chantons",
+          "accept": [
+            "chantons"
+          ],
+          "en": "My friends and I often sing.",
+          "why": "Nous: -ons.",
+          "rule": "er"
+        },
+        {
+          "id": "e11-8",
+          "set": "Exercice 11 · La vie de Joël",
+          "type": "type",
+          "text": "Mon copain Malik ___ beaucoup avec sa famille. (voyager)",
+          "answer": "voyage",
+          "accept": [
+            "voyage"
+          ],
+          "en": "My friend Malik travels a lot with his family.",
+          "why": "Il: -e.",
+          "rule": "er"
+        },
+        {
+          "id": "e11-9",
+          "set": "Exercice 11 · La vie de Joël",
+          "type": "type",
+          "text": "Mes copines Sophie et Lourdes ___ au football. (jouer)",
+          "answer": "jouent",
+          "accept": [
+            "jouent"
+          ],
+          "en": "My friends Sophie and Lourdes play soccer.",
+          "why": "Elles: -ent.",
+          "rule": "er"
+        },
+        {
+          "id": "e11-10",
+          "set": "Exercice 11 · La vie de Joël",
+          "type": "type",
+          "text": "Et mes parents ___ beaucoup d'amis pendant le weekend. (inviter)",
+          "answer": "invitent",
+          "accept": [
+            "invitent"
+          ],
+          "en": "And my parents invite lots of friends over on weekends.",
+          "why": "Ils: -ent.",
+          "rule": "er"
+        },
+        {
+          "id": "e12-1a",
+          "set": "Exercice 12 · Ma vie",
+          "text": "«Tu ___ excessivement !» (travailler)",
+          "options": [
+            "travaillez",
+            "travailles",
+            "travaille"
+          ],
+          "answer": "travailles",
+          "en": "“You work too much!”",
+          "why": "Tu: -es.",
+          "rule": "er"
+        },
+        {
+          "id": "e12-1b",
+          "set": "Exercice 12 · Ma vie",
+          "text": "«Tu ___ trop au téléphone.» (parler)",
+          "options": [
+            "parle",
+            "parles",
+            "parlez"
+          ],
+          "answer": "parles",
+          "en": "“You talk on the phone too much.”",
+          "why": "Tu: -es.",
+          "rule": "er"
+        },
+        {
+          "id": "e12-2a",
+          "set": "Exercice 12 · Ma vie",
+          "text": "Dans ma famille, nous ___ beaucoup la télé. (regarder)",
+          "options": [
+            "regardes",
+            "regardons",
+            "regardent"
+          ],
+          "answer": "regardons",
+          "en": "In my family, we watch a lot of TV.",
+          "why": "Nous: -ons.",
+          "rule": "er"
+        },
+        {
+          "id": "e12-2b",
+          "set": "Exercice 12 · Ma vie",
+          "text": "Dans ma famille, nous ___ ensemble. (diner)",
+          "options": [
+            "dine",
+            "dines",
+            "dinons"
+          ],
+          "answer": "dinons",
+          "en": "In my family, we eat dinner together.",
+          "why": "Nous: -ons.",
+          "rule": "er"
+        },
+        {
+          "id": "e12-3a",
+          "set": "Exercice 12 · Ma vie",
+          "text": "Mes amis sont intéressants. Ils ___ toutes sortes de musique. (écouter)",
+          "options": [
+            "écoutez",
+            "écoutent",
+            "écoutes"
+          ],
+          "answer": "écoutent",
+          "en": "My friends are interesting. They listen to all kinds of music.",
+          "why": "Ils: -ent.",
+          "rule": "er"
+        },
+        {
+          "id": "e12-3b",
+          "set": "Exercice 12 · Ma vie",
+          "text": "Ils ___ aux jeux vidéo. (jouer)",
+          "options": [
+            "jouent",
+            "jouons",
+            "joue"
+          ],
+          "answer": "jouent",
+          "en": "They play video games.",
+          "why": "Ils: -ent.",
+          "rule": "er"
+        },
+        {
+          "id": "e12-4a",
+          "set": "Exercice 12 · Ma vie",
+          "text": "«Vous ___ beaucoup !» (étudier)",
+          "options": [
+            "étudions",
+            "étudies",
+            "étudiez"
+          ],
+          "answer": "étudiez",
+          "en": "“You study a lot!”",
+          "why": "Vous: -ez.",
+          "rule": "er"
+        },
+        {
+          "id": "e12-4b",
+          "set": "Exercice 12 · Ma vie",
+          "text": "«Vous ___ vos devoirs tous les jours.» (préparer)",
+          "options": [
+            "préparez",
+            "préparent",
+            "prépares"
+          ],
+          "answer": "préparez",
+          "en": "“You prepare your homework every day.”",
+          "why": "Vous: -ez.",
+          "rule": "er"
+        },
+        {
+          "id": "e12-5a",
+          "set": "Exercice 12 · Ma vie",
+          "text": "Moi, j'___ dans une résidence universitaire. (habiter)",
+          "options": [
+            "habitons",
+            "habites",
+            "habite"
+          ],
+          "answer": "habite",
+          "en": "Me, I live in a dorm.",
+          "why": "J'habite: -e.",
+          "rule": "er"
+        },
+        {
+          "id": "e12-5b",
+          "set": "Exercice 12 · Ma vie",
+          "text": "Je ___ normalement à l'université. (déjeuner)",
+          "options": [
+            "déjeunent",
+            "déjeunez",
+            "déjeune"
+          ],
+          "answer": "déjeune",
+          "en": "I normally eat lunch at the university.",
+          "why": "Je: -e.",
+          "rule": "er"
+        },
+        {
+          "id": "e12-6a",
+          "set": "Exercice 12 · Ma vie",
+          "text": "Mes professeurs ___ trop de devoirs. (donner)",
+          "options": [
+            "donnes",
+            "donnent",
+            "donnez"
+          ],
+          "answer": "donnent",
+          "en": "My teachers give too much homework.",
+          "why": "Ils: -ent.",
+          "rule": "er"
+        },
+        {
+          "id": "e12-6b",
+          "set": "Exercice 12 · Ma vie",
+          "text": "Mon professeur de français ___ vite ! (parler)",
+          "options": [
+            "parlent",
+            "parle",
+            "parlez"
+          ],
+          "answer": "parle",
+          "en": "My French teacher talks fast!",
+          "why": "Il: -e.",
+          "rule": "er"
+        }
+      ]
+    }
+  ],
+  "readings": [
+    {
+      "id": "r1",
+      "title": "La maison internationale",
+      "lines": [
+        {
+          "fr": "Bienvenue à la maison internationale !",
+          "en": "Welcome to the international house!",
+          "pr": "byan-vuh-NÜ ah lah may-ZOHN an-tehr-nah-syoh-NAHL",
+          "fa": "بیَنوُنو آ لا مِزُن اَنتِرناسیُنال"
+        },
+        {
+          "fr": "Voici Kenji. Il vient du Japon, de Tokyo.",
+          "en": "This is Kenji. He's from Japan, from Tokyo.",
+          "pr": "vwah-SEE ken-JEE. eel vyan dü zhah-POHN, duh toh-KYOH",
+          "fa": "وواسی کِنجی. ایل ویَن دو ژاپُن، دُ تُکیُ"
+        },
+        {
+          "fr": "Ana et Lucas viennent du Brésil.",
+          "en": "Ana and Lucas are from Brazil.",
+          "pr": "ah-NAH ay lü-KAH vyen dü bray-ZEEL",
+          "fa": "آنا اِ لوکا ویِن دو برِزیل"
+        },
+        {
+          "fr": "Emma vient des États-Unis. Elle étudie le français.",
+          "en": "Emma is from the United States. She's studying French.",
+          "pr": "ay-MAH vyan day-zay-tah-zü-NEE. el ay-tü-DEE luh frahn-SEH",
+          "fa": "اِما ویَن دِزِتازونی. اِل اِتودی لُ فرانسِ"
+        },
+        {
+          "fr": "Et moi, Minou, je viens de France, de Lyon.",
+          "en": "And me, Minou, I'm from France, from Lyon.",
+          "pr": "ay MWAH, mee-NOO, zhuh vyan duh FRAHNS, duh lee-OHN",
+          "fa": "اِ موا، مینو، ژُ ویَن دُ فرانس، دُ لیُن"
+        },
+        {
+          "fr": "Le soir, nous mangeons ensemble et nous parlons français !",
+          "en": "In the evening, we eat together and speak French!",
+          "pr": "luh SWAR, noo mahn-ZHOHN ahn-SAHM-bluh ay noo par-LOHN frahn-SEH",
+          "fa": "لُ سوآر، نو مانژُن آنسامبل اِ نو پارلُن فرانسِ"
+        }
+      ],
+      "questions": [
+        {
+          "q": "D'où vient Kenji ?",
+          "hint": "Where is Kenji from?",
+          "options": [
+            "du Japon",
+            "du Brésil",
+            "de France"
+          ],
+          "answer": "du Japon",
+          "optionsEn": {
+            "du Japon": "from Japan",
+            "du Brésil": "from Brazil",
+            "de France": "from France"
+          }
+        },
+        {
+          "q": "Qui vient du Brésil ?",
+          "hint": "Who is from Brazil?",
+          "options": [
+            "Ana et Lucas",
+            "Emma",
+            "Kenji"
+          ],
+          "answer": "Ana et Lucas",
+          "optionsEn": {
+            "Ana et Lucas": "Ana and Lucas",
+            "Emma": "Emma",
+            "Kenji": "Kenji"
+          }
+        },
+        {
+          "q": "De quelle ville vient Minou ?",
+          "hint": "What city is Minou from?",
+          "options": [
+            "de Lyon",
+            "de Paris",
+            "de Tokyo"
+          ],
+          "answer": "de Lyon",
+          "optionsEn": {
+            "de Lyon": "from Lyon",
+            "de Paris": "from Paris",
+            "de Tokyo": "from Tokyo"
+          }
+        },
+        {
+          "q": "Qu'est-ce qu'ils font le soir ?",
+          "hint": "What do they do in the evening?",
+          "options": [
+            "Ils mangent et parlent français.",
+            "Ils regardent la télé.",
+            "Ils voyagent."
+          ],
+          "answer": "Ils mangent et parlent français.",
+          "optionsEn": {
+            "Ils mangent et parlent français.": "They eat and speak French.",
+            "Ils regardent la télé.": "They watch TV.",
+            "Ils voyagent.": "They travel."
+          }
+        }
+      ]
+    },
+    {
+      "id": "r2",
+      "title": "La semaine de Joël",
+      "lines": [
+        {
+          "fr": "Le lundi, je travaille à la bibliothèque.",
+          "en": "On Mondays, I work at the library.",
+          "pr": "luh lun-DEE, zhuh trah-VAI ah lah bee-blee-oh-TEK",
+          "fa": "لُ لَندی، ژُ ترَوای آ لا بیبلیُتِک"
+        },
+        {
+          "fr": "Le mardi, mon frère et moi, nous jouons au tennis.",
+          "en": "On Tuesdays, my brother and I play tennis.",
+          "pr": "luh mar-DEE, mohn FREHR ay MWAH, noo zhoo-OHN oh tay-NEESS",
+          "fa": "لُ ماردی، مُن فرِر اِ موا، نو ژوئُن اُ تِنیس"
+        },
+        {
+          "fr": "Le mercredi, mes parents dinent au restaurant.",
+          "en": "On Wednesdays, my parents eat dinner at a restaurant.",
+          "pr": "luh mehr-kruh-DEE, may pah-RAHN DEEN oh res-toh-RAHN",
+          "fa": "لُ مِرکرُدی، مِ پاران دین اُ رِستُران"
+        },
+        {
+          "fr": "Le jeudi, ma sœur étudie avec ses amis.",
+          "en": "On Thursdays, my sister studies with her friends.",
+          "pr": "luh zhuh-DEE, mah SUHR ay-tü-DEE ah-VEK say-zah-MEE",
+          "fa": "لُ ژُدی، ما سُر اِتودی آوِک سِزامی"
+        },
+        {
+          "fr": "Le vendredi, j'écoute de la musique et je danse !",
+          "en": "On Fridays, I listen to music and dance!",
+          "pr": "luh vahn-druh-DEE, zhay-KOOT duh lah mü-ZEEK ay zhuh DAHNS",
+          "fa": "لُ واندرُدی، ژِکوت دُ لا موزیک اِ ژُ دانس"
+        },
+        {
+          "fr": "Et le weekend ? Nous restons à la maison et nous regardons des films.",
+          "en": "And on the weekend? We stay home and watch movies.",
+          "pr": "ay luh wee-KEND? noo res-TOHN ah lah may-ZOHN ay noo ruh-gar-DOHN day FEELM",
+          "fa": "اِ لُ ویکِند؟ نو رِستُن آ لا مِزُن اِ نو رُگاردُن دِ فیلم"
+        }
+      ],
+      "questions": [
+        {
+          "q": "Quand est-ce que Joël travaille ?",
+          "hint": "When does Joël work?",
+          "options": [
+            "le lundi",
+            "le mardi",
+            "le vendredi"
+          ],
+          "answer": "le lundi",
+          "optionsEn": {
+            "le lundi": "on Mondays",
+            "le mardi": "on Tuesdays",
+            "le vendredi": "on Fridays"
+          }
+        },
+        {
+          "q": "Qu'est-ce que Joël et son frère font le mardi ?",
+          "hint": "What do Joël and his brother do on Tuesdays?",
+          "options": [
+            "Ils jouent au tennis.",
+            "Ils dinent au restaurant.",
+            "Ils étudient."
+          ],
+          "answer": "Ils jouent au tennis.",
+          "optionsEn": {
+            "Ils jouent au tennis.": "They play tennis.",
+            "Ils dinent au restaurant.": "They eat at a restaurant.",
+            "Ils étudient.": "They study."
+          }
+        },
+        {
+          "q": "Qui étudie le jeudi ?",
+          "hint": "Who studies on Thursdays?",
+          "options": [
+            "sa sœur",
+            "ses parents",
+            "son frère"
+          ],
+          "answer": "sa sœur",
+          "optionsEn": {
+            "sa sœur": "his sister",
+            "ses parents": "his parents",
+            "son frère": "his brother"
+          }
+        },
+        {
+          "q": "Qu'est-ce qu'ils font le weekend ?",
+          "hint": "What do they do on the weekend?",
+          "options": [
+            "Ils restent à la maison.",
+            "Ils voyagent.",
+            "Ils travaillent."
+          ],
+          "answer": "Ils restent à la maison.",
+          "optionsEn": {
+            "Ils restent à la maison.": "They stay home.",
+            "Ils voyagent.": "They travel.",
+            "Ils travaillent.": "They work."
+          }
+        }
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "id": "u1",
+      "fr": "D'où viens-tu ?",
+      "en": "Where are you from?",
+      "pr": "DOO vyan-TÜ",
+      "fa": "دو ویَن‌تو",
+      "alts": [
+        "Tu viens d'où ?"
+      ]
+    },
+    {
+      "id": "u2",
+      "fr": "Je viens du Canada.",
+      "en": "I'm from Canada.",
+      "pr": "zhuh vyan dü kah-nah-DAH",
+      "fa": "ژُ ویَن دو کانادا"
+    },
+    {
+      "id": "u3",
+      "fr": "Elle vient de France.",
+      "en": "She's from France.",
+      "pr": "el vyan duh FRAHNS",
+      "fa": "اِل ویَن دُ فرانس"
+    },
+    {
+      "id": "u4",
+      "fr": "Nous venons des États-Unis.",
+      "en": "We're from the United States.",
+      "pr": "noo vuh-NOHN day-zay-tah-zü-NEE",
+      "fa": "نو وُنُن دِزِتازونی"
+    },
+    {
+      "id": "u5",
+      "fr": "Ils viennent de Lyon.",
+      "en": "They're from Lyon.",
+      "pr": "eel VYEN duh lee-OHN",
+      "fa": "ایل ویِن دُ لیُن"
+    },
+    {
+      "id": "u6",
+      "fr": "De quel pays viens-tu ?",
+      "en": "What country are you from?",
+      "pr": "duh kel pay-EE vyan-TÜ",
+      "fa": "دُ کِل پِئی ویَن‌تو",
+      "alts": [
+        "Tu viens de quel pays ?"
+      ]
+    },
+    {
+      "id": "u7",
+      "fr": "J'habite à Toronto.",
+      "en": "I live in Toronto.",
+      "pr": "zhah-BEET ah toh-ron-TOH",
+      "fa": "ژابیت آ تُرُنتُ"
+    },
+    {
+      "id": "u8",
+      "fr": "Nous étudions le français.",
+      "en": "We're studying French.",
+      "pr": "noo-zay-tü-DYOHN luh frahn-SEH",
+      "fa": "نوزِتودیُن لُ فرانسِ",
+      "alts": [
+        "On étudie le français."
+      ]
+    },
+    {
+      "id": "u9",
+      "fr": "Tu travailles ce soir ?",
+      "en": "Are you working tonight?",
+      "pr": "tü trah-VAI suh SWAR",
+      "fa": "تو ترَوای سُ سوآر",
+      "alts": [
+        "Est-ce que tu travailles ce soir ?"
+      ]
+    },
+    {
+      "id": "u10",
+      "fr": "Ils parlent anglais et français.",
+      "en": "They speak English and French.",
+      "pr": "eel PARL ahn-GLEH ay frahn-SEH",
+      "fa": "ایل پارل آنگلِ اِ فرانسِ"
+    },
+    {
+      "id": "u11",
+      "fr": "Je cherche mon livre.",
+      "en": "I'm looking for my book.",
+      "pr": "zhuh SHEHRSH mohn LEE-vruh",
+      "fa": "ژُ شِرش مُن لیور"
+    },
+    {
+      "id": "u12",
+      "fr": "Vous mangez au restaurant ?",
+      "en": "Are you eating at the restaurant?",
+      "pr": "voo mahn-ZHAY oh res-toh-RAHN",
+      "fa": "وو مانژه اُ رِستُران",
+      "alts": [
+        "Est-ce que vous mangez au restaurant ?"
+      ]
+    },
+    {
+      "id": "u13",
+      "fr": "Nous rentrons à la maison.",
+      "en": "We're going back home.",
+      "pr": "noo rahn-TROHN ah lah may-ZOHN",
+      "fa": "نو رانترُن آ لا مِزُن"
+    },
+    {
+      "id": "u14",
+      "fr": "Mes amis voyagent beaucoup.",
+      "en": "My friends travel a lot.",
+      "pr": "may-zah-MEE vwah-YAHZH boh-KOO",
+      "fa": "مِزامی ووآیاژ بوکو"
+    }
+  ]
+}
