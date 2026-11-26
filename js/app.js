@@ -13,7 +13,7 @@ import { startTour } from './tour.js';
 import { applyPronClasses, prOn, faOn } from './fa.js';
 
 // Shown on the Me tab so it's easy to check which version is running. Bump with every release.
-export const APP_VERSION = '2.1 (25 Nov 2026)';
+export const APP_VERSION = '2.2 (25 Nov 2026)';
 
 const app = $('#app');
 let installEvt = null;
@@ -284,14 +284,26 @@ function notesScreen(key) {
     const m = moduleByKey(decodeURIComponent(key));
     if (m) return moduleNotes(m);
   }
+  // One section per module, like the Learn tab, with that module's files listed under it.
+  const pdfFor = (m, fa) => `summaries/${m.classId}-${m.id}${fa ? '-fa' : ''}.pdf`;
+  const files = (m) => h('ul', { class: 'file-list' },
+    h('li', {}, h('a', { class: 'file-row', href: `#/notes/${m.key}` },
+      icon('notes'), h('span', {}, h('b', {}, 'Notes'), h('small', {}, 'Read and listen in the app')), icon('back', 'flip'))),
+    h('li', {}, h('a', { class: 'file-row', href: pdfFor(m, false), target: '_blank', rel: 'noopener' },
+      icon('download'), h('span', {}, h('b', {}, 'PDF summary'), h('small', {}, 'With English pronunciation')), icon('back', 'flip'))),
+    h('li', {}, h('a', { class: 'file-row', href: pdfFor(m, true), target: '_blank', rel: 'noopener' },
+      icon('download'), h('span', {}, h('b', {}, 'PDF summary with Persian'), h('small', { lang: 'fa', dir: 'rtl' }, 'با تلفظ فارسی')), icon('back', 'flip'))));
+  const block = (m) => h('div', { class: 'file-group' },
+    h('h3', { class: 'file-group-title' }, h('span', { lang: 'fr' }, m.title), h('small', {}, m.subtitle)), files(m));
+  const pre = preModules();
   return h('div', { class: 'screen notes' },
-    h('header', { class: 'page-head' }, h('h1', {}, 'Notebook'), h('p', {}, 'One summary per module. Read it here, or open the PDF to save, share or print it.')),
-    ...DB.classes.map((cls) => h('section', { class: 'notes-class' }, h('h2', { class: 'card-title' }, cls.title),
-      ...DB.modules.filter((m) => m.classId === cls.id).map((m) =>
-        h('a', { class: 'card note-link', href: `#/notes/${m.key}` },
-          h('span', { class: 'note-num' }, m.pre ? (m.letters ? 'Aa' : '12') : String(m.number)),
-          h('span', {}, h('b', {}, m.title), h('small', {}, m.subtitle)),
-          icon('back', 'flip'))))));
+    h('header', { class: 'page-head' }, h('h1', {}, 'Notebook'), h('p', {}, 'Each module’s notes and PDFs. Open a PDF to save, share or print it.')),
+    pre.length ? h('section', { class: 'card notes-sec' },
+      h('span', { class: 'mod-num' }, 'Before Module 1'), h('h2', { lang: 'fr' }, 'Les bases', h('small', { class: 'banner-en' }, 'The basics')),
+      ...pre.map(block)) : null,
+    ...mainModules().map((m) => h('section', { class: 'card notes-sec' },
+      h('span', { class: 'mod-num' }, `Module ${m.number}`), h('h2', { lang: 'fr' }, m.title), h('p', { class: 'notes-sub' }, m.subtitle),
+      files(m))));
 }
 
 function moduleNotes(m) {
