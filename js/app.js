@@ -13,7 +13,7 @@ import { startTour } from './tour.js';
 import { applyPronClasses, prOn, faOn } from './fa.js';
 
 // Shown on the Me tab so it's easy to check which version is running. Bump with every release.
-export const APP_VERSION = '1.11 (25 Nov 2026)';
+export const APP_VERSION = '2.0 (25 Nov 2026)';
 
 const app = $('#app');
 let installEvt = null;
@@ -46,7 +46,15 @@ async function boot() {
   applyPronClasses();
   addEventListener('hashchange', route);
   route();
-  if (!store.get().settings.name) onboarding();
+  if (!store.currentLearner()) onboarding();
+  else {
+    store.syncNow().then((changed) => { if (changed && !document.body.classList.contains('in-lesson')) route(); });
+  }
+  // Pick up progress made on another device whenever Minou comes back to the screen.
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState !== 'visible' || !store.currentLearner()) return;
+    store.syncNow().then((changed) => { if (changed && !document.body.classList.contains('in-lesson')) route(); });
+  });
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {
     // When a new version finishes installing it takes over this page; reload once to show it.
     const hadController = !!navigator.serviceWorker.controller;
@@ -64,29 +72,34 @@ async function boot() {
   }
 }
 
+// Who's learning? Two learners, no passwords. Their progress is saved online under their name.
 function onboarding() {
-  const input = h('input', { class: 'answer', type: 'text', placeholder: 'Your name', autocomplete: 'given-name', maxlength: '30' });
-  const go = h('button', { class: 'btn primary wide', disabled: true }, 'C’est parti !', h('small', { class: 'btn-en' }, 'Let’s go!'));
-  input.addEventListener('input', () => (go.disabled = !input.value.trim()));
-  input.addEventListener('keydown', (e) => { if (e.key === 'Enter' && input.value.trim()) go.click(); });
   const cat = minouSVG({ size: 170, mood: 'happy', cls: 'm-react' });
+  const status = h('p', { class: 'ob-status', role: 'status' });
+  const pick = async (key) => {
+    buttons.forEach((b) => (b.disabled = true));
+    status.textContent = 'Loading your progress…';
+    const firstTime = !store.get().settings.toured;
+    store.setLearner(key);
+    await store.syncNow();
+    const name = store.learners[key];
+    sfx.meow();
+    speak(`Enchanté, ${name} !`);
+    ov.remove();
+    route();
+    if (firstTime && !store.get().settings.toured) setTimeout(() => startTour(), 350);
+  };
+  const buttons = Object.entries(store.learners).map(([key, name]) =>
+    h('button', { class: 'btn primary wide learner-btn', onclick: () => pick(key) }, name));
   const ov = h('div', { class: 'onboard', role: 'dialog', 'aria-modal': 'true', 'aria-labelledby': 'ob-title' },
     h('div', { class: 'onboard-card' }, cat,
       h('h1', { id: 'ob-title', lang: 'fr' }, 'Bonjour ! Je suis Minou.'),
       h('p', { class: 'ob-en' }, 'Hello! I’m Minou.'),
-      h('p', {}, 'I’ll be your French teacher. Start with the alphabet and numbers, then work through one module a day: vocabulary, grammar, review. Everything comes with English, and you can turn on pronunciation help in English or Persian.'),
-      h('label', { class: 'field' }, h('span', { lang: 'fr' }, 'Et toi, comment tu t’appelles ?'), h('small', {}, 'And you, what’s your name?'), input),
-      go));
-  go.onclick = () => {
-    store.setSetting('name', input.value.trim());
-    sfx.meow();
-    speak(`Enchanté, ${input.value.trim()} !`);
-    ov.remove();
-    route();
-    setTimeout(() => startTour(), 350);
-  };
+      h('p', {}, 'I’ll be your French teacher. Your progress is saved under your name, so it follows you to any phone or computer.'),
+      h('p', { class: 'field' }, h('span', { lang: 'fr' }, 'Qui apprend aujourd’hui ?'), h('small', {}, 'Who’s learning today?')),
+      h('div', { class: 'learner-pick' }, ...buttons),
+      status));
   document.body.append(ov);
-  setTimeout(() => input.focus(), 100);
 }
 
 // ---------- Router ----------
@@ -309,7 +322,10 @@ function meScreen() {
     ...last7.map((d) => h('div', { class: `paw-day ${d.on ? 'on' : ''} ${d.today ? 'today' : ''}` }, icon('paw'), h('span', { class: 'paw-label' }, d.label))));
 
   // Settings controls
-  const nameIn = h('input', { type: 'text', value: s.settings.name || '', maxlength: '30', onchange: (e) => store.setSetting('name', e.target.value.trim()) });
+  const sync = store.syncState;
+  const syncLine = sync.status === 'saved' ? `Saved online${sync.at ? ` at ${new Date(sync.at).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })}` : ''}.`
+    : sync.status === 'offline' ? 'Offline right now. Progress is kept on this device and saved online when you’re back.'
+      : 'Saving online…';
   const sound = h('input', { type: 'checkbox', checked: s.settings.sound || null, onchange: (e) => store.setSetting('sound', e.target.checked) });
   const pronIn = h('input', { type: 'checkbox', checked: prOn() || null, onchange: (e) => { store.setSetting('pron', e.target.checked); applyPronClasses(); } });
   const faIn = h('input', { type: 'checkbox', checked: faOn() || null, onchange: (e) => { store.setSetting('persian', e.target.checked); applyPronClasses(); } });
@@ -329,6 +345,12 @@ function meScreen() {
   return h('div', { class: 'screen me' },
     h('header', { class: 'me-head' }, minouSVG({ size: 96, mood: 'happy' }),
       h('div', {}, h('h1', { lang: 'fr' }, `Salut, ${name} !`), h('p', {}, `Hi, ${name}! ${streak === 0 ? 'Do a lesson today to start your streak.' : `You’re on a ${streak}-day streak.`}`))),
+    h('section', { class: 'card' }, h('h2', { class: 'card-title' }, 'Learner'),
+      h('p', { class: 'muted' }, `This is ${name}’s progress. ${syncLine}`),
+      h('div', { class: 'btn-row' }, h('button', { class: 'btn ghost', onclick: async () => {
+        await store.pushNow();
+        onboarding();
+      } }, 'Switch learner'))),
     h('section', { class: 'card' }, h('h2', { class: 'card-title' }, 'Your streak'), week),
     h('section', { class: 'card' }, h('h2', { class: 'card-title' }, 'Skills'), ...Object.entries(s.skills).map(([k, [c, t]]) => skillBar(k, c, t))),
     s.exams.length ? h('section', { class: 'card' }, h('h2', { class: 'card-title' }, 'Mock exams'),
@@ -340,7 +362,6 @@ function meScreen() {
     h('section', { class: 'card settings' }, h('h2', { class: 'card-title' }, 'Settings'),
       h('label', { class: 'set-row' }, h('span', {}, 'English pronunciation', h('small', {}, 'Sound-it-out spelling, like “luh PEHR”')), pronIn),
       h('label', { class: 'set-row' }, h('span', {}, 'Persian pronunciation', h('small', { lang: 'fa', dir: 'rtl' }, 'تلفظ به خط فارسی، مثل «لُ پِر»')), faIn),
-      h('label', { class: 'set-row' }, h('span', {}, 'Your name'), nameIn),
       h('label', { class: 'set-row' }, h('span', {}, 'Sound effects'), sound),
       h('label', { class: 'set-row' }, h('span', {}, 'Speaking exercises', h('small', {}, sttSupported() ? 'Uses your mic' : 'Your browser can’t check speech, so you’ll self-check')), speakOff),
       h('label', { class: 'set-row col' }, h('span', {}, 'Voice speed'), rate),
@@ -349,7 +370,7 @@ function meScreen() {
       h('p', { class: 'muted' }, 'A 30-second walk through the app with Minou.'),
       h('div', { class: 'btn-row' }, h('button', { class: 'btn ghost', onclick: () => { location.hash = '#/learn'; setTimeout(() => startTour(), 250); } }, 'Show the tour again'))),
     h('section', { class: 'card' }, h('h2', { class: 'card-title' }, 'Backup'),
-      h('p', { class: 'muted' }, 'Progress lives in this browser. Save a backup to move it to another device.'),
+      h('p', { class: 'muted' }, 'Progress is saved online automatically. You can also keep a backup file.'),
       h('div', { class: 'btn-row' },
         h('button', { class: 'btn ghost', onclick: () => {
           const blob = new Blob([store.exportJSON()], { type: 'application/json' });
@@ -358,7 +379,7 @@ function meScreen() {
         } }, icon('download'), 'Save backup'),
         h('button', { class: 'btn ghost', onclick: () => fileIn.click() }, 'Restore'), fileIn),
       h('button', { class: 'btn text danger', onclick: () => {
-        if (confirm('Erase all progress? This can’t be undone.')) { store.resetAll(); location.hash = '#/learn'; location.reload(); }
+        if (confirm(`Erase all of ${name}’s progress, on every device? This can’t be undone.`)) { store.resetAll().then(() => { location.hash = '#/learn'; location.reload(); }); }
       } }, 'Erase all progress')),
     h('p', { class: 'version-line' }, `Minou version ${APP_VERSION}`),
   );

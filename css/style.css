@@ -678,3 +678,8 @@ html.no-pr.no-fa .pron { display: none; }
 .accent-name .an-label { font-size: .85rem; color: var(--ink-2); }
 .accent-wrap { display: flex; flex-direction: column; gap: 8px; }
 .accent-help { margin: 0; font-size: .85rem; color: var(--ink-2); }
+
+/* Learner picker */
+.learner-pick { display: flex; flex-direction: column; gap: 10px; margin-top: 6px; }
+.learner-btn { font-size: 1.1rem; }
+.ob-status { min-height: 1.2em; margin: 8px 0 0; color: var(--ink-2); text-align: center; }
